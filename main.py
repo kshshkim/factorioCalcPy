@@ -9,4 +9,4 @@ class Test():
 
 tst = Test()
 ddb = dependencydictbuilder.DependencyDictBuilder()
-tst.jprint(ddb.dependencyFinder('speed-module-3'))
+tst.jprint(ddb.dependencyFinder('processing-unit'))

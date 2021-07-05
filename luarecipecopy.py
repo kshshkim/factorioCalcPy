@@ -89,7 +89,7 @@ class Copyrecipe:
             returndict[name]['energy_required'] = energy_required
             returndict[name]['ingredients'] = ingredients
             if result is not None:
-                returndict[name]['result'] = result
+                returndict[name]['results'] = result
             else:
                 returndict[name]['results'] = results
 
@@ -112,7 +112,7 @@ class Copyrecipe:
             returndict[item]['name'] = item
             returndict[item]['energy_required'] = ''
             returndict[item]['ingredients'] = ''
-            returndict[item]['result'] = ''
+            returndict[item]['results'] = ''
         return returndict
 
     def final(self):

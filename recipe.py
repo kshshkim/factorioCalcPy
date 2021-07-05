@@ -6,7 +6,7 @@ recipe = {
             "advanced-circuit": 5,
             "electronic-circuit": 5
         },
-        "result": {
+        "results": {
             "speed-module": 1
         }
     },
@@ -18,7 +18,7 @@ recipe = {
             "advanced-circuit": 5,
             "processing-unit": 5
         },
-        "result": {
+        "results": {
             "speed-module-2": 1
         }
     },
@@ -30,7 +30,7 @@ recipe = {
             "advanced-circuit": 5,
             "processing-unit": 5
         },
-        "result": {
+        "results": {
             "speed-module-3": 1
         }
     },
@@ -41,7 +41,7 @@ recipe = {
             "advanced-circuit": 5,
             "electronic-circuit": 5
         },
-        "result": {
+        "results": {
             "productivity-module": 1
         }
     },
@@ -53,7 +53,7 @@ recipe = {
             "advanced-circuit": 5,
             "processing-unit": 5
         },
-        "result": {
+        "results": {
             "productivity-module-2": 1
         }
     },
@@ -65,7 +65,7 @@ recipe = {
             "advanced-circuit": 5,
             "processing-unit": 5
         },
-        "result": {
+        "results": {
             "productivity-module-3": 1
         }
     },
@@ -76,7 +76,7 @@ recipe = {
             "advanced-circuit": 5,
             "electronic-circuit": 5
         },
-        "result": {
+        "results": {
             "effectivity-module": 1
         }
     },
@@ -88,7 +88,7 @@ recipe = {
             "advanced-circuit": 5,
             "processing-unit": 5
         },
-        "result": {
+        "results": {
             "effectivity-module-2": 1
         }
     },
@@ -100,7 +100,7 @@ recipe = {
             "advanced-circuit": 5,
             "processing-unit": 5
         },
-        "result": {
+        "results": {
             "effectivity-module-3": 1
         }
     },
@@ -113,7 +113,7 @@ recipe = {
             "advanced-circuit": 1,
             "fast-inserter": 1
         },
-        "result": {
+        "results": {
             "stack-inserter": 1
         }
     },
@@ -124,7 +124,7 @@ recipe = {
             "stack-inserter": 1,
             "electronic-circuit": 5
         },
-        "result": {
+        "results": {
             "stack-filter-inserter": 1
         }
     },
@@ -278,7 +278,7 @@ recipe = {
             "advanced-circuit": 5,
             "steel-plate": 10
         },
-        "result": {
+        "results": {
             "night-vision-equipment": 1
         }
     },
@@ -289,7 +289,7 @@ recipe = {
             "advanced-circuit": 5,
             "steel-plate": 10
         },
-        "result": {
+        "results": {
             "belt-immunity-equipment": 1
         }
     },
@@ -300,7 +300,7 @@ recipe = {
             "advanced-circuit": 5,
             "steel-plate": 10
         },
-        "result": {
+        "results": {
             "energy-shield-equipment": 1
         }
     },
@@ -312,7 +312,7 @@ recipe = {
             "processing-unit": 5,
             "low-density-structure": 5
         },
-        "result": {
+        "results": {
             "energy-shield-mk2-equipment": 1
         }
     },
@@ -323,7 +323,7 @@ recipe = {
             "battery": 5,
             "steel-plate": 10
         },
-        "result": {
+        "results": {
             "battery-equipment": 1
         }
     },
@@ -335,7 +335,7 @@ recipe = {
             "processing-unit": 15,
             "low-density-structure": 5
         },
-        "result": {
+        "results": {
             "battery-mk2-equipment": 1
         }
     },
@@ -347,7 +347,7 @@ recipe = {
             "advanced-circuit": 2,
             "steel-plate": 5
         },
-        "result": {
+        "results": {
             "solar-panel-equipment": 1
         }
     },
@@ -358,7 +358,7 @@ recipe = {
             "processing-unit": 200,
             "low-density-structure": 50
         },
-        "result": {
+        "results": {
             "fusion-reactor-equipment": 1
         }
     },
@@ -370,7 +370,7 @@ recipe = {
             "low-density-structure": 5,
             "laser-turret": 5
         },
-        "result": {
+        "results": {
             "personal-laser-defense-equipment": 1
         }
     },
@@ -382,7 +382,7 @@ recipe = {
             "steel-plate": 20,
             "laser-turret": 10
         },
-        "result": {
+        "results": {
             "discharge-defense-equipment": 1
         }
     },
@@ -392,7 +392,7 @@ recipe = {
         "ingredients": {
             "electronic-circuit": 1
         },
-        "result": {
+        "results": {
             "discharge-defense-remote": 1
         }
     },
@@ -404,7 +404,7 @@ recipe = {
             "electric-engine-unit": 30,
             "steel-plate": 20
         },
-        "result": {
+        "results": {
             "exoskeleton-equipment": 1
         }
     },
@@ -417,7 +417,7 @@ recipe = {
             "steel-plate": 20,
             "battery": 45
         },
-        "result": {
+        "results": {
             "personal-roboport-equipment": 1
         }
     },
@@ -429,7 +429,7 @@ recipe = {
             "processing-unit": 100,
             "low-density-structure": 20
         },
-        "result": {
+        "results": {
             "personal-roboport-mk2-equipment": 1
         }
     },
@@ -441,7 +441,7 @@ recipe = {
             "electronic-circuit": 20,
             "battery": 12
         },
-        "result": {
+        "results": {
             "laser-turret": 1
         }
     },
@@ -454,7 +454,7 @@ recipe = {
             "pipe": 10,
             "engine-unit": 5
         },
-        "result": {
+        "results": {
             "flamethrower-turret": 1
         }
     },
@@ -467,7 +467,7 @@ recipe = {
             "iron-gear-wheel": 40,
             "advanced-circuit": 20
         },
-        "result": {
+        "results": {
             "artillery-turret": 1
         }
     },
@@ -478,7 +478,7 @@ recipe = {
             "processing-unit": 1,
             "radar": 1
         },
-        "result": {
+        "results": {
             "artillery-targeting-remote": 1
         }
     },
@@ -490,7 +490,7 @@ recipe = {
             "copper-plate": 10,
             "iron-plate": 20
         },
-        "result": {
+        "results": {
             "gun-turret": 1
         }
     },
@@ -500,7 +500,7 @@ recipe = {
         "ingredients": {
             "wood": 2
         },
-        "result": {
+        "results": {
             "wooden-chest": 1
         }
     },
@@ -510,7 +510,7 @@ recipe = {
         "ingredients": {
             "iron-plate": 1
         },
-        "result": {
+        "results": {
             "iron-stick": 2
         }
     },
@@ -520,7 +520,7 @@ recipe = {
         "ingredients": {
             "stone": 5
         },
-        "result": {
+        "results": {
             "stone-furnace": 1
         }
     },
@@ -531,7 +531,7 @@ recipe = {
             "stone-furnace": 1,
             "pipe": 4
         },
-        "result": {
+        "results": {
             "boiler": 1
         }
     },
@@ -543,7 +543,7 @@ recipe = {
             "pipe": 5,
             "iron-plate": 10
         },
-        "result": {
+        "results": {
             "steam-engine": 1
         }
     },
@@ -553,7 +553,7 @@ recipe = {
         "ingredients": {
             "iron-plate": 2
         },
-        "result": {
+        "results": {
             "iron-gear-wheel": 1
         }
     },
@@ -564,7 +564,7 @@ recipe = {
             "iron-plate": 1,
             "copper-cable": 3
         },
-        "result": {
+        "results": {
             "electronic-circuit": 1
         }
     },
@@ -575,7 +575,7 @@ recipe = {
             "iron-plate": 1,
             "iron-gear-wheel": 1
         },
-        "result": {
+        "results": {
             "transport-belt": 2
         }
     },
@@ -587,7 +587,7 @@ recipe = {
             "iron-gear-wheel": 5,
             "iron-plate": 10
         },
-        "result": {
+        "results": {
             "electric-mining-drill": 1
         }
     },
@@ -599,7 +599,7 @@ recipe = {
             "stone-furnace": 1,
             "iron-plate": 3
         },
-        "result": {
+        "results": {
             "burner-mining-drill": 1
         }
     },
@@ -611,7 +611,7 @@ recipe = {
             "iron-gear-wheel": 1,
             "iron-plate": 1
         },
-        "result": {
+        "results": {
             "inserter": 1
         }
     },
@@ -623,7 +623,7 @@ recipe = {
             "iron-plate": 2,
             "inserter": 1
         },
-        "result": {
+        "results": {
             "fast-inserter": 1
         }
     },
@@ -634,7 +634,7 @@ recipe = {
             "fast-inserter": 1,
             "electronic-circuit": 4
         },
-        "result": {
+        "results": {
             "filter-inserter": 1
         }
     },
@@ -646,7 +646,7 @@ recipe = {
             "iron-plate": 1,
             "inserter": 1
         },
-        "result": {
+        "results": {
             "long-handed-inserter": 1
         }
     },
@@ -657,7 +657,7 @@ recipe = {
             "iron-plate": 1,
             "iron-gear-wheel": 1
         },
-        "result": {
+        "results": {
             "burner-inserter": 1
         }
     },
@@ -667,7 +667,7 @@ recipe = {
         "ingredients": {
             "iron-plate": 1
         },
-        "result": {
+        "results": {
             "pipe": 1
         }
     },
@@ -679,7 +679,7 @@ recipe = {
             "pipe": 1,
             "iron-gear-wheel": 1
         },
-        "result": {
+        "results": {
             "offshore-pump": 1
         }
     },
@@ -689,7 +689,7 @@ recipe = {
         "ingredients": {
             "copper-plate": 1
         },
-        "result": {
+        "results": {
             "copper-cable": 2
         }
     },
@@ -700,7 +700,7 @@ recipe = {
             "wood": 1,
             "copper-cable": 2
         },
-        "result": {
+        "results": {
             "small-electric-pole": 2
         }
     },
@@ -711,7 +711,7 @@ recipe = {
             "copper-plate": 5,
             "iron-plate": 5
         },
-        "result": {
+        "results": {
             "pistol": 1
         }
     },
@@ -723,7 +723,7 @@ recipe = {
             "copper-plate": 5,
             "iron-plate": 10
         },
-        "result": {
+        "results": {
             "submachine-gun": 1
         }
     },
@@ -733,7 +733,7 @@ recipe = {
         "ingredients": {
             "iron-plate": 4
         },
-        "result": {
+        "results": {
             "firearm-magazine": 1
         }
     },
@@ -743,7 +743,7 @@ recipe = {
         "ingredients": {
             "iron-plate": 40
         },
-        "result": {
+        "results": {
             "light-armor": 1
         }
     },
@@ -755,7 +755,7 @@ recipe = {
             "iron-gear-wheel": 5,
             "iron-plate": 10
         },
-        "result": {
+        "results": {
             "radar": 1
         }
     },
@@ -767,7 +767,7 @@ recipe = {
             "copper-cable": 3,
             "iron-plate": 1
         },
-        "result": {
+        "results": {
             "small-lamp": 1
         }
     },
@@ -778,7 +778,7 @@ recipe = {
             "pipe": 10,
             "iron-plate": 5
         },
-        "result": {
+        "results": {
             "pipe-to-ground": 2
         }
     },
@@ -790,7 +790,7 @@ recipe = {
             "iron-gear-wheel": 5,
             "iron-plate": 9
         },
-        "result": {
+        "results": {
             "assembling-machine-1": 1
         }
     },
@@ -801,7 +801,7 @@ recipe = {
             "electronic-circuit": 2,
             "iron-gear-wheel": 2
         },
-        "result": {
+        "results": {
             "repair-pack": 1
         }
     },
@@ -812,7 +812,7 @@ recipe = {
             "copper-plate": 1,
             "iron-gear-wheel": 1
         },
-        "result": {
+        "results": {
             "automation-science-pack": 1
         }
     },
@@ -823,7 +823,7 @@ recipe = {
             "inserter": 1,
             "transport-belt": 1
         },
-        "result": {
+        "results": {
             "logistic-science-pack": 1
         }
     },
@@ -835,7 +835,7 @@ recipe = {
             "iron-gear-wheel": 10,
             "transport-belt": 4
         },
-        "result": {
+        "results": {
             "lab": 1
         }
     },
@@ -845,7 +845,7 @@ recipe = {
         "ingredients": {
             "stone-brick": 5
         },
-        "result": {
+        "results": {
             "stone-wall": 1
         }
     },
@@ -858,7 +858,7 @@ recipe = {
             "iron-gear-wheel": 5,
             "assembling-machine-1": 1
         },
-        "result": {
+        "results": {
             "assembling-machine-2": 1
         }
     },
@@ -870,7 +870,7 @@ recipe = {
             "iron-plate": 5,
             "transport-belt": 4
         },
-        "result": {
+        "results": {
             "splitter": 1
         }
     },
@@ -881,7 +881,7 @@ recipe = {
             "iron-plate": 10,
             "transport-belt": 5
         },
-        "result": {
+        "results": {
             "underground-belt": 2
         }
     },
@@ -895,7 +895,7 @@ recipe = {
             "iron-plate": 5,
             "transport-belt": 5
         },
-        "result": {
+        "results": {
             "loader": 1
         }
     },
@@ -907,7 +907,7 @@ recipe = {
             "iron-plate": 20,
             "steel-plate": 5
         },
-        "result": {
+        "results": {
             "car": 1
         }
     },
@@ -919,7 +919,7 @@ recipe = {
             "iron-gear-wheel": 1,
             "pipe": 2
         },
-        "result": {
+        "results": {
             "engine-unit": 1
         }
     },
@@ -929,7 +929,7 @@ recipe = {
         "ingredients": {
             "iron-plate": 8
         },
-        "result": {
+        "results": {
             "iron-chest": 1
         }
     },
@@ -941,7 +941,7 @@ recipe = {
             "steel-plate": 5,
             "copper-plate": 5
         },
-        "result": {
+        "results": {
             "big-electric-pole": 1
         }
     },
@@ -953,7 +953,7 @@ recipe = {
             "steel-plate": 2,
             "copper-plate": 2
         },
-        "result": {
+        "results": {
             "medium-electric-pole": 1
         }
     },
@@ -966,7 +966,7 @@ recipe = {
             "copper-plate": 10,
             "wood": 5
         },
-        "result": {
+        "results": {
             "shotgun": 1
         }
     },
@@ -977,7 +977,7 @@ recipe = {
             "copper-plate": 2,
             "iron-plate": 2
         },
-        "result": {
+        "results": {
             "shotgun-shell": 1
         }
     },
@@ -989,7 +989,7 @@ recipe = {
             "steel-plate": 1,
             "copper-plate": 5
         },
-        "result": {
+        "results": {
             "piercing-rounds-magazine": 1
         }
     },
@@ -1000,7 +1000,7 @@ recipe = {
             "iron-plate": 5,
             "coal": 10
         },
-        "result": {
+        "results": {
             "grenade": 1
         }
     },
@@ -1011,7 +1011,7 @@ recipe = {
             "steel-plate": 6,
             "stone-brick": 10
         },
-        "result": {
+        "results": {
             "steel-furnace": 1
         }
     },
@@ -1023,7 +1023,7 @@ recipe = {
             "steel-plate": 2,
             "electronic-circuit": 2
         },
-        "result": {
+        "results": {
             "gate": 1
         }
     },
@@ -1034,7 +1034,7 @@ recipe = {
             "copper-plate": 100,
             "steel-plate": 50
         },
-        "result": {
+        "results": {
             "heavy-armor": 1
         }
     },
@@ -1044,7 +1044,7 @@ recipe = {
         "ingredients": {
             "steel-plate": 8
         },
-        "result": {
+        "results": {
             "steel-chest": 1
         }
     },
@@ -1055,7 +1055,7 @@ recipe = {
             "iron-gear-wheel": 40,
             "underground-belt": 2
         },
-        "result": {
+        "results": {
             "fast-underground-belt": 2
         }
     },
@@ -1067,7 +1067,7 @@ recipe = {
             "iron-gear-wheel": 10,
             "electronic-circuit": 10
         },
-        "result": {
+        "results": {
             "fast-splitter": 1
         }
     },
@@ -1079,7 +1079,7 @@ recipe = {
             "iron-ore": 1,
             "water": 100
         },
-        "result": {
+        "results": {
             "concrete": 10
         }
     },
@@ -1089,7 +1089,7 @@ recipe = {
         "ingredients": {
             "concrete": 10
         },
-        "result": {
+        "results": {
             "hazard-concrete": 10
         }
     },
@@ -1102,7 +1102,7 @@ recipe = {
             "steel-plate": 1,
             "water": 100
         },
-        "result": {
+        "results": {
             "refined-concrete": 10
         }
     },
@@ -1112,7 +1112,7 @@ recipe = {
         "ingredients": {
             "refined-concrete": 10
         },
-        "result": {
+        "results": {
             "refined-hazard-concrete": 10
         }
     },
@@ -1122,7 +1122,7 @@ recipe = {
         "ingredients": {
             "stone": 20
         },
-        "result": {
+        "results": {
             "landfill": 1
         }
     },
@@ -1133,7 +1133,7 @@ recipe = {
             "iron-gear-wheel": 5,
             "transport-belt": 1
         },
-        "result": {
+        "results": {
             "fast-transport-belt": 1
         }
     },
@@ -1145,7 +1145,7 @@ recipe = {
             "electronic-circuit": 15,
             "copper-plate": 5
         },
-        "result": {
+        "results": {
             "solar-panel": 1
         }
     },
@@ -1157,7 +1157,7 @@ recipe = {
             "iron-stick": 1,
             "steel-plate": 1
         },
-        "result": {
+        "results": {
             "rail": 2
         }
     },
@@ -1169,7 +1169,7 @@ recipe = {
             "electronic-circuit": 10,
             "steel-plate": 30
         },
-        "result": {
+        "results": {
             "locomotive": 1
         }
     },
@@ -1181,7 +1181,7 @@ recipe = {
             "iron-plate": 20,
             "steel-plate": 20
         },
-        "result": {
+        "results": {
             "cargo-wagon": 1
         }
     },
@@ -1192,7 +1192,7 @@ recipe = {
             "electronic-circuit": 1,
             "iron-plate": 5
         },
-        "result": {
+        "results": {
             "rail-signal": 1
         }
     },
@@ -1203,7 +1203,7 @@ recipe = {
             "electronic-circuit": 1,
             "iron-plate": 5
         },
-        "result": {
+        "results": {
             "rail-chain-signal": 1
         }
     },
@@ -1216,7 +1216,7 @@ recipe = {
             "iron-stick": 6,
             "steel-plate": 3
         },
-        "result": {
+        "results": {
             "train-stop": 1
         }
     },
@@ -1226,7 +1226,7 @@ recipe = {
         "ingredients": {
             "copper-ore": 1
         },
-        "result": {
+        "results": {
             "copper-plate": 1
         }
     },
@@ -1236,7 +1236,7 @@ recipe = {
         "ingredients": {
             "iron-ore": 1
         },
-        "result": {
+        "results": {
             "iron-plate": 1
         }
     },
@@ -1246,7 +1246,7 @@ recipe = {
         "ingredients": {
             "stone": 2
         },
-        "result": {
+        "results": {
             "stone-brick": 1
         }
     },
@@ -1256,7 +1256,7 @@ recipe = {
         "ingredients": {
             "iron-plate": 5
         },
-        "result": {
+        "results": {
             "steel-plate": 1
         }
     },
@@ -1267,7 +1267,7 @@ recipe = {
             "copper-cable": 5,
             "electronic-circuit": 5
         },
-        "result": {
+        "results": {
             "arithmetic-combinator": 1
         }
     },
@@ -1278,7 +1278,7 @@ recipe = {
             "copper-cable": 5,
             "electronic-circuit": 5
         },
-        "result": {
+        "results": {
             "decider-combinator": 1
         }
     },
@@ -1289,7 +1289,7 @@ recipe = {
             "copper-cable": 5,
             "electronic-circuit": 2
         },
-        "result": {
+        "results": {
             "constant-combinator": 1
         }
     },
@@ -1301,7 +1301,7 @@ recipe = {
             "copper-cable": 5,
             "electronic-circuit": 2
         },
-        "result": {
+        "results": {
             "power-switch": 1
         }
     },
@@ -1314,7 +1314,7 @@ recipe = {
             "copper-cable": 5,
             "electronic-circuit": 4
         },
-        "result": {
+        "results": {
             "programmable-speaker": 1
         }
     },
@@ -1325,7 +1325,7 @@ recipe = {
             "electronic-circuit": 1,
             "copper-cable": 1
         },
-        "result": {
+        "results": {
             "red-wire": 1
         }
     },
@@ -1336,7 +1336,7 @@ recipe = {
             "electronic-circuit": 1,
             "copper-cable": 1
         },
-        "result": {
+        "results": {
             "green-wire": 1
         }
     },
@@ -1348,7 +1348,7 @@ recipe = {
             "electronic-circuit": 3,
             "coal": 10
         },
-        "result": {
+        "results": {
             "poison-capsule": 1
         }
     },
@@ -1360,7 +1360,7 @@ recipe = {
             "electronic-circuit": 2,
             "coal": 5
         },
-        "result": {
+        "results": {
             "slowdown-capsule": 1
         }
     },
@@ -1372,7 +1372,7 @@ recipe = {
             "explosives": 5,
             "steel-plate": 5
         },
-        "result": {
+        "results": {
             "cluster-grenade": 1
         }
     },
@@ -1384,7 +1384,7 @@ recipe = {
             "electronic-circuit": 3,
             "iron-gear-wheel": 3
         },
-        "result": {
+        "results": {
             "defender-capsule": 1
         }
     },
@@ -1395,7 +1395,7 @@ recipe = {
             "defender-capsule": 4,
             "advanced-circuit": 3
         },
-        "result": {
+        "results": {
             "distractor-capsule": 1
         }
     },
@@ -1406,7 +1406,7 @@ recipe = {
             "distractor-capsule": 4,
             "speed-module": 1
         },
-        "result": {
+        "results": {
             "destroyer-capsule": 1
         }
     },
@@ -1418,7 +1418,7 @@ recipe = {
             "grenade": 1,
             "empty-barrel": 1
         },
-        "result": {
+        "results": {
             "cliff-explosives": 1
         }
     },
@@ -1429,7 +1429,7 @@ recipe = {
             "piercing-rounds-magazine": 1,
             "uranium-238": 1
         },
-        "result": {
+        "results": {
             "uranium-rounds-magazine": 1
         }
     },
@@ -1441,7 +1441,7 @@ recipe = {
             "explosives": 1,
             "iron-plate": 2
         },
-        "result": {
+        "results": {
             "rocket": 1
         }
     },
@@ -1452,7 +1452,7 @@ recipe = {
             "rocket": 1,
             "explosives": 2
         },
-        "result": {
+        "results": {
             "explosive-rocket": 1
         }
     },
@@ -1464,7 +1464,7 @@ recipe = {
             "explosives": 10,
             "uranium-235": 30
         },
-        "result": {
+        "results": {
             "atomic-bomb": 1
         }
     },
@@ -1476,7 +1476,7 @@ recipe = {
             "copper-plate": 5,
             "steel-plate": 2
         },
-        "result": {
+        "results": {
             "piercing-shotgun-shell": 1
         }
     },
@@ -1488,7 +1488,7 @@ recipe = {
             "plastic-bar": 2,
             "explosives": 1
         },
-        "result": {
+        "results": {
             "cannon-shell": 1
         }
     },
@@ -1500,7 +1500,7 @@ recipe = {
             "plastic-bar": 2,
             "explosives": 2
         },
-        "result": {
+        "results": {
             "explosive-cannon-shell": 1
         }
     },
@@ -1511,7 +1511,7 @@ recipe = {
             "cannon-shell": 1,
             "uranium-238": 1
         },
-        "result": {
+        "results": {
             "uranium-cannon-shell": 1
         }
     },
@@ -1522,7 +1522,7 @@ recipe = {
             "explosive-cannon-shell": 1,
             "uranium-238": 1
         },
-        "result": {
+        "results": {
             "explosive-uranium-cannon-shell": 1
         }
     },
@@ -1534,7 +1534,7 @@ recipe = {
             "radar": 1,
             "explosives": 8
         },
-        "result": {
+        "results": {
             "artillery-shell": 1
         }
     },
@@ -1545,7 +1545,7 @@ recipe = {
             "steel-plate": 5,
             "crude-oil": 100
         },
-        "result": {
+        "results": {
             "flamethrower-ammo": 1
         }
     },
@@ -1557,7 +1557,7 @@ recipe = {
             "fast-transport-belt": 1,
             "lubricant": 20
         },
-        "result": {
+        "results": {
             "express-transport-belt": 1
         }
     },
@@ -1568,7 +1568,7 @@ recipe = {
             "speed-module": 4,
             "assembling-machine-2": 2
         },
-        "result": {
+        "results": {
             "assembling-machine-3": 1
         }
     },
@@ -1581,7 +1581,7 @@ recipe = {
             "iron-gear-wheel": 15,
             "advanced-circuit": 10
         },
-        "result": {
+        "results": {
             "tank": 1
         }
     },
@@ -1598,7 +1598,7 @@ recipe = {
             "effectivity-module-3": 2,
             "raw-fish": 1
         },
-        "result": {
+        "results": {
             "spidertron": 1
         }
     },
@@ -1609,7 +1609,7 @@ recipe = {
             "rocket-control-unit": 1,
             "radar": 1
         },
-        "result": {
+        "results": {
             "spidertron-remote": 1
         }
     },
@@ -1622,7 +1622,7 @@ recipe = {
             "pipe": 8,
             "storage-tank": 1
         },
-        "result": {
+        "results": {
             "fluid-wagon": 1
         }
     },
@@ -1636,7 +1636,7 @@ recipe = {
             "pipe": 16,
             "advanced-circuit": 20
         },
-        "result": {
+        "results": {
             "artillery-wagon": 1
         }
     },
@@ -1647,7 +1647,7 @@ recipe = {
             "advanced-circuit": 30,
             "steel-plate": 50
         },
-        "result": {
+        "results": {
             "modular-armor": 1
         }
     },
@@ -1659,7 +1659,7 @@ recipe = {
             "electric-engine-unit": 20,
             "steel-plate": 40
         },
-        "result": {
+        "results": {
             "power-armor": 1
         }
     },
@@ -1673,7 +1673,7 @@ recipe = {
             "electric-engine-unit": 40,
             "low-density-structure": 30
         },
-        "result": {
+        "results": {
             "power-armor-mk2": 1
         }
     },
@@ -1684,7 +1684,7 @@ recipe = {
             "steel-plate": 5,
             "iron-gear-wheel": 10
         },
-        "result": {
+        "results": {
             "flamethrower": 1
         }
     },
@@ -1695,7 +1695,7 @@ recipe = {
             "steel-plate": 1,
             "explosives": 2
         },
-        "result": {
+        "results": {
             "land-mine": 4
         }
     },
@@ -1707,7 +1707,7 @@ recipe = {
             "iron-gear-wheel": 5,
             "electronic-circuit": 5
         },
-        "result": {
+        "results": {
             "rocket-launcher": 1
         }
     },
@@ -1720,7 +1720,7 @@ recipe = {
             "copper-plate": 10,
             "wood": 10
         },
-        "result": {
+        "results": {
             "combat-shotgun": 1
         }
     },
@@ -1732,7 +1732,7 @@ recipe = {
             "advanced-circuit": 3,
             "sulfur": 1
         },
-        "result": {
+        "results": {
             "chemical-science-pack": 2
         }
     },
@@ -1744,7 +1744,7 @@ recipe = {
             "grenade": 1,
             "stone-wall": 2
         },
-        "result": {
+        "results": {
             "military-science-pack": 2
         }
     },
@@ -1756,7 +1756,7 @@ recipe = {
             "productivity-module": 1,
             "rail": 30
         },
-        "result": {
+        "results": {
             "production-science-pack": 3
         }
     },
@@ -1768,7 +1768,7 @@ recipe = {
             "processing-unit": 2,
             "flying-robot-frame": 1
         },
-        "result": {
+        "results": {
             "utility-science-pack": 3
         }
     },
@@ -1780,7 +1780,7 @@ recipe = {
             "fast-underground-belt": 2,
             "lubricant": 40
         },
-        "result": {
+        "results": {
             "express-underground-belt": 2
         }
     },
@@ -1791,7 +1791,7 @@ recipe = {
             "fast-transport-belt": 5,
             "loader": 1
         },
-        "result": {
+        "results": {
             "fast-loader": 1
         }
     },
@@ -1802,7 +1802,7 @@ recipe = {
             "express-transport-belt": 5,
             "fast-loader": 1
         },
-        "result": {
+        "results": {
             "express-loader": 1
         }
     },
@@ -1815,7 +1815,7 @@ recipe = {
             "advanced-circuit": 10,
             "lubricant": 80
         },
-        "result": {
+        "results": {
             "express-splitter": 1
         }
     },
@@ -1827,7 +1827,7 @@ recipe = {
             "plastic-bar": 2,
             "copper-cable": 4
         },
-        "result": {
+        "results": {
             "advanced-circuit": 1
         }
     },
@@ -1839,7 +1839,7 @@ recipe = {
             "advanced-circuit": 2,
             "sulfuric-acid": 5
         },
-        "result": {
+        "results": {
             "processing-unit": 1
         }
     },
@@ -1850,7 +1850,7 @@ recipe = {
             "flying-robot-frame": 1,
             "advanced-circuit": 2
         },
-        "result": {
+        "results": {
             "logistic-robot": 1
         }
     },
@@ -1861,7 +1861,7 @@ recipe = {
             "flying-robot-frame": 1,
             "electronic-circuit": 2
         },
-        "result": {
+        "results": {
             "construction-robot": 1
         }
     },
@@ -1873,7 +1873,7 @@ recipe = {
             "electronic-circuit": 3,
             "advanced-circuit": 1
         },
-        "result": {
+        "results": {
             "logistic-chest-passive-provider": 1
         }
     },
@@ -1885,7 +1885,7 @@ recipe = {
             "electronic-circuit": 3,
             "advanced-circuit": 1
         },
-        "result": {
+        "results": {
             "logistic-chest-active-provider": 1
         }
     },
@@ -1897,7 +1897,7 @@ recipe = {
             "electronic-circuit": 3,
             "advanced-circuit": 1
         },
-        "result": {
+        "results": {
             "logistic-chest-storage": 1
         }
     },
@@ -1909,7 +1909,7 @@ recipe = {
             "electronic-circuit": 3,
             "advanced-circuit": 1
         },
-        "result": {
+        "results": {
             "logistic-chest-buffer": 1
         }
     },
@@ -1921,7 +1921,7 @@ recipe = {
             "electronic-circuit": 3,
             "advanced-circuit": 1
         },
-        "result": {
+        "results": {
             "logistic-chest-requester": 1
         }
     },
@@ -1935,7 +1935,7 @@ recipe = {
             "processing-unit": 200,
             "electric-engine-unit": 200
         },
-        "result": {
+        "results": {
             "rocket-silo": 1
         }
     },
@@ -1947,7 +1947,7 @@ recipe = {
             "iron-gear-wheel": 45,
             "advanced-circuit": 45
         },
-        "result": {
+        "results": {
             "roboport": 1
         }
     },
@@ -1959,7 +1959,7 @@ recipe = {
             "advanced-circuit": 5,
             "copper-plate": 5
         },
-        "result": {
+        "results": {
             "substation": 1
         }
     },
@@ -1970,7 +1970,7 @@ recipe = {
             "iron-plate": 2,
             "battery": 5
         },
-        "result": {
+        "results": {
             "accumulator": 1
         }
     },
@@ -1982,7 +1982,7 @@ recipe = {
             "advanced-circuit": 5,
             "stone-brick": 10
         },
-        "result": {
+        "results": {
             "electric-furnace": 1
         }
     },
@@ -1995,7 +1995,7 @@ recipe = {
             "steel-plate": 10,
             "copper-cable": 10
         },
-        "result": {
+        "results": {
             "beacon": 1
         }
     },
@@ -2008,7 +2008,7 @@ recipe = {
             "electronic-circuit": 5,
             "pipe": 10
         },
-        "result": {
+        "results": {
             "pumpjack": 1
         }
     },
@@ -2022,7 +2022,7 @@ recipe = {
             "electronic-circuit": 10,
             "pipe": 10
         },
-        "result": {
+        "results": {
             "oil-refinery": 1
         }
     },
@@ -2034,7 +2034,7 @@ recipe = {
             "lubricant": 15,
             "electronic-circuit": 2
         },
-        "result": {
+        "results": {
             "electric-engine-unit": 1
         }
     },
@@ -2047,7 +2047,7 @@ recipe = {
             "steel-plate": 1,
             "electronic-circuit": 3
         },
-        "result": {
+        "results": {
             "flying-robot-frame": 1
         }
     },
@@ -2059,7 +2059,7 @@ recipe = {
             "coal": 1,
             "water": 10
         },
-        "result": {
+        "results": {
             "explosives": 2
         }
     },
@@ -2071,7 +2071,7 @@ recipe = {
             "iron-plate": 1,
             "copper-plate": 1
         },
-        "result": {
+        "results": {
             "battery": 1
         }
     },
@@ -2082,7 +2082,7 @@ recipe = {
             "iron-plate": 20,
             "steel-plate": 5
         },
-        "result": {
+        "results": {
             "storage-tank": 1
         }
     },
@@ -2094,7 +2094,7 @@ recipe = {
             "steel-plate": 1,
             "pipe": 1
         },
-        "result": {
+        "results": {
             "pump": 1
         }
     },
@@ -2107,7 +2107,7 @@ recipe = {
             "electronic-circuit": 5,
             "pipe": 5
         },
-        "result": {
+        "results": {
             "chemical-plant": 1
         }
     },
@@ -2119,7 +2119,7 @@ recipe = {
             "copper-plate": 20,
             "plastic-bar": 5
         },
-        "result": {
+        "results": {
             "low-density-structure": 1
         }
     },
@@ -2130,7 +2130,7 @@ recipe = {
             "solid-fuel": 10,
             "light-oil": 10
         },
-        "result": {
+        "results": {
             "rocket-fuel": 1
         }
     },
@@ -2141,7 +2141,7 @@ recipe = {
             "processing-unit": 1,
             "speed-module": 1
         },
-        "result": {
+        "results": {
             "rocket-control-unit": 1
         }
     },
@@ -2153,7 +2153,7 @@ recipe = {
             "low-density-structure": 10,
             "rocket-fuel": 10
         },
-        "result": {
+        "results": {
             "rocket-part": 1
         }
     },
@@ -2168,7 +2168,7 @@ recipe = {
             "processing-unit": 100,
             "rocket-fuel": 50
         },
-        "result": {
+        "results": {
             "satellite": 1
         }
     },
@@ -2179,7 +2179,7 @@ recipe = {
             "iron-plate": 2,
             "electronic-circuit": 5
         },
-        "result": {
+        "results": {
             "electric-energy-interface": 1
         }
     },
@@ -2192,7 +2192,7 @@ recipe = {
             "advanced-circuit": 500,
             "copper-plate": 500
         },
-        "result": {
+        "results": {
             "nuclear-reactor": 1
         }
     },
@@ -2205,7 +2205,7 @@ recipe = {
             "advanced-circuit": 100,
             "iron-gear-wheel": 100
         },
-        "result": {
+        "results": {
             "centrifuge": 1
         }
     },
@@ -2228,7 +2228,7 @@ recipe = {
             "uranium-235": 1,
             "rocket-fuel": 1
         },
-        "result": {
+        "results": {
             "nuclear-fuel": 1
         }
     },
@@ -2250,7 +2250,7 @@ recipe = {
             "uranium-235": 1,
             "uranium-238": 19
         },
-        "result": {
+        "results": {
             "uranium-fuel-cell": 10
         }
     },
@@ -2262,7 +2262,7 @@ recipe = {
             "copper-plate": 100,
             "pipe": 10
         },
-        "result": {
+        "results": {
             "heat-exchanger": 1
         }
     },
@@ -2273,7 +2273,7 @@ recipe = {
             "steel-plate": 10,
             "copper-plate": 20
         },
-        "result": {
+        "results": {
             "heat-pipe": 1
         }
     },
@@ -2285,7 +2285,7 @@ recipe = {
             "copper-plate": 50,
             "pipe": 20
         },
-        "result": {
+        "results": {
             "steam-turbine": 1
         }
     },
@@ -2293,96 +2293,96 @@ recipe = {
         "name": "crude-oil",
         "energy_required": "",
         "ingredients": "",
-        "result": ""
+        "results": ""
     },
     "water": {
         "name": "water",
         "energy_required": "",
         "ingredients": "",
-        "result": ""
+        "results": ""
     },
     "coal": {
         "name": "coal",
         "energy_required": "",
         "ingredients": "",
-        "result": ""
+        "results": ""
     },
     "heavy-oil": {
         "name": "heavy-oil",
         "energy_required": "",
         "ingredients": "",
-        "result": ""
+        "results": ""
     },
     "steam": {
         "name": "steam",
         "energy_required": "",
         "ingredients": "",
-        "result": ""
+        "results": ""
     },
     "light-oil": {
         "name": "light-oil",
         "energy_required": "",
         "ingredients": "",
-        "result": ""
+        "results": ""
     },
     "petroleum-gas": {
         "name": "petroleum-gas",
         "energy_required": "",
         "ingredients": "",
-        "result": ""
+        "results": ""
     },
     "wood": {
         "name": "wood",
         "energy_required": "",
         "ingredients": "",
-        "result": ""
+        "results": ""
     },
     "stone": {
         "name": "stone",
         "energy_required": "",
         "ingredients": "",
-        "result": ""
+        "results": ""
     },
     "iron-ore": {
         "name": "iron-ore",
         "energy_required": "",
         "ingredients": "",
-        "result": ""
+        "results": ""
     },
     "copper-ore": {
         "name": "copper-ore",
         "energy_required": "",
         "ingredients": "",
-        "result": ""
+        "results": ""
     },
     "uranium-238": {
         "name": "uranium-238",
         "energy_required": "",
         "ingredients": "",
-        "result": ""
+        "results": ""
     },
     "uranium-235": {
         "name": "uranium-235",
         "energy_required": "",
         "ingredients": "",
-        "result": ""
+        "results": ""
     },
     "raw-fish": {
         "name": "raw-fish",
         "energy_required": "",
         "ingredients": "",
-        "result": ""
+        "results": ""
     },
     "solid-fuel": {
         "name": "solid-fuel",
         "energy_required": "",
         "ingredients": "",
-        "result": ""
+        "results": ""
     },
     "used-up-uranium-fuel-cell": {
         "name": "used-up-uranium-fuel-cell",
         "energy_required": "",
         "ingredients": "",
-        "result": ""
+        "results": ""
     }
 }
