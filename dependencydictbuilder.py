@@ -6,7 +6,7 @@ recipe1 = recipe.recipe
 
 class DependencyDictBuilder:
     def dependencyFinder_dict(self, item):
-        newdict = self.getDictInfo(item)
+        newdict = self.getDictInfo_dict(item)
 
         if recipe1[item]['ingredients'] == '':
             print('no dependency for ' + str(item))
@@ -22,14 +22,14 @@ class DependencyDictBuilder:
     def addChildLayer(self, ddict):
         ddict['child layer'] = {}
         for ingredient in list(ddict['ingredients'].keys()):
-            ddict['child layer'][ingredient] = self.getDictInfo(ingredient)
+            ddict['child layer'][ingredient] = self.getDictInfo_dict(ingredient)
             if recipe1[ingredient]['ingredients'] != '':
                 ddict['child layer'][ingredient] = self.addChildLayer(ddict['child layer'][ingredient])
         return ddict
 
     def getingredientperone_dict(self,itemname):
         copiedrecipe=copy.deepcopy(recipe1)
-        pquant = self.getpquant(itemname)
+        pquant = self.getResultCount_float(itemname)
         if len(copiedrecipe[itemname]['results'].keys())<2:
             for ingredient in copiedrecipe[itemname]['ingredients']:
                 copiedrecipe[itemname]['ingredients'][ingredient]=copiedrecipe[itemname]['ingredients'][ingredient]/pquant
@@ -37,7 +37,7 @@ class DependencyDictBuilder:
         else:
             pass
 
-    def getpquant_float(self,itemname):
+    def getResultCount_float(self, itemname):
         copiedrecipe = copy.deepcopy(recipe1)
         if recipe1[itemname]['results']=='':
             return int(1)
