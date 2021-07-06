@@ -33,8 +33,7 @@ class factorioItem:
                 child.mother = self
                 child.amount_mother_needs = self.ingredientsperone[key]
                 child.amount_ancestors_needs = child.amount_mother_needs * amount_ancestors_needs
-                self.children[
-                    child.name] = child  # children 변수에 지정된 딕셔너리에 factorioItem 타입 오브젝트를 value로 저장, list로 하는게 나을지 이게 나을지 아직 못 정함
+                self.children[child.name] = child  # children 변수에 지정된 딕셔너리에 factorioItem 타입 오브젝트를 value로 저장, list로 하는게 나을지 이게 나을지 아직 못 정함
                 child.makechild(child.amount_ancestors_needs)
 
 
