@@ -1,6 +1,6 @@
 import dependencydictbuilder
 import json
-
+from factorioItemclass import factorioItem
 
 class Test():
     def jprint(self, obj):
