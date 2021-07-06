@@ -21,10 +21,7 @@ class factorioItem:
                         ingredientsdict[ingredient] = ingredientsdict[ingredient] / self.results[self.name]
                     return ingredientsdict
         else:
-            pass  # TODO 다중출력 레시피는 나중에
-
-    def getingredientslist(self):
-        return list(self.ingredients.keys())
+            pass  # TODO 결과물이 여럿인 레시피는 나중에
 
     def makechild(self, ancestors_needs=1.0):
         self.children = {}
