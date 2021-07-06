@@ -9,4 +9,4 @@ class Test():
 
 tst = Test()
 ddb = dependencydictbuilder.DependencyDictBuilder()
-tst.jprint(ddb.dependencyFinder('processing-unit'))
+tst.jprint(ddb.dependencyFinder_dict('processing-unit'))

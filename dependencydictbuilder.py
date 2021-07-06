@@ -5,7 +5,7 @@ recipe1 = recipe.recipe
 
 
 class DependencyDictBuilder:
-    def dependencyFinder(self, item):
+    def dependencyFinder_dict(self, item):
         newdict = self.getDictInfo(item)
 
         if recipe1[item]['ingredients'] == '':
@@ -16,18 +16,18 @@ class DependencyDictBuilder:
             newdict = self.addChildLayer(newdict)
         return newdict
 
-    def getDictInfo(self, item):
+    def getDictInfo_dict(self, item):
         return recipe1[item]
 
-    def addChildLayer(self, dict):
-        dict['child layer'] = {}
-        for ingredient in list(dict['ingredients'].keys()):
-            dict['child layer'][ingredient] = self.getDictInfo(ingredient)
+    def addChildLayer(self, ddict):
+        ddict['child layer'] = {}
+        for ingredient in list(ddict['ingredients'].keys()):
+            ddict['child layer'][ingredient] = self.getDictInfo(ingredient)
             if recipe1[ingredient]['ingredients'] != '':
-                dict['child layer'][ingredient] = self.addChildLayer(dict['child layer'][ingredient])
-        return dict
+                ddict['child layer'][ingredient] = self.addChildLayer(ddict['child layer'][ingredient])
+        return ddict
 
-    def getingredientperone(self,itemname):
+    def getingredientperone_dict(self,itemname):
         copiedrecipe=copy.deepcopy(recipe1)
         pquant = self.getpquant(itemname)
         if len(copiedrecipe[itemname]['results'].keys())<2:
@@ -37,7 +37,7 @@ class DependencyDictBuilder:
         else:
             pass
 
-    def getpquant(self,itemname):
+    def getpquant_float(self,itemname):
         copiedrecipe = copy.deepcopy(recipe1)
         if recipe1[itemname]['results']=='':
             return int(1)
@@ -47,8 +47,8 @@ class DependencyDictBuilder:
         else:
             pass # TODO 다중출력레시피 손봐야함
 
-    def totalReq(self,itemname):
-        newdict = self.getDictInfo(itemname)
+    def totalReq_dict(self):
 
+        pass
 
 ddb=DependencyDictBuilder()
