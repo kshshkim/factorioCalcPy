@@ -10,4 +10,4 @@ class Test():
 
 tst = Test()
 ddb = dependencydictbuilder.DependencyDictBuilder()
-tst.jprint(ddb.dependencyFinder_dict('processing-unit'))
+tst.jprint(ddb.dependencyFinder_dict('advanced-circuit'))
