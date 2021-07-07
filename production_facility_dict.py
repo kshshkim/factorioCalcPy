@@ -17,6 +17,9 @@ production_facility_dict = {
         'module_slots': 4,
         'power_consumption': 375
     },
+
+    #이하 furnace
+
     'stone-furnace': {
         'name': 'stone-furnace',
         'production_rate': 1,
@@ -38,5 +41,6 @@ production_facility_dict = {
         'power_consumption': 180,
         'group': 'furnace'
     },
+
 
 }
