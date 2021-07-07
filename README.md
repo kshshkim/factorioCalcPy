@@ -12,7 +12,7 @@ recipe.py - 결과물, 의존성 추적, 재료 계산의 바탕이 됨.
 
 dependencydictbuilder.py - 딕셔너리 형식으로 의존성 트리와 재료 계산을 구현하려던 시도, 현재 중단
 
-factorioItemClass.py - factorioItem이라는 클래스 생성, makeChild() 메소드를 포함한 객체로 의존성 트리 생성을 간소화, 현재 개발중\n
+factorioItemClass.py - factorioItem이라는 클래스 생성, makeChild() 메소드를 포함한 객체로 의존성 트리 생성을 간소화, 현재 개발중
 
 
-main.py - 테스트 목적\n
+main.py - 테스트 목적
