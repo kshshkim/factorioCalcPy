@@ -3,7 +3,7 @@ import copy
 from collections import Counter
 
 
-class factorioItem:
+class FactorioItem:
     def __init__(self, putname):
         self.name = putname
         self.energy_required = recipe[self.name]['energy_required']
@@ -31,12 +31,12 @@ class factorioItem:
         self.totalreqdict = {}
         if self.ingredients != '':
             for key in self.ingredients.keys():
-                child = factorioItem(key)
+                child = FactorioItem(key)
                 child.mother = self
                 child.amount_mother_needs = float(self.ingredientsperone[key])
                 child.amount_ancestors_needs = child.amount_mother_needs * amount_ancestors_needs
                 self.children[child.name + ' *' + str(child.amount_ancestors_needs)] = child  # self.children.values() <- children 목록,
-                # children 변수에 지정된 딕셔너리에 factorioItem 타입 오브젝트를 value로 저장, list로 하는게 나을지 이게 나을지 아직 못 정함
+                # children 변수에 지정된 딕셔너리에 FactorioItem 타입 오브젝트를 value로 저장, list로 하는게 나을지 이게 나을지 아직 못 정함
                 child.makechild(child.amount_ancestors_needs)
                 self.totalreqdict[child.name] = child.amount_ancestors_needs
 
@@ -44,6 +44,7 @@ class factorioItem:
                 childdict = Counter(child.totalreqdict)
 
                 self.totalreqdict = selfdict + childdict
+                self.totalreqdict = dict(self.totalreqdict)
 
     def gettotalrequirements(self):
         self.makechild()
