@@ -26,4 +26,3 @@ class DependencyDictBuilder:
             if recipe1[ingredient]['ingredients'] != '':
                 ddict['child layer'][ingredient] = self.add_child_layer(ddict['child layer'][ingredient])
         return ddict
-    #
