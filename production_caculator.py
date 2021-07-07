@@ -6,7 +6,7 @@ import copy
 # FactorioItem 필요
 
 class ProductionCalc:
-    def __init__(self, target_item, production_rate=1):
+    def __init__(self, target_item, production_rate=1): # production_rate는 production_facility에 따라 달라짐.
         self.target=target_item
         self.total_req=FactorioItem(self.target).gettotalrequirements()
         self.production_rate=production_rate

@@ -5,6 +5,3 @@ class production_facility:
         self.module_slots=module_slots
         self.power_consumption=power_consumption
         self.cannot_produce_list=[]
-
-    def get_cannot_produce_list(self):
-        pass
