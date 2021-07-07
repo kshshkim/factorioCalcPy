@@ -8,6 +8,10 @@ class Test():
         print(json.dumps(obj, sort_keys=False, indent=6))
 
 
+
+
+
 tst = Test()
-ddb = dependencydictbuilder.DependencyDictBuilder()
-tst.jprint(ddb.dependencyFinder_dict('advanced-circuit'))
+asdfa=factorioItem('processing-unit')
+print('processing-unit 총 아이템 요구량')
+tst.jprint(asdfa.gettotalrequirements())
