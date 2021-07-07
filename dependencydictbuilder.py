@@ -21,7 +21,7 @@ class DependencyDictBuilder:
 
     def add_child_layer(self, ddict):
         ddict['child layer'] = {}
-        for ingredient in list(ddict['ingredients'].keys()):
+        for ingredient in list(ddict['ingredients'].keys()): #깊이우선
             ddict['child layer'][ingredient] = self.getDictInfo_dict(ingredient)
             if recipe1[ingredient]['ingredients'] != '':
                 ddict['child layer'][ingredient] = self.add_child_layer(ddict['child layer'][ingredient])
