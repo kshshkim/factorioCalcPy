@@ -96,6 +96,7 @@ class Copyrecipe:
         return returndict
 
     def checkitemexists(self):
+        # 레시피 이름과 아이템 이름이 다르거나, 1차 재료라서 레시피가 존재하지 않는 경우 아이템 데이터를 생성, 추후 수정 필요
         asdict = cr.recipeconvert()
         noitemlist = list()
         for item in list(asdict.keys()):
