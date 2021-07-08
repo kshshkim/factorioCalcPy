@@ -23,4 +23,4 @@ print(json.dumps(asdf.lua_parse(), sort_keys=False, indent=6))
 towrite=json.dumps(asdf.lua_parse(), sort_keys=False, indent=4)
 towrite='item_info = '+towrite+'\n'
 towrite=towrite.replace('true','True').replace('false','False')
-open('../item_info.py', 'w').write(towrite)
+open('../converted_data/item_info.py', 'w').write(towrite)

@@ -1,6 +1,5 @@
-from recipe_info import recipe
+from converted_data.recipe_info import recipe
 from factorioItemclass import FactorioItem
-import copy
 import pprint
 
 # production-time=energy_required/생산배수

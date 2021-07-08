@@ -1,4 +1,4 @@
-import recipe_info
+from converted_data import recipe_info
 
 recipe1 = recipe_info.recipe
 
