@@ -1,7 +1,7 @@
 import json
 
 
-class WriteDictToPy:
+class WriteDictToFile:
 
     def write(self, dict_obj: dict, dict_name: str, directory: str):
         towrite = json.dumps(dict_obj, sort_keys=False, indent=4)

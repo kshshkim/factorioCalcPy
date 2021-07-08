@@ -1,3 +1,6 @@
+data:extend(
+{
+  {
     type = "recipe",
     name = "speed-module",
     enabled = false,
@@ -143,11 +146,11 @@
     energy_required = 5,
     ingredients =
     {
-      {type="fluid", name="crude-oil", amount=100}
+      {type="fluid", name="crude-oil", amount=100, fluidbox_index = 2}
     },
     results=
     {
-      {type="fluid", name="petroleum-gas", amount=45}
+      {type="fluid", name="petroleum-gas", amount=45, fluidbox_index = 3}
     },
     icon = "__base__/graphics/icons/fluid/basic-oil-processing.png",
     icon_size = 64, icon_mipmaps = 4,
@@ -2826,3 +2829,6 @@
     energy_required = 3,
     ingredients = {{"iron-gear-wheel", 50}, {"copper-plate", 50}, {"pipe", 20}},
     result = "steam-turbine"
+  }
+}
+)

@@ -2,7 +2,7 @@ import copy
 import re
 from ast import literal_eval
 
-recipe = open('../lua_data_convert/recipe.lua', 'r')
+recipe = open('recipe.lua', 'r')
 strrecipe = str(recipe.read())  # 문자열로
 recipe.close()
 
