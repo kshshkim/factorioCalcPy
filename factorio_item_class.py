@@ -37,17 +37,31 @@ class FactorioItem:
                 child.mother = self
                 child.amount_mother_needs = float(self.ingredientsperone[key])
                 child.amount_ancestors_needs = child.amount_mother_needs * amount_ancestors_needs
-                self.children[child.name + ' *' + str(
-                    child.amount_ancestors_needs)] = child  # self.children.values() <- children 목록,
+                self.children[child.name + ' *' + str(child.amount_ancestors_needs)] = child  # self.children.values() <- children 목록,
                 # children 변수에 지정된 딕셔너리에 FactorioItem 타입 오브젝트를 value로 저장, list로 하는게 나을지 이게 나을지 아직 못 정함
                 child.makechild(child.amount_ancestors_needs)
-                self.totalreqdict[child.name] = child.amount_ancestors_needs
+                # self.totalreqdict[child.name] = child.amount_ancestors_needs
+                #
+                # selfdict = Counter(self.totalreqdict)
+                # childdict = Counter(child.totalreqdict)
+                #
+                # self.totalreqdict = selfdict + childdict
+                # self.totalreqdict = dict(self.totalreqdict)
 
-                selfdict = Counter(self.totalreqdict)
-                childdict = Counter(child.totalreqdict)
+    def totalreqdict(self): # 아이템 요구량 트리 순회
+        self.makechild()
+        current = self
+        self.isend=False
+        while self.isend:
+            pass
 
-                self.totalreqdict = selfdict + childdict
-                self.totalreqdict = dict(self.totalreqdict)
+
+    def is_has_child(self):
+        if self.children=={}:
+            return False
+        else:
+            return True
+
 
     def gettotalrequirements(self):
         self.makechild()
