@@ -1,6 +1,7 @@
-from recipe import recipe
+from recipe_info import recipe
 from factorioItemclass import FactorioItem
 import copy
+import pprint
 
 # production-time=energy_required/생산배수
 # FactorioItem 필요
@@ -25,4 +26,4 @@ class ProductionCalc:
 asd=ProductionCalc('processing-unit')
 
 
-print(asd.getproductiontime())
+pprint.pp(asd.total_req)

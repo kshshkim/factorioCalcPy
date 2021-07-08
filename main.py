@@ -1,4 +1,3 @@
-import dependencydictbuilder
 import json
 from factorioItemclass import FactorioItem
 

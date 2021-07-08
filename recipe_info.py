@@ -8,7 +8,9 @@ recipe = {
         },
         "results": {
             "speed-module": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/speed-module.png",
+        "subgroup": "module"
     },
     "speed-module-2": {
         "name": "speed-module-2",
@@ -20,7 +22,9 @@ recipe = {
         },
         "results": {
             "speed-module-2": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/speed-module-2.png",
+        "subgroup": "module"
     },
     "speed-module-3": {
         "name": "speed-module-3",
@@ -32,7 +36,9 @@ recipe = {
         },
         "results": {
             "speed-module-3": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/speed-module-3.png",
+        "subgroup": "module"
     },
     "productivity-module": {
         "name": "productivity-module",
@@ -43,7 +49,9 @@ recipe = {
         },
         "results": {
             "productivity-module": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/productivity-module.png",
+        "subgroup": "module"
     },
     "productivity-module-2": {
         "name": "productivity-module-2",
@@ -55,7 +63,9 @@ recipe = {
         },
         "results": {
             "productivity-module-2": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/productivity-module-2.png",
+        "subgroup": "module"
     },
     "productivity-module-3": {
         "name": "productivity-module-3",
@@ -67,7 +77,9 @@ recipe = {
         },
         "results": {
             "productivity-module-3": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/productivity-module-3.png",
+        "subgroup": "module"
     },
     "effectivity-module": {
         "name": "effectivity-module",
@@ -78,7 +90,9 @@ recipe = {
         },
         "results": {
             "effectivity-module": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/effectivity-module.png",
+        "subgroup": "module"
     },
     "effectivity-module-2": {
         "name": "effectivity-module-2",
@@ -90,7 +104,9 @@ recipe = {
         },
         "results": {
             "effectivity-module-2": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/effectivity-module-2.png",
+        "subgroup": "module"
     },
     "effectivity-module-3": {
         "name": "effectivity-module-3",
@@ -102,7 +118,9 @@ recipe = {
         },
         "results": {
             "effectivity-module-3": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/effectivity-module-3.png",
+        "subgroup": "module"
     },
     "stack-inserter": {
         "name": "stack-inserter",
@@ -115,7 +133,9 @@ recipe = {
         },
         "results": {
             "stack-inserter": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/stack-inserter.png",
+        "subgroup": "inserter"
     },
     "stack-filter-inserter": {
         "name": "stack-filter-inserter",
@@ -126,7 +146,9 @@ recipe = {
         },
         "results": {
             "stack-filter-inserter": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/stack-filter-inserter.png",
+        "subgroup": "inserter"
     },
     "basic-oil-processing": {
         "name": "basic-oil-processing",
@@ -208,7 +230,9 @@ recipe = {
         },
         "results": {
             "plastic-bar": 2
-        }
+        },
+        "icon": "__base__/graphics/icons/plastic-bar.png",
+        "subgroup": "raw-material"
     },
     "solid-fuel-from-light-oil": {
         "name": "solid-fuel-from-light-oil",
@@ -249,7 +273,9 @@ recipe = {
         },
         "results": {
             "sulfur": 2
-        }
+        },
+        "icon": "__base__/graphics/icons/sulfur.png",
+        "subgroup": "raw-material"
     },
     "lubricant": {
         "name": "lubricant",
@@ -269,7 +295,9 @@ recipe = {
         },
         "results": {
             "empty-barrel": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/fluid/barreling/empty-barrel.png",
+        "subgroup": "intermediate-product"
     },
     "night-vision-equipment": {
         "name": "night-vision-equipment",
@@ -280,7 +308,9 @@ recipe = {
         },
         "results": {
             "night-vision-equipment": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/night-vision-equipment.png",
+        "subgroup": "equipment"
     },
     "belt-immunity-equipment": {
         "name": "belt-immunity-equipment",
@@ -291,7 +321,9 @@ recipe = {
         },
         "results": {
             "belt-immunity-equipment": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/belt-immunity-equipment.png",
+        "subgroup": "equipment"
     },
     "energy-shield-equipment": {
         "name": "energy-shield-equipment",
@@ -302,7 +334,9 @@ recipe = {
         },
         "results": {
             "energy-shield-equipment": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/energy-shield-equipment.png",
+        "subgroup": "military-equipment"
     },
     "energy-shield-mk2-equipment": {
         "name": "energy-shield-mk2-equipment",
@@ -314,7 +348,9 @@ recipe = {
         },
         "results": {
             "energy-shield-mk2-equipment": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/energy-shield-mk2-equipment.png",
+        "subgroup": "military-equipment"
     },
     "battery-equipment": {
         "name": "battery-equipment",
@@ -325,7 +361,9 @@ recipe = {
         },
         "results": {
             "battery-equipment": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/battery-equipment.png",
+        "subgroup": "equipment"
     },
     "battery-mk2-equipment": {
         "name": "battery-mk2-equipment",
@@ -337,7 +375,9 @@ recipe = {
         },
         "results": {
             "battery-mk2-equipment": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/battery-mk2-equipment.png",
+        "subgroup": "equipment"
     },
     "solar-panel-equipment": {
         "name": "solar-panel-equipment",
@@ -360,7 +400,9 @@ recipe = {
         },
         "results": {
             "fusion-reactor-equipment": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/fusion-reactor-equipment.png",
+        "subgroup": "equipment"
     },
     "personal-laser-defense-equipment": {
         "name": "personal-laser-defense-equipment",
@@ -372,7 +414,9 @@ recipe = {
         },
         "results": {
             "personal-laser-defense-equipment": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/personal-laser-defense-equipment.png",
+        "subgroup": "military-equipment"
     },
     "discharge-defense-equipment": {
         "name": "discharge-defense-equipment",
@@ -384,7 +428,9 @@ recipe = {
         },
         "results": {
             "discharge-defense-equipment": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/discharge-defense-equipment.png",
+        "subgroup": "military-equipment"
     },
     "discharge-defense-remote": {
         "name": "discharge-defense-remote",
@@ -394,7 +440,9 @@ recipe = {
         },
         "results": {
             "discharge-defense-remote": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/discharge-defense-equipment-controller.png",
+        "subgroup": "military-equipment"
     },
     "exoskeleton-equipment": {
         "name": "exoskeleton-equipment",
@@ -406,7 +454,9 @@ recipe = {
         },
         "results": {
             "exoskeleton-equipment": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/exoskeleton-equipment.png",
+        "subgroup": "equipment"
     },
     "personal-roboport-equipment": {
         "name": "personal-roboport-equipment",
@@ -419,7 +469,9 @@ recipe = {
         },
         "results": {
             "personal-roboport-equipment": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/personal-roboport-equipment.png",
+        "subgroup": "equipment"
     },
     "personal-roboport-mk2-equipment": {
         "name": "personal-roboport-mk2-equipment",
@@ -431,7 +483,9 @@ recipe = {
         },
         "results": {
             "personal-roboport-mk2-equipment": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/personal-roboport-mk2-equipment.png",
+        "subgroup": "equipment"
     },
     "laser-turret": {
         "name": "laser-turret",
@@ -443,7 +497,9 @@ recipe = {
         },
         "results": {
             "laser-turret": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/laser-turret.png",
+        "subgroup": "defensive-structure"
     },
     "flamethrower-turret": {
         "name": "flamethrower-turret",
@@ -456,7 +512,9 @@ recipe = {
         },
         "results": {
             "flamethrower-turret": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/flamethrower-turret.png",
+        "subgroup": "defensive-structure"
     },
     "artillery-turret": {
         "name": "artillery-turret",
@@ -469,7 +527,9 @@ recipe = {
         },
         "results": {
             "artillery-turret": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/artillery-turret.png",
+        "subgroup": "defensive-structure"
     },
     "artillery-targeting-remote": {
         "name": "artillery-targeting-remote",
@@ -480,7 +540,9 @@ recipe = {
         },
         "results": {
             "artillery-targeting-remote": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/artillery-targeting-remote.png",
+        "subgroup": "defensive-structure"
     },
     "gun-turret": {
         "name": "gun-turret",
@@ -492,7 +554,9 @@ recipe = {
         },
         "results": {
             "gun-turret": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/gun-turret.png",
+        "subgroup": "defensive-structure"
     },
     "wooden-chest": {
         "name": "wooden-chest",
@@ -502,7 +566,9 @@ recipe = {
         },
         "results": {
             "wooden-chest": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/wooden-chest.png",
+        "subgroup": "storage"
     },
     "iron-stick": {
         "name": "iron-stick",
@@ -512,7 +578,9 @@ recipe = {
         },
         "results": {
             "iron-stick": 2
-        }
+        },
+        "icon": "__base__/graphics/icons/iron-stick.png",
+        "subgroup": "intermediate-product"
     },
     "stone-furnace": {
         "name": "stone-furnace",
@@ -522,7 +590,9 @@ recipe = {
         },
         "results": {
             "stone-furnace": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/stone-furnace.png",
+        "subgroup": "smelting-machine"
     },
     "boiler": {
         "name": "boiler",
@@ -533,7 +603,9 @@ recipe = {
         },
         "results": {
             "boiler": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/boiler.png",
+        "subgroup": "energy"
     },
     "steam-engine": {
         "name": "steam-engine",
@@ -545,7 +617,9 @@ recipe = {
         },
         "results": {
             "steam-engine": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/steam-engine.png",
+        "subgroup": "energy"
     },
     "iron-gear-wheel": {
         "name": "iron-gear-wheel",
@@ -555,7 +629,9 @@ recipe = {
         },
         "results": {
             "iron-gear-wheel": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/iron-gear-wheel.png",
+        "subgroup": "intermediate-product"
     },
     "electronic-circuit": {
         "name": "electronic-circuit",
@@ -566,7 +642,9 @@ recipe = {
         },
         "results": {
             "electronic-circuit": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/electronic-circuit.png",
+        "subgroup": "intermediate-product"
     },
     "transport-belt": {
         "name": "transport-belt",
@@ -577,7 +655,9 @@ recipe = {
         },
         "results": {
             "transport-belt": 2
-        }
+        },
+        "icon": "__base__/graphics/icons/transport-belt.png",
+        "subgroup": "belt"
     },
     "electric-mining-drill": {
         "name": "electric-mining-drill",
@@ -589,7 +669,9 @@ recipe = {
         },
         "results": {
             "electric-mining-drill": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/electric-mining-drill.png",
+        "subgroup": "extraction-machine"
     },
     "burner-mining-drill": {
         "name": "burner-mining-drill",
@@ -601,7 +683,9 @@ recipe = {
         },
         "results": {
             "burner-mining-drill": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/burner-mining-drill.png",
+        "subgroup": "extraction-machine"
     },
     "inserter": {
         "name": "inserter",
@@ -613,7 +697,9 @@ recipe = {
         },
         "results": {
             "inserter": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/inserter.png",
+        "subgroup": "inserter"
     },
     "fast-inserter": {
         "name": "fast-inserter",
@@ -625,7 +711,9 @@ recipe = {
         },
         "results": {
             "fast-inserter": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/fast-inserter.png",
+        "subgroup": "inserter"
     },
     "filter-inserter": {
         "name": "filter-inserter",
@@ -636,7 +724,9 @@ recipe = {
         },
         "results": {
             "filter-inserter": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/filter-inserter.png",
+        "subgroup": "inserter"
     },
     "long-handed-inserter": {
         "name": "long-handed-inserter",
@@ -648,7 +738,9 @@ recipe = {
         },
         "results": {
             "long-handed-inserter": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/long-handed-inserter.png",
+        "subgroup": "inserter"
     },
     "burner-inserter": {
         "name": "burner-inserter",
@@ -659,7 +751,9 @@ recipe = {
         },
         "results": {
             "burner-inserter": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/burner-inserter.png",
+        "subgroup": "inserter"
     },
     "pipe": {
         "name": "pipe",
@@ -669,7 +763,9 @@ recipe = {
         },
         "results": {
             "pipe": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/pipe.png",
+        "subgroup": "energy-pipe-distribution"
     },
     "offshore-pump": {
         "name": "offshore-pump",
@@ -681,7 +777,9 @@ recipe = {
         },
         "results": {
             "offshore-pump": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/offshore-pump.png",
+        "subgroup": "extraction-machine"
     },
     "copper-cable": {
         "name": "copper-cable",
@@ -691,7 +789,9 @@ recipe = {
         },
         "results": {
             "copper-cable": 2
-        }
+        },
+        "icon": "__base__/graphics/icons/copper-cable.png",
+        "subgroup": "intermediate-product"
     },
     "small-electric-pole": {
         "name": "small-electric-pole",
@@ -702,7 +802,9 @@ recipe = {
         },
         "results": {
             "small-electric-pole": 2
-        }
+        },
+        "icon": "__base__/graphics/icons/small-electric-pole.png",
+        "subgroup": "energy-pipe-distribution"
     },
     "pistol": {
         "name": "pistol",
@@ -713,7 +815,9 @@ recipe = {
         },
         "results": {
             "pistol": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/pistol.png",
+        "subgroup": "gun"
     },
     "submachine-gun": {
         "name": "submachine-gun",
@@ -725,7 +829,9 @@ recipe = {
         },
         "results": {
             "submachine-gun": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/submachine-gun.png",
+        "subgroup": "gun"
     },
     "firearm-magazine": {
         "name": "firearm-magazine",
@@ -735,7 +841,9 @@ recipe = {
         },
         "results": {
             "firearm-magazine": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/firearm-magazine.png",
+        "subgroup": "ammo"
     },
     "light-armor": {
         "name": "light-armor",
@@ -745,7 +853,9 @@ recipe = {
         },
         "results": {
             "light-armor": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/light-armor.png",
+        "subgroup": "armor"
     },
     "radar": {
         "name": "radar",
@@ -757,7 +867,9 @@ recipe = {
         },
         "results": {
             "radar": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/radar.png",
+        "subgroup": "defensive-structure"
     },
     "small-lamp": {
         "name": "small-lamp",
@@ -769,7 +881,9 @@ recipe = {
         },
         "results": {
             "small-lamp": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/small-lamp.png",
+        "subgroup": "circuit-network"
     },
     "pipe-to-ground": {
         "name": "pipe-to-ground",
@@ -780,7 +894,9 @@ recipe = {
         },
         "results": {
             "pipe-to-ground": 2
-        }
+        },
+        "icon": "__base__/graphics/icons/pipe-to-ground.png",
+        "subgroup": "energy-pipe-distribution"
     },
     "assembling-machine-1": {
         "name": "assembling-machine-1",
@@ -792,7 +908,9 @@ recipe = {
         },
         "results": {
             "assembling-machine-1": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/assembling-machine-1.png",
+        "subgroup": "production-machine"
     },
     "repair-pack": {
         "name": "repair-pack",
@@ -803,7 +921,9 @@ recipe = {
         },
         "results": {
             "repair-pack": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/repair-pack.png",
+        "subgroup": "tool"
     },
     "automation-science-pack": {
         "name": "automation-science-pack",
@@ -814,7 +934,9 @@ recipe = {
         },
         "results": {
             "automation-science-pack": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/automation-science-pack.png",
+        "subgroup": "science-pack"
     },
     "logistic-science-pack": {
         "name": "logistic-science-pack",
@@ -825,7 +947,9 @@ recipe = {
         },
         "results": {
             "logistic-science-pack": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/logistic-science-pack.png",
+        "subgroup": "science-pack"
     },
     "lab": {
         "name": "lab",
@@ -837,7 +961,9 @@ recipe = {
         },
         "results": {
             "lab": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/lab.png",
+        "subgroup": "production-machine"
     },
     "stone-wall": {
         "name": "stone-wall",
@@ -847,7 +973,9 @@ recipe = {
         },
         "results": {
             "stone-wall": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/wall.png",
+        "subgroup": "defensive-structure"
     },
     "assembling-machine-2": {
         "name": "assembling-machine-2",
@@ -860,7 +988,9 @@ recipe = {
         },
         "results": {
             "assembling-machine-2": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/assembling-machine-2.png",
+        "subgroup": "production-machine"
     },
     "splitter": {
         "name": "splitter",
@@ -872,7 +1002,9 @@ recipe = {
         },
         "results": {
             "splitter": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/splitter.png",
+        "subgroup": "belt"
     },
     "underground-belt": {
         "name": "underground-belt",
@@ -883,7 +1015,9 @@ recipe = {
         },
         "results": {
             "underground-belt": 2
-        }
+        },
+        "icon": "__base__/graphics/icons/underground-belt.png",
+        "subgroup": "belt"
     },
     "loader": {
         "name": "loader",
@@ -897,7 +1031,9 @@ recipe = {
         },
         "results": {
             "loader": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/loader.png",
+        "subgroup": "belt"
     },
     "car": {
         "name": "car",
@@ -909,7 +1045,9 @@ recipe = {
         },
         "results": {
             "car": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/car.png",
+        "subgroup": "transport"
     },
     "engine-unit": {
         "name": "engine-unit",
@@ -921,7 +1059,9 @@ recipe = {
         },
         "results": {
             "engine-unit": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/engine-unit.png",
+        "subgroup": "intermediate-product"
     },
     "iron-chest": {
         "name": "iron-chest",
@@ -931,7 +1071,9 @@ recipe = {
         },
         "results": {
             "iron-chest": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/iron-chest.png",
+        "subgroup": "storage"
     },
     "big-electric-pole": {
         "name": "big-electric-pole",
@@ -943,7 +1085,9 @@ recipe = {
         },
         "results": {
             "big-electric-pole": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/big-electric-pole.png",
+        "subgroup": "energy-pipe-distribution"
     },
     "medium-electric-pole": {
         "name": "medium-electric-pole",
@@ -955,7 +1099,9 @@ recipe = {
         },
         "results": {
             "medium-electric-pole": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/medium-electric-pole.png",
+        "subgroup": "energy-pipe-distribution"
     },
     "shotgun": {
         "name": "shotgun",
@@ -968,7 +1114,9 @@ recipe = {
         },
         "results": {
             "shotgun": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/shotgun.png",
+        "subgroup": "gun"
     },
     "shotgun-shell": {
         "name": "shotgun-shell",
@@ -979,7 +1127,9 @@ recipe = {
         },
         "results": {
             "shotgun-shell": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/shotgun-shell.png",
+        "subgroup": "ammo"
     },
     "piercing-rounds-magazine": {
         "name": "piercing-rounds-magazine",
@@ -991,7 +1141,9 @@ recipe = {
         },
         "results": {
             "piercing-rounds-magazine": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/piercing-rounds-magazine.png",
+        "subgroup": "ammo"
     },
     "grenade": {
         "name": "grenade",
@@ -1002,7 +1154,9 @@ recipe = {
         },
         "results": {
             "grenade": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/grenade.png",
+        "subgroup": "capsule"
     },
     "steel-furnace": {
         "name": "steel-furnace",
@@ -1013,7 +1167,9 @@ recipe = {
         },
         "results": {
             "steel-furnace": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/steel-furnace.png",
+        "subgroup": "smelting-machine"
     },
     "gate": {
         "name": "gate",
@@ -1025,7 +1181,9 @@ recipe = {
         },
         "results": {
             "gate": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/gate.png",
+        "subgroup": "defensive-structure"
     },
     "heavy-armor": {
         "name": "heavy-armor",
@@ -1036,7 +1194,9 @@ recipe = {
         },
         "results": {
             "heavy-armor": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/heavy-armor.png",
+        "subgroup": "armor"
     },
     "steel-chest": {
         "name": "steel-chest",
@@ -1046,7 +1206,9 @@ recipe = {
         },
         "results": {
             "steel-chest": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/steel-chest.png",
+        "subgroup": "storage"
     },
     "fast-underground-belt": {
         "name": "fast-underground-belt",
@@ -1057,7 +1219,9 @@ recipe = {
         },
         "results": {
             "fast-underground-belt": 2
-        }
+        },
+        "icon": "__base__/graphics/icons/fast-underground-belt.png",
+        "subgroup": "belt"
     },
     "fast-splitter": {
         "name": "fast-splitter",
@@ -1069,7 +1233,9 @@ recipe = {
         },
         "results": {
             "fast-splitter": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/fast-splitter.png",
+        "subgroup": "belt"
     },
     "concrete": {
         "name": "concrete",
@@ -1081,7 +1247,9 @@ recipe = {
         },
         "results": {
             "concrete": 10
-        }
+        },
+        "icon": "__base__/graphics/icons/concrete.png",
+        "subgroup": "terrain"
     },
     "hazard-concrete": {
         "name": "hazard-concrete",
@@ -1091,7 +1259,9 @@ recipe = {
         },
         "results": {
             "hazard-concrete": 10
-        }
+        },
+        "icon": "__base__/graphics/icons/hazard-concrete.png",
+        "subgroup": "terrain"
     },
     "refined-concrete": {
         "name": "refined-concrete",
@@ -1104,7 +1274,9 @@ recipe = {
         },
         "results": {
             "refined-concrete": 10
-        }
+        },
+        "icon": "__base__/graphics/icons/refined-concrete.png",
+        "subgroup": "terrain"
     },
     "refined-hazard-concrete": {
         "name": "refined-hazard-concrete",
@@ -1114,7 +1286,9 @@ recipe = {
         },
         "results": {
             "refined-hazard-concrete": 10
-        }
+        },
+        "icon": "__base__/graphics/icons/refined-hazard-concrete.png",
+        "subgroup": "terrain"
     },
     "landfill": {
         "name": "landfill",
@@ -1124,7 +1298,9 @@ recipe = {
         },
         "results": {
             "landfill": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/landfill.png",
+        "subgroup": "terrain"
     },
     "fast-transport-belt": {
         "name": "fast-transport-belt",
@@ -1135,7 +1311,9 @@ recipe = {
         },
         "results": {
             "fast-transport-belt": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/fast-transport-belt.png",
+        "subgroup": "belt"
     },
     "solar-panel": {
         "name": "solar-panel",
@@ -1147,7 +1325,9 @@ recipe = {
         },
         "results": {
             "solar-panel": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/solar-panel.png",
+        "subgroup": "energy"
     },
     "rail": {
         "name": "rail",
@@ -1159,7 +1339,9 @@ recipe = {
         },
         "results": {
             "rail": 2
-        }
+        },
+        "icon": "__base__/graphics/icons/rail.png",
+        "subgroup": "train-transport"
     },
     "locomotive": {
         "name": "locomotive",
@@ -1171,7 +1353,9 @@ recipe = {
         },
         "results": {
             "locomotive": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/locomotive.png",
+        "subgroup": "train-transport"
     },
     "cargo-wagon": {
         "name": "cargo-wagon",
@@ -1183,7 +1367,9 @@ recipe = {
         },
         "results": {
             "cargo-wagon": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/cargo-wagon.png",
+        "subgroup": "train-transport"
     },
     "rail-signal": {
         "name": "rail-signal",
@@ -1194,7 +1380,9 @@ recipe = {
         },
         "results": {
             "rail-signal": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/rail-signal.png",
+        "subgroup": "train-transport"
     },
     "rail-chain-signal": {
         "name": "rail-chain-signal",
@@ -1205,7 +1393,9 @@ recipe = {
         },
         "results": {
             "rail-chain-signal": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/rail-chain-signal.png",
+        "subgroup": "train-transport"
     },
     "train-stop": {
         "name": "train-stop",
@@ -1218,7 +1408,9 @@ recipe = {
         },
         "results": {
             "train-stop": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/train-stop.png",
+        "subgroup": "train-transport"
     },
     "copper-plate": {
         "name": "copper-plate",
@@ -1228,7 +1420,9 @@ recipe = {
         },
         "results": {
             "copper-plate": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/copper-plate.png",
+        "subgroup": "raw-material"
     },
     "iron-plate": {
         "name": "iron-plate",
@@ -1238,7 +1432,9 @@ recipe = {
         },
         "results": {
             "iron-plate": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/iron-plate.png",
+        "subgroup": "raw-material"
     },
     "stone-brick": {
         "name": "stone-brick",
@@ -1248,7 +1444,9 @@ recipe = {
         },
         "results": {
             "stone-brick": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/stone-brick.png",
+        "subgroup": "terrain"
     },
     "steel-plate": {
         "name": "steel-plate",
@@ -1258,7 +1456,9 @@ recipe = {
         },
         "results": {
             "steel-plate": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/steel-plate.png",
+        "subgroup": "raw-material"
     },
     "arithmetic-combinator": {
         "name": "arithmetic-combinator",
@@ -1280,7 +1480,9 @@ recipe = {
         },
         "results": {
             "decider-combinator": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/decider-combinator.png",
+        "subgroup": "circuit-network"
     },
     "constant-combinator": {
         "name": "constant-combinator",
@@ -1291,7 +1493,9 @@ recipe = {
         },
         "results": {
             "constant-combinator": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/constant-combinator.png",
+        "subgroup": "circuit-network"
     },
     "power-switch": {
         "name": "power-switch",
@@ -1303,7 +1507,9 @@ recipe = {
         },
         "results": {
             "power-switch": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/power-switch.png",
+        "subgroup": "circuit-network"
     },
     "programmable-speaker": {
         "name": "programmable-speaker",
@@ -1316,7 +1522,9 @@ recipe = {
         },
         "results": {
             "programmable-speaker": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/programmable-speaker.png",
+        "subgroup": "circuit-network"
     },
     "red-wire": {
         "name": "red-wire",
@@ -1327,7 +1535,9 @@ recipe = {
         },
         "results": {
             "red-wire": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/red-wire.png",
+        "subgroup": "circuit-network"
     },
     "green-wire": {
         "name": "green-wire",
@@ -1338,7 +1548,9 @@ recipe = {
         },
         "results": {
             "green-wire": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/green-wire.png",
+        "subgroup": "circuit-network"
     },
     "poison-capsule": {
         "name": "poison-capsule",
@@ -1350,7 +1562,9 @@ recipe = {
         },
         "results": {
             "poison-capsule": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/poison-capsule.png",
+        "subgroup": "capsule"
     },
     "slowdown-capsule": {
         "name": "slowdown-capsule",
@@ -1397,7 +1611,9 @@ recipe = {
         },
         "results": {
             "distractor-capsule": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/distractor.png",
+        "subgroup": "capsule"
     },
     "destroyer-capsule": {
         "name": "destroyer-capsule",
@@ -1408,7 +1624,9 @@ recipe = {
         },
         "results": {
             "destroyer-capsule": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/destroyer.png",
+        "subgroup": "capsule"
     },
     "cliff-explosives": {
         "name": "cliff-explosives",
@@ -1420,7 +1638,9 @@ recipe = {
         },
         "results": {
             "cliff-explosives": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/cliff-explosives.png",
+        "subgroup": "terrain"
     },
     "uranium-rounds-magazine": {
         "name": "uranium-rounds-magazine",
@@ -1443,7 +1663,9 @@ recipe = {
         },
         "results": {
             "rocket": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/rocket.png",
+        "subgroup": "ammo"
     },
     "explosive-rocket": {
         "name": "explosive-rocket",
@@ -1454,7 +1676,9 @@ recipe = {
         },
         "results": {
             "explosive-rocket": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/explosive-rocket.png",
+        "subgroup": "ammo"
     },
     "atomic-bomb": {
         "name": "atomic-bomb",
@@ -1466,7 +1690,9 @@ recipe = {
         },
         "results": {
             "atomic-bomb": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/atomic-bomb.png",
+        "subgroup": "ammo"
     },
     "piercing-shotgun-shell": {
         "name": "piercing-shotgun-shell",
@@ -1478,7 +1704,9 @@ recipe = {
         },
         "results": {
             "piercing-shotgun-shell": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/piercing-shotgun-shell.png",
+        "subgroup": "ammo"
     },
     "cannon-shell": {
         "name": "cannon-shell",
@@ -1490,7 +1718,9 @@ recipe = {
         },
         "results": {
             "cannon-shell": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/cannon-shell.png",
+        "subgroup": "ammo"
     },
     "explosive-cannon-shell": {
         "name": "explosive-cannon-shell",
@@ -1502,7 +1732,9 @@ recipe = {
         },
         "results": {
             "explosive-cannon-shell": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/explosive-cannon-shell.png",
+        "subgroup": "ammo"
     },
     "uranium-cannon-shell": {
         "name": "uranium-cannon-shell",
@@ -1513,7 +1745,9 @@ recipe = {
         },
         "results": {
             "uranium-cannon-shell": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/uranium-cannon-shell.png",
+        "subgroup": "ammo"
     },
     "explosive-uranium-cannon-shell": {
         "name": "explosive-uranium-cannon-shell",
@@ -1524,7 +1758,9 @@ recipe = {
         },
         "results": {
             "explosive-uranium-cannon-shell": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/explosive-uranium-cannon-shell.png",
+        "subgroup": "ammo"
     },
     "artillery-shell": {
         "name": "artillery-shell",
@@ -1536,7 +1772,9 @@ recipe = {
         },
         "results": {
             "artillery-shell": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/artillery-shell.png",
+        "subgroup": "ammo"
     },
     "flamethrower-ammo": {
         "name": "flamethrower-ammo",
@@ -1547,7 +1785,9 @@ recipe = {
         },
         "results": {
             "flamethrower-ammo": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/flamethrower-ammo.png",
+        "subgroup": "ammo"
     },
     "express-transport-belt": {
         "name": "express-transport-belt",
@@ -1559,7 +1799,9 @@ recipe = {
         },
         "results": {
             "express-transport-belt": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/express-transport-belt.png",
+        "subgroup": "belt"
     },
     "assembling-machine-3": {
         "name": "assembling-machine-3",
@@ -1570,7 +1812,9 @@ recipe = {
         },
         "results": {
             "assembling-machine-3": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/assembling-machine-3.png",
+        "subgroup": "production-machine"
     },
     "tank": {
         "name": "tank",
@@ -1583,7 +1827,9 @@ recipe = {
         },
         "results": {
             "tank": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/tank.png",
+        "subgroup": "transport"
     },
     "spidertron": {
         "name": "spidertron",
@@ -1600,7 +1846,9 @@ recipe = {
         },
         "results": {
             "spidertron": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/spidertron.png",
+        "subgroup": "transport"
     },
     "spidertron-remote": {
         "name": "spidertron-remote",
@@ -1611,7 +1859,9 @@ recipe = {
         },
         "results": {
             "spidertron-remote": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/spidertron-remote.png",
+        "subgroup": "transport"
     },
     "fluid-wagon": {
         "name": "fluid-wagon",
@@ -1624,7 +1874,9 @@ recipe = {
         },
         "results": {
             "fluid-wagon": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/fluid-wagon.png",
+        "subgroup": "train-transport"
     },
     "artillery-wagon": {
         "name": "artillery-wagon",
@@ -1638,7 +1890,9 @@ recipe = {
         },
         "results": {
             "artillery-wagon": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/artillery-wagon.png",
+        "subgroup": "train-transport"
     },
     "modular-armor": {
         "name": "modular-armor",
@@ -1661,7 +1915,9 @@ recipe = {
         },
         "results": {
             "power-armor": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/power-armor.png",
+        "subgroup": "armor"
     },
     "power-armor-mk2": {
         "name": "power-armor-mk2",
@@ -1675,7 +1931,9 @@ recipe = {
         },
         "results": {
             "power-armor-mk2": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/power-armor-mk2.png",
+        "subgroup": "armor"
     },
     "flamethrower": {
         "name": "flamethrower",
@@ -1686,7 +1944,9 @@ recipe = {
         },
         "results": {
             "flamethrower": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/flamethrower.png",
+        "subgroup": "gun"
     },
     "land-mine": {
         "name": "land-mine",
@@ -1697,7 +1957,9 @@ recipe = {
         },
         "results": {
             "land-mine": 4
-        }
+        },
+        "icon": "__base__/graphics/icons/land-mine.png",
+        "subgroup": "gun"
     },
     "rocket-launcher": {
         "name": "rocket-launcher",
@@ -1709,7 +1971,9 @@ recipe = {
         },
         "results": {
             "rocket-launcher": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/rocket-launcher.png",
+        "subgroup": "gun"
     },
     "combat-shotgun": {
         "name": "combat-shotgun",
@@ -1722,7 +1986,9 @@ recipe = {
         },
         "results": {
             "combat-shotgun": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/combat-shotgun.png",
+        "subgroup": "gun"
     },
     "chemical-science-pack": {
         "name": "chemical-science-pack",
@@ -1734,7 +2000,9 @@ recipe = {
         },
         "results": {
             "chemical-science-pack": 2
-        }
+        },
+        "icon": "__base__/graphics/icons/chemical-science-pack.png",
+        "subgroup": "science-pack"
     },
     "military-science-pack": {
         "name": "military-science-pack",
@@ -1746,7 +2014,9 @@ recipe = {
         },
         "results": {
             "military-science-pack": 2
-        }
+        },
+        "icon": "__base__/graphics/icons/military-science-pack.png",
+        "subgroup": "science-pack"
     },
     "production-science-pack": {
         "name": "production-science-pack",
@@ -1758,7 +2028,9 @@ recipe = {
         },
         "results": {
             "production-science-pack": 3
-        }
+        },
+        "icon": "__base__/graphics/icons/production-science-pack.png",
+        "subgroup": "science-pack"
     },
     "utility-science-pack": {
         "name": "utility-science-pack",
@@ -1770,7 +2042,9 @@ recipe = {
         },
         "results": {
             "utility-science-pack": 3
-        }
+        },
+        "icon": "__base__/graphics/icons/utility-science-pack.png",
+        "subgroup": "science-pack"
     },
     "express-underground-belt": {
         "name": "express-underground-belt",
@@ -1782,7 +2056,9 @@ recipe = {
         },
         "results": {
             "express-underground-belt": 2
-        }
+        },
+        "icon": "__base__/graphics/icons/express-underground-belt.png",
+        "subgroup": "belt"
     },
     "fast-loader": {
         "name": "fast-loader",
@@ -1793,7 +2069,9 @@ recipe = {
         },
         "results": {
             "fast-loader": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/fast-loader.png",
+        "subgroup": "belt"
     },
     "express-loader": {
         "name": "express-loader",
@@ -1804,7 +2082,9 @@ recipe = {
         },
         "results": {
             "express-loader": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/express-loader.png",
+        "subgroup": "belt"
     },
     "express-splitter": {
         "name": "express-splitter",
@@ -1817,7 +2097,9 @@ recipe = {
         },
         "results": {
             "express-splitter": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/express-splitter.png",
+        "subgroup": "belt"
     },
     "advanced-circuit": {
         "name": "advanced-circuit",
@@ -1829,7 +2111,9 @@ recipe = {
         },
         "results": {
             "advanced-circuit": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/advanced-circuit.png",
+        "subgroup": "intermediate-product"
     },
     "processing-unit": {
         "name": "processing-unit",
@@ -1841,7 +2125,9 @@ recipe = {
         },
         "results": {
             "processing-unit": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/processing-unit.png",
+        "subgroup": "intermediate-product"
     },
     "logistic-robot": {
         "name": "logistic-robot",
@@ -1852,7 +2138,9 @@ recipe = {
         },
         "results": {
             "logistic-robot": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/logistic-robot.png",
+        "subgroup": "logistic-network"
     },
     "construction-robot": {
         "name": "construction-robot",
@@ -1863,7 +2151,9 @@ recipe = {
         },
         "results": {
             "construction-robot": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/construction-robot.png",
+        "subgroup": "logistic-network"
     },
     "logistic-chest-passive-provider": {
         "name": "logistic-chest-passive-provider",
@@ -1875,7 +2165,9 @@ recipe = {
         },
         "results": {
             "logistic-chest-passive-provider": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/logistic-chest-passive-provider.png",
+        "subgroup": "logistic-network"
     },
     "logistic-chest-active-provider": {
         "name": "logistic-chest-active-provider",
@@ -1887,7 +2179,9 @@ recipe = {
         },
         "results": {
             "logistic-chest-active-provider": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/logistic-chest-active-provider.png",
+        "subgroup": "logistic-network"
     },
     "logistic-chest-storage": {
         "name": "logistic-chest-storage",
@@ -1899,7 +2193,9 @@ recipe = {
         },
         "results": {
             "logistic-chest-storage": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/logistic-chest-storage.png",
+        "subgroup": "logistic-network"
     },
     "logistic-chest-buffer": {
         "name": "logistic-chest-buffer",
@@ -1911,7 +2207,9 @@ recipe = {
         },
         "results": {
             "logistic-chest-buffer": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/logistic-chest-buffer.png",
+        "subgroup": "logistic-network"
     },
     "logistic-chest-requester": {
         "name": "logistic-chest-requester",
@@ -1923,7 +2221,9 @@ recipe = {
         },
         "results": {
             "logistic-chest-requester": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/logistic-chest-requester.png",
+        "subgroup": "logistic-network"
     },
     "rocket-silo": {
         "name": "rocket-silo",
@@ -1937,7 +2237,9 @@ recipe = {
         },
         "results": {
             "rocket-silo": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/rocket-silo.png",
+        "subgroup": "space-related"
     },
     "roboport": {
         "name": "roboport",
@@ -1949,7 +2251,9 @@ recipe = {
         },
         "results": {
             "roboport": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/roboport.png",
+        "subgroup": "logistic-network"
     },
     "substation": {
         "name": "substation",
@@ -1961,7 +2265,9 @@ recipe = {
         },
         "results": {
             "substation": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/substation.png",
+        "subgroup": "energy-pipe-distribution"
     },
     "accumulator": {
         "name": "accumulator",
@@ -1972,7 +2278,9 @@ recipe = {
         },
         "results": {
             "accumulator": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/accumulator.png",
+        "subgroup": "energy"
     },
     "electric-furnace": {
         "name": "electric-furnace",
@@ -1984,7 +2292,9 @@ recipe = {
         },
         "results": {
             "electric-furnace": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/electric-furnace.png",
+        "subgroup": "smelting-machine"
     },
     "beacon": {
         "name": "beacon",
@@ -1997,7 +2307,9 @@ recipe = {
         },
         "results": {
             "beacon": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/beacon.png",
+        "subgroup": "module"
     },
     "pumpjack": {
         "name": "pumpjack",
@@ -2010,7 +2322,9 @@ recipe = {
         },
         "results": {
             "pumpjack": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/pumpjack.png",
+        "subgroup": "extraction-machine"
     },
     "oil-refinery": {
         "name": "oil-refinery",
@@ -2024,7 +2338,9 @@ recipe = {
         },
         "results": {
             "oil-refinery": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/oil-refinery.png",
+        "subgroup": "production-machine"
     },
     "electric-engine-unit": {
         "name": "electric-engine-unit",
@@ -2036,7 +2352,9 @@ recipe = {
         },
         "results": {
             "electric-engine-unit": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/electric-engine-unit.png",
+        "subgroup": "intermediate-product"
     },
     "flying-robot-frame": {
         "name": "flying-robot-frame",
@@ -2049,7 +2367,9 @@ recipe = {
         },
         "results": {
             "flying-robot-frame": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/flying-robot-frame.png",
+        "subgroup": "intermediate-product"
     },
     "explosives": {
         "name": "explosives",
@@ -2061,7 +2381,9 @@ recipe = {
         },
         "results": {
             "explosives": 2
-        }
+        },
+        "icon": "__base__/graphics/icons/explosives.png",
+        "subgroup": "raw-material"
     },
     "battery": {
         "name": "battery",
@@ -2073,7 +2395,9 @@ recipe = {
         },
         "results": {
             "battery": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/battery.png",
+        "subgroup": "raw-material"
     },
     "storage-tank": {
         "name": "storage-tank",
@@ -2084,7 +2408,9 @@ recipe = {
         },
         "results": {
             "storage-tank": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/storage-tank.png",
+        "subgroup": "storage"
     },
     "pump": {
         "name": "pump",
@@ -2096,7 +2422,9 @@ recipe = {
         },
         "results": {
             "pump": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/pump.png",
+        "subgroup": "energy-pipe-distribution"
     },
     "chemical-plant": {
         "name": "chemical-plant",
@@ -2109,7 +2437,9 @@ recipe = {
         },
         "results": {
             "chemical-plant": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/chemical-plant.png",
+        "subgroup": "production-machine"
     },
     "low-density-structure": {
         "name": "low-density-structure",
@@ -2121,7 +2451,9 @@ recipe = {
         },
         "results": {
             "low-density-structure": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/low-density-structure.png",
+        "subgroup": "intermediate-product"
     },
     "rocket-fuel": {
         "name": "rocket-fuel",
@@ -2132,7 +2464,9 @@ recipe = {
         },
         "results": {
             "rocket-fuel": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/rocket-fuel.png",
+        "subgroup": "intermediate-product"
     },
     "rocket-control-unit": {
         "name": "rocket-control-unit",
@@ -2143,7 +2477,9 @@ recipe = {
         },
         "results": {
             "rocket-control-unit": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/rocket-control-unit.png",
+        "subgroup": "intermediate-product"
     },
     "rocket-part": {
         "name": "rocket-part",
@@ -2155,7 +2491,9 @@ recipe = {
         },
         "results": {
             "rocket-part": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/rocket-part.png",
+        "subgroup": "intermediate-product"
     },
     "satellite": {
         "name": "satellite",
@@ -2170,7 +2508,9 @@ recipe = {
         },
         "results": {
             "satellite": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/satellite.png",
+        "subgroup": "space-related"
     },
     "electric-energy-interface": {
         "name": "electric-energy-interface",
@@ -2181,7 +2521,8 @@ recipe = {
         },
         "results": {
             "electric-energy-interface": 1
-        }
+        },
+        "subgroup": "other"
     },
     "nuclear-reactor": {
         "name": "nuclear-reactor",
@@ -2194,7 +2535,9 @@ recipe = {
         },
         "results": {
             "nuclear-reactor": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/nuclear-reactor.png",
+        "subgroup": "energy"
     },
     "centrifuge": {
         "name": "centrifuge",
@@ -2207,7 +2550,9 @@ recipe = {
         },
         "results": {
             "centrifuge": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/centrifuge.png",
+        "subgroup": "production-machine"
     },
     "kovarex-enrichment-process": {
         "name": "kovarex-enrichment-process",
@@ -2230,7 +2575,9 @@ recipe = {
         },
         "results": {
             "nuclear-fuel": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/nuclear-fuel.png",
+        "subgroup": "intermediate-product"
     },
     "nuclear-fuel-reprocessing": {
         "name": "nuclear-fuel-reprocessing",
@@ -2252,7 +2599,9 @@ recipe = {
         },
         "results": {
             "uranium-fuel-cell": 10
-        }
+        },
+        "icon": "__base__/graphics/icons/uranium-fuel-cell.png",
+        "subgroup": "intermediate-product"
     },
     "heat-exchanger": {
         "name": "heat-exchanger",
@@ -2264,7 +2613,9 @@ recipe = {
         },
         "results": {
             "heat-exchanger": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/heat-boiler.png",
+        "subgroup": "energy"
     },
     "heat-pipe": {
         "name": "heat-pipe",
@@ -2275,7 +2626,9 @@ recipe = {
         },
         "results": {
             "heat-pipe": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/heat-pipe.png",
+        "subgroup": "energy"
     },
     "steam-turbine": {
         "name": "steam-turbine",
@@ -2287,7 +2640,9 @@ recipe = {
         },
         "results": {
             "steam-turbine": 1
-        }
+        },
+        "icon": "__base__/graphics/icons/steam-turbine.png",
+        "subgroup": "energy"
     },
     "crude-oil": {
         "name": "crude-oil",
@@ -2305,7 +2660,9 @@ recipe = {
         "name": "coal",
         "energy_required": "",
         "ingredients": "",
-        "results": ""
+        "results": "",
+        "icon": "__base__/graphics/icons/coal.png",
+        "subgroup": "raw-resource"
     },
     "heavy-oil": {
         "name": "heavy-oil",
@@ -2335,54 +2692,72 @@ recipe = {
         "name": "wood",
         "energy_required": "",
         "ingredients": "",
-        "results": ""
+        "results": "",
+        "icon": "__base__/graphics/icons/wood.png",
+        "subgroup": "raw-resource"
     },
     "stone": {
         "name": "stone",
         "energy_required": "",
         "ingredients": "",
-        "results": ""
+        "results": "",
+        "icon": "__base__/graphics/icons/stone.png",
+        "subgroup": "raw-resource"
     },
     "iron-ore": {
         "name": "iron-ore",
         "energy_required": "",
         "ingredients": "",
-        "results": ""
+        "results": "",
+        "icon": "__base__/graphics/icons/iron-ore.png",
+        "subgroup": "raw-resource"
     },
     "copper-ore": {
         "name": "copper-ore",
         "energy_required": "",
         "ingredients": "",
-        "results": ""
+        "results": "",
+        "icon": "__base__/graphics/icons/copper-ore.png",
+        "subgroup": "raw-resource"
     },
     "uranium-238": {
         "name": "uranium-238",
         "energy_required": "",
         "ingredients": "",
-        "results": ""
+        "results": "",
+        "icon": "__base__/graphics/icons/uranium-238.png",
+        "subgroup": "intermediate-product"
     },
     "uranium-235": {
         "name": "uranium-235",
         "energy_required": "",
         "ingredients": "",
-        "results": ""
+        "results": "",
+        "icon": "__base__/graphics/icons/uranium-235.png",
+        "subgroup": "intermediate-product"
     },
     "raw-fish": {
         "name": "raw-fish",
         "energy_required": "",
         "ingredients": "",
-        "results": ""
+        "results": "",
+        "icon": "__base__/graphics/icons/fish.png",
+        "subgroup": "raw-resource"
     },
     "solid-fuel": {
         "name": "solid-fuel",
         "energy_required": "",
         "ingredients": "",
-        "results": ""
+        "results": "",
+        "icon": "__base__/graphics/icons/solid-fuel.png",
+        "subgroup": "raw-material"
     },
     "used-up-uranium-fuel-cell": {
         "name": "used-up-uranium-fuel-cell",
         "energy_required": "",
         "ingredients": "",
-        "results": ""
+        "results": "",
+        "icon": "__base__/graphics/icons/used-up-uranium-fuel-cell.png",
+        "subgroup": "intermediate-product"
     }
 }

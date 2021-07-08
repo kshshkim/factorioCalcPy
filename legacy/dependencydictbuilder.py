@@ -1,6 +1,6 @@
-import recipe
+import recipe_info
 
-recipe1 = recipe.recipe
+recipe1 = recipe_info.recipe
 
 
 class DependencyDictBuilder:

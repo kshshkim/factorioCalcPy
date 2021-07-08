@@ -1,4 +1,4 @@
-from recipe import recipe
+from recipe_info import recipe
 import copy
 from collections import Counter
 
@@ -9,6 +9,7 @@ class FactorioItem:
         self.energy_required = recipe[self.name]['energy_required']
         self.ingredients = recipe[self.name]['ingredients']
         self.results = recipe[self.name]['results']
+        self.icon = recipe[self.name]['icon']
         # self.ingredientsperone=self.getingredientsperone()
 
     def getingredientsperone(self):

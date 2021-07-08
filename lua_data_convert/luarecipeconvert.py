@@ -56,7 +56,7 @@ class Copyrecipe:
             else:
                 results = re.search('results={{.*?}}', iteminstr)
                 results = results.group()
-                results = results.replace('type=\"fluid\",name=', '').replace('type=\"item\",name=', '')
+                results = results.replace('type=\"fluid\",name=', '').replace('type=\"item_info\",name=', '')
                 results = results.replace('{{', '{').replace('}}', '}')
                 results = results.replace('results=', '')
                 results = results.replace('",', '\':')
@@ -70,7 +70,7 @@ class Copyrecipe:
             ingredients = ingredients.group().replace('ingredients=', '')
 
             ingredients = ingredients.replace('type=\"fluid\",name=', '')
-            ingredients = ingredients.replace('type=\"item\",name=', '')
+            ingredients = ingredients.replace('type=\"item_info\",name=', '')
             # 타입이 지정된 경우, 레시피 이름과 산출물 이름이 다른 것으로 보임.
             ingredients = ingredients.replace('amount=', '')
             ingredients = ingredients.replace('",', '\':')
