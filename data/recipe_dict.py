@@ -1,4 +1,4 @@
-recipe_info = {
+recipe_dict = {
     "speed-module": {
         "name": "speed-module",
         "energy_required": 15.0,

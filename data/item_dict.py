@@ -1,6 +1,6 @@
-item_info = {
+item_dict = {
     "stone-brick": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "stone-brick",
         "icon": "__base__/graphics/icons/stone-brick.png",
         "icon_size": 64,
@@ -17,7 +17,7 @@ item_info = {
         }
     },
     "wood": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "wood",
         "icon": "__base__/graphics/icons/wood.png",
         "icon_size": 64,
@@ -29,7 +29,7 @@ item_info = {
         "stack_size": 100
     },
     "coal": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "coal",
         "icon": "__base__/graphics/icons/coal.png",
         "icon_size": 64,
@@ -68,7 +68,7 @@ item_info = {
         "stack_size": 50
     },
     "stone": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "stone",
         "icon": "__base__/graphics/icons/stone.png",
         "icon_size": 64,
@@ -104,7 +104,7 @@ item_info = {
         "stack_size": 50
     },
     "iron-ore": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "iron-ore",
         "icon": "__base__/graphics/icons/iron-ore.png",
         "icon_size": 64,
@@ -140,7 +140,7 @@ item_info = {
         "stack_size": 50
     },
     "copper-ore": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "copper-ore",
         "icon": "__base__/graphics/icons/copper-ore.png",
         "icon_size": 64,
@@ -176,7 +176,7 @@ item_info = {
         "stack_size": 50
     },
     "iron-plate": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "iron-plate",
         "icon": "__base__/graphics/icons/iron-plate.png",
         "icon_size": 64,
@@ -186,7 +186,7 @@ item_info = {
         "stack_size": 100
     },
     "copper-plate": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "copper-plate",
         "icon": "__base__/graphics/icons/copper-plate.png",
         "icon_size": 64,
@@ -196,7 +196,7 @@ item_info = {
         "stack_size": 100
     },
     "copper-cable": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "copper-cable",
         "icon": "__base__/graphics/icons/copper-cable.png",
         "icon_size": 64,
@@ -207,7 +207,7 @@ item_info = {
         "wire_count": 1
     },
     "iron-stick": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "iron-stick",
         "icon": "__base__/graphics/icons/iron-stick.png",
         "icon_size": 64,
@@ -217,7 +217,7 @@ item_info = {
         "stack_size": 100
     },
     "iron-gear-wheel": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "iron-gear-wheel",
         "icon": "__base__/graphics/icons/iron-gear-wheel.png",
         "icon_size": 64,
@@ -227,7 +227,7 @@ item_info = {
         "stack_size": 100
     },
     "electronic-circuit": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "electronic-circuit",
         "icon": "__base__/graphics/icons/electronic-circuit.png",
         "icon_size": 64,
@@ -237,7 +237,7 @@ item_info = {
         "stack_size": 200
     },
     "wooden-chest": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "wooden-chest",
         "icon": "__base__/graphics/icons/wooden-chest.png",
         "icon_size": 64,
@@ -248,7 +248,7 @@ item_info = {
         "stack_size": 50
     },
     "stone-furnace": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "stone-furnace",
         "icon": "__base__/graphics/icons/stone-furnace.png",
         "icon_size": 64,
@@ -259,7 +259,7 @@ item_info = {
         "stack_size": 50
     },
     "burner-mining-drill": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "burner-mining-drill",
         "icon": "__base__/graphics/icons/burner-mining-drill.png",
         "icon_size": 64,
@@ -270,7 +270,7 @@ item_info = {
         "stack_size": 50
     },
     "electric-mining-drill": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "electric-mining-drill",
         "icon": "__base__/graphics/icons/electric-mining-drill.png",
         "icon_size": 64,
@@ -281,7 +281,7 @@ item_info = {
         "stack_size": 50
     },
     "burner-inserter": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "burner-inserter",
         "icon": "__base__/graphics/icons/burner-inserter.png",
         "icon_size": 64,
@@ -292,7 +292,7 @@ item_info = {
         "stack_size": 50
     },
     "inserter": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "inserter",
         "icon": "__base__/graphics/icons/inserter.png",
         "icon_size": 64,
@@ -303,7 +303,7 @@ item_info = {
         "stack_size": 50
     },
     "fast-inserter": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "fast-inserter",
         "icon": "__base__/graphics/icons/fast-inserter.png",
         "icon_size": 64,
@@ -314,7 +314,7 @@ item_info = {
         "stack_size": 50
     },
     "filter-inserter": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "filter-inserter",
         "icon": "__base__/graphics/icons/filter-inserter.png",
         "icon_size": 64,
@@ -325,7 +325,7 @@ item_info = {
         "stack_size": 50
     },
     "long-handed-inserter": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "long-handed-inserter",
         "icon": "__base__/graphics/icons/long-handed-inserter.png",
         "icon_size": 64,
@@ -336,7 +336,7 @@ item_info = {
         "stack_size": 50
     },
     "offshore-pump": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "offshore-pump",
         "icon": "__base__/graphics/icons/offshore-pump.png",
         "icon_size": 64,
@@ -347,7 +347,7 @@ item_info = {
         "stack_size": 20
     },
     "pipe": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "pipe",
         "icon": "__base__/graphics/icons/pipe.png",
         "icon_size": 64,
@@ -358,7 +358,7 @@ item_info = {
         "stack_size": 100
     },
     "boiler": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "boiler",
         "icon": "__base__/graphics/icons/boiler.png",
         "icon_size": 64,
@@ -369,7 +369,7 @@ item_info = {
         "stack_size": 50
     },
     "steam-engine": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "steam-engine",
         "icon": "__base__/graphics/icons/steam-engine.png",
         "icon_size": 64,
@@ -380,7 +380,7 @@ item_info = {
         "stack_size": 10
     },
     "small-electric-pole": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "small-electric-pole",
         "icon": "__base__/graphics/icons/small-electric-pole.png",
         "icon_size": 64,
@@ -391,7 +391,7 @@ item_info = {
         "stack_size": 50
     },
     "radar": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "radar",
         "icon": "__base__/graphics/icons/radar.png",
         "icon_size": 64,
@@ -402,7 +402,7 @@ item_info = {
         "stack_size": 50
     },
     "small-lamp": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "small-lamp",
         "icon": "__base__/graphics/icons/small-lamp.png",
         "icon_size": 64,
@@ -413,7 +413,7 @@ item_info = {
         "stack_size": 50
     },
     "pipe-to-ground": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "pipe-to-ground",
         "icon": "__base__/graphics/icons/pipe-to-ground.png",
         "icon_size": 64,
@@ -424,7 +424,7 @@ item_info = {
         "stack_size": 50
     },
     "assembling-machine-1": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "assembling-machine-1",
         "icon": "__base__/graphics/icons/assembling-machine-1.png",
         "icon_size": 64,
@@ -435,7 +435,7 @@ item_info = {
         "stack_size": 50
     },
     "assembling-machine-2": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "assembling-machine-2",
         "icon": "__base__/graphics/icons/assembling-machine-2.png",
         "icon_size": 64,
@@ -446,7 +446,7 @@ item_info = {
         "stack_size": 50
     },
     "red-wire": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "red-wire",
         "icon": "__base__/graphics/icons/red-wire.png",
         "icon_size": 64,
@@ -457,7 +457,7 @@ item_info = {
         "wire_count": 1
     },
     "green-wire": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "green-wire",
         "icon": "__base__/graphics/icons/green-wire.png",
         "icon_size": 64,
@@ -524,7 +524,7 @@ item_info = {
         "stack_size": 100
     },
     "stone-wall": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "stone-wall",
         "icon": "__base__/graphics/icons/wall.png",
         "icon_size": 64,
@@ -535,7 +535,7 @@ item_info = {
         "stack_size": 100
     },
     "lab": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "lab",
         "icon": "__base__/graphics/icons/lab.png",
         "icon_size": 64,
@@ -657,11 +657,11 @@ item_info = {
         "selection_cursor_box_type": "copy",
         "alt_selection_cursor_box_type": "copy",
         "open_sound": {
-            "filename": "__base__/sound/item_info-open.ogg",
+            "filename": "__base__/sound/item_dict-open.ogg",
             "volume": 1
         },
         "close_sound": {
-            "filename": "__base__/sound/item_info-close.ogg",
+            "filename": "__base__/sound/item_dict-close.ogg",
             "volume": 1
         }
     },
@@ -669,7 +669,7 @@ item_info = {
         "type": "tool",
         "name": "automation-science-pack",
         "localised_description": [
-            "item_info-description.science-pack"
+            "item_dict-description.science-pack"
         ],
         "icon": "__base__/graphics/icons/automation-science-pack.png",
         "icon_size": 64,
@@ -685,7 +685,7 @@ item_info = {
         "type": "tool",
         "name": "logistic-science-pack",
         "localised_description": [
-            "item_info-description.science-pack"
+            "item_dict-description.science-pack"
         ],
         "icon": "__base__/graphics/icons/logistic-science-pack.png",
         "icon_size": 64,
@@ -698,7 +698,7 @@ item_info = {
         "durability_description_value": "description.science-pack-remaining-amount-value"
     },
     "steel-plate": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "steel-plate",
         "icon": "__base__/graphics/icons/steel-plate.png",
         "icon_size": 64,
@@ -708,7 +708,7 @@ item_info = {
         "stack_size": 100
     },
     "car": {
-        "type": "item_info-with-entity-data",
+        "type": "item_dict-with-entity-data",
         "name": "car",
         "icon": "__base__/graphics/icons/car.png",
         "icon_size": 64,
@@ -719,7 +719,7 @@ item_info = {
         "stack_size": 1
     },
     "engine-unit": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "engine-unit",
         "icon": "__base__/graphics/icons/engine-unit.png",
         "icon_size": 64,
@@ -729,7 +729,7 @@ item_info = {
         "stack_size": 50
     },
     "electric-furnace": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "electric-furnace",
         "icon": "__base__/graphics/icons/electric-furnace.png",
         "icon_size": 64,
@@ -740,7 +740,7 @@ item_info = {
         "stack_size": 50
     },
     "solid-fuel": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "solid-fuel",
         "icon": "__base__/graphics/icons/solid-fuel.png",
         "icon_size": 64,
@@ -754,7 +754,7 @@ item_info = {
         "stack_size": 50
     },
     "rocket-fuel": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "rocket-fuel",
         "icon": "__base__/graphics/icons/rocket-fuel.png",
         "icon_size": 64,
@@ -768,7 +768,7 @@ item_info = {
         "stack_size": 10
     },
     "iron-chest": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "iron-chest",
         "icon": "__base__/graphics/icons/iron-chest.png",
         "icon_size": 64,
@@ -779,7 +779,7 @@ item_info = {
         "stack_size": 50
     },
     "big-electric-pole": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "big-electric-pole",
         "icon": "__base__/graphics/icons/big-electric-pole.png",
         "icon_size": 64,
@@ -790,7 +790,7 @@ item_info = {
         "stack_size": 50
     },
     "medium-electric-pole": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "medium-electric-pole",
         "icon": "__base__/graphics/icons/medium-electric-pole.png",
         "icon_size": 64,
@@ -849,7 +849,7 @@ item_info = {
         "stack_size": 100
     },
     "steel-furnace": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "steel-furnace",
         "icon": "__base__/graphics/icons/steel-furnace.png",
         "icon_size": 64,
@@ -860,7 +860,7 @@ item_info = {
         "stack_size": 50
     },
     "gate": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "gate",
         "icon": "__base__/graphics/icons/gate.png",
         "icon_size": 64,
@@ -871,7 +871,7 @@ item_info = {
         "stack_size": 50
     },
     "steel-chest": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "steel-chest",
         "icon": "__base__/graphics/icons/steel-chest.png",
         "icon_size": 64,
@@ -882,7 +882,7 @@ item_info = {
         "stack_size": 50
     },
     "solar-panel": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "solar-panel",
         "icon": "__base__/graphics/icons/solar-panel.png",
         "icon_size": 64,
@@ -893,7 +893,7 @@ item_info = {
         "stack_size": 50
     },
     "locomotive": {
-        "type": "item_info-with-entity-data",
+        "type": "item_dict-with-entity-data",
         "name": "locomotive",
         "icon": "__base__/graphics/icons/locomotive.png",
         "icon_size": 64,
@@ -904,7 +904,7 @@ item_info = {
         "stack_size": 5
     },
     "cargo-wagon": {
-        "type": "item_info-with-entity-data",
+        "type": "item_dict-with-entity-data",
         "name": "cargo-wagon",
         "icon": "__base__/graphics/icons/cargo-wagon.png",
         "icon_size": 64,
@@ -921,7 +921,7 @@ item_info = {
         "icon_size": 64,
         "icon_mipmaps": 4,
         "localised_name": [
-            "item_info-name.rail"
+            "item_dict-name.rail"
         ],
         "subgroup": "train-transport",
         "order": "a[train-system]-a[rail]",
@@ -931,7 +931,7 @@ item_info = {
         "curved_rail": "curved-rail"
     },
     "train-stop": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "train-stop",
         "icon": "__base__/graphics/icons/train-stop.png",
         "icon_size": 64,
@@ -942,7 +942,7 @@ item_info = {
         "stack_size": 10
     },
     "rail-signal": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "rail-signal",
         "icon": "__base__/graphics/icons/rail-signal.png",
         "icon_size": 64,
@@ -953,7 +953,7 @@ item_info = {
         "stack_size": 50
     },
     "rail-chain-signal": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "rail-chain-signal",
         "icon": "__base__/graphics/icons/rail-chain-signal.png",
         "icon_size": 64,
@@ -964,7 +964,7 @@ item_info = {
         "stack_size": 50
     },
     "concrete": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "concrete",
         "icon": "__base__/graphics/icons/concrete.png",
         "icon_size": 64,
@@ -981,7 +981,7 @@ item_info = {
         }
     },
     "refined-concrete": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "refined-concrete",
         "icon": "__base__/graphics/icons/refined-concrete.png",
         "icon_size": 64,
@@ -998,7 +998,7 @@ item_info = {
         }
     },
     "hazard-concrete": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "hazard-concrete",
         "icon": "__base__/graphics/icons/hazard-concrete.png",
         "icon_size": 64,
@@ -1015,7 +1015,7 @@ item_info = {
         }
     },
     "refined-hazard-concrete": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "refined-hazard-concrete",
         "icon": "__base__/graphics/icons/refined-hazard-concrete.png",
         "icon_size": 64,
@@ -1032,7 +1032,7 @@ item_info = {
         }
     },
     "landfill": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "landfill",
         "icon": "__base__/graphics/icons/landfill.png",
         "icon_size": 64,
@@ -1049,7 +1049,7 @@ item_info = {
         }
     },
     "accumulator": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "accumulator",
         "icon": "__base__/graphics/icons/accumulator.png",
         "icon_size": 64,
@@ -1060,7 +1060,7 @@ item_info = {
         "stack_size": 50
     },
     "transport-belt": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "transport-belt",
         "icon": "__base__/graphics/icons/transport-belt.png",
         "icon_size": 64,
@@ -1071,7 +1071,7 @@ item_info = {
         "stack_size": 100
     },
     "fast-transport-belt": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "fast-transport-belt",
         "icon": "__base__/graphics/icons/fast-transport-belt.png",
         "icon_size": 64,
@@ -1082,7 +1082,7 @@ item_info = {
         "stack_size": 100
     },
     "express-transport-belt": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "express-transport-belt",
         "icon": "__base__/graphics/icons/express-transport-belt.png",
         "icon_size": 64,
@@ -1093,7 +1093,7 @@ item_info = {
         "stack_size": 100
     },
     "stack-inserter": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "stack-inserter",
         "icon": "__base__/graphics/icons/stack-inserter.png",
         "icon_size": 64,
@@ -1104,7 +1104,7 @@ item_info = {
         "stack_size": 50
     },
     "stack-filter-inserter": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "stack-filter-inserter",
         "icon": "__base__/graphics/icons/stack-filter-inserter.png",
         "icon_size": 64,
@@ -1115,7 +1115,7 @@ item_info = {
         "stack_size": 50
     },
     "assembling-machine-3": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "assembling-machine-3",
         "icon": "__base__/graphics/icons/assembling-machine-3.png",
         "icon_size": 64,
@@ -1126,7 +1126,7 @@ item_info = {
         "stack_size": 50
     },
     "fluid-wagon": {
-        "type": "item_info-with-entity-data",
+        "type": "item_dict-with-entity-data",
         "name": "fluid-wagon",
         "icon": "__base__/graphics/icons/fluid-wagon.png",
         "icon_size": 64,
@@ -1137,7 +1137,7 @@ item_info = {
         "stack_size": 5
     },
     "artillery-wagon": {
-        "type": "item_info-with-entity-data",
+        "type": "item_dict-with-entity-data",
         "name": "artillery-wagon",
         "icon": "__base__/graphics/icons/artillery-wagon.png",
         "icon_size": 64,
@@ -1148,7 +1148,7 @@ item_info = {
         "stack_size": 5
     },
     "player-port": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "player-port",
         "icon": "__base__/graphics/icons/player-port.png",
         "icon_size": 64,
@@ -1162,7 +1162,7 @@ item_info = {
         "stack_size": 50
     },
     "tank": {
-        "type": "item_info-with-entity-data",
+        "type": "item_dict-with-entity-data",
         "name": "tank",
         "icon": "__base__/graphics/icons/tank.png",
         "icon_size": 64,
@@ -1176,7 +1176,7 @@ item_info = {
         "type": "tool",
         "name": "chemical-science-pack",
         "localised_description": [
-            "item_info-description.science-pack"
+            "item_dict-description.science-pack"
         ],
         "icon": "__base__/graphics/icons/chemical-science-pack.png",
         "icon_size": 64,
@@ -1192,7 +1192,7 @@ item_info = {
         "type": "tool",
         "name": "military-science-pack",
         "localised_description": [
-            "item_info-description.science-pack"
+            "item_dict-description.science-pack"
         ],
         "icon": "__base__/graphics/icons/military-science-pack.png",
         "icon_size": 64,
@@ -1208,7 +1208,7 @@ item_info = {
         "type": "tool",
         "name": "production-science-pack",
         "localised_description": [
-            "item_info-description.science-pack"
+            "item_dict-description.science-pack"
         ],
         "icon": "__base__/graphics/icons/production-science-pack.png",
         "icon_size": 64,
@@ -1224,7 +1224,7 @@ item_info = {
         "type": "tool",
         "name": "utility-science-pack",
         "localised_description": [
-            "item_info-description.science-pack"
+            "item_dict-description.science-pack"
         ],
         "icon": "__base__/graphics/icons/utility-science-pack.png",
         "icon_size": 64,
@@ -1254,7 +1254,7 @@ item_info = {
         "durability_description_value": "description.science-pack-remaining-amount-value"
     },
     "underground-belt": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "underground-belt",
         "icon": "__base__/graphics/icons/underground-belt.png",
         "icon_size": 64,
@@ -1265,7 +1265,7 @@ item_info = {
         "stack_size": 50
     },
     "fast-underground-belt": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "fast-underground-belt",
         "icon": "__base__/graphics/icons/fast-underground-belt.png",
         "icon_size": 64,
@@ -1276,7 +1276,7 @@ item_info = {
         "stack_size": 50
     },
     "express-underground-belt": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "express-underground-belt",
         "icon": "__base__/graphics/icons/express-underground-belt.png",
         "icon_size": 64,
@@ -1287,7 +1287,7 @@ item_info = {
         "stack_size": 50
     },
     "splitter": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "splitter",
         "icon": "__base__/graphics/icons/splitter.png",
         "icon_size": 64,
@@ -1298,7 +1298,7 @@ item_info = {
         "stack_size": 50
     },
     "fast-splitter": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "fast-splitter",
         "icon": "__base__/graphics/icons/fast-splitter.png",
         "icon_size": 64,
@@ -1309,7 +1309,7 @@ item_info = {
         "stack_size": 50
     },
     "express-splitter": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "express-splitter",
         "icon": "__base__/graphics/icons/express-splitter.png",
         "icon_size": 64,
@@ -1320,7 +1320,7 @@ item_info = {
         "stack_size": 50
     },
     "loader": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "loader",
         "icon": "__base__/graphics/icons/loader.png",
         "icon_size": 64,
@@ -1334,7 +1334,7 @@ item_info = {
         "stack_size": 50
     },
     "fast-loader": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "fast-loader",
         "icon": "__base__/graphics/icons/fast-loader.png",
         "icon_size": 64,
@@ -1348,7 +1348,7 @@ item_info = {
         "stack_size": 50
     },
     "express-loader": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "express-loader",
         "icon": "__base__/graphics/icons/express-loader.png",
         "icon_size": 64,
@@ -1362,7 +1362,7 @@ item_info = {
         "stack_size": 50
     },
     "advanced-circuit": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "advanced-circuit",
         "icon": "__base__/graphics/icons/advanced-circuit.png",
         "icon_size": 64,
@@ -1372,7 +1372,7 @@ item_info = {
         "stack_size": 200
     },
     "processing-unit": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "processing-unit",
         "icon": "__base__/graphics/icons/processing-unit.png",
         "icon_size": 64,
@@ -1382,7 +1382,7 @@ item_info = {
         "stack_size": 100
     },
     "logistic-robot": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "logistic-robot",
         "icon": "__base__/graphics/icons/logistic-robot.png",
         "icon_size": 64,
@@ -1393,7 +1393,7 @@ item_info = {
         "stack_size": 50
     },
     "construction-robot": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "construction-robot",
         "icon": "__base__/graphics/icons/construction-robot.png",
         "icon_size": 64,
@@ -1404,7 +1404,7 @@ item_info = {
         "stack_size": 50
     },
     "logistic-chest-passive-provider": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "logistic-chest-passive-provider",
         "icon": "__base__/graphics/icons/logistic-chest-passive-provider.png",
         "icon_size": 64,
@@ -1415,7 +1415,7 @@ item_info = {
         "stack_size": 50
     },
     "logistic-chest-active-provider": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "logistic-chest-active-provider",
         "icon": "__base__/graphics/icons/logistic-chest-active-provider.png",
         "icon_size": 64,
@@ -1426,7 +1426,7 @@ item_info = {
         "stack_size": 50
     },
     "logistic-chest-storage": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "logistic-chest-storage",
         "icon": "__base__/graphics/icons/logistic-chest-storage.png",
         "icon_size": 64,
@@ -1437,7 +1437,7 @@ item_info = {
         "stack_size": 50
     },
     "logistic-chest-buffer": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "logistic-chest-buffer",
         "icon": "__base__/graphics/icons/logistic-chest-buffer.png",
         "icon_size": 64,
@@ -1448,7 +1448,7 @@ item_info = {
         "stack_size": 50
     },
     "logistic-chest-requester": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "logistic-chest-requester",
         "icon": "__base__/graphics/icons/logistic-chest-requester.png",
         "icon_size": 64,
@@ -1459,7 +1459,7 @@ item_info = {
         "stack_size": 50
     },
     "rocket-silo": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "rocket-silo",
         "icon": "__base__/graphics/icons/rocket-silo.png",
         "icon_size": 64,
@@ -1470,7 +1470,7 @@ item_info = {
         "stack_size": 1
     },
     "roboport": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "roboport",
         "icon": "__base__/graphics/icons/roboport.png",
         "icon_size": 64,
@@ -1481,7 +1481,7 @@ item_info = {
         "stack_size": 10
     },
     "coin": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "coin",
         "icon": "__base__/graphics/icons/coin.png",
         "icon_size": 64,
@@ -1494,7 +1494,7 @@ item_info = {
         "stack_size": 100000
     },
     "substation": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "substation",
         "icon": "__base__/graphics/icons/substation.png",
         "icon_size": 64,
@@ -1505,7 +1505,7 @@ item_info = {
         "stack_size": 50
     },
     "beacon": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "beacon",
         "icon": "__base__/graphics/icons/beacon.png",
         "icon_size": 64,
@@ -1516,7 +1516,7 @@ item_info = {
         "stack_size": 10
     },
     "storage-tank": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "storage-tank",
         "icon": "__base__/graphics/icons/storage-tank.png",
         "icon_size": 64,
@@ -1527,7 +1527,7 @@ item_info = {
         "stack_size": 50
     },
     "pump": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "pump",
         "icon": "__base__/graphics/icons/pump.png",
         "icon_size": 64,
@@ -1538,7 +1538,7 @@ item_info = {
         "stack_size": 50
     },
     "upgrade-planner": {
-        "type": "upgrade-item_info",
+        "type": "upgrade-item_dict",
         "name": "upgrade-planner",
         "icon": "__base__/graphics/icons/upgrade-planner.png",
         "flags": [
@@ -1578,16 +1578,16 @@ item_info = {
         "alt_selection_cursor_box_type": "not-allowed",
         "reverse_selection_cursor_box_type": "not-allowed",
         "open_sound": {
-            "filename": "__base__/sound/item_info-open.ogg",
+            "filename": "__base__/sound/item_dict-open.ogg",
             "volume": 1
         },
         "close_sound": {
-            "filename": "__base__/sound/item_info-close.ogg",
+            "filename": "__base__/sound/item_dict-close.ogg",
             "volume": 1
         }
     },
     "deconstruction-planner": {
-        "type": "deconstruction-item_info",
+        "type": "deconstruction-item_dict",
         "name": "deconstruction-planner",
         "icon": "__base__/graphics/icons/deconstruction-planner.png",
         "flags": [
@@ -1629,11 +1629,11 @@ item_info = {
         "selection_cursor_box_type": "not-allowed",
         "alt_selection_cursor_box_type": "not-allowed",
         "open_sound": {
-            "filename": "__base__/sound/item_info-open.ogg",
+            "filename": "__base__/sound/item_dict-open.ogg",
             "volume": 1
         },
         "close_sound": {
-            "filename": "__base__/sound/item_info-close.ogg",
+            "filename": "__base__/sound/item_dict-close.ogg",
             "volume": 1
         }
     },
@@ -1651,16 +1651,16 @@ item_info = {
         "stack_size": 1,
         "inventory_size": "dynamic",
         "open_sound": {
-            "filename": "__base__/sound/item_info-open.ogg",
+            "filename": "__base__/sound/item_dict-open.ogg",
             "volume": 1
         },
         "close_sound": {
-            "filename": "__base__/sound/item_info-close.ogg",
+            "filename": "__base__/sound/item_dict-close.ogg",
             "volume": 1
         }
     },
     "pumpjack": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "pumpjack",
         "icon": "__base__/graphics/icons/pumpjack.png",
         "icon_size": 64,
@@ -1671,7 +1671,7 @@ item_info = {
         "stack_size": 20
     },
     "oil-refinery": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "oil-refinery",
         "icon": "__base__/graphics/icons/oil-refinery.png",
         "icon_size": 64,
@@ -1682,7 +1682,7 @@ item_info = {
         "stack_size": 10
     },
     "chemical-plant": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "chemical-plant",
         "icon": "__base__/graphics/icons/chemical-plant.png",
         "icon_size": 64,
@@ -1693,7 +1693,7 @@ item_info = {
         "stack_size": 10
     },
     "sulfur": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "sulfur",
         "icon": "__base__/graphics/icons/sulfur.png",
         "icon_size": 64,
@@ -1703,7 +1703,7 @@ item_info = {
         "stack_size": 50
     },
     "empty-barrel": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "empty-barrel",
         "icon": "__base__/graphics/icons/fluid/barreling/empty-barrel.png",
         "icon_size": 64,
@@ -1713,7 +1713,7 @@ item_info = {
         "stack_size": 10
     },
     "plastic-bar": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "plastic-bar",
         "icon": "__base__/graphics/icons/plastic-bar.png",
         "icon_size": 64,
@@ -1723,7 +1723,7 @@ item_info = {
         "stack_size": 100
     },
     "electric-engine-unit": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "electric-engine-unit",
         "icon": "__base__/graphics/icons/electric-engine-unit.png",
         "icon_size": 64,
@@ -1733,7 +1733,7 @@ item_info = {
         "stack_size": 50
     },
     "explosives": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "explosives",
         "icon": "__base__/graphics/icons/explosives.png",
         "icon_size": 64,
@@ -1743,7 +1743,7 @@ item_info = {
         "stack_size": 50
     },
     "battery": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "battery",
         "icon": "__base__/graphics/icons/battery.png",
         "icon_size": 64,
@@ -1753,7 +1753,7 @@ item_info = {
         "stack_size": 200
     },
     "flying-robot-frame": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "flying-robot-frame",
         "icon": "__base__/graphics/icons/flying-robot-frame.png",
         "icon_size": 64,
@@ -1763,7 +1763,7 @@ item_info = {
         "stack_size": 50
     },
     "low-density-structure": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "low-density-structure",
         "icon": "__base__/graphics/icons/low-density-structure.png",
         "icon_size": 64,
@@ -1773,7 +1773,7 @@ item_info = {
         "stack_size": 10
     },
     "nuclear-fuel": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "nuclear-fuel",
         "icon": "__base__/graphics/icons/nuclear-fuel.png",
         "icon_size": 64,
@@ -1807,7 +1807,7 @@ item_info = {
         "stack_size": 1
     },
     "rocket-control-unit": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "rocket-control-unit",
         "icon": "__base__/graphics/icons/rocket-control-unit.png",
         "icon_size": 64,
@@ -1817,7 +1817,7 @@ item_info = {
         "stack_size": 10
     },
     "rocket-part": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "rocket-part",
         "icon": "__base__/graphics/icons/rocket-part.png",
         "icon_size": 64,
@@ -1830,7 +1830,7 @@ item_info = {
         "stack_size": 5
     },
     "satellite": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "satellite",
         "icon": "__base__/graphics/icons/satellite.png",
         "icon_size": 64,
@@ -1844,7 +1844,7 @@ item_info = {
         ]
     },
     "spidertron": {
-        "type": "item_info-with-entity-data",
+        "type": "item_dict-with-entity-data",
         "name": "spidertron",
         "icon": "__base__/graphics/icons/spidertron.png",
         "icon_tintable": "__base__/graphics/icons/spidertron-tintable.png",
@@ -1901,7 +1901,7 @@ item_info = {
         "alt_selection_cursor_box_type": "copy"
     },
     "electric-energy-interface": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "electric-energy-interface",
         "icons": [
             {
@@ -1925,7 +1925,7 @@ item_info = {
         "stack_size": 50
     },
     "heat-interface": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "heat-interface",
         "icon": "__base__/graphics/icons/heat-interface.png",
         "icon_size": 64,
@@ -1939,7 +1939,7 @@ item_info = {
         "stack_size": 20
     },
     "nuclear-reactor": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "nuclear-reactor",
         "icon": "__base__/graphics/icons/nuclear-reactor.png",
         "icon_size": 64,
@@ -1950,7 +1950,7 @@ item_info = {
         "stack_size": 10
     },
     "uranium-235": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "uranium-235",
         "icon": "__base__/graphics/icons/uranium-235.png",
         "pictures": {
@@ -1984,7 +1984,7 @@ item_info = {
         "stack_size": 100
     },
     "uranium-238": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "uranium-238",
         "icon": "__base__/graphics/icons/uranium-238.png",
         "icon_size": 64,
@@ -1994,7 +1994,7 @@ item_info = {
         "stack_size": 100
     },
     "centrifuge": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "centrifuge",
         "icon": "__base__/graphics/icons/centrifuge.png",
         "icon_size": 64,
@@ -2005,7 +2005,7 @@ item_info = {
         "stack_size": 50
     },
     "uranium-fuel-cell": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "uranium-fuel-cell",
         "icon": "__base__/graphics/icons/uranium-fuel-cell.png",
         "icon_size": 64,
@@ -2038,7 +2038,7 @@ item_info = {
         "stack_size": 50
     },
     "used-up-uranium-fuel-cell": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "used-up-uranium-fuel-cell",
         "icon": "__base__/graphics/icons/used-up-uranium-fuel-cell.png",
         "icon_size": 64,
@@ -2048,7 +2048,7 @@ item_info = {
         "stack_size": 50
     },
     "heat-exchanger": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "heat-exchanger",
         "icon": "__base__/graphics/icons/heat-boiler.png",
         "icon_size": 64,
@@ -2059,7 +2059,7 @@ item_info = {
         "stack_size": 50
     },
     "steam-turbine": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "steam-turbine",
         "icon": "__base__/graphics/icons/steam-turbine.png",
         "icon_size": 64,
@@ -2070,7 +2070,7 @@ item_info = {
         "stack_size": 10
     },
     "heat-pipe": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "heat-pipe",
         "icon": "__base__/graphics/icons/heat-pipe.png",
         "icon_size": 64,
@@ -2081,7 +2081,7 @@ item_info = {
         "stack_size": 50
     },
     "simple-entity-with-force": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "simple-entity-with-force",
         "icon": "__base__/graphics/icons/steel-chest.png",
         "icon_size": 64,
@@ -2095,7 +2095,7 @@ item_info = {
         "stack_size": 50
     },
     "simple-entity-with-owner": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "simple-entity-with-owner",
         "icon": "__base__/graphics/icons/wooden-chest.png",
         "icon_size": 64,
@@ -2108,9 +2108,9 @@ item_info = {
         "place_result": "simple-entity-with-owner",
         "stack_size": 50
     },
-    "item_info-with-tags": {
-        "type": "item_info-with-tags",
-        "name": "item_info-with-tags",
+    "item_dict-with-tags": {
+        "type": "item_dict-with-tags",
+        "name": "item_dict-with-tags",
         "icon": "__base__/graphics/icons/wooden-chest.png",
         "icon_size": 64,
         "icon_mipmaps": 4,
@@ -2118,12 +2118,12 @@ item_info = {
             "hidden"
         ],
         "subgroup": "other",
-        "order": "s[item_info-with-tags]-o[item_info-with-tags]",
+        "order": "s[item_dict-with-tags]-o[item_dict-with-tags]",
         "stack_size": 1
     },
-    "item_info-with-label": {
-        "type": "item_info-with-label",
-        "name": "item_info-with-label",
+    "item_dict-with-label": {
+        "type": "item_dict-with-label",
+        "name": "item_dict-with-label",
         "icon": "__base__/graphics/icons/wooden-chest.png",
         "icon_size": 64,
         "icon_mipmaps": 4,
@@ -2131,12 +2131,12 @@ item_info = {
             "hidden"
         ],
         "subgroup": "other",
-        "order": "s[item_info-with-label]-o[item_info-with-label]",
+        "order": "s[item_dict-with-label]-o[item_dict-with-label]",
         "stack_size": 1
     },
-    "item_info-with-inventory": {
-        "type": "item_info-with-inventory",
-        "name": "item_info-with-inventory",
+    "item_dict-with-inventory": {
+        "type": "item_dict-with-inventory",
+        "name": "item_dict-with-inventory",
         "icon": "__base__/graphics/icons/wooden-chest.png",
         "icon_size": 64,
         "icon_mipmaps": 4,
@@ -2144,12 +2144,12 @@ item_info = {
             "hidden"
         ],
         "subgroup": "other",
-        "order": "s[item_info-with-inventory]-o[item_info-with-inventory]",
+        "order": "s[item_dict-with-inventory]-o[item_dict-with-inventory]",
         "stack_size": 1,
         "inventory_size": 1
     },
     "infinity-chest": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "infinity-chest",
         "icon": "__base__/graphics/icons/infinity-chest.png",
         "icon_size": 64,
@@ -2158,12 +2158,12 @@ item_info = {
             "hidden"
         ],
         "subgroup": "other",
-        "order": "c[item_info]-o[infinity-chest]",
+        "order": "c[item_dict]-o[infinity-chest]",
         "stack_size": 10,
         "place_result": "infinity-chest"
     },
     "infinity-pipe": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "infinity-pipe",
         "icons": [
             {
@@ -2181,12 +2181,12 @@ item_info = {
             "hidden"
         ],
         "subgroup": "other",
-        "order": "d[item_info]-o[infinity-pipe]",
+        "order": "d[item_dict]-o[infinity-pipe]",
         "stack_size": 10,
         "place_result": "infinity-pipe"
     },
     "burner-generator": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "burner-generator",
         "icon": "__base__/graphics/icons/steam-engine.png",
         "icon_size": 64,
@@ -2195,12 +2195,12 @@ item_info = {
             "hidden"
         ],
         "subgroup": "other",
-        "order": "t[item_info]-o[burner-generator]",
+        "order": "t[item_dict]-o[burner-generator]",
         "stack_size": 10,
         "place_result": "burner-generator"
     },
     "linked-chest": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "linked-chest",
         "icon": "__base__/graphics/icons/linked-chest-icon.png",
         "icon_size": 64,
@@ -2214,7 +2214,7 @@ item_info = {
         "stack_size": 10
     },
     "linked-belt": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "linked-belt",
         "icon": "__base__/graphics/icons/linked-belt.png",
         "icon_size": 64,
@@ -2231,7 +2231,7 @@ item_info = {
         "type": "module",
         "name": "speed-module",
         "localised_description": [
-            "item_info-description.speed-module"
+            "item_dict-description.speed-module"
         ],
         "icon": "__base__/graphics/icons/speed-module.png",
         "icon_size": 64,
@@ -2270,7 +2270,7 @@ item_info = {
         "type": "module",
         "name": "speed-module-2",
         "localised_description": [
-            "item_info-description.speed-module"
+            "item_dict-description.speed-module"
         ],
         "icon": "__base__/graphics/icons/speed-module-2.png",
         "icon_size": 64,
@@ -2309,7 +2309,7 @@ item_info = {
         "type": "module",
         "name": "speed-module-3",
         "localised_description": [
-            "item_info-description.speed-module"
+            "item_dict-description.speed-module"
         ],
         "icon": "__base__/graphics/icons/speed-module-3.png",
         "icon_size": 64,
@@ -2348,7 +2348,7 @@ item_info = {
         "type": "module",
         "name": "effectivity-module",
         "localised_description": [
-            "item_info-description.effectivity-module"
+            "item_dict-description.effectivity-module"
         ],
         "icon": "__base__/graphics/icons/effectivity-module.png",
         "icon_size": 64,
@@ -2383,7 +2383,7 @@ item_info = {
         "type": "module",
         "name": "effectivity-module-2",
         "localised_description": [
-            "item_info-description.effectivity-module"
+            "item_dict-description.effectivity-module"
         ],
         "icon": "__base__/graphics/icons/effectivity-module-2.png",
         "icon_size": 64,
@@ -2418,7 +2418,7 @@ item_info = {
         "type": "module",
         "name": "effectivity-module-3",
         "localised_description": [
-            "item_info-description.effectivity-module"
+            "item_dict-description.effectivity-module"
         ],
         "icon": "__base__/graphics/icons/effectivity-module-3.png",
         "icon_size": 64,
@@ -2453,7 +2453,7 @@ item_info = {
         "type": "module",
         "name": "productivity-module",
         "localised_description": [
-            "item_info-description.productivity-module"
+            "item_dict-description.productivity-module"
         ],
         "icon": "__base__/graphics/icons/productivity-module.png",
         "icon_size": 64,
@@ -2485,7 +2485,7 @@ item_info = {
         "type": "module",
         "name": "productivity-module-2",
         "localised_description": [
-            "item_info-description.productivity-module"
+            "item_dict-description.productivity-module"
         ],
         "icon": "__base__/graphics/icons/productivity-module-2.png",
         "icon_size": 64,
@@ -2517,7 +2517,7 @@ item_info = {
         "type": "module",
         "name": "productivity-module-3",
         "localised_description": [
-            "item_info-description.productivity-module"
+            "item_dict-description.productivity-module"
         ],
         "icon": "__base__/graphics/icons/productivity-module-3.png",
         "icon_size": 64,
@@ -3043,7 +3043,7 @@ item_info = {
         "stack_size": 1
     },
     "land-mine": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "land-mine",
         "icon": "__base__/graphics/icons/land-mine.png",
         "icon_size": 64,
@@ -3188,7 +3188,7 @@ item_info = {
         "type": "gun",
         "name": "spidertron-rocket-launcher-1",
         "localised_name": [
-            "item_info-name.spidertron-rocket-launcher"
+            "item_dict-name.spidertron-rocket-launcher"
         ],
         "icon": "__base__/graphics/icons/rocket-launcher.png",
         "icon_size": 64,
@@ -3222,7 +3222,7 @@ item_info = {
         "type": "gun",
         "name": "spidertron-rocket-launcher-2",
         "localised_name": [
-            "item_info-name.spidertron-rocket-launcher"
+            "item_dict-name.spidertron-rocket-launcher"
         ],
         "icon": "__base__/graphics/icons/rocket-launcher.png",
         "icon_size": 64,
@@ -3256,7 +3256,7 @@ item_info = {
         "type": "gun",
         "name": "spidertron-rocket-launcher-3",
         "localised_name": [
-            "item_info-name.spidertron-rocket-launcher"
+            "item_dict-name.spidertron-rocket-launcher"
         ],
         "icon": "__base__/graphics/icons/rocket-launcher.png",
         "icon_size": 64,
@@ -3290,7 +3290,7 @@ item_info = {
         "type": "gun",
         "name": "spidertron-rocket-launcher-4",
         "localised_name": [
-            "item_info-name.spidertron-rocket-launcher"
+            "item_dict-name.spidertron-rocket-launcher"
         ],
         "icon": "__base__/graphics/icons/rocket-launcher.png",
         "icon_size": 64,
@@ -3932,7 +3932,7 @@ item_info = {
         "stack_size": 5
     },
     "fusion-reactor-equipment": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "fusion-reactor-equipment",
         "icon": "__base__/graphics/icons/fusion-reactor-equipment.png",
         "icon_size": 64,
@@ -3944,7 +3944,7 @@ item_info = {
         "stack_size": 20
     },
     "battery-equipment": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "battery-equipment",
         "icon": "__base__/graphics/icons/battery-equipment.png",
         "icon_size": 64,
@@ -3956,10 +3956,10 @@ item_info = {
         "stack_size": 20
     },
     "battery-mk2-equipment": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "battery-mk2-equipment",
         "localised_description": [
-            "item_info-description.battery-equipment"
+            "item_dict-description.battery-equipment"
         ],
         "icon": "__base__/graphics/icons/battery-mk2-equipment.png",
         "icon_size": 64,
@@ -3971,7 +3971,7 @@ item_info = {
         "stack_size": 20
     },
     "belt-immunity-equipment": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "belt-immunity-equipment",
         "icon": "__base__/graphics/icons/belt-immunity-equipment.png",
         "icon_size": 64,
@@ -3983,7 +3983,7 @@ item_info = {
         "stack_size": 20
     },
     "exoskeleton-equipment": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "exoskeleton-equipment",
         "icon": "__base__/graphics/icons/exoskeleton-equipment.png",
         "icon_size": 64,
@@ -3995,7 +3995,7 @@ item_info = {
         "stack_size": 20
     },
     "personal-roboport-equipment": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "personal-roboport-equipment",
         "icon": "__base__/graphics/icons/personal-roboport-equipment.png",
         "icon_size": 64,
@@ -4007,10 +4007,10 @@ item_info = {
         "stack_size": 20
     },
     "personal-roboport-mk2-equipment": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "personal-roboport-mk2-equipment",
         "localised_description": [
-            "item_info-description.personal-roboport-equipment"
+            "item_dict-description.personal-roboport-equipment"
         ],
         "icon": "__base__/graphics/icons/personal-roboport-mk2-equipment.png",
         "icon_size": 64,
@@ -4022,7 +4022,7 @@ item_info = {
         "stack_size": 20
     },
     "night-vision-equipment": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "night-vision-equipment",
         "icon": "__base__/graphics/icons/night-vision-equipment.png",
         "icon_size": 64,
@@ -4034,7 +4034,7 @@ item_info = {
         "stack_size": 20
     },
     "energy-shield-equipment": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "energy-shield-equipment",
         "icon": "__base__/graphics/icons/energy-shield-equipment.png",
         "icon_size": 64,
@@ -4046,10 +4046,10 @@ item_info = {
         "stack_size": 20
     },
     "energy-shield-mk2-equipment": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "energy-shield-mk2-equipment",
         "localised_description": [
-            "item_info-description.energy-shield-equipment"
+            "item_dict-description.energy-shield-equipment"
         ],
         "icon": "__base__/graphics/icons/energy-shield-mk2-equipment.png",
         "icon_size": 64,
@@ -4061,7 +4061,7 @@ item_info = {
         "stack_size": 20
     },
     "personal-laser-defense-equipment": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "personal-laser-defense-equipment",
         "icon": "__base__/graphics/icons/personal-laser-defense-equipment.png",
         "icon_size": 64,
@@ -4073,7 +4073,7 @@ item_info = {
         "stack_size": 20
     },
     "discharge-defense-equipment": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "discharge-defense-equipment",
         "icon": "__base__/graphics/icons/discharge-defense-equipment.png",
         "icon_size": 64,
@@ -4099,7 +4099,7 @@ item_info = {
         "stack_size": 1
     },
     "gun-turret": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "gun-turret",
         "icon": "__base__/graphics/icons/gun-turret.png",
         "icon_size": 64,
@@ -4110,7 +4110,7 @@ item_info = {
         "stack_size": 50
     },
     "laser-turret": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "laser-turret",
         "icon": "__base__/graphics/icons/laser-turret.png",
         "icon_size": 64,
@@ -4121,7 +4121,7 @@ item_info = {
         "stack_size": 50
     },
     "flamethrower-turret": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "flamethrower-turret",
         "icon": "__base__/graphics/icons/flamethrower-turret.png",
         "icon_size": 64,
@@ -4132,7 +4132,7 @@ item_info = {
         "stack_size": 50
     },
     "artillery-turret": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "artillery-turret",
         "icon": "__base__/graphics/icons/artillery-turret.png",
         "icon_size": 64,
@@ -4157,7 +4157,7 @@ item_info = {
         "stack_size": 1
     },
     "decider-combinator": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "decider-combinator",
         "icon": "__base__/graphics/icons/decider-combinator.png",
         "icon_size": 64,
@@ -4168,7 +4168,7 @@ item_info = {
         "stack_size": 50
     },
     "constant-combinator": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "constant-combinator",
         "icon": "__base__/graphics/icons/constant-combinator.png",
         "icon_size": 64,
@@ -4179,7 +4179,7 @@ item_info = {
         "stack_size": 50
     },
     "power-switch": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "power-switch",
         "icon": "__base__/graphics/icons/power-switch.png",
         "icon_size": 64,
@@ -4190,7 +4190,7 @@ item_info = {
         "stack_size": 50
     },
     "programmable-speaker": {
-        "type": "item_info",
+        "type": "item_dict",
         "name": "programmable-speaker",
         "icon": "__base__/graphics/icons/programmable-speaker.png",
         "icon_size": 64,

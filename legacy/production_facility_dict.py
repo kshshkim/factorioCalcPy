@@ -18,7 +18,7 @@ production_facility_dict = {
         'power_consumption': 375
     },
 
-    #이하 furnace
+    # 이하 furnace
 
     'stone-furnace': {
         'name': 'stone-furnace',
@@ -41,6 +41,5 @@ production_facility_dict = {
         'power_consumption': 180,
         'group': 'furnace'
     },
-
 
 }

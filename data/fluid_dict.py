@@ -1,4 +1,4 @@
-fluid_info = {
+fluid_dict = {
     "water": {
         "type": "fluid",
         "name": "water",

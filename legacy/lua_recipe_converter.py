@@ -2,7 +2,7 @@ import copy
 import re
 from ast import literal_eval
 
-recipe = open('recipe.lua', 'r')
+recipe = open('../lua_data_convert/recipe.lua', 'r')
 strrecipe = str(recipe.read())  # 문자열로
 recipe.close()
 
@@ -17,7 +17,7 @@ class Copyrecipe:
         for iteminstr in iteminstrlist:
             # remove useless infos
             iteminstr = iteminstr.replace('    enabled = false,\n', '')
-            iteminstr = iteminstr.replace('    type = "recipe",\n', '')
+            iteminstr = iteminstr.replace('    type = "recipe_dict",\n', '')
 
             # get name
             name = re.search('name = \".*\"', iteminstr).group()
@@ -56,7 +56,7 @@ class Copyrecipe:
             else:
                 results = re.search('results={{.*?}}', iteminstr)
                 results = results.group()
-                results = results.replace('type=\"fluid\",name=', '').replace('type=\"item_info\",name=', '')
+                results = results.replace('type=\"fluid\",name=', '').replace('type=\"item_dict\",name=', '')
                 results = results.replace('{{', '{').replace('}}', '}')
                 results = results.replace('results=', '')
                 results = results.replace('",', '\':')
@@ -70,7 +70,7 @@ class Copyrecipe:
             ingredients = ingredients.group().replace('ingredients=', '')
 
             ingredients = ingredients.replace('type=\"fluid\",name=', '')
-            ingredients = ingredients.replace('type=\"item_info\",name=', '')
+            ingredients = ingredients.replace('type=\"item_dict\",name=', '')
             # 타입이 지정된 경우, 레시피 이름과 산출물 이름이 다른 것으로 보임.
             ingredients = ingredients.replace('amount=', '')
             ingredients = ingredients.replace('",', '\':')
