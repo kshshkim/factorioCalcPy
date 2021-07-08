@@ -1,4 +1,4 @@
-from converted_data.recipe_info import recipe
+from converted_data.recipe_info import recipe_info as recipe
 from factorioItemclass import FactorioItem
 import pprint
 

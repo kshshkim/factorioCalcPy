@@ -1,4 +1,4 @@
-recipe = {
+recipe_info = {
     "speed-module": {
         "name": "speed-module",
         "energy_required": 15.0,
@@ -219,7 +219,9 @@ recipe = {
         },
         "results": {
             "sulfuric-acid": 50
-        }
+        },
+        "subgroup": "fluid",
+        "icon": "__base__/graphics/icons/fluid/sulfuric-acid.png"
     },
     "plastic-bar": {
         "name": "plastic-bar",
@@ -285,7 +287,9 @@ recipe = {
         },
         "results": {
             "lubricant": 10
-        }
+        },
+        "subgroup": "fluid",
+        "icon": "__base__/graphics/icons/fluid/lubricant.png"
     },
     "empty-barrel": {
         "name": "empty-barrel",
@@ -2648,13 +2652,17 @@ recipe = {
         "name": "crude-oil",
         "energy_required": "",
         "ingredients": "",
-        "results": ""
+        "results": "",
+        "subgroup": "fluid",
+        "icon": "__base__/graphics/icons/fluid/crude-oil.png"
     },
     "water": {
         "name": "water",
         "energy_required": "",
         "ingredients": "",
-        "results": ""
+        "results": "",
+        "subgroup": "fluid",
+        "icon": "__base__/graphics/icons/fluid/water.png"
     },
     "coal": {
         "name": "coal",
@@ -2668,25 +2676,33 @@ recipe = {
         "name": "heavy-oil",
         "energy_required": "",
         "ingredients": "",
-        "results": ""
+        "results": "",
+        "subgroup": "fluid",
+        "icon": "__base__/graphics/icons/fluid/heavy-oil.png"
     },
     "steam": {
         "name": "steam",
         "energy_required": "",
         "ingredients": "",
-        "results": ""
+        "results": "",
+        "subgroup": "fluid",
+        "icon": "__base__/graphics/icons/fluid/steam.png"
     },
     "light-oil": {
         "name": "light-oil",
         "energy_required": "",
         "ingredients": "",
-        "results": ""
+        "results": "",
+        "subgroup": "fluid",
+        "icon": "__base__/graphics/icons/fluid/light-oil.png"
     },
     "petroleum-gas": {
         "name": "petroleum-gas",
         "energy_required": "",
         "ingredients": "",
-        "results": ""
+        "results": "",
+        "subgroup": "fluid",
+        "icon": "__base__/graphics/icons/fluid/petroleum-gas.png"
     },
     "wood": {
         "name": "wood",
