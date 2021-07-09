@@ -8,9 +8,8 @@ class FactorioItem:
         self.energy_required = recipe_dict[self.name]['energy_required']
         self.ingredients = recipe_dict[self.name]['ingredients']
         self.results = recipe_dict[self.name]['results']
-        self.subgroup = recipe_dict[self.name]['subgroup']
-        self.icon = recipe_dict[self.name]['icon']
         self.amount_ancestors_needs = 1
+        self.category = self.get_category()
         # self.ingredients_per_one=self.getingredientsperone()
 
     def get_ingredients_per_one(self):
@@ -81,3 +80,9 @@ class FactorioItem:
                 return True
         except:
             return False
+
+    def get_category(self):
+        try:
+            return recipe_dict[self.name]['category']
+        except:
+            return None
