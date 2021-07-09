@@ -9,8 +9,7 @@ recipe_dict = {
         "results": {
             "speed-module": 1
         },
-        "icon": "__base__/graphics/icons/speed-module.png",
-        "subgroup": "module"
+        "icon": "__base__/graphics/icons/speed-module.png"
     },
     "speed-module-2": {
         "name": "speed-module-2",
@@ -23,8 +22,7 @@ recipe_dict = {
         "results": {
             "speed-module-2": 1
         },
-        "icon": "__base__/graphics/icons/speed-module-2.png",
-        "subgroup": "module"
+        "icon": "__base__/graphics/icons/speed-module-2.png"
     },
     "speed-module-3": {
         "name": "speed-module-3",
@@ -37,8 +35,7 @@ recipe_dict = {
         "results": {
             "speed-module-3": 1
         },
-        "icon": "__base__/graphics/icons/speed-module-3.png",
-        "subgroup": "module"
+        "icon": "__base__/graphics/icons/speed-module-3.png"
     },
     "productivity-module": {
         "name": "productivity-module",
@@ -50,8 +47,7 @@ recipe_dict = {
         "results": {
             "productivity-module": 1
         },
-        "icon": "__base__/graphics/icons/productivity-module.png",
-        "subgroup": "module"
+        "icon": "__base__/graphics/icons/productivity-module.png"
     },
     "productivity-module-2": {
         "name": "productivity-module-2",
@@ -64,8 +60,7 @@ recipe_dict = {
         "results": {
             "productivity-module-2": 1
         },
-        "icon": "__base__/graphics/icons/productivity-module-2.png",
-        "subgroup": "module"
+        "icon": "__base__/graphics/icons/productivity-module-2.png"
     },
     "productivity-module-3": {
         "name": "productivity-module-3",
@@ -78,8 +73,7 @@ recipe_dict = {
         "results": {
             "productivity-module-3": 1
         },
-        "icon": "__base__/graphics/icons/productivity-module-3.png",
-        "subgroup": "module"
+        "icon": "__base__/graphics/icons/productivity-module-3.png"
     },
     "effectivity-module": {
         "name": "effectivity-module",
@@ -91,8 +85,7 @@ recipe_dict = {
         "results": {
             "effectivity-module": 1
         },
-        "icon": "__base__/graphics/icons/effectivity-module.png",
-        "subgroup": "module"
+        "icon": "__base__/graphics/icons/effectivity-module.png"
     },
     "effectivity-module-2": {
         "name": "effectivity-module-2",
@@ -105,8 +98,7 @@ recipe_dict = {
         "results": {
             "effectivity-module-2": 1
         },
-        "icon": "__base__/graphics/icons/effectivity-module-2.png",
-        "subgroup": "module"
+        "icon": "__base__/graphics/icons/effectivity-module-2.png"
     },
     "effectivity-module-3": {
         "name": "effectivity-module-3",
@@ -119,8 +111,7 @@ recipe_dict = {
         "results": {
             "effectivity-module-3": 1
         },
-        "icon": "__base__/graphics/icons/effectivity-module-3.png",
-        "subgroup": "module"
+        "icon": "__base__/graphics/icons/effectivity-module-3.png"
     },
     "stack-inserter": {
         "name": "stack-inserter",
@@ -134,8 +125,7 @@ recipe_dict = {
         "results": {
             "stack-inserter": 1
         },
-        "icon": "__base__/graphics/icons/stack-inserter.png",
-        "subgroup": "inserter"
+        "icon": "__base__/graphics/icons/stack-inserter.png"
     },
     "stack-filter-inserter": {
         "name": "stack-filter-inserter",
@@ -147,8 +137,7 @@ recipe_dict = {
         "results": {
             "stack-filter-inserter": 1
         },
-        "icon": "__base__/graphics/icons/stack-filter-inserter.png",
-        "subgroup": "inserter"
+        "icon": "__base__/graphics/icons/stack-filter-inserter.png"
     },
     "basic-oil-processing": {
         "name": "basic-oil-processing",
@@ -158,7 +147,8 @@ recipe_dict = {
         },
         "results": {
             "petroleum-gas": 45
-        }
+        },
+        "category": "oil-processing"
     },
     "advanced-oil-processing": {
         "name": "advanced-oil-processing",
@@ -171,7 +161,8 @@ recipe_dict = {
             "heavy-oil": 25,
             "light-oil": 45,
             "petroleum-gas": 55
-        }
+        },
+        "category": "oil-processing"
     },
     "coal-liquefaction": {
         "name": "coal-liquefaction",
@@ -185,7 +176,8 @@ recipe_dict = {
             "heavy-oil": 90,
             "light-oil": 20,
             "petroleum-gas": 10
-        }
+        },
+        "category": "oil-processing"
     },
     "heavy-oil-cracking": {
         "name": "heavy-oil-cracking",
@@ -196,7 +188,8 @@ recipe_dict = {
         },
         "results": {
             "light-oil": 30
-        }
+        },
+        "category": "chemistry"
     },
     "light-oil-cracking": {
         "name": "light-oil-cracking",
@@ -207,7 +200,8 @@ recipe_dict = {
         },
         "results": {
             "petroleum-gas": 20
-        }
+        },
+        "category": "chemistry"
     },
     "sulfuric-acid": {
         "name": "sulfuric-acid",
@@ -220,8 +214,8 @@ recipe_dict = {
         "results": {
             "sulfuric-acid": 50
         },
-        "subgroup": "fluid",
-        "icon": "__base__/graphics/icons/fluid/sulfuric-acid.png"
+        "icon": "__base__/graphics/icons/fluid/sulfuric-acid.png",
+        "category": "chemistry"
     },
     "plastic-bar": {
         "name": "plastic-bar",
@@ -234,7 +228,7 @@ recipe_dict = {
             "plastic-bar": 2
         },
         "icon": "__base__/graphics/icons/plastic-bar.png",
-        "subgroup": "raw-material"
+        "category": "chemistry"
     },
     "solid-fuel-from-light-oil": {
         "name": "solid-fuel-from-light-oil",
@@ -244,7 +238,8 @@ recipe_dict = {
         },
         "results": {
             "solid-fuel": 1
-        }
+        },
+        "category": "chemistry"
     },
     "solid-fuel-from-petroleum-gas": {
         "name": "solid-fuel-from-petroleum-gas",
@@ -254,7 +249,8 @@ recipe_dict = {
         },
         "results": {
             "solid-fuel": 1
-        }
+        },
+        "category": "chemistry"
     },
     "solid-fuel-from-heavy-oil": {
         "name": "solid-fuel-from-heavy-oil",
@@ -264,7 +260,8 @@ recipe_dict = {
         },
         "results": {
             "solid-fuel": 1
-        }
+        },
+        "category": "chemistry"
     },
     "sulfur": {
         "name": "sulfur",
@@ -277,7 +274,7 @@ recipe_dict = {
             "sulfur": 2
         },
         "icon": "__base__/graphics/icons/sulfur.png",
-        "subgroup": "raw-material"
+        "category": "chemistry"
     },
     "lubricant": {
         "name": "lubricant",
@@ -288,8 +285,8 @@ recipe_dict = {
         "results": {
             "lubricant": 10
         },
-        "subgroup": "fluid",
-        "icon": "__base__/graphics/icons/fluid/lubricant.png"
+        "icon": "__base__/graphics/icons/fluid/lubricant.png",
+        "category": "chemistry"
     },
     "empty-barrel": {
         "name": "empty-barrel",
@@ -301,7 +298,7 @@ recipe_dict = {
             "empty-barrel": 1
         },
         "icon": "__base__/graphics/icons/fluid/barreling/empty-barrel.png",
-        "subgroup": "intermediate-product"
+        "category": "crafting"
     },
     "night-vision-equipment": {
         "name": "night-vision-equipment",
@@ -313,8 +310,7 @@ recipe_dict = {
         "results": {
             "night-vision-equipment": 1
         },
-        "icon": "__base__/graphics/icons/night-vision-equipment.png",
-        "subgroup": "equipment"
+        "icon": "__base__/graphics/icons/night-vision-equipment.png"
     },
     "belt-immunity-equipment": {
         "name": "belt-immunity-equipment",
@@ -326,8 +322,7 @@ recipe_dict = {
         "results": {
             "belt-immunity-equipment": 1
         },
-        "icon": "__base__/graphics/icons/belt-immunity-equipment.png",
-        "subgroup": "equipment"
+        "icon": "__base__/graphics/icons/belt-immunity-equipment.png"
     },
     "energy-shield-equipment": {
         "name": "energy-shield-equipment",
@@ -339,8 +334,7 @@ recipe_dict = {
         "results": {
             "energy-shield-equipment": 1
         },
-        "icon": "__base__/graphics/icons/energy-shield-equipment.png",
-        "subgroup": "military-equipment"
+        "icon": "__base__/graphics/icons/energy-shield-equipment.png"
     },
     "energy-shield-mk2-equipment": {
         "name": "energy-shield-mk2-equipment",
@@ -353,8 +347,7 @@ recipe_dict = {
         "results": {
             "energy-shield-mk2-equipment": 1
         },
-        "icon": "__base__/graphics/icons/energy-shield-mk2-equipment.png",
-        "subgroup": "military-equipment"
+        "icon": "__base__/graphics/icons/energy-shield-mk2-equipment.png"
     },
     "battery-equipment": {
         "name": "battery-equipment",
@@ -366,8 +359,7 @@ recipe_dict = {
         "results": {
             "battery-equipment": 1
         },
-        "icon": "__base__/graphics/icons/battery-equipment.png",
-        "subgroup": "equipment"
+        "icon": "__base__/graphics/icons/battery-equipment.png"
     },
     "battery-mk2-equipment": {
         "name": "battery-mk2-equipment",
@@ -380,8 +372,7 @@ recipe_dict = {
         "results": {
             "battery-mk2-equipment": 1
         },
-        "icon": "__base__/graphics/icons/battery-mk2-equipment.png",
-        "subgroup": "equipment"
+        "icon": "__base__/graphics/icons/battery-mk2-equipment.png"
     },
     "solar-panel-equipment": {
         "name": "solar-panel-equipment",
@@ -405,8 +396,7 @@ recipe_dict = {
         "results": {
             "fusion-reactor-equipment": 1
         },
-        "icon": "__base__/graphics/icons/fusion-reactor-equipment.png",
-        "subgroup": "equipment"
+        "icon": "__base__/graphics/icons/fusion-reactor-equipment.png"
     },
     "personal-laser-defense-equipment": {
         "name": "personal-laser-defense-equipment",
@@ -419,8 +409,7 @@ recipe_dict = {
         "results": {
             "personal-laser-defense-equipment": 1
         },
-        "icon": "__base__/graphics/icons/personal-laser-defense-equipment.png",
-        "subgroup": "military-equipment"
+        "icon": "__base__/graphics/icons/personal-laser-defense-equipment.png"
     },
     "discharge-defense-equipment": {
         "name": "discharge-defense-equipment",
@@ -433,8 +422,7 @@ recipe_dict = {
         "results": {
             "discharge-defense-equipment": 1
         },
-        "icon": "__base__/graphics/icons/discharge-defense-equipment.png",
-        "subgroup": "military-equipment"
+        "icon": "__base__/graphics/icons/discharge-defense-equipment.png"
     },
     "discharge-defense-remote": {
         "name": "discharge-defense-remote",
@@ -445,8 +433,7 @@ recipe_dict = {
         "results": {
             "discharge-defense-remote": 1
         },
-        "icon": "__base__/graphics/icons/discharge-defense-equipment-controller.png",
-        "subgroup": "military-equipment"
+        "icon": "__base__/graphics/icons/discharge-defense-equipment-controller.png"
     },
     "exoskeleton-equipment": {
         "name": "exoskeleton-equipment",
@@ -459,8 +446,7 @@ recipe_dict = {
         "results": {
             "exoskeleton-equipment": 1
         },
-        "icon": "__base__/graphics/icons/exoskeleton-equipment.png",
-        "subgroup": "equipment"
+        "icon": "__base__/graphics/icons/exoskeleton-equipment.png"
     },
     "personal-roboport-equipment": {
         "name": "personal-roboport-equipment",
@@ -474,8 +460,7 @@ recipe_dict = {
         "results": {
             "personal-roboport-equipment": 1
         },
-        "icon": "__base__/graphics/icons/personal-roboport-equipment.png",
-        "subgroup": "equipment"
+        "icon": "__base__/graphics/icons/personal-roboport-equipment.png"
     },
     "personal-roboport-mk2-equipment": {
         "name": "personal-roboport-mk2-equipment",
@@ -488,8 +473,7 @@ recipe_dict = {
         "results": {
             "personal-roboport-mk2-equipment": 1
         },
-        "icon": "__base__/graphics/icons/personal-roboport-mk2-equipment.png",
-        "subgroup": "equipment"
+        "icon": "__base__/graphics/icons/personal-roboport-mk2-equipment.png"
     },
     "laser-turret": {
         "name": "laser-turret",
@@ -502,8 +486,7 @@ recipe_dict = {
         "results": {
             "laser-turret": 1
         },
-        "icon": "__base__/graphics/icons/laser-turret.png",
-        "subgroup": "defensive-structure"
+        "icon": "__base__/graphics/icons/laser-turret.png"
     },
     "flamethrower-turret": {
         "name": "flamethrower-turret",
@@ -517,8 +500,7 @@ recipe_dict = {
         "results": {
             "flamethrower-turret": 1
         },
-        "icon": "__base__/graphics/icons/flamethrower-turret.png",
-        "subgroup": "defensive-structure"
+        "icon": "__base__/graphics/icons/flamethrower-turret.png"
     },
     "artillery-turret": {
         "name": "artillery-turret",
@@ -532,8 +514,7 @@ recipe_dict = {
         "results": {
             "artillery-turret": 1
         },
-        "icon": "__base__/graphics/icons/artillery-turret.png",
-        "subgroup": "defensive-structure"
+        "icon": "__base__/graphics/icons/artillery-turret.png"
     },
     "artillery-targeting-remote": {
         "name": "artillery-targeting-remote",
@@ -545,8 +526,7 @@ recipe_dict = {
         "results": {
             "artillery-targeting-remote": 1
         },
-        "icon": "__base__/graphics/icons/artillery-targeting-remote.png",
-        "subgroup": "defensive-structure"
+        "icon": "__base__/graphics/icons/artillery-targeting-remote.png"
     },
     "gun-turret": {
         "name": "gun-turret",
@@ -559,8 +539,7 @@ recipe_dict = {
         "results": {
             "gun-turret": 1
         },
-        "icon": "__base__/graphics/icons/gun-turret.png",
-        "subgroup": "defensive-structure"
+        "icon": "__base__/graphics/icons/gun-turret.png"
     },
     "wooden-chest": {
         "name": "wooden-chest",
@@ -571,8 +550,7 @@ recipe_dict = {
         "results": {
             "wooden-chest": 1
         },
-        "icon": "__base__/graphics/icons/wooden-chest.png",
-        "subgroup": "storage"
+        "icon": "__base__/graphics/icons/wooden-chest.png"
     },
     "iron-stick": {
         "name": "iron-stick",
@@ -583,8 +561,7 @@ recipe_dict = {
         "results": {
             "iron-stick": 2
         },
-        "icon": "__base__/graphics/icons/iron-stick.png",
-        "subgroup": "intermediate-product"
+        "icon": "__base__/graphics/icons/iron-stick.png"
     },
     "stone-furnace": {
         "name": "stone-furnace",
@@ -595,8 +572,7 @@ recipe_dict = {
         "results": {
             "stone-furnace": 1
         },
-        "icon": "__base__/graphics/icons/stone-furnace.png",
-        "subgroup": "smelting-machine"
+        "icon": "__base__/graphics/icons/stone-furnace.png"
     },
     "boiler": {
         "name": "boiler",
@@ -608,8 +584,7 @@ recipe_dict = {
         "results": {
             "boiler": 1
         },
-        "icon": "__base__/graphics/icons/boiler.png",
-        "subgroup": "energy"
+        "icon": "__base__/graphics/icons/boiler.png"
     },
     "steam-engine": {
         "name": "steam-engine",
@@ -622,8 +597,7 @@ recipe_dict = {
         "results": {
             "steam-engine": 1
         },
-        "icon": "__base__/graphics/icons/steam-engine.png",
-        "subgroup": "energy"
+        "icon": "__base__/graphics/icons/steam-engine.png"
     },
     "iron-gear-wheel": {
         "name": "iron-gear-wheel",
@@ -634,8 +608,7 @@ recipe_dict = {
         "results": {
             "iron-gear-wheel": 1
         },
-        "icon": "__base__/graphics/icons/iron-gear-wheel.png",
-        "subgroup": "intermediate-product"
+        "icon": "__base__/graphics/icons/iron-gear-wheel.png"
     },
     "electronic-circuit": {
         "name": "electronic-circuit",
@@ -647,8 +620,7 @@ recipe_dict = {
         "results": {
             "electronic-circuit": 1
         },
-        "icon": "__base__/graphics/icons/electronic-circuit.png",
-        "subgroup": "intermediate-product"
+        "icon": "__base__/graphics/icons/electronic-circuit.png"
     },
     "transport-belt": {
         "name": "transport-belt",
@@ -660,8 +632,7 @@ recipe_dict = {
         "results": {
             "transport-belt": 2
         },
-        "icon": "__base__/graphics/icons/transport-belt.png",
-        "subgroup": "belt"
+        "icon": "__base__/graphics/icons/transport-belt.png"
     },
     "electric-mining-drill": {
         "name": "electric-mining-drill",
@@ -674,8 +645,7 @@ recipe_dict = {
         "results": {
             "electric-mining-drill": 1
         },
-        "icon": "__base__/graphics/icons/electric-mining-drill.png",
-        "subgroup": "extraction-machine"
+        "icon": "__base__/graphics/icons/electric-mining-drill.png"
     },
     "burner-mining-drill": {
         "name": "burner-mining-drill",
@@ -688,8 +658,7 @@ recipe_dict = {
         "results": {
             "burner-mining-drill": 1
         },
-        "icon": "__base__/graphics/icons/burner-mining-drill.png",
-        "subgroup": "extraction-machine"
+        "icon": "__base__/graphics/icons/burner-mining-drill.png"
     },
     "inserter": {
         "name": "inserter",
@@ -702,8 +671,7 @@ recipe_dict = {
         "results": {
             "inserter": 1
         },
-        "icon": "__base__/graphics/icons/inserter.png",
-        "subgroup": "inserter"
+        "icon": "__base__/graphics/icons/inserter.png"
     },
     "fast-inserter": {
         "name": "fast-inserter",
@@ -716,8 +684,7 @@ recipe_dict = {
         "results": {
             "fast-inserter": 1
         },
-        "icon": "__base__/graphics/icons/fast-inserter.png",
-        "subgroup": "inserter"
+        "icon": "__base__/graphics/icons/fast-inserter.png"
     },
     "filter-inserter": {
         "name": "filter-inserter",
@@ -729,8 +696,7 @@ recipe_dict = {
         "results": {
             "filter-inserter": 1
         },
-        "icon": "__base__/graphics/icons/filter-inserter.png",
-        "subgroup": "inserter"
+        "icon": "__base__/graphics/icons/filter-inserter.png"
     },
     "long-handed-inserter": {
         "name": "long-handed-inserter",
@@ -743,8 +709,7 @@ recipe_dict = {
         "results": {
             "long-handed-inserter": 1
         },
-        "icon": "__base__/graphics/icons/long-handed-inserter.png",
-        "subgroup": "inserter"
+        "icon": "__base__/graphics/icons/long-handed-inserter.png"
     },
     "burner-inserter": {
         "name": "burner-inserter",
@@ -756,8 +721,7 @@ recipe_dict = {
         "results": {
             "burner-inserter": 1
         },
-        "icon": "__base__/graphics/icons/burner-inserter.png",
-        "subgroup": "inserter"
+        "icon": "__base__/graphics/icons/burner-inserter.png"
     },
     "pipe": {
         "name": "pipe",
@@ -768,8 +732,7 @@ recipe_dict = {
         "results": {
             "pipe": 1
         },
-        "icon": "__base__/graphics/icons/pipe.png",
-        "subgroup": "energy-pipe-distribution"
+        "icon": "__base__/graphics/icons/pipe.png"
     },
     "offshore-pump": {
         "name": "offshore-pump",
@@ -782,8 +745,7 @@ recipe_dict = {
         "results": {
             "offshore-pump": 1
         },
-        "icon": "__base__/graphics/icons/offshore-pump.png",
-        "subgroup": "extraction-machine"
+        "icon": "__base__/graphics/icons/offshore-pump.png"
     },
     "copper-cable": {
         "name": "copper-cable",
@@ -794,8 +756,7 @@ recipe_dict = {
         "results": {
             "copper-cable": 2
         },
-        "icon": "__base__/graphics/icons/copper-cable.png",
-        "subgroup": "intermediate-product"
+        "icon": "__base__/graphics/icons/copper-cable.png"
     },
     "small-electric-pole": {
         "name": "small-electric-pole",
@@ -807,8 +768,7 @@ recipe_dict = {
         "results": {
             "small-electric-pole": 2
         },
-        "icon": "__base__/graphics/icons/small-electric-pole.png",
-        "subgroup": "energy-pipe-distribution"
+        "icon": "__base__/graphics/icons/small-electric-pole.png"
     },
     "pistol": {
         "name": "pistol",
@@ -820,8 +780,7 @@ recipe_dict = {
         "results": {
             "pistol": 1
         },
-        "icon": "__base__/graphics/icons/pistol.png",
-        "subgroup": "gun"
+        "icon": "__base__/graphics/icons/pistol.png"
     },
     "submachine-gun": {
         "name": "submachine-gun",
@@ -834,8 +793,7 @@ recipe_dict = {
         "results": {
             "submachine-gun": 1
         },
-        "icon": "__base__/graphics/icons/submachine-gun.png",
-        "subgroup": "gun"
+        "icon": "__base__/graphics/icons/submachine-gun.png"
     },
     "firearm-magazine": {
         "name": "firearm-magazine",
@@ -846,8 +804,7 @@ recipe_dict = {
         "results": {
             "firearm-magazine": 1
         },
-        "icon": "__base__/graphics/icons/firearm-magazine.png",
-        "subgroup": "ammo"
+        "icon": "__base__/graphics/icons/firearm-magazine.png"
     },
     "light-armor": {
         "name": "light-armor",
@@ -858,8 +815,7 @@ recipe_dict = {
         "results": {
             "light-armor": 1
         },
-        "icon": "__base__/graphics/icons/light-armor.png",
-        "subgroup": "armor"
+        "icon": "__base__/graphics/icons/light-armor.png"
     },
     "radar": {
         "name": "radar",
@@ -872,8 +828,7 @@ recipe_dict = {
         "results": {
             "radar": 1
         },
-        "icon": "__base__/graphics/icons/radar.png",
-        "subgroup": "defensive-structure"
+        "icon": "__base__/graphics/icons/radar.png"
     },
     "small-lamp": {
         "name": "small-lamp",
@@ -886,8 +841,7 @@ recipe_dict = {
         "results": {
             "small-lamp": 1
         },
-        "icon": "__base__/graphics/icons/small-lamp.png",
-        "subgroup": "circuit-network"
+        "icon": "__base__/graphics/icons/small-lamp.png"
     },
     "pipe-to-ground": {
         "name": "pipe-to-ground",
@@ -899,8 +853,7 @@ recipe_dict = {
         "results": {
             "pipe-to-ground": 2
         },
-        "icon": "__base__/graphics/icons/pipe-to-ground.png",
-        "subgroup": "energy-pipe-distribution"
+        "icon": "__base__/graphics/icons/pipe-to-ground.png"
     },
     "assembling-machine-1": {
         "name": "assembling-machine-1",
@@ -913,8 +866,7 @@ recipe_dict = {
         "results": {
             "assembling-machine-1": 1
         },
-        "icon": "__base__/graphics/icons/assembling-machine-1.png",
-        "subgroup": "production-machine"
+        "icon": "__base__/graphics/icons/assembling-machine-1.png"
     },
     "repair-pack": {
         "name": "repair-pack",
@@ -926,8 +878,7 @@ recipe_dict = {
         "results": {
             "repair-pack": 1
         },
-        "icon": "__base__/graphics/icons/repair-pack.png",
-        "subgroup": "tool"
+        "icon": "__base__/graphics/icons/repair-pack.png"
     },
     "automation-science-pack": {
         "name": "automation-science-pack",
@@ -939,8 +890,7 @@ recipe_dict = {
         "results": {
             "automation-science-pack": 1
         },
-        "icon": "__base__/graphics/icons/automation-science-pack.png",
-        "subgroup": "science-pack"
+        "icon": "__base__/graphics/icons/automation-science-pack.png"
     },
     "logistic-science-pack": {
         "name": "logistic-science-pack",
@@ -952,8 +902,7 @@ recipe_dict = {
         "results": {
             "logistic-science-pack": 1
         },
-        "icon": "__base__/graphics/icons/logistic-science-pack.png",
-        "subgroup": "science-pack"
+        "icon": "__base__/graphics/icons/logistic-science-pack.png"
     },
     "lab": {
         "name": "lab",
@@ -966,8 +915,7 @@ recipe_dict = {
         "results": {
             "lab": 1
         },
-        "icon": "__base__/graphics/icons/lab.png",
-        "subgroup": "production-machine"
+        "icon": "__base__/graphics/icons/lab.png"
     },
     "stone-wall": {
         "name": "stone-wall",
@@ -978,8 +926,7 @@ recipe_dict = {
         "results": {
             "stone-wall": 1
         },
-        "icon": "__base__/graphics/icons/wall.png",
-        "subgroup": "defensive-structure"
+        "icon": "__base__/graphics/icons/wall.png"
     },
     "assembling-machine-2": {
         "name": "assembling-machine-2",
@@ -993,8 +940,7 @@ recipe_dict = {
         "results": {
             "assembling-machine-2": 1
         },
-        "icon": "__base__/graphics/icons/assembling-machine-2.png",
-        "subgroup": "production-machine"
+        "icon": "__base__/graphics/icons/assembling-machine-2.png"
     },
     "splitter": {
         "name": "splitter",
@@ -1007,8 +953,7 @@ recipe_dict = {
         "results": {
             "splitter": 1
         },
-        "icon": "__base__/graphics/icons/splitter.png",
-        "subgroup": "belt"
+        "icon": "__base__/graphics/icons/splitter.png"
     },
     "underground-belt": {
         "name": "underground-belt",
@@ -1020,8 +965,7 @@ recipe_dict = {
         "results": {
             "underground-belt": 2
         },
-        "icon": "__base__/graphics/icons/underground-belt.png",
-        "subgroup": "belt"
+        "icon": "__base__/graphics/icons/underground-belt.png"
     },
     "loader": {
         "name": "loader",
@@ -1036,8 +980,7 @@ recipe_dict = {
         "results": {
             "loader": 1
         },
-        "icon": "__base__/graphics/icons/loader.png",
-        "subgroup": "belt"
+        "icon": "__base__/graphics/icons/loader.png"
     },
     "car": {
         "name": "car",
@@ -1050,8 +993,7 @@ recipe_dict = {
         "results": {
             "car": 1
         },
-        "icon": "__base__/graphics/icons/car.png",
-        "subgroup": "transport"
+        "icon": "__base__/graphics/icons/car.png"
     },
     "engine-unit": {
         "name": "engine-unit",
@@ -1065,7 +1007,7 @@ recipe_dict = {
             "engine-unit": 1
         },
         "icon": "__base__/graphics/icons/engine-unit.png",
-        "subgroup": "intermediate-product"
+        "category": "advanced-crafting"
     },
     "iron-chest": {
         "name": "iron-chest",
@@ -1076,8 +1018,7 @@ recipe_dict = {
         "results": {
             "iron-chest": 1
         },
-        "icon": "__base__/graphics/icons/iron-chest.png",
-        "subgroup": "storage"
+        "icon": "__base__/graphics/icons/iron-chest.png"
     },
     "big-electric-pole": {
         "name": "big-electric-pole",
@@ -1090,8 +1031,7 @@ recipe_dict = {
         "results": {
             "big-electric-pole": 1
         },
-        "icon": "__base__/graphics/icons/big-electric-pole.png",
-        "subgroup": "energy-pipe-distribution"
+        "icon": "__base__/graphics/icons/big-electric-pole.png"
     },
     "medium-electric-pole": {
         "name": "medium-electric-pole",
@@ -1104,8 +1044,7 @@ recipe_dict = {
         "results": {
             "medium-electric-pole": 1
         },
-        "icon": "__base__/graphics/icons/medium-electric-pole.png",
-        "subgroup": "energy-pipe-distribution"
+        "icon": "__base__/graphics/icons/medium-electric-pole.png"
     },
     "shotgun": {
         "name": "shotgun",
@@ -1119,8 +1058,7 @@ recipe_dict = {
         "results": {
             "shotgun": 1
         },
-        "icon": "__base__/graphics/icons/shotgun.png",
-        "subgroup": "gun"
+        "icon": "__base__/graphics/icons/shotgun.png"
     },
     "shotgun-shell": {
         "name": "shotgun-shell",
@@ -1132,8 +1070,7 @@ recipe_dict = {
         "results": {
             "shotgun-shell": 1
         },
-        "icon": "__base__/graphics/icons/shotgun-shell.png",
-        "subgroup": "ammo"
+        "icon": "__base__/graphics/icons/shotgun-shell.png"
     },
     "piercing-rounds-magazine": {
         "name": "piercing-rounds-magazine",
@@ -1146,8 +1083,7 @@ recipe_dict = {
         "results": {
             "piercing-rounds-magazine": 1
         },
-        "icon": "__base__/graphics/icons/piercing-rounds-magazine.png",
-        "subgroup": "ammo"
+        "icon": "__base__/graphics/icons/piercing-rounds-magazine.png"
     },
     "grenade": {
         "name": "grenade",
@@ -1159,8 +1095,7 @@ recipe_dict = {
         "results": {
             "grenade": 1
         },
-        "icon": "__base__/graphics/icons/grenade.png",
-        "subgroup": "capsule"
+        "icon": "__base__/graphics/icons/grenade.png"
     },
     "steel-furnace": {
         "name": "steel-furnace",
@@ -1172,8 +1107,7 @@ recipe_dict = {
         "results": {
             "steel-furnace": 1
         },
-        "icon": "__base__/graphics/icons/steel-furnace.png",
-        "subgroup": "smelting-machine"
+        "icon": "__base__/graphics/icons/steel-furnace.png"
     },
     "gate": {
         "name": "gate",
@@ -1186,8 +1120,7 @@ recipe_dict = {
         "results": {
             "gate": 1
         },
-        "icon": "__base__/graphics/icons/gate.png",
-        "subgroup": "defensive-structure"
+        "icon": "__base__/graphics/icons/gate.png"
     },
     "heavy-armor": {
         "name": "heavy-armor",
@@ -1199,8 +1132,7 @@ recipe_dict = {
         "results": {
             "heavy-armor": 1
         },
-        "icon": "__base__/graphics/icons/heavy-armor.png",
-        "subgroup": "armor"
+        "icon": "__base__/graphics/icons/heavy-armor.png"
     },
     "steel-chest": {
         "name": "steel-chest",
@@ -1211,8 +1143,7 @@ recipe_dict = {
         "results": {
             "steel-chest": 1
         },
-        "icon": "__base__/graphics/icons/steel-chest.png",
-        "subgroup": "storage"
+        "icon": "__base__/graphics/icons/steel-chest.png"
     },
     "fast-underground-belt": {
         "name": "fast-underground-belt",
@@ -1224,8 +1155,7 @@ recipe_dict = {
         "results": {
             "fast-underground-belt": 2
         },
-        "icon": "__base__/graphics/icons/fast-underground-belt.png",
-        "subgroup": "belt"
+        "icon": "__base__/graphics/icons/fast-underground-belt.png"
     },
     "fast-splitter": {
         "name": "fast-splitter",
@@ -1238,8 +1168,7 @@ recipe_dict = {
         "results": {
             "fast-splitter": 1
         },
-        "icon": "__base__/graphics/icons/fast-splitter.png",
-        "subgroup": "belt"
+        "icon": "__base__/graphics/icons/fast-splitter.png"
     },
     "concrete": {
         "name": "concrete",
@@ -1253,7 +1182,7 @@ recipe_dict = {
             "concrete": 10
         },
         "icon": "__base__/graphics/icons/concrete.png",
-        "subgroup": "terrain"
+        "category": "crafting-with-fluid"
     },
     "hazard-concrete": {
         "name": "hazard-concrete",
@@ -1265,7 +1194,7 @@ recipe_dict = {
             "hazard-concrete": 10
         },
         "icon": "__base__/graphics/icons/hazard-concrete.png",
-        "subgroup": "terrain"
+        "category": "crafting"
     },
     "refined-concrete": {
         "name": "refined-concrete",
@@ -1280,7 +1209,7 @@ recipe_dict = {
             "refined-concrete": 10
         },
         "icon": "__base__/graphics/icons/refined-concrete.png",
-        "subgroup": "terrain"
+        "category": "crafting-with-fluid"
     },
     "refined-hazard-concrete": {
         "name": "refined-hazard-concrete",
@@ -1292,7 +1221,7 @@ recipe_dict = {
             "refined-hazard-concrete": 10
         },
         "icon": "__base__/graphics/icons/refined-hazard-concrete.png",
-        "subgroup": "terrain"
+        "category": "crafting"
     },
     "landfill": {
         "name": "landfill",
@@ -1304,7 +1233,7 @@ recipe_dict = {
             "landfill": 1
         },
         "icon": "__base__/graphics/icons/landfill.png",
-        "subgroup": "terrain"
+        "category": "crafting"
     },
     "fast-transport-belt": {
         "name": "fast-transport-belt",
@@ -1316,8 +1245,7 @@ recipe_dict = {
         "results": {
             "fast-transport-belt": 1
         },
-        "icon": "__base__/graphics/icons/fast-transport-belt.png",
-        "subgroup": "belt"
+        "icon": "__base__/graphics/icons/fast-transport-belt.png"
     },
     "solar-panel": {
         "name": "solar-panel",
@@ -1330,8 +1258,7 @@ recipe_dict = {
         "results": {
             "solar-panel": 1
         },
-        "icon": "__base__/graphics/icons/solar-panel.png",
-        "subgroup": "energy"
+        "icon": "__base__/graphics/icons/solar-panel.png"
     },
     "rail": {
         "name": "rail",
@@ -1344,8 +1271,7 @@ recipe_dict = {
         "results": {
             "rail": 2
         },
-        "icon": "__base__/graphics/icons/rail.png",
-        "subgroup": "train-transport"
+        "icon": "__base__/graphics/icons/rail.png"
     },
     "locomotive": {
         "name": "locomotive",
@@ -1358,8 +1284,7 @@ recipe_dict = {
         "results": {
             "locomotive": 1
         },
-        "icon": "__base__/graphics/icons/locomotive.png",
-        "subgroup": "train-transport"
+        "icon": "__base__/graphics/icons/locomotive.png"
     },
     "cargo-wagon": {
         "name": "cargo-wagon",
@@ -1372,8 +1297,7 @@ recipe_dict = {
         "results": {
             "cargo-wagon": 1
         },
-        "icon": "__base__/graphics/icons/cargo-wagon.png",
-        "subgroup": "train-transport"
+        "icon": "__base__/graphics/icons/cargo-wagon.png"
     },
     "rail-signal": {
         "name": "rail-signal",
@@ -1385,8 +1309,7 @@ recipe_dict = {
         "results": {
             "rail-signal": 1
         },
-        "icon": "__base__/graphics/icons/rail-signal.png",
-        "subgroup": "train-transport"
+        "icon": "__base__/graphics/icons/rail-signal.png"
     },
     "rail-chain-signal": {
         "name": "rail-chain-signal",
@@ -1398,8 +1321,7 @@ recipe_dict = {
         "results": {
             "rail-chain-signal": 1
         },
-        "icon": "__base__/graphics/icons/rail-chain-signal.png",
-        "subgroup": "train-transport"
+        "icon": "__base__/graphics/icons/rail-chain-signal.png"
     },
     "train-stop": {
         "name": "train-stop",
@@ -1413,8 +1335,7 @@ recipe_dict = {
         "results": {
             "train-stop": 1
         },
-        "icon": "__base__/graphics/icons/train-stop.png",
-        "subgroup": "train-transport"
+        "icon": "__base__/graphics/icons/train-stop.png"
     },
     "copper-plate": {
         "name": "copper-plate",
@@ -1426,7 +1347,7 @@ recipe_dict = {
             "copper-plate": 1
         },
         "icon": "__base__/graphics/icons/copper-plate.png",
-        "subgroup": "raw-material"
+        "category": "smelting"
     },
     "iron-plate": {
         "name": "iron-plate",
@@ -1438,7 +1359,7 @@ recipe_dict = {
             "iron-plate": 1
         },
         "icon": "__base__/graphics/icons/iron-plate.png",
-        "subgroup": "raw-material"
+        "category": "smelting"
     },
     "stone-brick": {
         "name": "stone-brick",
@@ -1450,7 +1371,7 @@ recipe_dict = {
             "stone-brick": 1
         },
         "icon": "__base__/graphics/icons/stone-brick.png",
-        "subgroup": "terrain"
+        "category": "smelting"
     },
     "steel-plate": {
         "name": "steel-plate",
@@ -1462,7 +1383,7 @@ recipe_dict = {
             "steel-plate": 1
         },
         "icon": "__base__/graphics/icons/steel-plate.png",
-        "subgroup": "raw-material"
+        "category": "smelting"
     },
     "arithmetic-combinator": {
         "name": "arithmetic-combinator",
@@ -1485,8 +1406,7 @@ recipe_dict = {
         "results": {
             "decider-combinator": 1
         },
-        "icon": "__base__/graphics/icons/decider-combinator.png",
-        "subgroup": "circuit-network"
+        "icon": "__base__/graphics/icons/decider-combinator.png"
     },
     "constant-combinator": {
         "name": "constant-combinator",
@@ -1498,8 +1418,7 @@ recipe_dict = {
         "results": {
             "constant-combinator": 1
         },
-        "icon": "__base__/graphics/icons/constant-combinator.png",
-        "subgroup": "circuit-network"
+        "icon": "__base__/graphics/icons/constant-combinator.png"
     },
     "power-switch": {
         "name": "power-switch",
@@ -1512,8 +1431,7 @@ recipe_dict = {
         "results": {
             "power-switch": 1
         },
-        "icon": "__base__/graphics/icons/power-switch.png",
-        "subgroup": "circuit-network"
+        "icon": "__base__/graphics/icons/power-switch.png"
     },
     "programmable-speaker": {
         "name": "programmable-speaker",
@@ -1527,8 +1445,7 @@ recipe_dict = {
         "results": {
             "programmable-speaker": 1
         },
-        "icon": "__base__/graphics/icons/programmable-speaker.png",
-        "subgroup": "circuit-network"
+        "icon": "__base__/graphics/icons/programmable-speaker.png"
     },
     "red-wire": {
         "name": "red-wire",
@@ -1540,8 +1457,7 @@ recipe_dict = {
         "results": {
             "red-wire": 1
         },
-        "icon": "__base__/graphics/icons/red-wire.png",
-        "subgroup": "circuit-network"
+        "icon": "__base__/graphics/icons/red-wire.png"
     },
     "green-wire": {
         "name": "green-wire",
@@ -1553,8 +1469,7 @@ recipe_dict = {
         "results": {
             "green-wire": 1
         },
-        "icon": "__base__/graphics/icons/green-wire.png",
-        "subgroup": "circuit-network"
+        "icon": "__base__/graphics/icons/green-wire.png"
     },
     "poison-capsule": {
         "name": "poison-capsule",
@@ -1567,8 +1482,7 @@ recipe_dict = {
         "results": {
             "poison-capsule": 1
         },
-        "icon": "__base__/graphics/icons/poison-capsule.png",
-        "subgroup": "capsule"
+        "icon": "__base__/graphics/icons/poison-capsule.png"
     },
     "slowdown-capsule": {
         "name": "slowdown-capsule",
@@ -1616,8 +1530,7 @@ recipe_dict = {
         "results": {
             "distractor-capsule": 1
         },
-        "icon": "__base__/graphics/icons/distractor.png",
-        "subgroup": "capsule"
+        "icon": "__base__/graphics/icons/distractor.png"
     },
     "destroyer-capsule": {
         "name": "destroyer-capsule",
@@ -1629,8 +1542,7 @@ recipe_dict = {
         "results": {
             "destroyer-capsule": 1
         },
-        "icon": "__base__/graphics/icons/destroyer.png",
-        "subgroup": "capsule"
+        "icon": "__base__/graphics/icons/destroyer.png"
     },
     "cliff-explosives": {
         "name": "cliff-explosives",
@@ -1643,8 +1555,7 @@ recipe_dict = {
         "results": {
             "cliff-explosives": 1
         },
-        "icon": "__base__/graphics/icons/cliff-explosives.png",
-        "subgroup": "terrain"
+        "icon": "__base__/graphics/icons/cliff-explosives.png"
     },
     "uranium-rounds-magazine": {
         "name": "uranium-rounds-magazine",
@@ -1668,8 +1579,7 @@ recipe_dict = {
         "results": {
             "rocket": 1
         },
-        "icon": "__base__/graphics/icons/rocket.png",
-        "subgroup": "ammo"
+        "icon": "__base__/graphics/icons/rocket.png"
     },
     "explosive-rocket": {
         "name": "explosive-rocket",
@@ -1681,8 +1591,7 @@ recipe_dict = {
         "results": {
             "explosive-rocket": 1
         },
-        "icon": "__base__/graphics/icons/explosive-rocket.png",
-        "subgroup": "ammo"
+        "icon": "__base__/graphics/icons/explosive-rocket.png"
     },
     "atomic-bomb": {
         "name": "atomic-bomb",
@@ -1695,8 +1604,7 @@ recipe_dict = {
         "results": {
             "atomic-bomb": 1
         },
-        "icon": "__base__/graphics/icons/atomic-bomb.png",
-        "subgroup": "ammo"
+        "icon": "__base__/graphics/icons/atomic-bomb.png"
     },
     "piercing-shotgun-shell": {
         "name": "piercing-shotgun-shell",
@@ -1709,8 +1617,7 @@ recipe_dict = {
         "results": {
             "piercing-shotgun-shell": 1
         },
-        "icon": "__base__/graphics/icons/piercing-shotgun-shell.png",
-        "subgroup": "ammo"
+        "icon": "__base__/graphics/icons/piercing-shotgun-shell.png"
     },
     "cannon-shell": {
         "name": "cannon-shell",
@@ -1723,8 +1630,7 @@ recipe_dict = {
         "results": {
             "cannon-shell": 1
         },
-        "icon": "__base__/graphics/icons/cannon-shell.png",
-        "subgroup": "ammo"
+        "icon": "__base__/graphics/icons/cannon-shell.png"
     },
     "explosive-cannon-shell": {
         "name": "explosive-cannon-shell",
@@ -1737,8 +1643,7 @@ recipe_dict = {
         "results": {
             "explosive-cannon-shell": 1
         },
-        "icon": "__base__/graphics/icons/explosive-cannon-shell.png",
-        "subgroup": "ammo"
+        "icon": "__base__/graphics/icons/explosive-cannon-shell.png"
     },
     "uranium-cannon-shell": {
         "name": "uranium-cannon-shell",
@@ -1750,8 +1655,7 @@ recipe_dict = {
         "results": {
             "uranium-cannon-shell": 1
         },
-        "icon": "__base__/graphics/icons/uranium-cannon-shell.png",
-        "subgroup": "ammo"
+        "icon": "__base__/graphics/icons/uranium-cannon-shell.png"
     },
     "explosive-uranium-cannon-shell": {
         "name": "explosive-uranium-cannon-shell",
@@ -1763,8 +1667,7 @@ recipe_dict = {
         "results": {
             "explosive-uranium-cannon-shell": 1
         },
-        "icon": "__base__/graphics/icons/explosive-uranium-cannon-shell.png",
-        "subgroup": "ammo"
+        "icon": "__base__/graphics/icons/explosive-uranium-cannon-shell.png"
     },
     "artillery-shell": {
         "name": "artillery-shell",
@@ -1777,8 +1680,7 @@ recipe_dict = {
         "results": {
             "artillery-shell": 1
         },
-        "icon": "__base__/graphics/icons/artillery-shell.png",
-        "subgroup": "ammo"
+        "icon": "__base__/graphics/icons/artillery-shell.png"
     },
     "flamethrower-ammo": {
         "name": "flamethrower-ammo",
@@ -1791,7 +1693,7 @@ recipe_dict = {
             "flamethrower-ammo": 1
         },
         "icon": "__base__/graphics/icons/flamethrower-ammo.png",
-        "subgroup": "ammo"
+        "category": "chemistry"
     },
     "express-transport-belt": {
         "name": "express-transport-belt",
@@ -1805,7 +1707,7 @@ recipe_dict = {
             "express-transport-belt": 1
         },
         "icon": "__base__/graphics/icons/express-transport-belt.png",
-        "subgroup": "belt"
+        "category": "crafting-with-fluid"
     },
     "assembling-machine-3": {
         "name": "assembling-machine-3",
@@ -1817,8 +1719,7 @@ recipe_dict = {
         "results": {
             "assembling-machine-3": 1
         },
-        "icon": "__base__/graphics/icons/assembling-machine-3.png",
-        "subgroup": "production-machine"
+        "icon": "__base__/graphics/icons/assembling-machine-3.png"
     },
     "tank": {
         "name": "tank",
@@ -1832,8 +1733,7 @@ recipe_dict = {
         "results": {
             "tank": 1
         },
-        "icon": "__base__/graphics/icons/tank.png",
-        "subgroup": "transport"
+        "icon": "__base__/graphics/icons/tank.png"
     },
     "spidertron": {
         "name": "spidertron",
@@ -1851,8 +1751,7 @@ recipe_dict = {
         "results": {
             "spidertron": 1
         },
-        "icon": "__base__/graphics/icons/spidertron.png",
-        "subgroup": "transport"
+        "icon": "__base__/graphics/icons/spidertron.png"
     },
     "spidertron-remote": {
         "name": "spidertron-remote",
@@ -1864,8 +1763,7 @@ recipe_dict = {
         "results": {
             "spidertron-remote": 1
         },
-        "icon": "__base__/graphics/icons/spidertron-remote.png",
-        "subgroup": "transport"
+        "icon": "__base__/graphics/icons/spidertron-remote.png"
     },
     "fluid-wagon": {
         "name": "fluid-wagon",
@@ -1879,8 +1777,7 @@ recipe_dict = {
         "results": {
             "fluid-wagon": 1
         },
-        "icon": "__base__/graphics/icons/fluid-wagon.png",
-        "subgroup": "train-transport"
+        "icon": "__base__/graphics/icons/fluid-wagon.png"
     },
     "artillery-wagon": {
         "name": "artillery-wagon",
@@ -1895,8 +1792,7 @@ recipe_dict = {
         "results": {
             "artillery-wagon": 1
         },
-        "icon": "__base__/graphics/icons/artillery-wagon.png",
-        "subgroup": "train-transport"
+        "icon": "__base__/graphics/icons/artillery-wagon.png"
     },
     "modular-armor": {
         "name": "modular-armor",
@@ -1920,8 +1816,7 @@ recipe_dict = {
         "results": {
             "power-armor": 1
         },
-        "icon": "__base__/graphics/icons/power-armor.png",
-        "subgroup": "armor"
+        "icon": "__base__/graphics/icons/power-armor.png"
     },
     "power-armor-mk2": {
         "name": "power-armor-mk2",
@@ -1936,8 +1831,7 @@ recipe_dict = {
         "results": {
             "power-armor-mk2": 1
         },
-        "icon": "__base__/graphics/icons/power-armor-mk2.png",
-        "subgroup": "armor"
+        "icon": "__base__/graphics/icons/power-armor-mk2.png"
     },
     "flamethrower": {
         "name": "flamethrower",
@@ -1949,8 +1843,7 @@ recipe_dict = {
         "results": {
             "flamethrower": 1
         },
-        "icon": "__base__/graphics/icons/flamethrower.png",
-        "subgroup": "gun"
+        "icon": "__base__/graphics/icons/flamethrower.png"
     },
     "land-mine": {
         "name": "land-mine",
@@ -1962,8 +1855,7 @@ recipe_dict = {
         "results": {
             "land-mine": 4
         },
-        "icon": "__base__/graphics/icons/land-mine.png",
-        "subgroup": "gun"
+        "icon": "__base__/graphics/icons/land-mine.png"
     },
     "rocket-launcher": {
         "name": "rocket-launcher",
@@ -1976,8 +1868,7 @@ recipe_dict = {
         "results": {
             "rocket-launcher": 1
         },
-        "icon": "__base__/graphics/icons/rocket-launcher.png",
-        "subgroup": "gun"
+        "icon": "__base__/graphics/icons/rocket-launcher.png"
     },
     "combat-shotgun": {
         "name": "combat-shotgun",
@@ -1991,8 +1882,7 @@ recipe_dict = {
         "results": {
             "combat-shotgun": 1
         },
-        "icon": "__base__/graphics/icons/combat-shotgun.png",
-        "subgroup": "gun"
+        "icon": "__base__/graphics/icons/combat-shotgun.png"
     },
     "chemical-science-pack": {
         "name": "chemical-science-pack",
@@ -2005,8 +1895,7 @@ recipe_dict = {
         "results": {
             "chemical-science-pack": 2
         },
-        "icon": "__base__/graphics/icons/chemical-science-pack.png",
-        "subgroup": "science-pack"
+        "icon": "__base__/graphics/icons/chemical-science-pack.png"
     },
     "military-science-pack": {
         "name": "military-science-pack",
@@ -2019,8 +1908,7 @@ recipe_dict = {
         "results": {
             "military-science-pack": 2
         },
-        "icon": "__base__/graphics/icons/military-science-pack.png",
-        "subgroup": "science-pack"
+        "icon": "__base__/graphics/icons/military-science-pack.png"
     },
     "production-science-pack": {
         "name": "production-science-pack",
@@ -2033,8 +1921,7 @@ recipe_dict = {
         "results": {
             "production-science-pack": 3
         },
-        "icon": "__base__/graphics/icons/production-science-pack.png",
-        "subgroup": "science-pack"
+        "icon": "__base__/graphics/icons/production-science-pack.png"
     },
     "utility-science-pack": {
         "name": "utility-science-pack",
@@ -2047,8 +1934,7 @@ recipe_dict = {
         "results": {
             "utility-science-pack": 3
         },
-        "icon": "__base__/graphics/icons/utility-science-pack.png",
-        "subgroup": "science-pack"
+        "icon": "__base__/graphics/icons/utility-science-pack.png"
     },
     "express-underground-belt": {
         "name": "express-underground-belt",
@@ -2062,7 +1948,7 @@ recipe_dict = {
             "express-underground-belt": 2
         },
         "icon": "__base__/graphics/icons/express-underground-belt.png",
-        "subgroup": "belt"
+        "category": "crafting-with-fluid"
     },
     "fast-loader": {
         "name": "fast-loader",
@@ -2074,8 +1960,7 @@ recipe_dict = {
         "results": {
             "fast-loader": 1
         },
-        "icon": "__base__/graphics/icons/fast-loader.png",
-        "subgroup": "belt"
+        "icon": "__base__/graphics/icons/fast-loader.png"
     },
     "express-loader": {
         "name": "express-loader",
@@ -2087,8 +1972,7 @@ recipe_dict = {
         "results": {
             "express-loader": 1
         },
-        "icon": "__base__/graphics/icons/express-loader.png",
-        "subgroup": "belt"
+        "icon": "__base__/graphics/icons/express-loader.png"
     },
     "express-splitter": {
         "name": "express-splitter",
@@ -2103,7 +1987,7 @@ recipe_dict = {
             "express-splitter": 1
         },
         "icon": "__base__/graphics/icons/express-splitter.png",
-        "subgroup": "belt"
+        "category": "crafting-with-fluid"
     },
     "advanced-circuit": {
         "name": "advanced-circuit",
@@ -2116,8 +2000,7 @@ recipe_dict = {
         "results": {
             "advanced-circuit": 1
         },
-        "icon": "__base__/graphics/icons/advanced-circuit.png",
-        "subgroup": "intermediate-product"
+        "icon": "__base__/graphics/icons/advanced-circuit.png"
     },
     "processing-unit": {
         "name": "processing-unit",
@@ -2131,7 +2014,7 @@ recipe_dict = {
             "processing-unit": 1
         },
         "icon": "__base__/graphics/icons/processing-unit.png",
-        "subgroup": "intermediate-product"
+        "category": "crafting-with-fluid"
     },
     "logistic-robot": {
         "name": "logistic-robot",
@@ -2143,8 +2026,7 @@ recipe_dict = {
         "results": {
             "logistic-robot": 1
         },
-        "icon": "__base__/graphics/icons/logistic-robot.png",
-        "subgroup": "logistic-network"
+        "icon": "__base__/graphics/icons/logistic-robot.png"
     },
     "construction-robot": {
         "name": "construction-robot",
@@ -2156,8 +2038,7 @@ recipe_dict = {
         "results": {
             "construction-robot": 1
         },
-        "icon": "__base__/graphics/icons/construction-robot.png",
-        "subgroup": "logistic-network"
+        "icon": "__base__/graphics/icons/construction-robot.png"
     },
     "logistic-chest-passive-provider": {
         "name": "logistic-chest-passive-provider",
@@ -2170,8 +2051,7 @@ recipe_dict = {
         "results": {
             "logistic-chest-passive-provider": 1
         },
-        "icon": "__base__/graphics/icons/logistic-chest-passive-provider.png",
-        "subgroup": "logistic-network"
+        "icon": "__base__/graphics/icons/logistic-chest-passive-provider.png"
     },
     "logistic-chest-active-provider": {
         "name": "logistic-chest-active-provider",
@@ -2184,8 +2064,7 @@ recipe_dict = {
         "results": {
             "logistic-chest-active-provider": 1
         },
-        "icon": "__base__/graphics/icons/logistic-chest-active-provider.png",
-        "subgroup": "logistic-network"
+        "icon": "__base__/graphics/icons/logistic-chest-active-provider.png"
     },
     "logistic-chest-storage": {
         "name": "logistic-chest-storage",
@@ -2198,8 +2077,7 @@ recipe_dict = {
         "results": {
             "logistic-chest-storage": 1
         },
-        "icon": "__base__/graphics/icons/logistic-chest-storage.png",
-        "subgroup": "logistic-network"
+        "icon": "__base__/graphics/icons/logistic-chest-storage.png"
     },
     "logistic-chest-buffer": {
         "name": "logistic-chest-buffer",
@@ -2212,8 +2090,7 @@ recipe_dict = {
         "results": {
             "logistic-chest-buffer": 1
         },
-        "icon": "__base__/graphics/icons/logistic-chest-buffer.png",
-        "subgroup": "logistic-network"
+        "icon": "__base__/graphics/icons/logistic-chest-buffer.png"
     },
     "logistic-chest-requester": {
         "name": "logistic-chest-requester",
@@ -2226,8 +2103,7 @@ recipe_dict = {
         "results": {
             "logistic-chest-requester": 1
         },
-        "icon": "__base__/graphics/icons/logistic-chest-requester.png",
-        "subgroup": "logistic-network"
+        "icon": "__base__/graphics/icons/logistic-chest-requester.png"
     },
     "rocket-silo": {
         "name": "rocket-silo",
@@ -2242,8 +2118,7 @@ recipe_dict = {
         "results": {
             "rocket-silo": 1
         },
-        "icon": "__base__/graphics/icons/rocket-silo.png",
-        "subgroup": "space-related"
+        "icon": "__base__/graphics/icons/rocket-silo.png"
     },
     "roboport": {
         "name": "roboport",
@@ -2256,8 +2131,7 @@ recipe_dict = {
         "results": {
             "roboport": 1
         },
-        "icon": "__base__/graphics/icons/roboport.png",
-        "subgroup": "logistic-network"
+        "icon": "__base__/graphics/icons/roboport.png"
     },
     "substation": {
         "name": "substation",
@@ -2270,8 +2144,7 @@ recipe_dict = {
         "results": {
             "substation": 1
         },
-        "icon": "__base__/graphics/icons/substation.png",
-        "subgroup": "energy-pipe-distribution"
+        "icon": "__base__/graphics/icons/substation.png"
     },
     "accumulator": {
         "name": "accumulator",
@@ -2283,8 +2156,7 @@ recipe_dict = {
         "results": {
             "accumulator": 1
         },
-        "icon": "__base__/graphics/icons/accumulator.png",
-        "subgroup": "energy"
+        "icon": "__base__/graphics/icons/accumulator.png"
     },
     "electric-furnace": {
         "name": "electric-furnace",
@@ -2297,8 +2169,7 @@ recipe_dict = {
         "results": {
             "electric-furnace": 1
         },
-        "icon": "__base__/graphics/icons/electric-furnace.png",
-        "subgroup": "smelting-machine"
+        "icon": "__base__/graphics/icons/electric-furnace.png"
     },
     "beacon": {
         "name": "beacon",
@@ -2312,8 +2183,7 @@ recipe_dict = {
         "results": {
             "beacon": 1
         },
-        "icon": "__base__/graphics/icons/beacon.png",
-        "subgroup": "module"
+        "icon": "__base__/graphics/icons/beacon.png"
     },
     "pumpjack": {
         "name": "pumpjack",
@@ -2327,8 +2197,7 @@ recipe_dict = {
         "results": {
             "pumpjack": 1
         },
-        "icon": "__base__/graphics/icons/pumpjack.png",
-        "subgroup": "extraction-machine"
+        "icon": "__base__/graphics/icons/pumpjack.png"
     },
     "oil-refinery": {
         "name": "oil-refinery",
@@ -2343,8 +2212,7 @@ recipe_dict = {
         "results": {
             "oil-refinery": 1
         },
-        "icon": "__base__/graphics/icons/oil-refinery.png",
-        "subgroup": "production-machine"
+        "icon": "__base__/graphics/icons/oil-refinery.png"
     },
     "electric-engine-unit": {
         "name": "electric-engine-unit",
@@ -2358,7 +2226,7 @@ recipe_dict = {
             "electric-engine-unit": 1
         },
         "icon": "__base__/graphics/icons/electric-engine-unit.png",
-        "subgroup": "intermediate-product"
+        "category": "crafting-with-fluid"
     },
     "flying-robot-frame": {
         "name": "flying-robot-frame",
@@ -2372,8 +2240,7 @@ recipe_dict = {
         "results": {
             "flying-robot-frame": 1
         },
-        "icon": "__base__/graphics/icons/flying-robot-frame.png",
-        "subgroup": "intermediate-product"
+        "icon": "__base__/graphics/icons/flying-robot-frame.png"
     },
     "explosives": {
         "name": "explosives",
@@ -2387,7 +2254,7 @@ recipe_dict = {
             "explosives": 2
         },
         "icon": "__base__/graphics/icons/explosives.png",
-        "subgroup": "raw-material"
+        "category": "chemistry"
     },
     "battery": {
         "name": "battery",
@@ -2401,7 +2268,7 @@ recipe_dict = {
             "battery": 1
         },
         "icon": "__base__/graphics/icons/battery.png",
-        "subgroup": "raw-material"
+        "category": "chemistry"
     },
     "storage-tank": {
         "name": "storage-tank",
@@ -2413,8 +2280,7 @@ recipe_dict = {
         "results": {
             "storage-tank": 1
         },
-        "icon": "__base__/graphics/icons/storage-tank.png",
-        "subgroup": "storage"
+        "icon": "__base__/graphics/icons/storage-tank.png"
     },
     "pump": {
         "name": "pump",
@@ -2427,8 +2293,7 @@ recipe_dict = {
         "results": {
             "pump": 1
         },
-        "icon": "__base__/graphics/icons/pump.png",
-        "subgroup": "energy-pipe-distribution"
+        "icon": "__base__/graphics/icons/pump.png"
     },
     "chemical-plant": {
         "name": "chemical-plant",
@@ -2442,8 +2307,7 @@ recipe_dict = {
         "results": {
             "chemical-plant": 1
         },
-        "icon": "__base__/graphics/icons/chemical-plant.png",
-        "subgroup": "production-machine"
+        "icon": "__base__/graphics/icons/chemical-plant.png"
     },
     "low-density-structure": {
         "name": "low-density-structure",
@@ -2457,7 +2321,7 @@ recipe_dict = {
             "low-density-structure": 1
         },
         "icon": "__base__/graphics/icons/low-density-structure.png",
-        "subgroup": "intermediate-product"
+        "category": "crafting"
     },
     "rocket-fuel": {
         "name": "rocket-fuel",
@@ -2470,7 +2334,7 @@ recipe_dict = {
             "rocket-fuel": 1
         },
         "icon": "__base__/graphics/icons/rocket-fuel.png",
-        "subgroup": "intermediate-product"
+        "category": "crafting-with-fluid"
     },
     "rocket-control-unit": {
         "name": "rocket-control-unit",
@@ -2483,7 +2347,7 @@ recipe_dict = {
             "rocket-control-unit": 1
         },
         "icon": "__base__/graphics/icons/rocket-control-unit.png",
-        "subgroup": "intermediate-product"
+        "category": "crafting"
     },
     "rocket-part": {
         "name": "rocket-part",
@@ -2497,7 +2361,7 @@ recipe_dict = {
             "rocket-part": 1
         },
         "icon": "__base__/graphics/icons/rocket-part.png",
-        "subgroup": "intermediate-product"
+        "category": "rocket-building"
     },
     "satellite": {
         "name": "satellite",
@@ -2514,7 +2378,7 @@ recipe_dict = {
             "satellite": 1
         },
         "icon": "__base__/graphics/icons/satellite.png",
-        "subgroup": "space-related"
+        "category": "crafting"
     },
     "electric-energy-interface": {
         "name": "electric-energy-interface",
@@ -2525,8 +2389,7 @@ recipe_dict = {
         },
         "results": {
             "electric-energy-interface": 1
-        },
-        "subgroup": "other"
+        }
     },
     "nuclear-reactor": {
         "name": "nuclear-reactor",
@@ -2540,8 +2403,7 @@ recipe_dict = {
         "results": {
             "nuclear-reactor": 1
         },
-        "icon": "__base__/graphics/icons/nuclear-reactor.png",
-        "subgroup": "energy"
+        "icon": "__base__/graphics/icons/nuclear-reactor.png"
     },
     "centrifuge": {
         "name": "centrifuge",
@@ -2555,8 +2417,7 @@ recipe_dict = {
         "results": {
             "centrifuge": 1
         },
-        "icon": "__base__/graphics/icons/centrifuge.png",
-        "subgroup": "production-machine"
+        "icon": "__base__/graphics/icons/centrifuge.png"
     },
     "kovarex-enrichment-process": {
         "name": "kovarex-enrichment-process",
@@ -2568,7 +2429,8 @@ recipe_dict = {
         "results": {
             "uranium-235": 41,
             "uranium-238": 2
-        }
+        },
+        "category": "centrifuging"
     },
     "nuclear-fuel": {
         "name": "nuclear-fuel",
@@ -2581,7 +2443,7 @@ recipe_dict = {
             "nuclear-fuel": 1
         },
         "icon": "__base__/graphics/icons/nuclear-fuel.png",
-        "subgroup": "intermediate-product"
+        "category": "centrifuging"
     },
     "nuclear-fuel-reprocessing": {
         "name": "nuclear-fuel-reprocessing",
@@ -2591,7 +2453,8 @@ recipe_dict = {
         },
         "results": {
             "uranium-238": 3
-        }
+        },
+        "category": "centrifuging"
     },
     "uranium-fuel-cell": {
         "name": "uranium-fuel-cell",
@@ -2604,8 +2467,7 @@ recipe_dict = {
         "results": {
             "uranium-fuel-cell": 10
         },
-        "icon": "__base__/graphics/icons/uranium-fuel-cell.png",
-        "subgroup": "intermediate-product"
+        "icon": "__base__/graphics/icons/uranium-fuel-cell.png"
     },
     "heat-exchanger": {
         "name": "heat-exchanger",
@@ -2618,8 +2480,7 @@ recipe_dict = {
         "results": {
             "heat-exchanger": 1
         },
-        "icon": "__base__/graphics/icons/heat-boiler.png",
-        "subgroup": "energy"
+        "icon": "__base__/graphics/icons/heat-boiler.png"
     },
     "heat-pipe": {
         "name": "heat-pipe",
@@ -2631,8 +2492,7 @@ recipe_dict = {
         "results": {
             "heat-pipe": 1
         },
-        "icon": "__base__/graphics/icons/heat-pipe.png",
-        "subgroup": "energy"
+        "icon": "__base__/graphics/icons/heat-pipe.png"
     },
     "steam-turbine": {
         "name": "steam-turbine",
@@ -2645,15 +2505,13 @@ recipe_dict = {
         "results": {
             "steam-turbine": 1
         },
-        "icon": "__base__/graphics/icons/steam-turbine.png",
-        "subgroup": "energy"
+        "icon": "__base__/graphics/icons/steam-turbine.png"
     },
     "crude-oil": {
         "name": "crude-oil",
         "energy_required": "",
         "ingredients": "",
         "results": "",
-        "subgroup": "fluid",
         "icon": "__base__/graphics/icons/fluid/crude-oil.png"
     },
     "water": {
@@ -2661,7 +2519,6 @@ recipe_dict = {
         "energy_required": "",
         "ingredients": "",
         "results": "",
-        "subgroup": "fluid",
         "icon": "__base__/graphics/icons/fluid/water.png"
     },
     "coal": {
@@ -2669,15 +2526,13 @@ recipe_dict = {
         "energy_required": "",
         "ingredients": "",
         "results": "",
-        "icon": "__base__/graphics/icons/coal.png",
-        "subgroup": "raw-resource"
+        "icon": "__base__/graphics/icons/coal.png"
     },
     "heavy-oil": {
         "name": "heavy-oil",
         "energy_required": "",
         "ingredients": "",
         "results": "",
-        "subgroup": "fluid",
         "icon": "__base__/graphics/icons/fluid/heavy-oil.png"
     },
     "steam": {
@@ -2685,7 +2540,6 @@ recipe_dict = {
         "energy_required": "",
         "ingredients": "",
         "results": "",
-        "subgroup": "fluid",
         "icon": "__base__/graphics/icons/fluid/steam.png"
     },
     "light-oil": {
@@ -2693,7 +2547,6 @@ recipe_dict = {
         "energy_required": "",
         "ingredients": "",
         "results": "",
-        "subgroup": "fluid",
         "icon": "__base__/graphics/icons/fluid/light-oil.png"
     },
     "petroleum-gas": {
@@ -2701,7 +2554,6 @@ recipe_dict = {
         "energy_required": "",
         "ingredients": "",
         "results": "",
-        "subgroup": "fluid",
         "icon": "__base__/graphics/icons/fluid/petroleum-gas.png"
     },
     "wood": {
@@ -2709,71 +2561,62 @@ recipe_dict = {
         "energy_required": "",
         "ingredients": "",
         "results": "",
-        "icon": "__base__/graphics/icons/wood.png",
-        "subgroup": "raw-resource"
+        "icon": "__base__/graphics/icons/wood.png"
     },
     "stone": {
         "name": "stone",
         "energy_required": "",
         "ingredients": "",
         "results": "",
-        "icon": "__base__/graphics/icons/stone.png",
-        "subgroup": "raw-resource"
+        "icon": "__base__/graphics/icons/stone.png"
     },
     "iron-ore": {
         "name": "iron-ore",
         "energy_required": "",
         "ingredients": "",
         "results": "",
-        "icon": "__base__/graphics/icons/iron-ore.png",
-        "subgroup": "raw-resource"
+        "icon": "__base__/graphics/icons/iron-ore.png"
     },
     "copper-ore": {
         "name": "copper-ore",
         "energy_required": "",
         "ingredients": "",
         "results": "",
-        "icon": "__base__/graphics/icons/copper-ore.png",
-        "subgroup": "raw-resource"
+        "icon": "__base__/graphics/icons/copper-ore.png"
     },
     "uranium-238": {
         "name": "uranium-238",
         "energy_required": "",
         "ingredients": "",
         "results": "",
-        "icon": "__base__/graphics/icons/uranium-238.png",
-        "subgroup": "intermediate-product"
+        "icon": "__base__/graphics/icons/uranium-238.png"
     },
     "uranium-235": {
         "name": "uranium-235",
         "energy_required": "",
         "ingredients": "",
         "results": "",
-        "icon": "__base__/graphics/icons/uranium-235.png",
-        "subgroup": "intermediate-product"
+        "icon": "__base__/graphics/icons/uranium-235.png"
     },
     "raw-fish": {
         "name": "raw-fish",
         "energy_required": "",
         "ingredients": "",
         "results": "",
-        "icon": "__base__/graphics/icons/fish.png",
-        "subgroup": "raw-resource"
+        "icon": "__base__/graphics/icons/fish.png"
     },
     "solid-fuel": {
         "name": "solid-fuel",
         "energy_required": "",
         "ingredients": "",
         "results": "",
-        "icon": "__base__/graphics/icons/solid-fuel.png",
-        "subgroup": "raw-material"
+        "icon": "__base__/graphics/icons/solid-fuel.png"
     },
     "used-up-uranium-fuel-cell": {
         "name": "used-up-uranium-fuel-cell",
         "energy_required": "",
         "ingredients": "",
         "results": "",
-        "icon": "__base__/graphics/icons/used-up-uranium-fuel-cell.png",
-        "subgroup": "intermediate-product"
+        "icon": "__base__/graphics/icons/used-up-uranium-fuel-cell.png"
     }
 }
