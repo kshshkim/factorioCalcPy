@@ -41,7 +41,7 @@ class FactorioItem:
     #             # children 변수에 지정된 딕셔너리에 FactorioItem 타입 오브젝트를 value로 저장, list로 하는게 나을지 이게 나을지 아직 못 정함
     #             child.make_child(child.amount_ancestors_needs)
 
-    def make_child(self, ancestors_needs=1.0, extra_product_dict={}): # TODO extra_product_dict를 반영해서 재료 요구량 조정
+    def make_child(self, ancestors_needs=1.0, extra_product_dict={}): # TODO extra_product_dict를 뱉어내는 공장 생성
         self.amount_ancestors_needs=ancestors_needs
         self.total_req_dict={}
         search_queue=[self]
@@ -52,8 +52,15 @@ class FactorioItem:
                 for key in current.ingredients.keys():
                     child=FactorioItem(key) # child obj 생성
                     child.mother=current
-                    child.amount_mother_needs= float(current.get_ingredients_per_one()[key])
+                    extra_product_modifier = float(1)
+
+                    # 전달받은 딕셔너리에 값이 존재할 경우, 즉 생산모듈이 장착된 경우, current의 1개당 아이템 요구량이 줄어드는 것으로 계산 가능.
+                    if current.name in extra_product_dict.keys():
+                        extra_product_modifier = extra_product_dict[current.name]
+
+                    child.amount_mother_needs= float(current.get_ingredients_per_one()[key]) * extra_product_modifier
                     child.amount_ancestors_needs = child.amount_mother_needs * current.amount_ancestors_needs
+
                     current.children[child.name]=child
                     search_queue.append(child)
             if self.total_req_dict.get(current.name) == None:  # total_req_dict에 self.name과 일치하는 key가 없으면 추가
@@ -67,7 +74,10 @@ class FactorioItem:
         return self.total_req_dict
 
     def is_has_child(self):
-        if self.children == {}:
+        try:
+            if self.children == {} or self.children is None:
+                return False
+            else:
+                return True
+        except:
             return False
-        else:
-            return True
