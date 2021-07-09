@@ -8,7 +8,7 @@ class Test():
 
 
 tst = Test()
-asdfa = FactorioItem('processing-unit')
-print('processing-unit 총 아이템 요구량')
-tst.jprint(asdfa.gettotalrequirements())
+asdfa = FactorioItem('advanced-circuit')
+print('총 아이템 요구량')
+tst.jprint(asdfa.get_total_req_dict(1))
 print('')

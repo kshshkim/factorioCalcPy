@@ -30,7 +30,7 @@ class FactorioItem:
         self.children = {}
         self.ingredientsperone = self.getingredientsperone()
         amount_ancestors_needs = copy.deepcopy(ancestors_needs)
-        self.totalreqdict = {}
+        # self.totalreqdict = {}
         if self.ingredients != '':
             for key in self.ingredients.keys():
                 child = FactorioItem(key)
@@ -48,12 +48,29 @@ class FactorioItem:
                 # self.totalreqdict = selfdict + childdict
                 # self.totalreqdict = dict(self.totalreqdict)
 
-    def totalreqdict(self): # 아이템 요구량 트리 순회
-        self.makechild()
+
+    def get_total_req_dict(self, howmany=1): # 아이템 요구량 트리 순회
+        self.amount_ancestors_needs = howmany
+        self.makechild(howmany)
         current = self
-        self.isend=False
-        while self.isend:
-            pass
+        search_que=[self]
+        total_req_dict={}
+
+        while search_que != []:
+            for child in current.children.values(): # 큐에 차일드 전부 추가
+                search_que.append(child)
+
+            if total_req_dict.get(current.name) == None: # total_req_dict에 self.name과 일치하는 key가 없으면 추가
+                total_req_dict[current.name]=0
+
+            total_req_dict[current.name]=total_req_dict[current.name]+current.amount_ancestors_needs
+
+            search_que.pop(0) # 큐에서 self 제거
+            if search_que != [] :
+                current=search_que[0] # current 변경
+
+        return total_req_dict
+
 
 
     def is_has_child(self):
