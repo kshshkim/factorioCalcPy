@@ -63,7 +63,7 @@ class FactorioItem:
             search_queue.pop(0)
 
     def get_total_req_dict(self, howmany=1, extra_product_dict={}):
-        self.make_child()
+        self.make_child(howmany,extra_product_dict)
         return self.total_req_dict
 
     def is_has_child(self):
