@@ -41,8 +41,9 @@ class FactorioItem:
     #             # children 변수에 지정된 딕셔너리에 FactorioItem 타입 오브젝트를 value로 저장, list로 하는게 나을지 이게 나을지 아직 못 정함
     #             child.make_child(child.amount_ancestors_needs)
 
-    def make_child(self, ancestors_needs=1.0, extra_product_dict={}):
+    def make_child(self, ancestors_needs=1.0, extra_product_dict={}): # TODO extra_product_dict를 반영해서 재료 요구량 조정
         self.amount_ancestors_needs=ancestors_needs
+        self.total_req_dict={}
         search_queue=[self]
         while search_queue!=[]:
             current = search_queue[0]
@@ -55,28 +56,15 @@ class FactorioItem:
                     child.amount_ancestors_needs = child.amount_mother_needs * current.amount_ancestors_needs
                     current.children[child.name]=child
                     search_queue.append(child)
+            if self.total_req_dict.get(current.name) == None:  # total_req_dict에 self.name과 일치하는 key가 없으면 추가
+                self.total_req_dict[current.name] = 0
+            self.total_req_dict[current.name] = self.total_req_dict[current.name] + current.amount_ancestors_needs
+
             search_queue.pop(0)
 
-    def get_total_req_dict(self, howmany=1, extra_product_dict={}):  # 아이템 요구량 트리 순회
-        self.amount_ancestors_needs = howmany
-        self.make_child(howmany,extra_product_dict)
-        search_que = [self]
-        total_req_dict = {}
-
-        while search_que != []:
-            current = search_que[0]
-            for child in current.children.values():  # 큐에 자식 전부 추가
-                search_que.append(child)
-
-            if total_req_dict.get(current.name) == None:  # total_req_dict에 self.name과 일치하는 key가 없으면 추가
-                total_req_dict[current.name] = 0
-
-            total_req_dict[current.name] = total_req_dict[current.name] + current.amount_ancestors_needs
-
-            search_que.pop(0)  # 큐에서 current 제거
-
-
-        return total_req_dict
+    def get_total_req_dict(self, howmany=1, extra_product_dict={}):
+        self.make_child()
+        return self.total_req_dict
 
     def is_has_child(self):
         if self.children == {}:
