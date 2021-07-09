@@ -2342,9 +2342,10 @@ recipe_dict = {
     },
     "coal": {
         "name": "coal",
-        "energy_required": "",
+        "energy_required": 1,
         "ingredients": "",
-        "results": ""
+        "results": {"coal":0.5},
+        "category": "mining"
     },
     "heavy-oil": {
         "name": "heavy-oil",
@@ -2378,21 +2379,24 @@ recipe_dict = {
     },
     "stone": {
         "name": "stone",
-        "energy_required": "",
+        "energy_required": 1,
         "ingredients": "",
-        "results": ""
+        "results": {"stone":0.5},
+        "category": "mining"
     },
     "iron-ore": {
         "name": "iron-ore",
-        "energy_required": "",
+        "energy_required": 1,
         "ingredients": "",
-        "results": ""
+        "results": {"iron-ore":0.5},
+        "category": "mining"
     },
     "copper-ore": {
         "name": "copper-ore",
-        "energy_required": "",
+        "energy_required": 1,
         "ingredients": "",
-        "results": ""
+        "results": {"copper-ore":0.5},
+        "category": "mining"
     },
     "uranium-238": {
         "name": "uranium-238",
@@ -2423,5 +2427,12 @@ recipe_dict = {
         "energy_required": "",
         "ingredients": "",
         "results": ""
+    },
+    "uranium-ore": {
+        "name": "uranium-ore",
+        "energy_required": 2,
+        "ingredients": {"sulfuric-acid":1},
+        "results": {"uranium-ore":0.5},
+        "category": "mining"
     }
 }
