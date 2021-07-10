@@ -9,3 +9,7 @@ C 깔짝, VB.net 깔짝, Java 깔짝 건드려본게 다인 초보가 맨땅에 
 다른 사람이 이미 만들어놓은 코드 베끼지 않고 혼자 힘으로 완성하는게 목표입니다.
 
 언젠간 웹 기반으로 만들고 싶습니다.
+
+https://gall.dcinside.com/mgallery/board/view/?id=factorio&no=36503
+
+2021년 6월 말경 시작
