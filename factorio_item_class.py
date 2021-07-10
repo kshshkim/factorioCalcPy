@@ -3,14 +3,21 @@ import copy
 
 
 class FactorioItem:
-    def __init__(self, putname):
-        self.name = putname
+    total_req_dict = dict
+    children = dict
+
+    def __init__(self, item_name: str, resource_consumption_rate_dict=None):
+
+        self.name = item_name
         self.energy_required = recipe_dict[self.name]['energy_required']
         self.ingredients = recipe_dict[self.name]['ingredients']
         self.results = recipe_dict[self.name]['results']
         self.amount_ancestors_needs = 1
         self.category = self.get_category()
-        # self.ingredients_per_one=self.getingredientsperone()
+        self.ingredients_per_one = self.get_ingredients_per_one()
+        if resource_consumption_rate_dict is None:
+            resource_consumption_rate_dict = {}
+        self.resource_consumption_rate_dict = resource_consumption_rate_dict
 
     def get_ingredients_per_one(self):
         ingredients_dict = copy.deepcopy(self.ingredients)
@@ -25,51 +32,40 @@ class FactorioItem:
         else:
             pass  # TODO 결과물이 여럿인 레시피는 나중에
 
-    # def make_child(self, ancestors_needs=1.0, extra_product_dict={}):
-    #     self.children = {}
-    #     self.ingredients_per_one = self.get_ingredients_per_one()
-    #     amount_ancestors_needs = copy.deepcopy(ancestors_needs)
-    #     if self.ingredients != '':
-    #         for key in self.ingredients.keys():
-    #             child = FactorioItem(key)
-    #             child.mother = self
-    #             child.amount_mother_needs = float(self.ingredients_per_one[key])
-    #             child.amount_ancestors_needs = child.amount_mother_needs * amount_ancestors_needs
-    #             self.children[child.name + ' *' + str(
-    #                 child.amount_ancestors_needs)] = child  # self.children.values() <- children 목록,
-    #             # children 변수에 지정된 딕셔너리에 FactorioItem 타입 오브젝트를 value로 저장, list로 하는게 나을지 이게 나을지 아직 못 정함
-    #             child.make_child(child.amount_ancestors_needs)
+    def make_child(self, ancestors_needs=1.0):
+        # 의존성 트리 생성, mother needs, ancestors needs 정보 전달, 총 아이템 요구량은 모든 후손들의 ancestors_needs 를 합하면 됨.
 
-    def make_child(self, ancestors_needs=1.0, extra_product_dict={}): # TODO extra_product_dict를 뱉어내는 공장 생성
-        self.amount_ancestors_needs=ancestors_needs
-        self.total_req_dict={}
-        search_queue=[self]
-        while search_queue!=[]:
+        self.amount_ancestors_needs = ancestors_needs
+        self.total_req_dict = {}
+        search_queue = [self]
+        while search_queue != []:
             current = search_queue[0]
             current.children = {}
             if current.ingredients != '':
                 for key in current.ingredients.keys():
-                    child=FactorioItem(key) # child obj 생성
-                    child.mother=current
-                    extra_product_modifier = float(1)
+                    child = FactorioItem(key)  # child obj 생성
+                    child.mother = current
+                    # 모디파이어 초기화, 기본 1
+                    resource_consumption_modifier = float(1)
 
-                    # 전달받은 딕셔너리에 값이 존재할 경우, 즉 생산모듈이 장착된 경우, current의 1개당 아이템 요구량이 줄어드는 것으로 계산 가능.
-                    if current.name in extra_product_dict.keys():
-                        extra_product_modifier = extra_product_dict[current.name]
+                    # 전달받은 딕셔너리에 값이 존재할 경우, 즉 생산모듈이 장착된 경우, current 의 1개당 아이템 요구량이 줄어드는 것으로 계산 가능.
+                    if self.resource_consumption_rate_dict != {}:
+                        if current.name in self.resource_consumption_rate_dict.keys():
+                            resource_consumption_modifier = self.resource_consumption_rate_dict[current.name]
 
-                    child.amount_mother_needs= float(current.get_ingredients_per_one()[key]) * extra_product_modifier
+                    child.amount_mother_needs = float(current.ingredients_per_one[key]) * resource_consumption_modifier
                     child.amount_ancestors_needs = child.amount_mother_needs * current.amount_ancestors_needs
 
-                    current.children[child.name]=child
+                    current.children[child.name] = child
                     search_queue.append(child)
-            if self.total_req_dict.get(current.name) == None:  # total_req_dict에 self.name과 일치하는 key가 없으면 추가
+            if self.total_req_dict.get(current.name) is None:  # total_req_dict 에 self.name 과 일치하는 key 가 없으면 추가
                 self.total_req_dict[current.name] = 0
             self.total_req_dict[current.name] = self.total_req_dict[current.name] + current.amount_ancestors_needs
 
             search_queue.pop(0)
 
-    def get_total_req_dict(self, howmany=1, extra_product_dict={}):
-        self.make_child(howmany,extra_product_dict)
+    def get_total_req_dict(self, howmany=1):
+        self.make_child(howmany)
         return self.total_req_dict
 
     def is_has_child(self):
@@ -78,11 +74,11 @@ class FactorioItem:
                 return False
             else:
                 return True
-        except:
+        except AttributeError:
             return False
 
     def get_category(self):
         try:
             return recipe_dict[self.name]['category']
-        except:
-            return None
+        except KeyError:
+            return 'crafting'
