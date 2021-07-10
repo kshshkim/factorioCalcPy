@@ -4,11 +4,11 @@ import json
 
 class LuaConverter:
     def parse(self, luafile):
-        with open(luafile, 'r') as toconvert:
-            toconvert = str(toconvert.read())
-        toconvert = toconvert.replace('data:extend(\n{\n  {', '').replace('})\n', '')  # slpp가 알아먹을수 있는 형태로 가공
-        toconvert = toconvert.replace('  },\n\n', '  },\n')  # 불규칙적으로 두 칸 띄운 경우가 있음.
-        item_info_list = toconvert.split('\n  },\n  {')
+        with open(luafile, 'r') as to_convert:
+            to_convert = str(to_convert.read())
+        to_convert = to_convert.replace('data:extend(\n{\n  {', '').replace('})\n', '')  # slpp가 알아먹을수 있는 형태로 가공
+        to_convert = to_convert.replace('  },\n\n', '  },\n')  # 불규칙적으로 두 칸 띄운 경우가 있음.
+        item_info_list = to_convert.split('\n  },\n  {')
         returndict = {}
         for each_item in item_info_list:  # 아이템별로 따로 반복
             each_item = '  {' + each_item + '\n  },'
