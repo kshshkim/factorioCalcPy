@@ -33,7 +33,7 @@ class FactorioItem:
             pass  # TODO 결과물이 여럿인 레시피는 나중에
 
     def make_child(self, ancestors_needs=1.0):
-        # 의존성 트리 생성, mother needs, ancestors needs 정보 전달, 총 아이템 요구량은 모든 후손들의 ancestors_needs 를 합하면 됨.
+        # 의존성 트리 생성, mother needs, ancestors needs 정보 전달, 총 아이템 요구량은 모든 객체들의 ancestors_needs 를 합하면 됨.
 
         self.amount_ancestors_needs = ancestors_needs
         self.total_req_dict = {}
