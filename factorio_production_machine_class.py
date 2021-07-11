@@ -47,13 +47,14 @@ class FactorioMachine:
             self.total_modifier[2] = self.total_modifier[2] + production_machine_dict[
                 self.production_machine_name] * self.mining_research_modifier
 
-        self.production_speed_rate = self.base_production_speed_rate + self.base_production_speed_rate * \
-                                     self.total_modifier[0]
-        self.power_consumption_rate = self.base_power_consumption_rate + self.base_power_consumption_rate * \
-                                      self.total_modifier[1]
+        self.production_speed_rate = self.base_production_speed_rate + self.base_production_speed_rate * self.total_modifier[0]
+        self.power_consumption_rate = self.base_power_consumption_rate + self.base_power_consumption_rate * self.total_modifier[1]
         self.extra_product_rate = self.total_modifier[2]
-        # 추가 생산품을 생산 속도에 반영
+        # 추가 생산품을 생산 속도에 반영 생산속도 배수 곱연산 적용
         self.production_speed_rate = self.production_speed_rate * (1 + self.extra_product_rate)
         self.resource_consumption_rate = 1
         if self.extra_product_rate != 0:
             self.resource_consumption_rate = (1/self.extra_product_rate) / (1/self.extra_product_rate + 1)
+
+    def get_resource_consumption_rate(self):
+        return self.resource_consumption_rate
