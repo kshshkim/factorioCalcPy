@@ -52,17 +52,24 @@ class FactorioCalcBody:
             amount_needed = self.total_req_dict[block_obj.item_name]
             production_machine_amount = self.get_how_many_machine_needed(block_obj)
             amount_per_minute = production_machine_amount*60/block_obj.get_production_time_per_one()
-            new_dict[block_obj.item_name]={
-                'item_name': block_obj.item_name,
-                'amount_needed': round(amount_needed, 2),
-                'production_machine': block_obj.production_machine_name,
-                'added_modules': block_obj.to_add_module_list,
-                'production_machine_amount': production_machine_amount,
-                'amount_per_1_minute': amount_per_minute,
-                'power_consumption(kw)': power_consumption,
-                'power_consumption(mw)': round(power_consumption/1000, 2),
-                'power_consumption(gw)': round(power_consumption/1000000, 2)
-            }
+            if block_obj.item_name not in ['petroleum-gas', 'light-oil', 'heavy-oil', 'crude-oil', 'solid-fuel']:
+                new_dict[block_obj.item_name]={
+                    'item_name': block_obj.item_name,
+                    'amount_needed': round(amount_needed, 2),
+                    'production_machine': block_obj.production_machine_name,
+                    'added_modules': block_obj.to_add_module_list,
+                    'production_machine_amount': production_machine_amount,
+                    'amount_per_1_minute': amount_per_minute,
+                    'power_consumption(kw)': power_consumption,
+                    'power_consumption(mw)': round(power_consumption/1000, 2),
+                    'power_consumption(gw)': round(power_consumption/1000000, 2)
+                }
+            else:
+                new_dict[block_obj.item_name]={
+                    'item_name': block_obj.item_name,
+                    'amount_needed': round(amount_needed, 2),
+
+                }
         return new_dict
 
     def get_how_many_machine_needed(self, ingredient_block_obj: FactorioProductionBlock):
