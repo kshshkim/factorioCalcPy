@@ -1,4 +1,5 @@
 from data.production_machine_category_list_dict import production_machine_category_list_dict as pmc_list_dict
+from data.production_machine_dict import production_machine_dict
 from factorio_production_machine_class import FactorioMachine
 from factorio_item_class import FactorioItem
 from data.productivity_module_available_list import productivity_module_available_list
@@ -65,14 +66,24 @@ class FactorioProductionBlock:
     def clear_module(self):
         self.to_add_module_list = []
 
-    def update_machine(self, machine_name=None):
+    def update_machine(self, machine_name=None, module_list=None):
         if machine_name == None:
             machine_name = self.production_machine_name
+        if module_list == None:
+            module_list = self.to_add_module_list
+        else: self.to_add_module_list=module_list
+
         if machine_name in self.available_machine_list:
             self.production_machine_name = machine_name
+            if len(module_list)>production_machine_dict[self.production_machine_name]['module_slots']:
+                while len(module_list) == production_machine_dict[self.production_machine_name]['module_slots']:
+                    print(module_list)
+                    module_list.pop(-1) # 슬롯이 더 적은 경우 마지막 슬롯부터 제거
+            del self.machine_obj
             self.machine_obj = FactorioMachine(self.production_machine_name, to_add_module_list=self.to_add_module_list, mining_research_modifier=self.mining_research_modifier)
 
     def get_production_time_per_one(self):
+        # self.update_machine()
         # 아이템 1개당 energy_required 계산
         energy_required_per_one = self.item_obj.energy_required_per_one
         production_speed_rate = self.machine_obj.production_speed_rate
@@ -80,11 +91,13 @@ class FactorioProductionBlock:
         return production_time
 
     def get_machine_resource_consumption_rate(self):
-        return self.machine_obj.get_resource_consumption_rate()
+        return self.machine_obj.resource_consumption_rate
 
     def get_item_name_and_resource_consumption_rate_list(self):
         return [self.item_obj.name, self.get_machine_resource_consumption_rate()]
 
+    def get_power_consumption(self):
+        return self.machine_obj.power_consumption_rate
     # def update_machine(self):
     #     self.main_block_obj = FactorioProductionBlock(self.main_item_name, mining_research_modifier=self.mining_research_modifier)
     # def get_how_many_machine_needed(self, amount_to_produce, ref_time):
