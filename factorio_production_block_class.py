@@ -98,10 +98,3 @@ class FactorioProductionBlock:
 
     def get_power_consumption(self):
         return self.machine_obj.power_consumption_rate
-    # def update_machine(self):
-    #     self.main_block_obj = FactorioProductionBlock(self.main_item_name, mining_research_modifier=self.mining_research_modifier)
-    # def get_how_many_machine_needed(self, amount_to_produce, ref_time):
-    #     # 기준 시간은 메인 아이템이 하나 만들어지는데 걸리는 시간, 모든 재료*요구량은 기준 시간 내에 생산이 되어야함. 기준 시간 내에 생산 가능한 공장의 갯수를 구해야함
-    #     # 공장 필요량 = 생산해야할 수량 * 1개 생산에 걸리는 시간 / 기준시간
-    #     to_return = self.get_production_time_per_one()*amount_to_produce/ref_time
-    #     return to_return
