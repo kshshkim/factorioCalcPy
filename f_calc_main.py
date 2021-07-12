@@ -3,8 +3,10 @@ from factorio_item_class import FactorioItem
 
 
 class FactorioCalcBody:
-    def __init__(self, main_item_name='advanced-circuit', mining_research_modifier=0):
+    def __init__(self, main_item_name='advanced-circuit', mining_research_modifier=0, machine_amount=1):
         self.main_item_name = main_item_name
+        self.main_machine_amount = machine_amount
+
         self.initial_total_req_dict = {}
         self.initial_create_total_req_dict()
         self.total_req_dict = self.initial_total_req_dict
@@ -32,6 +34,9 @@ class FactorioCalcBody:
         # total_req_dict 에 resource_consumption_rate_dict 가 반영됨.
         temp_obj = FactorioItem(self.main_item_name, self.resource_consumption_rate_dict)
         self.total_req_dict = temp_obj.get_total_req_dict()
+        if self.main_machine_amount != 1:
+            for key in self.total_req_dict.keys():
+                self.total_req_dict[key]=self.total_req_dict[key]*self.main_machine_amount
 
     def update_resource_consumption_rate_dict(self):
         for block_obj in self.block_objs_dict.values():
@@ -40,19 +45,23 @@ class FactorioCalcBody:
         self.update_total_req_dict()
 
     def get_total_calculated_dict(self):  # 최종 출력
-        self.update_total_req_dict()
+        self.update_resource_consumption_rate_dict()
         new_dict={}
-        # new_dict['main_item']={
-        #     'item_name': self.main_item_name,
-        #     'production_machine': self.main_block_obj.production_machine_name,
-        #     'production_machine_amount': 1 # 추후 수정 필요
-        # }
         for block_obj in self.block_objs_dict.values():
-            new_dict['ingredients'][block_obj.item_name]={
+            power_consumption = block_obj.get_power_consumption()*self.get_how_many_machine_needed(block_obj)
+            amount_needed = self.total_req_dict[block_obj.item_name]
+            production_machine_amount = self.get_how_many_machine_needed(block_obj)
+            amount_per_minute = production_machine_amount*60/block_obj.get_production_time_per_one()
+            new_dict[block_obj.item_name]={
                 'item_name': block_obj.item_name,
-                'amount_needed': self.total_req_dict[block_obj.item_name],
+                'amount_needed': round(amount_needed, 2),
                 'production_machine': block_obj.production_machine_name,
-                'production_machine_amount': self.get_how_many_machine_needed(block_obj)
+                'added_modules': block_obj.to_add_module_list,
+                'production_machine_amount': production_machine_amount,
+                'amount_per_1_minute': amount_per_minute,
+                'power_consumption(kw)': power_consumption,
+                'power_consumption(mw)': round(power_consumption/1000, 2),
+                'power_consumption(gw)': round(power_consumption/1000000, 2)
             }
         return new_dict
 
@@ -63,5 +72,5 @@ class FactorioCalcBody:
         production_time_per_one = ingredient_block_obj.get_production_time_per_one()
         ref_time = self.block_objs_dict[self.main_item_name].get_production_time_per_one()
         amount_machine_needed = amount_to_produce * production_time_per_one / ref_time
-        return amount_machine_needed
+        return round(amount_machine_needed,2)
 
