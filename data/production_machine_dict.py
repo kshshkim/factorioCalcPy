@@ -49,32 +49,51 @@ production_machine_dict = {
         "name": "burner-mining-drill",
         "production_rate": 0.25,
         "module_slots": 0,
-        "category": "mining-drill"
+        "category": "mining-drill",
+        "power_consumption": 180,
+
     },
     "electric-mining-drill": {
         "name": "electric-mining-drill",
         "production_rate": 0.5,
         "module_slots": 0,
-        "category": "mining-drill"
+        "category": "mining-drill",
+        "power_consumption": 180,
     },
     "offshore-pump": {
         "name": "offshore-pump",
-        "category": "water"
-    },
+        "production_rate": 1,
+        "category": "water",
+        "power_consumption": 0,
+        "module_slots": 0,
+
+},
     "pumpjack": {
         "name": "pumpjack",
-        "category": "crude-oil"
+        "category": "crude-oil",
+        "production_rate": 1,
+        "power_consumption": 180,
+        "module_slots": 0,
     },
     "oil-refinery": {
         "name": "oil-refinery",
-        "category":"oil-processing"
+        "category":"oil-processing",
+        "production_rate": 1,
+        "power_consumption": 180,
+        "module_slots": 0,
     },
     "chemical-plant": {
         "name": "chemical-plant",
-        "category": "chemistry"
+        "category": "chemistry",
+        "production_rate": 1,
+        "power_consumption": 180,
+        "module_slots": 0,
     },
     "centrifuge": {
         "name": "centrifuge",
-        "category": "centrifuging"
+        "category": "centrifuging",
+        "production_rate": 1,
+        "power_consumption": 180,
+        "module_slots": 0,
     }
 }
