@@ -15,6 +15,7 @@ class FactorioItem:
         self.amount_ancestors_needs = 1
         self.category = self.get_category()
         self.ingredients_per_one = self.get_ingredients_per_one()
+        self.energy_required_per_one = self.get_energy_required_per_one()
         if resource_consumption_rate_dict is None:
             resource_consumption_rate_dict = {}
         self.resource_consumption_rate_dict = resource_consumption_rate_dict
@@ -31,6 +32,18 @@ class FactorioItem:
                     return ingredients_dict
         else:
             pass  # TODO 결과물이 여럿인 레시피는 나중에
+
+    def get_energy_required_per_one(self):
+        try:
+            if len(list(self.results.keys())) == 1:
+                if float(self.results[self.name]) == 1.0:
+                    return self.energy_required
+                else:
+                    return self.energy_required/float(self.results[self.name])
+            else:
+                pass
+        except AttributeError: # results = '' 인 경우로, str 오브젝트임. 아직 미완성
+            return 1 # 임시값
 
     def make_child(self, ancestors_needs=1.0):
         # 의존성 트리 생성, mother needs, ancestors needs 정보 전달, 총 아이템 요구량은 모든 객체들의 ancestors_needs 를 합하면 됨.
