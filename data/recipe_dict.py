@@ -2336,16 +2336,17 @@ recipe_dict = {
     },
     "water": {
         "name": "water",
-        "energy_required": "",
+        "energy_required": 1,
         "ingredients": "",
-        "results": ""
+        "results": {"water": 1200},
+        "category": "water"
     },
     "coal": {
         "name": "coal",
         "energy_required": 1,
         "ingredients": "",
         "results": {"coal": 0.5},
-        "category": "mining"
+        "category": "mining-drill"
     },
     "heavy-oil": {
         "name": "heavy-oil",
@@ -2383,21 +2384,21 @@ recipe_dict = {
         "energy_required": 1,
         "ingredients": "",
         "results": {"stone": 0.5},
-        "category": "mining"
+        "category": "mining-drill"
     },
     "iron-ore": {
         "name": "iron-ore",
         "energy_required": 1,
         "ingredients": "",
         "results": {"iron-ore": 0.5},
-        "category": "mining"
+        "category": "mining-drill"
     },
     "copper-ore": {
         "name": "copper-ore",
         "energy_required": 1,
         "ingredients": "",
         "results": {"copper-ore": 0.5},
-        "category": "mining"
+        "category": "mining-drill"
     },
     "uranium-238": {
         "name": "uranium-238",
@@ -2437,6 +2438,6 @@ recipe_dict = {
         "energy_required": 2,
         "ingredients": {"sulfuric-acid": 1},
         "results": {"uranium-ore": 0.5},
-        "category": "mining"
+        "category": "mining-drill"
     }
 }
