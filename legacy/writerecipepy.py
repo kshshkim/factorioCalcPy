@@ -7,5 +7,5 @@ lcc = lua_recipe_converter.Copyrecipe()
 # towrite = 'recipe_dict = ' + json.dumps(lcc.final(), sort_keys=False, indent=4) + '\n'
 towrite1 = dict_merge.Merger()
 towrite = 'recipe_dict = ' + json.dumps(towrite1.merge(), sort_keys=False, indent=4) + '\n'
-with open('../data/recipe_dict.py', 'w') as recipe:
+with open('data/recipe_dict.py', 'w') as recipe:
     recipe.write(towrite)

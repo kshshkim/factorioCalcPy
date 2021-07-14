@@ -2345,9 +2345,9 @@ recipe_dict = {
     },
     "coal": {
         "name": "coal",
-        "energy_required": 2,
+        "energy_required": 1,
         "ingredients": "",
-        "results": {"coal": 1},
+        "results": {"coal": 0.5},
         "category": "mining-drill"
     },
     "heavy-oil": {
@@ -2355,27 +2355,25 @@ recipe_dict = {
         "energy_required": "",
         "ingredients": "",
         "results": "",
-        "available_recipe": ['advanced-oil-processing']
+        "available_recipe": ['heavy-oil-cracking']
     },
     "steam": {
         "name": "steam",
         "energy_required": "",
         "ingredients": "",
-        "results": "",
+        "results": ""
     },
     "light-oil": {
         "name": "light-oil",
         "energy_required": "",
         "ingredients": "",
-        "results": "",
-        "available_recipe": ['advanced-oil-processing', 'heavy-oil-cracking']
+        "results": ""
     },
     "petroleum-gas": {
         "name": "petroleum-gas",
         "energy_required": "",
         "ingredients": "",
-        "results": "",
-        "available_recipe": ['advanced-oil-processing', 'light-oil-cracking']
+        "results": ""
     },
     "wood": {
         "name": "wood",
@@ -2385,23 +2383,23 @@ recipe_dict = {
     },
     "stone": {
         "name": "stone",
-        "energy_required": 2,
+        "energy_required": 1,
         "ingredients": "",
-        "results": {"stone": 1},
+        "results": {"stone": 0.5},
         "category": "mining-drill"
     },
     "iron-ore": {
         "name": "iron-ore",
-        "energy_required": 2,
+        "energy_required": 1,
         "ingredients": "",
-        "results": {"iron-ore": 1},
+        "results": {"iron-ore": 0.5},
         "category": "mining-drill"
     },
     "copper-ore": {
         "name": "copper-ore",
-        "energy_required": 2,
+        "energy_required": 1,
         "ingredients": "",
-        "results": {"copper-ore": 1},
+        "results": {"copper-ore": 0.5},
         "category": "mining-drill"
     },
     "uranium-238": {
@@ -2429,6 +2427,7 @@ recipe_dict = {
         "results": "",
         "category": "chemistry",
         "available_recipe": ['solid-fuel-from-heavy-oil', 'solid-fuel-from-petroleum-gas', 'solid-fuel-from-light-oil']
+
     },
     "used-up-uranium-fuel-cell": {
         "name": "used-up-uranium-fuel-cell",
@@ -2438,9 +2437,9 @@ recipe_dict = {
     },
     "uranium-ore": {
         "name": "uranium-ore",
-        "energy_required": 4,
+        "energy_required": 2,
         "ingredients": {"sulfuric-acid": 1},
-        "results": {"uranium-ore": 1},
+        "results": {"uranium-ore": 0.5},
         "category": "mining-drill"
     }
 }
