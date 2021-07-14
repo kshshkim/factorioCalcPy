@@ -4,30 +4,16 @@ from factorio_production_machine_class import FactorioMachine
 from factorio_item_class import FactorioItem
 from data.productivity_module_available_list import productivity_module_available_list
 from data.module_modifier_dict import module_modifier_dict
-# TODO FactorioItem make_child 메소드 FactorioProductionBlock 클래스에 넣기
+from data.recipe_dict import recipe_dict
+# TODO FactorioItem make_child 메소드 FactorioGeneralBlock 클래스에 넣기
 # TODO 계산기 객체 how_many 인수 적용
 
 
-class FactorioProductionBlock:
-    def __init__(self, item_name='advanced-circuit', mining_research_modifier=0, resource_consumption_modifier_dict=None):
-        if resource_consumption_modifier_dict is None:
-            resource_consumption_modifier_dict = {}
-        self.resource_consumption_modifier_dict = resource_consumption_modifier_dict
-        self.item_name = item_name
-        self.item_obj = FactorioItem(item_name, resource_consumption_modifier_dict)
-        # 선택 가능 머신 설정
-        self.available_machine_list = self.get_available_machine_list()
-        self.production_machine_name = self.available_machine_list[-1]
+class FactorioBlock:
+    def __init__(self, item_or_recipe_name, mining_research_modifier=0):
         self.to_add_module_list = []
+        self.name = item_or_recipe_name
         self.mining_research_modifier = mining_research_modifier
-        self.machine_obj = FactorioMachine(self.production_machine_name, self.to_add_module_list, self.mining_research_modifier)
-        self.production_time = self.get_production_time_per_one()
-
-    # 아이템별 가능한 생산머신
-    def get_available_machine_list(self):
-        item_category = self.item_obj.get_category()
-        machine_list = pmc_list_dict[item_category]
-        return machine_list
 
     def is_able_to_add_a_module(self, module_name: str):
         module_list = list(module_modifier_dict.keys())
@@ -43,7 +29,7 @@ class FactorioProductionBlock:
             is_not_full = True
         if module_name in ['p1', 'p2', 'p3']:
             is_productivity_module = True
-        if self.item_obj.name in productivity_module_available_list:
+        if self.name in productivity_module_available_list:
             is_pmodule_available = True
 
         if is_legit_module and is_not_full:
@@ -71,9 +57,9 @@ class FactorioProductionBlock:
             machine_name = self.production_machine_name
         if module_list == None:
             module_list = self.to_add_module_list
-        else: self.to_add_module_list=module_list
+        else:
+            self.to_add_module_list=module_list
 
-        if machine_name in self.available_machine_list:
             self.production_machine_name = machine_name
             if len(module_list)>production_machine_dict[self.production_machine_name]['module_slots']:
                 while len(module_list) == production_machine_dict[self.production_machine_name]['module_slots']:
@@ -82,19 +68,57 @@ class FactorioProductionBlock:
             del self.machine_obj
             self.machine_obj = FactorioMachine(self.production_machine_name, to_add_module_list=self.to_add_module_list, mining_research_modifier=self.mining_research_modifier)
 
+    def get_machine_resource_consumption_rate(self):
+        return self.machine_obj.resource_consumption_rate
+
+    def get_power_consumption(self):
+        return self.machine_obj.power_consumption_rate
+
+    def get_item_name_and_resource_consumption_rate_list(self):
+        return [self.name, self.get_machine_resource_consumption_rate()]
+
+
+class FactorioGeneralBlock(FactorioBlock):
+    def __init__(self, item_name='advanced-circuit', mining_research_modifier=0, resource_consumption_modifier_dict=None):
+        super().__init__(item_name, mining_research_modifier)
+        if resource_consumption_modifier_dict is None:
+            resource_consumption_modifier_dict = {}
+        self.item_name = self.name
+        self.resource_consumption_modifier_dict = resource_consumption_modifier_dict
+        self.item_obj = FactorioItem(item_name, resource_consumption_modifier_dict)
+        # 선택 가능 머신 설정
+        self.available_machine_list = self.get_available_machine_list()
+        self.production_machine_name = self.available_machine_list[-1]
+        self.machine_obj = FactorioMachine(self.production_machine_name, self.to_add_module_list, self.mining_research_modifier)
+        self.production_time = self.get_production_time_per_one()
+
+    # 아이템별 가능한 생산머신
+    def get_available_machine_list(self):
+        item_category = self.item_obj.get_category()
+        machine_list = pmc_list_dict[item_category]
+        return machine_list
+
     def get_production_time_per_one(self):
         # self.update_machine()
         # 아이템 1개당 energy_required 계산
+        # advanced-oil-processing의 경우
         energy_required_per_one = self.item_obj.energy_required_per_one
         production_speed_rate = self.machine_obj.production_speed_rate
         production_time = energy_required_per_one / production_speed_rate
         return production_time
 
-    def get_machine_resource_consumption_rate(self):
-        return self.machine_obj.resource_consumption_rate
 
-    def get_item_name_and_resource_consumption_rate_list(self):
-        return [self.item_obj.name, self.get_machine_resource_consumption_rate()]
+class FactorioOilBlock(FactorioBlock):
+    def __init__(self, recipe_name):
+        super().__init__(item_or_recipe_name='advanced-oil-processing')
+        self.recipe_name = recipe_name
+        if self.recipe_name == 'advanced-oil-processing':
+            self.production_machine_name = 'oil_refinery'
+        self.machine_obj = FactorioMachine(self.production_machine_name)
 
-    def get_power_consumption(self):
-        return self.machine_obj.power_consumption_rate
+    def get_production_time(self):
+        energy_required = recipe_dict[self.recipe_name]['energy_required']
+        production_speed_rate = self.machine_obj.production_speed_rate
+        production_time = energy_required / production_speed_rate
+        return production_time
+

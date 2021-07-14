@@ -4,7 +4,7 @@ from data.module_modifier_dict import module_modifier_dict
 
 
 class FactorioMachine:
-    # FactorioProductionBlock 에 전달할 것
+    # FactorioGeneralBlock 에 전달할 것
     total_modifier: list
     production_speed_rate: float
     power_consumption_rate: float
@@ -13,7 +13,7 @@ class FactorioMachine:
     total_requirement_modifier: float
 
     def __init__(self, factory_name: str, to_add_module_list=None, mining_research_modifier=0):
-        # FactorioProductionBlock 에서 전달받을 것
+        # FactorioGeneralBlock 에서 전달받을 것
         self.production_machine_name = factory_name
         if to_add_module_list is None:
             to_add_module_list = []
@@ -55,5 +55,6 @@ class FactorioMachine:
         self.resource_consumption_rate = 1
 
         if self.extra_product_rate != 0:
+            # 산출물이 여러개면 분모 +1 이 아니라 분모 +산출물 갯수
             self.resource_consumption_rate = (1/self.extra_product_rate) / (1/self.extra_product_rate + 1)
 

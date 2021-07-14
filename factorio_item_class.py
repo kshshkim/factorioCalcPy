@@ -3,8 +3,8 @@ import copy
 
 
 class FactorioItem:
-    total_req_dict = dict
-    children = dict
+    total_req_dict: dict
+    children: dict
 
     def __init__(self, item_name: str, resource_consumption_rate_dict=None):
 
@@ -21,28 +21,30 @@ class FactorioItem:
         self.resource_consumption_rate_dict = resource_consumption_rate_dict
 
     def get_ingredients_per_one(self):
+        # 산출되는 결과가 한 가지일 경우 개당 산출물, 아닐 경우 레시피 하나당 산출물
         ingredients_dict = copy.deepcopy(self.ingredients)
         if self.ingredients != '':
-            if len(list(self.results.keys())) == 1:
-                if self.results[self.name] == 1 or self.results[self.name] == 1.0:
+            if len(list(self.results.values())) == 1:
+                if list(self.results.values())[0] == 1 or list(self.results.values())[0] == 1.0:
                     return ingredients_dict
                 else:
                     for ingredient in ingredients_dict.keys():
-                        ingredients_dict[ingredient] = ingredients_dict[ingredient] / self.results[self.name]
+                        ingredients_dict[ingredient] = ingredients_dict[ingredient] / list(self.results.values())[0]
                     return ingredients_dict
+            return ingredients_dict
         else:
             pass  # TODO 결과물이 여럿인 레시피는 나중에
 
     def get_energy_required_per_one(self):
         try:
-            if len(list(self.results.keys())) == 1:
-                if float(self.results[self.name]) == 1.0:
+            if len(list(self.results.values())) == 1:
+                if float(list(self.results.values())[0]) == 1.0:
                     return self.energy_required
                 else:
-                    return self.energy_required/float(self.results[self.name])
+                    return self.energy_required/list(self.results.values())[0]
             else:
-                pass
-        except AttributeError: # results = '' 인 경우로, str 오브젝트임. 아직 미완성
+                return self.energy_required # 생산물이 여러개인 레시피의 경우 energy_required를 그대로 반환, 이 경우 레시피를 한 단위로 봄.
+        except AttributeError: # results = '' 인 경우로, str 오브젝트임.
             return 1 # 임시값
 
     def make_child(self, ancestors_needs=1.0):
