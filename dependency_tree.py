@@ -1,5 +1,4 @@
 from data.recipe_dict import recipe_dict
-import copy
 from recipe_class import RecipeClass
 from oil_processing import FactorioOilNeedToRecipe
 
@@ -34,7 +33,7 @@ class RecipeDependency:
                     # returned_recipe_list, [0]: name, [1]: amount
                     if total_recipe_needed_dict.get(returned_recipe_list[0]) is None:
                         total_recipe_needed_dict[returned_recipe_list[0]] = 0
-                    total_recipe_needed_dict[returned_recipe_list[0]] = total_recipe_needed_dict[returned_recipe_list[0]] + returned_recipe_list[1]
+                    total_recipe_needed_dict[returned_recipe_list[0]] += returned_recipe_list[1]
                     new_obj = RecipeClass(returned_recipe_list[0])
                     new_obj.amount = returned_recipe_list[1]
                     obj_search_queue.append(new_obj)
@@ -42,7 +41,7 @@ class RecipeDependency:
                     # item_needed_queue[0][b], 0: index, b:0: item name, b:1: item amount
                     if cannot_process_dict.get(item_needed_queue[0][0]) is None:
                         cannot_process_dict[item_needed_queue[0][0]] = 0
-                    cannot_process_dict[item_needed_queue[0][0]] = cannot_process_dict[item_needed_queue[0][0]] + item_needed_queue[0][1]
+                    cannot_process_dict[item_needed_queue[0][0]] += item_needed_queue[0][1]
                 item_needed_queue.pop(0)
             obj_search_queue.pop(0)
         print(cannot_process_dict)
@@ -63,7 +62,7 @@ class RecipeDependency:
             for keykey in to_add.keys():
                 if keykey not in new_dict:
                     new_dict[keykey] = 0
-                new_dict[keykey] = new_dict[keykey] + to_add[keykey]*total_needed_recipe[key]
+                new_dict[keykey] += to_add[keykey]*total_needed_recipe[key]
         return new_dict
 
     def find_recipe(self, needed_list):
