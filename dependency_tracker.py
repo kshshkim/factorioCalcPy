@@ -1,6 +1,6 @@
 from data.recipe_dict import recipe_dict
 from recipe_class import RecipeClass
-from oil_processing import FactorioOilNeedToRecipe
+from oil_processing import FactorioOilReqToRecipe
 
 
 class DependencyTracker:
@@ -59,7 +59,7 @@ class DependencyTracker:
         if self.cannot_process_item_dict == {}:
             pass
         else:
-            new_obj = FactorioOilNeedToRecipe(self.cannot_process_item_dict, self.resource_consumption_rate_dict)
+            new_obj = FactorioOilReqToRecipe(self.cannot_process_item_dict, self.resource_consumption_rate_dict)
             oil_recipe_dict = new_obj.get_recipe_needed()
             oil_item_dict = new_obj.get_item_needed()
             new_dict = {

@@ -1,7 +1,8 @@
 from data.recipe_dict import recipe_dict
 
 
-class FactorioOilNeedToRecipe:
+# TODO advanced-oil-processing 이외 다른 방법 추가
+class FactorioOilReqToRecipe:
     how_many_adv: float
     heavy_to_light_amount: float
     light_to_gas_amount: float
@@ -98,5 +99,4 @@ class FactorioOilNeedToRecipe:
                     if new_dict2.get(key2) is None:
                         new_dict2[key2] = 0
                     new_dict2[key2] = new_dict2[key2] + ingredients_dict[key2]*ref_dict[key]*self.resource_consumption_ratio_dict[key]
-        print(new_dict2)
         return new_dict2
