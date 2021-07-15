@@ -13,13 +13,13 @@ class FactorioOilReqToRecipe:
             resource_consumption_ratio_dict = {}
         self.resource_consumption_ratio_dict = resource_consumption_ratio_dict
         if oil_need_dict.get('petroleum-gas') is None:
-            oil_need_dict['petroleum-gas']=0
+            oil_need_dict['petroleum-gas'] = 0
         self.petroleum_gas_need = oil_need_dict['petroleum-gas']
         if oil_need_dict.get('light-oil') is None:
-            oil_need_dict['light-oil']=0
+            oil_need_dict['light-oil'] = 0
         self.light_oil_need = oil_need_dict['light-oil']
         if oil_need_dict.get('heavy_oil') is None:
-            oil_need_dict['heavy_oil']=0
+            oil_need_dict['heavy_oil'] = 0
         self.heavy_oil_need = oil_need_dict['heavy_oil']
 
         self.hoc_resource_consumption_ratio = 1
@@ -42,12 +42,12 @@ class FactorioOilReqToRecipe:
         need = [self.heavy_oil_need, self.light_oil_need, self.petroleum_gas_need]
         extra = [0, 0, 0]
 
-        h2l = 3/(4*self.hoc_resource_consumption_ratio)
-        l2p = 2/(3*self.loc_resource_consumption_ratio)
+        h2l = 3 / (4 * self.hoc_resource_consumption_ratio)
+        l2p = 2 / (3 * self.loc_resource_consumption_ratio)
 
         a = need[0] / adv[0]
         for i in range(3):
-            extra[i - 1] = adv[i - 1] * a
+            extra[i] = adv[i] * a
         extra[0] = 0
 
         if extra[1] < need[1]:
@@ -69,13 +69,13 @@ class FactorioOilReqToRecipe:
 
         before_cracked = [0, 0, 0]
         for i in range(3):
-            before_cracked[i - 1] = adv[i - 1] * how_many_adv
+            before_cracked[i] = adv[i] * how_many_adv
         heavy_to_light_amount = before_cracked[0] - need[0]
         light_to_gas_amount = heavy_to_light_amount * 0.75 + before_cracked[1] - need[1]
 
         self.how_many_adv = how_many_adv
-        self.heavy_to_light_amount = heavy_to_light_amount/(40*h2l)
-        self.light_to_gas_amount = light_to_gas_amount/(30*l2p)
+        self.heavy_to_light_amount = heavy_to_light_amount / (40 * h2l)
+        self.light_to_gas_amount = light_to_gas_amount / (30 * l2p)
         self.extra = extra
 
     def get_recipe_needed(self):
@@ -91,12 +91,12 @@ class FactorioOilReqToRecipe:
         ref_dict = self.get_recipe_needed()
         new_dict2 = {}
         for key in ref_dict:
-            if ref_dict[key]!=0:
+            if ref_dict[key] != 0:
                 ingredients_dict = recipe_dict[key]['ingredients']
                 if key not in self.resource_consumption_ratio_dict:
                     self.resource_consumption_ratio_dict[key] = 1
                 for key2 in ingredients_dict:
                     if new_dict2.get(key2) is None:
                         new_dict2[key2] = 0
-                    new_dict2[key2] = new_dict2[key2] + ingredients_dict[key2]*ref_dict[key]*self.resource_consumption_ratio_dict[key]
+                    new_dict2[key2] = new_dict2[key2] + ingredients_dict[key2] * ref_dict[key] * self.resource_consumption_ratio_dict[key]
         return new_dict2

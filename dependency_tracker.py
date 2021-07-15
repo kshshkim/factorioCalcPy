@@ -14,6 +14,7 @@ class DependencyTracker:
         self.cannot_process_item_dict = {}
         self.item_needed_dict = self.recipe_obj.ingredients
         self.results = self.recipe_obj.results
+        self.oil_obj = None
         self.initial_total_recipe_req_dict = self.get_initial_recipe_req_dict()
         self.initial_total_item_req_dict = self.get_initial_item_req_dict()
 
@@ -31,7 +32,7 @@ class DependencyTracker:
                         resource_consumption_ratio = self.resource_consumption_rate_dict[key]
                     else:
                         resource_consumption_ratio = 1
-                    to_append = [key, current.ingredients[key]*current.amount*resource_consumption_ratio]
+                    to_append = [key, current.ingredients[key] * current.amount * resource_consumption_ratio]
                     item_needed_queue.append(to_append)
             while item_needed_queue != []:
                 if self.find_recipe(item_needed_queue[0]) != -1:
@@ -51,7 +52,7 @@ class DependencyTracker:
                 item_needed_queue.pop(0)
             obj_search_queue.pop(0)
         self.cannot_process_item_dict = cannot_process_item_dict
-        # self.initial_total_recipe_req_dict = initial_total_recipe_req_dict
+        self.oil_obj = FactorioOilReqToRecipe(self.cannot_process_item_dict, self.resource_consumption_rate_dict)
 
         return total_recipe_needed_dict
 
@@ -59,9 +60,9 @@ class DependencyTracker:
         if self.cannot_process_item_dict == {}:
             pass
         else:
-            new_obj = FactorioOilReqToRecipe(self.cannot_process_item_dict, self.resource_consumption_rate_dict)
-            oil_recipe_dict = new_obj.get_recipe_needed()
-            oil_item_dict = new_obj.get_item_needed()
+            oil_obj = self.oil_obj
+            oil_recipe_dict = oil_obj.get_recipe_needed()
+            oil_item_dict = oil_obj.get_item_needed()
             new_dict = {
                 'recipe': oil_recipe_dict,
                 'item': oil_item_dict
@@ -74,8 +75,8 @@ class DependencyTracker:
 
             if roi is not None:
                 to_return_dict = {
-                    'general_'+roi: general_dict,
-                    'oil_'+roi: new_dict[roi]
+                    'general_' + roi: general_dict,
+                    'oil_' + roi: new_dict[roi]
                 }
                 return to_return_dict
 
@@ -87,20 +88,21 @@ class DependencyTracker:
     #         main[key] += to_add[key]
 
     def get_initial_item_req_dict(self):
-        new_dict={}
+        new_dict = {}
         total_needed_recipe = self.initial_total_recipe_req_dict
         for key in total_needed_recipe.keys():
             to_add = recipe_dict[key]['results']
             for keykey in to_add.keys():
                 if keykey not in new_dict:
                     new_dict[keykey] = 0
-                new_dict[keykey] += to_add[keykey]*total_needed_recipe[key]
+                new_dict[keykey] += to_add[keykey] * total_needed_recipe[key]
 
         # merged_dict = self.cpid_handle(general_dict=new_dict, r_or_i='i')
 
         return new_dict
 
-    def find_recipe(self, needed_list):
+    @staticmethod
+    def find_recipe(needed_list):
         item_name = needed_list[0]
         item_amount = needed_list[1]
 
@@ -124,6 +126,7 @@ class DependencyTracker:
 class DependencyDictMerged:
     def __init__(self, recipe_name: str, amount=1, resource_consumption_rate_dict=None):
         teclass = DependencyTracker(recipe_name, amount, resource_consumption_rate_dict)
+
         self.total_recipe_req_dict = teclass.initial_total_recipe_req_dict
         self.total_item_req_dict = teclass.initial_total_item_req_dict
 
