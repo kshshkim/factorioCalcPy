@@ -18,8 +18,13 @@ class ProductionBlock:
         self.machine_name = machine_name
         self.machine_obj = None
         self.available_machine_list = self.get_available_machine_list()
+        self.total_modifier = [0, 0, 0]
+        self.resource_consumption_rate = 0
+        self.power_consumption = 0
+        self.production_speed = 0
+        self.extra_product_rate = 0
+        # self.update_and_calculate_at_once()
         self.update_machine()
-        self.total_modifier = self.get_total_modifier()
 
 
     def get_available_machine_list(self):
@@ -27,9 +32,10 @@ class ProductionBlock:
         machine_list = production_machine_category_list_dict[recipe_category]
         return machine_list
 
-    def update_machine(self):
+    def update_machine(self, machine_name=None):
+        if machine_name is not None:
+            self.machine_name = machine_name
         if (self.machine_name is None) or (self.machine_name not in self.available_machine_list):
-            print(self.available_machine_list)
             self.machine_obj = ProductionMachine(self.available_machine_list[-1])
         else:
             self.machine_obj = ProductionMachine(self.machine_name)
@@ -37,12 +43,13 @@ class ProductionBlock:
 
     def set_module(self, module_code_or_list=None):
         check_list = None
-        if type(module_code_or_list) is str:
+
+        if module_code_or_list is None:
+            check_list = []
+        elif type(module_code_or_list) is str:
             check_list = [module_code_or_list]
         elif type(module_code_or_list) is list:
             check_list = module_code_or_list
-        elif module_code_or_list is None:
-            check_list = []
 
         can_add = []
 
@@ -57,8 +64,7 @@ class ProductionBlock:
             else:
                 self.module_list = can_add[:self.machine_obj.module_slots]
 
-        self.get_total_modifier()
-        # self.module_list
+        self.update_and_calculate_at_once()
 
     def can_this_module_be_added(self, module_code: str):
         is_legit = False
@@ -79,7 +85,7 @@ class ProductionBlock:
         elif is_legit and is_p and is_recipe_in_p_list:
             return True
 
-    def get_total_modifier(self):
+    def update_total_modifier(self):
         module_list = self.module_list
         total_modifier = [0, 0, 0]
         if len(module_list) != 0:
@@ -91,10 +97,8 @@ class ProductionBlock:
         if self.mining_research_modifier != 0 and self.recipe_obj.category == 'mining-drill':
             total_modifier[2] += self.mining_research_modifier
         self.total_modifier = total_modifier
-        self.get_modifiers_calculated()
-        return total_modifier
 
-    def get_modifiers_calculated(self):
+    def calculate_total_modifier(self):
         base_list = [self.machine_obj.base_speed_rate, self.machine_obj.base_power_consumption, 0]
         return_list = [0, 0, 0]
         for i in range(2):
@@ -104,3 +108,24 @@ class ProductionBlock:
             if return_list[2] != 0:
                 return_list[0] = return_list[0] * (return_list[2] + 1)
 
+        # base_speed_rate = self.machine_obj.base_speed_rate
+        # base_power_consumption = self.machine_obj.base_power_consumption
+        # module_speed_rate = return_list[0]
+        # module_power_rate = return_list[1]
+        # module_extra_rate = return_list[2]
+
+        # self.production_speed = base_speed_rate + base_speed_rate*module_speed_rate
+        # self.power_consumption = base_power_consumption + base_power_consumption*module_power_rate
+        # self.extra_product_rate = module_extra_rate
+        # self.resource_consumption_rate = 1
+
+        self.production_speed = return_list[0]
+        self.power_consumption = return_list[1]
+        self.extra_product_rate = return_list[2]
+        self.resource_consumption_rate = 1
+        if self.extra_product_rate != 0:
+            self.resource_consumption_rate = (1/self.extra_product_rate) / (1/self.extra_product_rate + 1)
+
+    def update_and_calculate_at_once(self):
+        self.update_total_modifier()
+        self.calculate_total_modifier()
