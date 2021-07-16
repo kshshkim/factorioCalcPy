@@ -28,9 +28,8 @@ class DependencyTracker:
             current = obj_search_queue[0]
             if current.ingredients != '':
                 for key in current.ingredients.keys():
-                    if key in self.resource_consumption_rate_dict.keys():
-                        resource_consumption_ratio = self.resource_consumption_rate_dict[key]
-                    else:
+                    resource_consumption_ratio = self.resource_consumption_rate_dict.get(key)
+                    if resource_consumption_ratio is None:
                         resource_consumption_ratio = 1
                     to_append = [key, current.ingredients[key] * current.amount * resource_consumption_ratio]
                     item_needed_queue.append(to_append)

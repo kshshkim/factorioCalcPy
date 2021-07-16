@@ -1,21 +1,19 @@
 from dependency_tracker import DependencyDictMerged
-
+from calculator_base import FactorioCalculatorBase
 import pprint
 from production_block import ProductionBlock
 
-asdf = DependencyDictMerged(recipe_name='processing-unit')
-aaaa = ProductionBlock(recipe_name='processing-unit')
-# # print(asdf.get_total_recipe_req_dict())
-# pprint.pprint(asdf.total_needed_item())
-# pprint.pp(asdf.merged_oil_dict)
-# pprint.pp(asdf.merged_recipe_dict)
-# pprint.pp(asdf.merged_item_dict)
-aaaa.set_module(['s1', 's2', 'p3', 'p2'])
-# aaaa.get_total_modifier()
-print(aaaa.module_list)
-aaaa.update_machine('assembling-machine-2')
-print(aaaa.module_list)
-pprint.pprint(aaaa.total_modifier)
+pprint.pp = pprint.pprint
+ddd = FactorioCalculatorBase('processing-unit', 12354)
+pprint.pp(ddd.block_obj_dict)
+# ddd.set_module_to_specific_block('advanced-circuit',['p3','p1','s3'])
+print(ddd.general_obj_dict['advanced-circuit'].module_list)
+print(ddd.general_obj_dict['advanced-circuit'].production_speed)
+print(ddd.general_obj_dict['advanced-circuit'].power_consumption)
+
+
+print(ddd.resource_consumption_dict)
+print(ddd.update_total_recipe_dict())
 #
 # pprint.pp('eaeas')
 #
