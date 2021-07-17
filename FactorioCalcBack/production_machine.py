@@ -1,6 +1,4 @@
-from data.production_machine_dict import production_machine_dict
-from data.module_modifier_dict import module_modifier_dict
-from data.productivity_module_available_list import productivity_module_available_list
+from FactorioCalcBack.data.production_machine_dict import production_machine_dict
 
 
 class ProductionMachine:
