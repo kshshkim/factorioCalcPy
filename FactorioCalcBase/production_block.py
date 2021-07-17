@@ -1,6 +1,6 @@
-from data.production_machine_category_list_dict import production_machine_category_list_dict
-from data.productivity_module_available_list import productivity_module_available_list
-from data.module_modifier_dict import module_modifier_dict
+from FactorioCalcBase.data.production_machine_category_list_dict import production_machine_category_list_dict
+from FactorioCalcBase.data.productivity_module_available_list import productivity_module_available_list
+from FactorioCalcBase.data.module_modifier_dict import module_modifier_dict
 from production_machine import ProductionMachine
 from recipe_class import RecipeClass
 
@@ -23,6 +23,7 @@ class ProductionBlock:
         self.power_consumption = 0
         self.production_speed = 0
         self.extra_product_rate = 0
+        self.production_time_per_recipe = 0
         # self.update_and_calculate_at_once()
         self.update_machine()
 
@@ -37,6 +38,7 @@ class ProductionBlock:
             self.machine_name = machine_name
         if (self.machine_name is None) or (self.machine_name not in self.available_machine_list):
             self.machine_obj = ProductionMachine(self.available_machine_list[-1])
+            self.machine_name = self.machine_obj.machine_name
         else:
             self.machine_obj = ProductionMachine(self.machine_name)
         self.set_module(self.module_list)
@@ -123,8 +125,10 @@ class ProductionBlock:
         self.power_consumption = return_list[1]
         self.extra_product_rate = return_list[2]
         self.resource_consumption_rate = 1
+        self.production_time_per_recipe = self.recipe_obj.energy_required/self.production_speed
         if self.extra_product_rate != 0:
             self.resource_consumption_rate = (1/self.extra_product_rate) / (1/self.extra_product_rate + 1)
+
 
     def update_and_calculate_at_once(self):
         self.update_total_modifier()
