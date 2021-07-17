@@ -1,9 +1,10 @@
-from FactorioCalcBase.data.recipe_dict import recipe_dict
-
+from data.recipe_dict import recipe_dict
 
 # TODO advanced-oil-processing 이외 다른 방법 추가
+
+
 class OilProcessor:
-    def __init__(self, oil_need_dict, extra_product_rate_dict):
+    def __init__(self, oil_need_dict, extra_product_rate_dict=None):
         self.how_many_adv = 0
         self.heavy_to_light_amount = 0
         self.light_to_gas_amount = 0
@@ -11,7 +12,7 @@ class OilProcessor:
         self.item_needed = {}
         self.oil_recipe_needed = {}
         self.non_oil_recipe_needed = {}
-
+        self.oil_item_needed = {}
         if extra_product_rate_dict is None:
             extra_product_rate_dict = {}
         self.extra_product_rate_dict = extra_product_rate_dict
@@ -38,7 +39,7 @@ class OilProcessor:
 
         self.advanced_oil_processing_plus_cracking()
         self.update_oil_recipe_needed()
-        # self.update_item_needed()
+        self.update_oil_item_needed()
         # self.update_non_oil_recipe_needed()
 
     def advanced_oil_processing_plus_cracking(self):
@@ -78,12 +79,12 @@ class OilProcessor:
         before_cracked = [0, 0, 0]
         for i in range(3):
             before_cracked[i] = adv[i] * how_many_adv
-        heavy_to_light_amount = before_cracked[0] - need[0]
-        light_to_gas_amount = heavy_to_light_amount * 0.75 + before_cracked[1] - need[1]
+        extra_heavy_amount = before_cracked[0] - need[0]
+        extra_light_amount = extra_heavy_amount * h2l + before_cracked[1] - need[1]
 
         self.how_many_adv = how_many_adv
-        self.heavy_to_light_amount = heavy_to_light_amount / (40 * h2l)
-        self.light_to_gas_amount = light_to_gas_amount / (30 * l2p)
+        self.heavy_to_light_amount = extra_heavy_amount / (40 * h2l)
+        self.light_to_gas_amount = extra_light_amount / (30 * l2p)
         self.extra = extra
 
     def update_oil_recipe_needed(self):
@@ -96,4 +97,16 @@ class OilProcessor:
         }
         self.oil_recipe_needed = new_dict
 
-    # TODO 아이템 요구량 계산
+    def update_oil_item_needed(self):
+        new_dict = {}
+        for key in self.oil_recipe_needed.keys():
+            for key2 in recipe_dict[key]['ingredients'].keys():
+                if key2 in ['heavy-oil', 'light-oil']:
+                    continue
+                if new_dict.get(key2) is None:
+                    new_dict[key2] = 0
+                new_dict[key2] += recipe_dict[key]['ingredients'][key2]*self.oil_recipe_needed[key]/recipe_dict[key2]['results'][key2]
+        print(self.extra)
+        self.oil_item_needed = new_dict
+        self.oil_recipe_needed.update(self.oil_item_needed)
+

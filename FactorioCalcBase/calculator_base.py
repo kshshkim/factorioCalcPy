@@ -22,6 +22,7 @@ class FactorioCalculatorBase:
     def make_initial_total_recipe_dict(self):
         new_obj = DependencyDictMerged(self.recipe_name, self.amount, self.extra_product_rate_dict)
         self.total_recipe_dict = new_obj.merged_recipe_dict
+        self.total_item_dict = new_obj.merged_item_dict
 
     def make_initial_block_objs(self):
         self.make_initial_total_recipe_dict()
@@ -99,11 +100,11 @@ class FactorioCalculatorBase:
                 amount_required = self.get_block_needed_amount_in_ref_time(recp)
                 amount_recipe_required = self.production_block_recipe_finder(recipe_name=recp, block_or_recipe='r')
                 to_return_dict[cat][recp] = {
-                    'name': recp,
-                    'machine_name': block_obj.machine_obj.machine_name,
-                    'added_modules': block_obj.module_list,
+                    # 'name': recp,
                     'amount_recipe_required': round(amount_recipe_required, 4),
                     'amount_factory_required': round(amount_required, 4),
+                    'machine_name': block_obj.machine_obj.machine_name,
+                    'added_modules': block_obj.module_list,
                     'total_power_consumption': round(amount_required*block_obj.power_consumption, 4),
                 }
         return to_return_dict

@@ -73,7 +73,7 @@ production_machine_dict = {
         "category": "crude-oil",
         "production_rate": 1,
         "power_consumption": 180,
-        "module_slots": 0,
+        "module_slots": 2,
     },
     "oil-refinery": {
         "name": "oil-refinery",

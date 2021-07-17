@@ -53,28 +53,6 @@ class DependencyTracker:
 
         return total_recipe_needed_dict
 
-    def cpid_handle(self, general_dict: dict, r_or_i: str):
-        # cpid list 가 비어있으면 사용해선 안 되는 메소드
-        roi = None
-        if r_or_i == 'r':
-            roi = 'recipe'
-        elif r_or_i == 'i':
-            roi = 'item'
-
-        oil_obj = OilProcessor(self.cannot_process_item_dict, self.extra_product_rate_dict)
-        oil_recipe_dict = oil_obj.oil_recipe_needed
-        oil_item_dict = oil_obj.item_needed
-        new_dict = {
-            'recipe': oil_recipe_dict,
-            'item': oil_item_dict
-        }
-
-        to_return_dict = {
-            'general_' + roi: general_dict,
-            'oil_' + roi: new_dict[roi]
-        }
-        return to_return_dict
-
     def get_initial_item_req_dict(self):
         new_dict = {}
         total_needed_recipe = self.initial_total_recipe_req_dict
@@ -111,17 +89,56 @@ class DependencyTracker:
 
 
 class DependencyDictMerged:
-    def __init__(self, recipe_name: str, amount=1, resource_consumption_rate_dict=None):
-        dp_tracker: DependencyTracker = DependencyTracker(recipe_name, amount, resource_consumption_rate_dict)
+    # 하드코딩 정리
+    def __init__(self, recipe_name: str, amount=1, extra_product_rate_dict=None):
+        dp_tracker: DependencyTracker = DependencyTracker(recipe_name, amount, extra_product_rate_dict)
 
         self.total_recipe_req_dict = dp_tracker.initial_total_recipe_req_dict
         self.total_item_req_dict = dp_tracker.initial_total_item_req_dict
 
+        self.oil_obj = OilProcessor(dp_tracker.cannot_process_item_dict, extra_product_rate_dict=extra_product_rate_dict)
+
         if dp_tracker.cannot_process_item_dict != {}:
-            self.merged_recipe_dict = dp_tracker.cpid_handle(self.total_recipe_req_dict, 'r')
-            self.merged_item_dict = dp_tracker.cpid_handle(self.total_item_req_dict, 'i')
+            self.merged_recipe_dict = self.cpid_handler(self.total_recipe_req_dict, 'r')
+            self.merged_item_dict = self.cpid_handler(self.total_item_req_dict, 'i')
+            # self.dict_merger()
         else:
             self.merged_recipe_dict = {'general_recipe': self.total_recipe_req_dict,
                                        'oil_recipe': {}}
             self.merged_item_dict = {'general_item': self.total_item_req_dict,
                                      'oil_item': {}}
+
+    def cpid_handler(self, general_dict: dict, r_or_i: str):
+        # cpid list 가 비어있으면 사용해선 안 되는 메소드
+        roi = None
+        if r_or_i == 'r':
+            roi = 'recipe'
+        elif r_or_i == 'i':
+            roi = 'item'
+
+        oil_recipe_dict = self.oil_obj.oil_recipe_needed
+        oil_item_dict = self.oil_obj.oil_item_needed
+        new_dict = {
+            'recipe': oil_recipe_dict,
+            'item': oil_item_dict
+        }
+
+        to_return_dict = {
+            'general_' + roi: general_dict,
+            'oil_' + roi: new_dict[roi]
+        }
+        return to_return_dict
+
+    def dict_merger(self):
+        general_dict: dict = self.merged_recipe_dict['general_recipe']
+        oil_dict: dict = self.merged_recipe_dict['oil_recipe']
+
+        for key in list(oil_dict.keys()):
+            if key not in general_dict.keys():
+                general_dict[key] = 0
+            general_dict[key] += oil_dict[key]
+            del oil_dict[key]
+
+        for key in list(self.merged_recipe_dict.keys()):
+            if self.merged_recipe_dict[key] == {}:
+                del self.merged_recipe_dict[key]
