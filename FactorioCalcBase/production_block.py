@@ -19,14 +19,11 @@ class ProductionBlock:
         self.machine_obj = None
         self.available_machine_list = self.get_available_machine_list()
         self.total_modifier = [0, 0, 0]
-        self.resource_consumption_rate = 0
         self.power_consumption = 0
         self.production_speed = 0
         self.extra_product_rate = 0
         self.production_time_per_recipe = 0
-        # self.update_and_calculate_at_once()
         self.update_machine()
-
 
     def get_available_machine_list(self):
         recipe_category = self.recipe_obj.category
@@ -105,30 +102,15 @@ class ProductionBlock:
         return_list = [0, 0, 0]
         for i in range(2):
             return_list[i] = base_list[i] + base_list[i] * self.total_modifier[i]
-            return_list[2] = self.total_modifier[2]
+            return_list[2] = 1 + self.total_modifier[2]
 
             if return_list[2] != 0:
                 return_list[0] = return_list[0] * (return_list[2] + 1)
 
-        # base_speed_rate = self.machine_obj.base_speed_rate
-        # base_power_consumption = self.machine_obj.base_power_consumption
-        # module_speed_rate = return_list[0]
-        # module_power_rate = return_list[1]
-        # module_extra_rate = return_list[2]
-
-        # self.production_speed = base_speed_rate + base_speed_rate*module_speed_rate
-        # self.power_consumption = base_power_consumption + base_power_consumption*module_power_rate
-        # self.extra_product_rate = module_extra_rate
-        # self.resource_consumption_rate = 1
-
         self.production_speed = return_list[0]
         self.power_consumption = return_list[1]
         self.extra_product_rate = return_list[2]
-        self.resource_consumption_rate = 1
         self.production_time_per_recipe = self.recipe_obj.energy_required/self.production_speed
-        if self.extra_product_rate != 0:
-            self.resource_consumption_rate = (1/self.extra_product_rate) / (1/self.extra_product_rate + 1)
-
 
     def update_and_calculate_at_once(self):
         self.update_total_modifier()

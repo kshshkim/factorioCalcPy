@@ -2332,9 +2332,10 @@ recipe_dict = {
     },
     "crude-oil": {
         "name": "crude-oil",
-        "energy_required": "",
+        "energy_required": 1,
         "ingredients": "",
-        "results": ""
+        "results": {"crude-oil": 2},
+        "category": "crude-oil"
     },
     "water": {
         "name": "water",

@@ -5,7 +5,7 @@ from production_block import ProductionBlock
 
 pprint.pp = pprint.pprint
 ddd = FactorioCalculatorBase('processing-unit')
-pprint.pp(ddd.block_obj_dict)
+# pprint.pp(ddd.block_obj_dict)
 ddd.set_module_to_specific_block('advanced-circuit',['p3','p1','s3'])
 # print(ddd.general_obj_dict['advanced-circuit'].module_list)
 # print(ddd.general_obj_dict['advanced-circuit'].production_speed)
@@ -21,4 +21,5 @@ ddd.set_module_to_specific_block('advanced-circuit',['p3','p1','s3'])
 # pprint.pp(asdf.merged_recipe_dict)
 # pprint.pp(asdf.merged_gen_dict)
 # pprint.pp(asdf.merged_oil_dict)
-print(ddd.json_out_total_info())
+print(ddd.json_out())
+pprint.pp(ddd.total_item_dict)

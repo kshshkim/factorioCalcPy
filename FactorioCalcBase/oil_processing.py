@@ -2,16 +2,19 @@ from FactorioCalcBase.data.recipe_dict import recipe_dict
 
 
 # TODO advanced-oil-processing 이외 다른 방법 추가
-class FactorioOilReqToRecipe:
-    how_many_adv: float
-    heavy_to_light_amount: float
-    light_to_gas_amount: float
-    extra: list
+class OilProcessor:
+    def __init__(self, oil_need_dict, extra_product_rate_dict):
+        self.how_many_adv = 0
+        self.heavy_to_light_amount = 0
+        self.light_to_gas_amount = 0
+        self.extra = 0
+        self.item_needed = {}
+        self.oil_recipe_needed = {}
+        self.non_oil_recipe_needed = {}
 
-    def __init__(self, oil_need_dict, resource_consumption_ratio_dict):
-        if resource_consumption_ratio_dict is None:
-            resource_consumption_ratio_dict = {}
-        self.resource_consumption_ratio_dict = resource_consumption_ratio_dict
+        if extra_product_rate_dict is None:
+            extra_product_rate_dict = {}
+        self.extra_product_rate_dict = extra_product_rate_dict
         if oil_need_dict.get('petroleum-gas') is None:
             oil_need_dict['petroleum-gas'] = 0
         self.petroleum_gas_need = oil_need_dict['petroleum-gas']
@@ -22,28 +25,33 @@ class FactorioOilReqToRecipe:
             oil_need_dict['heavy_oil'] = 0
         self.heavy_oil_need = oil_need_dict['heavy_oil']
 
-        self.hoc_resource_consumption_ratio = 1
-        self.loc_resource_consumption_ratio = 1
+        self.hoc_extra_product_ratio = 1
+        self.loc_extra_product_ratio = 1
 
-        for key in self.resource_consumption_ratio_dict.keys():
+        for key in self.extra_product_rate_dict.keys():
             if key == 'heavy-oil-cracking':
-                self.hoc_resource_consumption_ratio = self.resource_consumption_ratio_dict[key]
+                self.hoc_extra_product_ratio = self.extra_product_rate_dict[key]
             elif key == 'light-oil-cracking':
-                self.loc_resource_consumption_ratio = self.resource_consumption_ratio_dict[key]
+                self.loc_extra_product_ratio = self.extra_product_rate_dict[key]
             elif key == 'advanced-oil-processing':
-                self.adv_resource_consumption_ratio = self.resource_consumption_ratio_dict[key]
+                self.adv_resource_consumption_ratio = self.extra_product_rate_dict[key]
 
         self.advanced_oil_processing_plus_cracking()
-        self.get_item_needed()
+        self.update_oil_recipe_needed()
+        # self.update_item_needed()
+        # self.update_non_oil_recipe_needed()
 
     def advanced_oil_processing_plus_cracking(self):
+        adv = [25, 45, 55]  # advanced_oil_processing 생산량, 중유, 경유, 가스 순서
+        if 'advanced-oil-processing' in self.extra_product_rate_dict.keys():
+            for i in range(len(adv)):
+                adv[i] = adv[i]*self.extra_product_rate_dict['advanced-oil-processing']
 
-        adv = [25, 45, 55]
         need = [self.heavy_oil_need, self.light_oil_need, self.petroleum_gas_need]
         extra = [0, 0, 0]
 
-        h2l = 3 / (4 * self.hoc_resource_consumption_ratio)
-        l2p = 2 / (3 * self.loc_resource_consumption_ratio)
+        h2l = (3 * self.hoc_extra_product_ratio) / 4
+        l2p = (2 * self.loc_extra_product_ratio) / 3
 
         a = need[0] / adv[0]
         for i in range(3):
@@ -78,25 +86,14 @@ class FactorioOilReqToRecipe:
         self.light_to_gas_amount = light_to_gas_amount / (30 * l2p)
         self.extra = extra
 
-    def get_recipe_needed(self):
+    def update_oil_recipe_needed(self):
+        # 먼저 advanced_oil_processing_plus_cracking 이 실행되어야함.
         new_dict = {
             'advanced-oil-processing': self.how_many_adv,
             'heavy-oil-cracking': self.heavy_to_light_amount,
             'light-oil-cracking': self.light_to_gas_amount,
             # 'extra': self.extra
         }
-        return new_dict
+        self.oil_recipe_needed = new_dict
 
-    def get_item_needed(self):
-        ref_dict = self.get_recipe_needed()
-        new_dict2 = {}
-        for key in ref_dict:
-            if ref_dict[key] != 0:
-                ingredients_dict = recipe_dict[key]['ingredients']
-                if key not in self.resource_consumption_ratio_dict:
-                    self.resource_consumption_ratio_dict[key] = 1
-                for key2 in ingredients_dict:
-                    if new_dict2.get(key2) is None:
-                        new_dict2[key2] = 0
-                    new_dict2[key2] = new_dict2[key2] + ingredients_dict[key2] * ref_dict[key] * self.resource_consumption_ratio_dict[key]
-        return new_dict2
+    # TODO 아이템 요구량 계산
