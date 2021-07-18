@@ -45,11 +45,17 @@ class FactorioCalculatorBase:
                 self.update_extra_product_dict(block_obj=block_obj)
 
     def set_module_to_specific_block(self, recipe_name, module_code_or_list):
-        specific_block = self.production_block_recipe_finder(recipe_name, 'b')
+        specific_block = self.production_block_recipe_finder(recipe_name=recipe_name, block_or_recipe='b')
 
         if specific_block is not None:
             specific_block.set_module(module_code_or_list)
             self.update_extra_product_dict(specific_block)
+
+    def change_machine_to_specific_block(self, recipe_name: str, machine_name: str):
+        specific_block: ProductionBlock = self.production_block_recipe_finder(recipe_name=recipe_name, block_or_recipe='b')
+
+        if specific_block is not None and type(machine_name) == str:
+            specific_block.update_machine(machine_name)
 
     def update_total_recipe_dict(self):
         new_obj = DependencyDictMerged(self.recipe_name, self.amount, self.extra_product_rate_dict)
@@ -112,6 +118,7 @@ class FactorioCalculatorBase:
                     'machine_name': block_obj.machine_obj.machine_name,
                     'added_modules': block_obj.module_list,
                     'speed_rate': block_obj.production_speed,
+                    'base_speed_rate': block_obj.machine_obj.base_speed_rate,
                     'total_power_consumption': round(amount_required*block_obj.power_consumption, 4),
                 }
         to_return_dict.update(self.total_item_dict)
