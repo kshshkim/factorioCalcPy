@@ -19,7 +19,7 @@ class RecipeClass:
         return category
 
     def is_name_results_match(self):
-        if self.results.get(self.name) is not None:
+        if self.results != '' and self.results.get(self.name) is not None:
             return True
         else:
             return False
