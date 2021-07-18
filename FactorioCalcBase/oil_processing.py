@@ -1,4 +1,5 @@
 from data.recipe_dict import recipe_dict
+from recipe_class import RecipeClass
 
 # TODO advanced-oil-processing 이외 다른 방법 추가
 
@@ -39,7 +40,7 @@ class OilProcessor:
 
         self.advanced_oil_processing_plus_cracking()
         self.update_oil_recipe_needed()
-        self.update_oil_item_needed()
+        # self.update_oil_item_needed()
         # self.update_non_oil_recipe_needed()
 
     def advanced_oil_processing_plus_cracking(self):
@@ -96,17 +97,19 @@ class OilProcessor:
             # 'extra': self.extra
         }
         self.oil_recipe_needed = new_dict
+        self.update_oil_item_needed()
+        for recipe in ['water', 'crude-oil']:
+            new_rcp_obj = RecipeClass(recipe)
+            if self.oil_recipe_needed.get(recipe) is None:
+                self.oil_recipe_needed[recipe] = 0
+            self.oil_recipe_needed[recipe] += self.oil_item_needed[recipe]/new_rcp_obj.get_results_count()
 
     def update_oil_item_needed(self):
         new_dict = {}
         for key in self.oil_recipe_needed.keys():
-            for key2 in recipe_dict[key]['ingredients'].keys():
-                if key2 in ['heavy-oil', 'light-oil']:
-                    continue
-                if new_dict.get(key2) is None:
-                    new_dict[key2] = 0
-                new_dict[key2] += recipe_dict[key]['ingredients'][key2]*self.oil_recipe_needed[key]/recipe_dict[key2]['results'][key2]
-        print(self.extra)
+            for each_ingredient in recipe_dict[key]['ingredients'].keys():
+                if new_dict.get(each_ingredient) is None:
+                    new_dict[each_ingredient] = 0
+                new_dict[each_ingredient] += recipe_dict[key]['ingredients'][each_ingredient]*self.oil_recipe_needed[key]
         self.oil_item_needed = new_dict
-        self.oil_recipe_needed.update(self.oil_item_needed)
 
