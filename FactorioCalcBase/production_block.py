@@ -1,6 +1,4 @@
-from FactorioCalcBase.data.production_machine_category_list_dict import production_machine_category_list_dict
-from FactorioCalcBase.data.productivity_module_available_list import productivity_module_available_list
-from FactorioCalcBase.data.module_modifier_dict import module_modifier_dict
+from data.binary import production_machine_category_list_dict, productivity_module_available_list, module_modifier_dict
 from production_machine import ProductionMachine
 from recipe_class import RecipeClass
 

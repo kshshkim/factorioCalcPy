@@ -1,4 +1,4 @@
-from FactorioCalcBase.data.recipe_dict import recipe_dict
+from data.binary import recipe_dict
 
 
 class RecipeClass:
