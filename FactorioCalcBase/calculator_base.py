@@ -18,6 +18,7 @@ class FactorioCalculatorBase:
             self.extra_product_rate_dict = {}
         self.block_obj_dict = {}
         self.make_initial_block_objs()
+        self.is_modified = False
 
     def make_initial_total_recipe_dict(self):
         new_obj = DependencyDictMerged(self.recipe_name, self.amount, self.extra_product_rate_dict)
@@ -96,17 +97,24 @@ class FactorioCalculatorBase:
         for cat in main_dict.keys():
             to_return_dict[cat] = {}
             for recp in main_dict[cat].keys():
+                # 카테고리를 분리해서 출력할 경우 필요한 코드, 현재는 필요하지 않지만 성능 영향이 크지 않아서 그냥 둠.
                 block_obj: ProductionBlock = self.production_block_recipe_finder(recipe_name=recp, block_or_recipe='b')
                 amount_required = self.get_block_needed_amount_in_ref_time(recp)
                 amount_recipe_required = self.production_block_recipe_finder(recipe_name=recp, block_or_recipe='r')
+                amount_item_required = self.total_item_dict['item'].get(recp)
+                if amount_item_required is not None:
+                    amount_item_required = round(amount_item_required, 4)
                 to_return_dict[cat][recp] = {
                     # 'name': recp,
+                    'amount_item_required': amount_item_required,
                     'amount_recipe_required': round(amount_recipe_required, 4),
                     'amount_factory_required': round(amount_required, 4),
                     'machine_name': block_obj.machine_obj.machine_name,
                     'added_modules': block_obj.module_list,
+                    'speed_rate': block_obj.production_speed,
                     'total_power_consumption': round(amount_required*block_obj.power_consumption, 4),
                 }
+        to_return_dict.update(self.total_item_dict)
         return to_return_dict
 
     def json_out(self):
