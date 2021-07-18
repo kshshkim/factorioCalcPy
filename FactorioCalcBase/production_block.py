@@ -102,10 +102,11 @@ class ProductionBlock:
         return_list = [0, 0, 0]
         for i in range(2):
             return_list[i] = base_list[i] + base_list[i] * self.total_modifier[i]
-            return_list[2] = 1 + self.total_modifier[2]
 
-            if return_list[2] != 0:
-                return_list[0] = return_list[0] * (return_list[2] + 1)
+        return_list[2] = 1 + self.total_modifier[2]
+
+        if return_list[2] != 1:
+            return_list[0] = return_list[0] * (return_list[2])
 
         self.production_speed = return_list[0]
         self.power_consumption = return_list[1]
