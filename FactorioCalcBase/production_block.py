@@ -93,7 +93,7 @@ class ProductionBlock:
                     total_modifier[i] += module_modifier_dict[module][i]
             for i in range(3):
                 total_modifier[i] = round(total_modifier[i], 4)
-        if self.mining_research_modifier != 0 and self.recipe_obj.category == 'mining-drill':
+        if (self.mining_research_modifier != 0) and (self.recipe_obj.category in ['mining-drill', 'crude-oil']):
             total_modifier[2] += self.mining_research_modifier
         self.total_modifier = total_modifier
 
