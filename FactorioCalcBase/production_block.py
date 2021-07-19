@@ -1,6 +1,6 @@
-from data.binary import production_machine_category_list_dict, productivity_module_available_list, module_modifier_dict
-from production_machine import ProductionMachine
-from recipe_class import RecipeClass
+from FactorioCalcBase.data.binary import production_machine_category_list_dict, productivity_module_available_list, module_modifier_dict
+from FactorioCalcBase.production_machine import ProductionMachine
+from FactorioCalcBase.recipe_class import RecipeClass
 
 
 class ProductionBlock:

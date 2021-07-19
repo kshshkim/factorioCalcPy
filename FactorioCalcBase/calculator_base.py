@@ -1,6 +1,6 @@
-from production_block import ProductionBlock
-from dependency_tracker import DependencyDictMerged
-from recipe_class import RecipeClass
+from FactorioCalcBase.production_block import ProductionBlock
+from FactorioCalcBase.dependency_tracker import DependencyDictMerged
+from FactorioCalcBase.recipe_class import RecipeClass
 import json
 
 

@@ -1,6 +1,6 @@
-from data.binary import recipe_dict
-from recipe_class import RecipeClass
-from oil_processing import OilProcessor
+from FactorioCalcBase.data.binary import recipe_dict
+from FactorioCalcBase.recipe_class import RecipeClass
+from FactorioCalcBase.oil_processing import OilProcessor
 from collections import Counter
 
 

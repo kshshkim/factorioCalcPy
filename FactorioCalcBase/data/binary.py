@@ -1,5 +1,5 @@
 import pickle
-with open('data/data_dict.pickle', 'rb') as pk:
+with open('FactorioCalcBase/data/data_dict.pickle', 'rb') as pk:
     dataaa = pickle.load(pk)
 recipe_dict = dataaa['recipe_dict']
 production_machine_category_list_dict = dataaa['production_machine_category_list_dict']

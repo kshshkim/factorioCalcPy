@@ -1,4 +1,4 @@
-from data.binary import production_machine_dict
+from FactorioCalcBase.data.binary import production_machine_dict
 
 
 class ProductionMachine:

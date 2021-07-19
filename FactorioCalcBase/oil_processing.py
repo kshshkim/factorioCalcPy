@@ -1,5 +1,5 @@
-from recipe_class import RecipeClass
-from data.binary import recipe_dict
+from FactorioCalcBase.recipe_class import RecipeClass
+from FactorioCalcBase.data.binary import recipe_dict
 
 # TODO advanced-oil-processing 이외 다른 방법 추가
 
