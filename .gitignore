@@ -1,5 +1,4 @@
 *.pyc
 .idea/
 venv/
-templates/
 *.sqlite3

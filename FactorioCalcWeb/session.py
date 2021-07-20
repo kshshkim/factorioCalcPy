@@ -15,7 +15,7 @@ class SessionManagerClass:
         self.SD = {}
         self.kill_list = []
         self.default_life_span = 3600
-        # 업데이트 사이클이 정확하진 않지만 정확할 필요는 없을듯함
+        # 업데이트 사이클이 정확히 10초는 아니지만 정확히 10초일 필요는 없을듯함
         self.update_cycle = 10
 
         expired_session_watcher = threading.Thread(target=self.start_session_time_bomb)
