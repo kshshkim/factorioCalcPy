@@ -15,10 +15,11 @@ class SessionManagerClass:
         self.SD = {}
         self.kill_list = []
         self.default_life_span = 3600
-        # 정확히 1초는 아니지만 정확히 1초일 필요는 없을듯함
+        # 업데이트 사이클이 정확하진 않지만 정확할 필요는 없을듯함
         self.update_cycle = 10
 
-        threading.Thread(target=self.start_session_time_bomb).start()
+        expired_session_watcher = threading.Thread(target=self.start_session_time_bomb)
+        expired_session_watcher.start()
 
     def add_session(self, rand_id: float):
         self.SD[rand_id] = SessionClass(rand_id, self.default_life_span)
@@ -32,14 +33,12 @@ class SessionManagerClass:
     def session_time_bomb(self):
         # while True:
         for ss in self.SD.values():
-            asdf = self.remain_life_counter(ss)
-            t = threading.Thread(target=asdf)
+            lc = self.remain_life_counter(ss)
+            t = threading.Thread(target=lc)
             t.start()
         if self.kill_list:
-            for victim in self.kill_list:
-                del self.SD[victim.id]
-            self.kill_list = []
-            print('thread all killed')
+            self.kill_session()
+            print('killed all expired thread')
 
     def kill_session(self):
         for victim in self.kill_list:
