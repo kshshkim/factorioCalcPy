@@ -18,13 +18,13 @@ class SessionManagerClass:
         # 업데이트 사이클이 정확히 10초는 아니지만 정확히 10초일 필요는 없을듯함
         self.update_cycle = 10
 
-        expired_session_watcher = threading.Thread(target=self.start_session_time_bomb)
+        expired_session_watcher = threading.Thread(target=self.session_watcher)
         expired_session_watcher.start()
 
     def add_session(self, rand_id: float):
         self.SD[rand_id] = SessionClass(rand_id, self.default_life_span)
 
-    def start_session_time_bomb(self):
+    def session_watcher(self):
         # TODO
         while True:
             threading.Timer(self.update_cycle, self.session_time_bomb).start()
