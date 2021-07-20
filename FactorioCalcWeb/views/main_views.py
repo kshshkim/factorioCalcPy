@@ -7,8 +7,8 @@ bp = Blueprint('main', __name__, url_prefix='/')
 
 @bp.route('/')
 def main():
-    fcb = FactorioCalculatorBase()
     return render_template('test.html')
+
 
 @bp.route('/session', methods=['POST'])
 def initial_session_create():
@@ -16,6 +16,7 @@ def initial_session_create():
     sm_instance: SessionManagerClass = current_app.config.factorio_session_manager
     sm_instance.add_session(rand_id=rand_id)
     return str(sm_instance.SD.keys())
+
 
 @bp.route('/session/imalive', methods=['POST'])
 def session_keep_alive():
