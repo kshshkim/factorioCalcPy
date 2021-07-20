@@ -5,20 +5,9 @@ from FactorioCalcWeb.session import SessionManagerClass
 bp = Blueprint('main', __name__, url_prefix='/')
 
 
-@bp.route('/hello')
-def hello_pybo():
-    return 'Hello, Pybo!'
-
-
 @bp.route('/')
-def index():
-    return 'Pybo index'
-
-@bp.route('/dd')
-def dd():
+def main():
     fcb = FactorioCalculatorBase()
-    new_dict=fcb.total_info_out_as_dict()
-    # return render_template('question_list.html', new_dict=new_dict)
     return render_template('test.html')
 
 @bp.route('/session', methods=['POST'])
