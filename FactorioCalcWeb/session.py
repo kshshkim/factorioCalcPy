@@ -47,7 +47,7 @@ class SessionManagerClass:
 
     def remain_life_counter(self, ss_obj: SessionClass):
         ss_obj.remain_life -= self.update_cycle
-        print('id='+str(ss_obj.id)+'\nremain_life='+str(ss_obj.remain_life))
+        # print('id='+str(ss_obj.id)+'\nremain_life='+str(ss_obj.remain_life))
         if ss_obj.remain_life < 0:
             self.kill_list.append(ss_obj)
 
