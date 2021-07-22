@@ -7,5 +7,6 @@ def create_app():
     app.secret_key = 'Factorio'
     from .views import main_views
     app.register_blueprint(main_views.bp)
+    app.config['JSON_SORT_KEYS'] = False
     app.config.factorio_session_manager = SessionManagerClass()
     return app
