@@ -5,3 +5,4 @@ RUN pip install -U pip
 
 COPY . /FactorioCalcBase
 COPY . /FactorioCalcWeb
+COPY . /runserver.py
