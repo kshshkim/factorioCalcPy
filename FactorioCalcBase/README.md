@@ -1,22 +1,22 @@
 # FactorioCalcBase
 계산기의 본체입니다.
 
-<h2>data</h2>
->    Factorio의 레시피와 생산시설, 모듈 정보 등의 데이터입니다. 
+><h2>data</h2>
+>Factorio의 레시피와 생산시설, 모듈 정보 등의 데이터입니다. 
 
-<h2>recipe_class.py</h2>
+><h2>recipe_class.py</h2>
 >    
 >    recipe_name 인자를 받아 레시피 객체를 생성합니다.
->    >
->    > <h4>get_category()</h4>
-카테고리를 확인합니다. 카테고리가 따로 기입되지 않은 경우, 'crafting'으로 분류합니다.
+>>
+>> <h4>get_category()</h4>
+>>카테고리를 확인합니다. 카테고리가 따로 기입되지 않은 경우, 'crafting'으로 분류합니다.
 >
 >><h4>is_name_results_match()</h4>
 >>
 >>레시피의 이름과 결과물이 일치하는지 확인합니다.
->> 
->>대부분은 결과물과 레시피의 이름이 일치합니다. 일치하지 않는 경우 계산을 위해 추가적인 과정이 필요합니다.
 >>
+>>대부분은 결과물과 레시피의 이름이 일치합니다. 일치하지 않는 경우 계산을 위해 추가적인 과정이 필요합니다.
+>
 >><h4>get_results_count()</h4>
 >>결과물의 개수를 확인합니다. 
 >>
@@ -24,19 +24,23 @@
 >>
 >>레시피의 결과물이 한 종류 이상일 경우엔 -1을 반환합니다.
 
-<h2>production_machine.py</h2>
->팩토리오의 생산시설 정보(**data.binary.production_machine_dict**)를 바탕으로 머신 객체를 생성합니다. 
+><h2>production_machine.py</h2>
+>팩토리오의 생산시설 정보(data.binary.production_machine_dict)를 바탕으로 머신 객체를 생성합니다. 
 
-<h2>production_block.py</h2>
+><h2>production_block.py</h2>
 > <h3>ProductionBlock</h3>
 > 레시피와 머신을 결합한 계산기의 기본단위입니다.
->><h4>get_available_machine_list()</h4> 
+>
+>> <h4>get_available_machine_list()</h4> 
 >> 레시피 객체의 **category**를 바탕으로 가능한 머신 리스트를 생성합니다. 기본값은 리스트의 맨 마지막(-1) 입니다.
+> 
 >><h4>update_machine(machine_name: str)</h4>
 >> 머신 객체를 다시 생성합니다. machine_name이 available_machine_list에 속하지 않을 경우에는 기존의 machine_name을 바탕으로 머신 객체가 다시 생성됩니다.
+>
 >><h4>set_module(module_code_or_list)</h4>
 >> 모듈을 장착합니다. **can_this_module_be_added()** 메소드로 리스트 요소의 장착 가능 여부를 검사한 후, 추가합니다. 장착 불가능한 값을 전달하면 장착되지 않습니다.
 >> 모듈을 장착한 후에는 **update_and_calculate_at_once()** 메소드를 통해 모듈 모디파이어를 적용합니다.
+>
 >><h4>calculate_total_modifier()</h4>
 >> 장착된 모듈의 값을 **module_modifier_dict**에서 가져온 후 전부 합칩니다.
 >> 채광 카테고리에 포함된 경우 **mining_research_modifier**의 값도 반영합니다.
@@ -51,11 +55,11 @@
 >>      extra_product_rate = extra_modifier +1
 >>      modified_speed = base_speed*(extra_product_rate)
 
-<h2>dependency_tracker.py</h2>
+><h2>dependency_tracker.py</h2>
 >레시피의 ingredients와 results를 바탕으로 의존성 트리를 생성합니다.
 >
 ><h3>DependencyTracker</h3>
-일반적인 레시피의 의존성 트리를 생성합니다.
+>일반적인 레시피의 의존성 트리를 생성합니다.
 >
 >><h4>get_initial_recipe_req_dict()</h4>
 >>두 개의 큐와 while문을 바탕으로 의존성 트리를 생성합니다.
@@ -80,9 +84,9 @@
 >>   **obj_search_queue**에서 받은 **[키,값]** 형태의 리스트를 처리합니다.
 > 
 >>   **find_recipe()** 메소드에 **[키,값]** 을 전달하여 필요한 레시피와 아이템 1개당 레시피 요구량을 **[recipe_name, amount]** 형태의 리스트로 돌려받습니다.
->   
+>>   
 >>       -1이 반환될 경우 cannot_process_item_dict 에 [키,값] 형태의 리스트를 변환, 저장합니다.
-> 
+>> 
 >>    이렇게 전달받은 리스트는 두 가지 용도로 쓰입니다.
 >>  1. 반환할 값인 **total_recipe_needed_dict**에 추가됩니다.
 >>  2. 레시피 객체를 생성합니다. 레시피 객체에 **amount** 값을 attribute로 붙여준 후, 이 객체를 **obj_search_queue** 에 추가합니다. 
@@ -98,11 +102,11 @@
 >> 일부 레시피는 레시피와 생산되는 아이템의 이름이 다르거나, 한 가지의 레시피에서 여러가지 결과물이 나옵니다. 이 경우 -1을 반환합니다.
 > 
 ><h3>DependencyDictMerged</h3>
-**cannot_process_item_dict** 를 별도의 로직으로 처리한 후, **DependencyTracker** 객체의 **total_recipe_dict**, **total_item_dict**와 합칩니다. 
+>**cannot_process_item_dict** 를 별도의 로직으로 처리한 후, **DependencyTracker** 객체의 **total_recipe_dict**, **total_item_dict**와 합칩니다. 
 >
 >일단 구현해놓고 보자고 하드코딩을 해놓은 부분이 있는데, 추후 정리할 예정입니다.
 
-<h2>oil_processing.py</h2>
+><h2>oil_processing.py</h2>
 >석유 가공 아이템을 처리합니다. 
 >
 >advanced-oil-processing 레시피를 통해 원유를 가공하면 중유, 경유, 석유가스의 세 가지 결과물이 나옵니다. 중유와 경유는 열분해 레시피를 통해 각각 경유와 석유가스로 변환이 가능합니다.
