@@ -7,3 +7,4 @@ app.secret_key = 'Factorio'
 app.config['JSON_SORT_KEYS'] = False
 app.config.factorio_session_manager = SessionManagerClass()
 
+import FactorioCalcWeb.main
