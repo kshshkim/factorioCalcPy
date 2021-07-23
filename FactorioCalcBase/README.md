@@ -82,7 +82,7 @@
 >> - **item_needed_queue: list**
 >>   
 >>   **obj_search_queue**에서 받은 **[키,값]** 형태의 리스트를 처리합니다.
-> 
+>>
 >>   **find_recipe()** 메소드에 **[키,값]** 을 전달하여 필요한 레시피와 아이템 1개당 레시피 요구량을 **[recipe_name, amount]** 형태의 리스트로 돌려받습니다.
 >>   
 >>       -1이 반환될 경우 cannot_process_item_dict 에 [키,값] 형태의 리스트를 변환, 저장합니다.
