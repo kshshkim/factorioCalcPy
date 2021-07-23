@@ -35,10 +35,11 @@ class CalcInstance:
         #     }
         # }
         action_dict: dict = json_data['action']
-        for each_action in action_dict.keys():
-            current_action_name = action_dict[each_action]['action_name']
-            current_action_dict: dict = action_dict[each_action]
-            self.do_action(action_name=current_action_name, action_dict=current_action_dict)
+        if len(list(action_dict.keys())) < 20:  # 최대 20개 제한,
+            for each_action in action_dict.keys():
+                current_action_name = action_dict[each_action]['action_name']
+                current_action_dict: dict = action_dict[each_action]
+                self.do_action(action_name=current_action_name, action_dict=current_action_dict)
         return self.base_obj.total_info_out_as_dict()  # 요청 처리 후 결과값 새로고침, 딕셔너리로 반환
 
     def do_action(self, action_name: str, action_dict: dict):
