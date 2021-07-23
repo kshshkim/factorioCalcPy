@@ -2,13 +2,13 @@
 계산기의 본체입니다.
 
 <h2>data</h2>
->Factorio의 레시피와 생산시설, 모듈 정보 등의 데이터입니다. 
+> Factorio의 레시피와 생산시설, 모듈 정보 등의 데이터입니다. 
 
 <h2>recipe_class.py</h2>
 >
->recipe_name 인자를 받아 레시피 객체를 생성합니다.
+> recipe_name 인자를 받아 레시피 객체를 생성합니다.
 >>
->><h4>get_category()</h4>
+>> <h4>get_category()</h4>
 카테고리를 확인합니다. 카테고리가 따로 기입되지 않은 경우, 'crafting'으로 분류합니다.
 >
 >><h4>is_name_results_match()</h4>
