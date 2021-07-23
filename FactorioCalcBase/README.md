@@ -1,11 +1,12 @@
 # FactorioCalcBase
 계산기의 본체입니다.
 
-><h2>data</h2>
+<h2>data</h2>
+
 >Factorio의 레시피와 생산시설, 모듈 정보 등의 데이터입니다. 
 
-><h2>recipe_class.py</h2>
->    
+<h2>recipe_class.py</h2>
+    
 >    recipe_name 인자를 받아 레시피 객체를 생성합니다.
 >>
 >> <h4>get_category()</h4>
@@ -24,10 +25,12 @@
 >>
 >>레시피의 결과물이 한 종류 이상일 경우엔 -1을 반환합니다.
 
-><h2>production_machine.py</h2>
+<h2>production_machine.py</h2>
+
 >팩토리오의 생산시설 정보(data.binary.production_machine_dict)를 바탕으로 머신 객체를 생성합니다. 
 
-><h2>production_block.py</h2>
+<h2>production_block.py</h2>
+
 > <h3>ProductionBlock</h3>
 > 레시피와 머신을 결합한 계산기의 기본단위입니다.
 >
@@ -55,7 +58,8 @@
 >>      extra_product_rate = extra_modifier +1
 >>      modified_speed = base_speed*(extra_product_rate)
 
-><h2>dependency_tracker.py</h2>
+<h2>dependency_tracker.py</h2>
+
 >레시피의 ingredients와 results를 바탕으로 의존성 트리를 생성합니다.
 >
 ><h3>DependencyTracker</h3>
@@ -106,7 +110,8 @@
 >
 >일단 구현해놓고 보자고 하드코딩을 해놓은 부분이 있는데, 추후 정리할 예정입니다.
 
-><h2>oil_processing.py</h2>
+<h2>oil_processing.py</h2>
+
 >석유 가공 아이템을 처리합니다. 
 >
 >advanced-oil-processing 레시피를 통해 원유를 가공하면 중유, 경유, 석유가스의 세 가지 결과물이 나옵니다. 중유와 경유는 열분해 레시피를 통해 각각 경유와 석유가스로 변환이 가능합니다.
