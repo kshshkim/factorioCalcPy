@@ -18,7 +18,7 @@ class CalcInstance:
         self.base_obj = FactorioCalculatorBase(recipe_name=recipe_name, amount=recipe_amount, mining_research_modifier=mining_research_modifier)
 
     def change_config(self, instruction: dict):
-        self.config = instruction
+        self.config.update(instruction)
         self.initialize_base_obj()
 
     def handle_request(self, json_data: dict):
