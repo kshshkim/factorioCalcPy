@@ -1,4 +1,4 @@
-#FactorioCalcBase
+# FactorioCalcBase
 계산기의 본체입니다.
 
 <h2>data</h2>
