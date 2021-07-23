@@ -55,6 +55,7 @@ class DependencyTracker:
         return total_recipe_needed_dict
 
     def get_initial_item_req_dict(self):
+        # TODO 위 메소드와 통합 가능.
         new_dict = {}
         total_needed_recipe = self.initial_total_recipe_req_dict
         for key in total_needed_recipe.keys():

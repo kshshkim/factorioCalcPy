@@ -16,7 +16,7 @@ class ProductionBlock:
         self.machine_name = machine_name
         self.machine_obj = None
         self.available_machine_list = self.get_available_machine_list()
-        self.total_modifier = [0, 0, 0]
+        self.total_modifier = [0, 0, 0]  # speed, power, extra
         self.power_consumption = 0
         self.production_speed = 0
         self.extra_product_rate = 0
@@ -84,7 +84,7 @@ class ProductionBlock:
 
     def update_total_modifier(self):
         module_list = self.module_list
-        total_modifier = [0, 0, 0]
+        total_modifier = [0, 0, 0]  # speed, power, extra
         if len(module_list) != 0:
             for module in self.module_list:
                 for i in range(3):
@@ -97,7 +97,7 @@ class ProductionBlock:
 
     def calculate_total_modifier(self):
         base_list = [self.machine_obj.base_speed_rate, self.machine_obj.base_power_consumption, 0]
-        return_list = [0, 0, 0]
+        return_list = [0, 0, 0]  # speed, power, extra
         for i in range(2):
             return_list[i] = base_list[i] + base_list[i] * self.total_modifier[i]
 

@@ -8,8 +8,20 @@ C 깔짝, VB.net 깔짝, Java 깔짝 건드려보고 수년이 지난 초보가 
 
 다른 사람이 이미 만들어놓은 코드 베끼지 않고 혼자 힘으로 완성하는게 목표입니다.
 
-언젠간 웹 기반으로 만들고 싶습니다.
-
 https://gall.dcinside.com/mgallery/board/view/?id=factorio&no=36503
 
 2021년 6월 말경 시작
+
+<h2>FactorioCalcBase</h2>
+계산기의 본체입니다.
+
+recipe를 기반으로 의존성 트리를 생성하고, 총 자원 필요량과 생산시설 필요량을 계산합니다.
+
+생산 속도와 생산량, 연구여부에 따른 변동 요소를 반영했습니다.
+
+<h2>FactorioCalcWeb</h2>
+FactorioCalcBase를 REST API를 통해 조작할 수 있도록 합니다. 
+
+Flask 기반으로 간단한 세션 관리 기능을 만들었습니다.
+
+Vue.js 기반 프론트엔드와 결합할 예정입니다.
