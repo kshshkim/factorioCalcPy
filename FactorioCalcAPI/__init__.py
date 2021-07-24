@@ -1,7 +1,9 @@
-from flask import Flask, render_template, request, current_app, jsonify
+from flask import Flask
+from flask_cors import CORS
 from FactorioCalcAPI.session import SessionManagerClass
 
 app = Flask(__name__)
+CORS(app)
 app.secret_key = 'Factorio'
 
 app.config['JSON_SORT_KEYS'] = False

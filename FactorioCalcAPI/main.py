@@ -38,8 +38,8 @@ def calc_controller():
     return jsonify(refreshed_info)
 
 
-@app.route('/api/recipe_list', methods=['GET'])
+@app.route('/api/recipe_list')
 def common():
-    from FactorioCalcAPI.api_handler import get_recipe_list
+    from FactorioCalcAPI.static_api_handler import get_recipe_list
 
     return jsonify(get_recipe_list())
