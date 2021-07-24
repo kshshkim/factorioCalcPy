@@ -36,7 +36,7 @@ def calc_controller():
     to_toss = request.get_json()
     rand_id = to_toss['rand_id']
     sm_instance: SessionManagerClass = app.config.factorio_session_manager
-    refreshed_info = sm_instance.SD[rand_id].calc_instance.handle_request(to_toss)
+    calc_instance = sm_instance.SD.get(rand_id).calc_instance
+    refreshed_info = calc_instance.handle_request(to_toss)
     return jsonify(refreshed_info)
-
 
