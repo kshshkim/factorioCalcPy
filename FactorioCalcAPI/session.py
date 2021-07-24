@@ -1,6 +1,6 @@
 import threading
 import time
-from FactorioCalcWeb.calculator_interface import CalcInstance
+from FactorioCalcAPI.calculator_interface import CalcInstance
 
 
 class SessionClass:

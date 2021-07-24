@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-
-</head>
-<body>
-<div class="content">
-</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
 let rand = Math.random()
 
 function setCookie () {
@@ -23,7 +10,7 @@ function getCookie (key) {
     let cksp = ck.split(';')
     let to_return = ""
     for (let cckk in cksp){
-        knv = cksp[cckk].split("=")
+        let knv = cksp[cckk].split("=")
         if (knv[0] === key){
             to_return = knv[1]
             break
@@ -33,7 +20,6 @@ function getCookie (key) {
 }
 
 function sendJsonReq(postOrGet, to_where, data) {
-    console.log(data)
     $.ajax({
         url: to_where,
         type: postOrGet,
@@ -60,13 +46,3 @@ function set_session(){
         }, 10000)
 
 }
-
-window.onload = set_session()
-
-
-
-</script>
-
-</body>
-
-</html>

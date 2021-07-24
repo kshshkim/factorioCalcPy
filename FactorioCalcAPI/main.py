@@ -1,17 +1,15 @@
-from FactorioCalcWeb import app
-from flask import render_template, jsonify, request
-from FactorioCalcWeb.session import SessionManagerClass
+from FactorioCalcAPI import app
+from flask import jsonify, request
+from FactorioCalcAPI.session import SessionManagerClass
 
-@app.route('/')
-def main():
-    return render_template('index.html')
 
+# @app.route('/')
+# def main():
+#     return ''
 
 @app.route('/session', methods=['POST'])
 def initial_session_create():
-    print(request.get_json())
     rand_id = request.get_json()['rand_id']
-    print(rand_id)
     sm_instance: SessionManagerClass = app.config.factorio_session_manager
     if rand_id not in sm_instance.SD.keys():
         sm_instance.add_session(rand_id=rand_id)
@@ -20,7 +18,6 @@ def initial_session_create():
 
 @app.route('/session/imalive', methods=['POST'])
 def session_keep_alive():
-    print(request.get_json())
     rand_id = request.get_json()['rand_id']
 
     sm_instance: SessionManagerClass = app.config.factorio_session_manager
@@ -40,3 +37,9 @@ def calc_controller():
     refreshed_info = calc_instance.handle_request(to_toss)
     return jsonify(refreshed_info)
 
+
+@app.route('/api/recipe_list', methods=['GET'])
+def common():
+    from FactorioCalcAPI.api_handler import get_recipe_list
+
+    return jsonify(get_recipe_list())

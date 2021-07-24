@@ -1,5 +1,5 @@
 # from flask import Blueprint, render_template, request, current_app, jsonify
-# from FactorioCalcWeb.session import SessionManagerClass
+# from FactorioCalcAPI.session import SessionManagerClass
 #
 # bp = Blueprint('main', __name__, url_prefix='/')
 #
