@@ -124,5 +124,8 @@ class FactorioCalculatorBase:
         to_return_dict.update(self.total_item_dict)
         return to_return_dict
 
+    def change_amount(self, amount: float):
+        self.amount = amount
+
     def json_out(self):
         return json.dumps(self.total_info_out_as_dict(), sort_keys=False, indent=4)
