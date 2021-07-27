@@ -95,5 +95,12 @@ production_machine_dict = {
         "production_rate": 1,
         "power_consumption": 180,
         "module_slots": 0,
+    },
+    "raw-fish": {
+        "name": "raw-fish",
+        "category": "raw-fish",
+        "production_rate": 1,
+        "power_consumption": 0,
+        "module_slots": 0
     }
 }

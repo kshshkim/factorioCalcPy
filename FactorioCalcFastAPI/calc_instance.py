@@ -24,7 +24,10 @@ class Calculator:
     def set_module(self, recipe_name: str, module_list: list):
         self.base.set_module_to_specific_block(recipe_name=recipe_name, module_code_or_list=module_list)
 
-    async def update_result(self):
+    async def async_update_result(self):
+        self.results = self.base.total_info_out_as_dict()
+
+    def update_result(self):
         self.results = self.base.total_info_out_as_dict()
 
     def parse_action(self, action):

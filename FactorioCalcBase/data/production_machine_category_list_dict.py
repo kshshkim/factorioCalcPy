@@ -35,5 +35,8 @@ production_machine_category_list_dict = {
     ],
     'centrifuging': [
         'centrifuge'
+    ],
+    'raw-fish': [
+        'raw-fish'
     ]
 }

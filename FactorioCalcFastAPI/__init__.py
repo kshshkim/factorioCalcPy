@@ -57,14 +57,15 @@ class Instruction(BaseModel):
     conf: Conf
     action: Action
 
+async def get_result_base(rand_id:float):
+    target = app.instance_dict.get(rand_id)
+    await target.async_update_result()
+    return target.results
 
 @app.get("/calc/get_results/{rand_id}")
 async def get_result(rand_id: float):
     if rand_id in app.instance_dict.keys():
-        target = app.instance_dict.get(rand_id)
-        await target.update_result()
-        return target.results
-
+        return await get_result_base(rand_id=rand_id)
 
 @app.post("/calc")
 async def calc_control(instruction: Instruction):
@@ -75,6 +76,6 @@ async def calc_control(instruction: Instruction):
     else:
         await create_new_instance(instruction.rand_id, instruction.conf)
 
-    to_return = await get_result(instruction.rand_id)
+    to_return = await get_result_base(instruction.rand_id)
 
     return to_return

@@ -1,4 +1,4 @@
-from FactorioCalcBase.legacy.factorio_item_class import FactorioItem
+from legacy.factorio_item_class import FactorioItem
 import copy
 
 

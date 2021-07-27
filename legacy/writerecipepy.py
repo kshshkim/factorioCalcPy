@@ -1,5 +1,5 @@
 import json
-from FactorioCalcBase.legacy import lua_recipe_converter
+from legacy import lua_recipe_converter
 from data import dict_merge
 
 lcc = lua_recipe_converter.Copyrecipe()

@@ -1,4 +1,4 @@
-from FactorioCalcBase.legacy.data import recipe_dict
+from legacy.data import recipe_dict
 
 recipe1 = recipe_dict.recipe
 

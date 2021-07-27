@@ -2419,9 +2419,10 @@ recipe_dict = {
     },
     "raw-fish": {
         "name": "raw-fish",
-        "energy_required": "",
+        "energy_required": 1,
         "ingredients": "",
-        "results": ""
+        "results": {"raw-fish":1},
+        "category": "raw-fish"
     },
     "solid-fuel": {
         "name": "solid-fuel",

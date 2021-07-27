@@ -25,7 +25,7 @@ class ProductionBlock:
 
     def get_available_machine_list(self):
         recipe_category = self.recipe_obj.category
-        machine_list = production_machine_category_list_dict[recipe_category]
+        machine_list = production_machine_category_list_dict.get(recipe_category)
         return machine_list
 
     def update_machine(self, machine_name=None):
