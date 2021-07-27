@@ -19,9 +19,6 @@ recipe를 기반으로 의존성 트리를 생성하고, 총 자원 필요량과
 
 생산 속도와 생산량, 연구여부에 따른 변동 요소를 반영했습니다.
 
-<h2>FactorioCalcWeb</h2>
-FactorioCalcBase를 REST API를 통해 조작할 수 있도록 합니다. 
-
-Flask 기반으로 간단한 세션 관리 기능을 만들었습니다.
-
+<h2>FactorioCalcFastAPI</h2>
+[**FastAPI**](https://fastapi.tiangolo.com/) 기반 API입니다.
 Vue.js 기반 프론트엔드와 결합할 예정입니다.
