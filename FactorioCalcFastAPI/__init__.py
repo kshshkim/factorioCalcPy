@@ -3,6 +3,7 @@ from FactorioCalcFastAPI.static_req_handle import *
 from FactorioCalcFastAPI.calc_instance import Calculator
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
+from data.icon_ref_dict import icon_ref_dict
 
 from typing import Optional
 import asyncio
@@ -35,6 +36,9 @@ async def create_new_instance(rand_id, conf):
 async def root():
     return {"message": "Hello World"}
 
+@app.get("/icon-dir/{name}")
+async def icon_dir(name: str):
+    return icon_ref_dict.get(name)
 
 @app.get("/recipe_list")
 async def recipe_list():
@@ -83,12 +87,11 @@ async def get_result(rand_id: float):
 @app.post("/calc")
 async def calc_control(instruction: Instruction):
     await check_instance(instruction.rand_id, instruction.conf)
-    target_instance = app.instance_dict.get(instruction.rand_id)
-    if instruction.action.action_name != 'initialize':
-        target_instance.parse_action(instruction.action)
-    else:
+    target_instance: Calculator = app.instance_dict.get(instruction.rand_id)
+    if (target_instance.conf != instruction.conf) or (instruction.action.action_name == 'initialize'):
         await create_new_instance(instruction.rand_id, instruction.conf)
 
+    target_instance.parse_action(instruction.action)
     to_return = await get_result_base(instruction.rand_id)
 
     return to_return
