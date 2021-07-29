@@ -3,7 +3,7 @@ from FactorioCalcFastAPI.static_req_handle import *
 from FactorioCalcFastAPI.calc_instance import Calculator
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
-from data.icon_ref_dict import icon_ref_dict
+from FactorioCalcFastAPI.data.icon_ref_dict import icon_ref_dict
 
 from typing import Optional
 import asyncio
