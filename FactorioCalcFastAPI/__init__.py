@@ -36,9 +36,9 @@ async def create_new_instance(rand_id, conf):
 async def root():
     return {"message": "Hello World"}
 
-@app.get("/icon-dir/{name}")
-async def icon_dir(name: str):
-    return icon_ref_dict.get(name)
+@app.get("/icon_url/{name}")
+async def icon_url(name: str):
+    return "https://cdn.privatelaw.net/"+icon_ref_dict.get(name)
 
 @app.get("/recipe_list")
 async def recipe_list():
