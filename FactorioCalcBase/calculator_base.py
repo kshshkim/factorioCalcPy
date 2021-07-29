@@ -111,7 +111,7 @@ class FactorioCalculatorBase:
                 if amount_item_required is not None:
                     amount_item_required = round(amount_item_required, 4)
                 to_return_dict[cat][recp] = {
-                    # 'name': recp,
+                    'name': recp,
                     'amount_item_required': amount_item_required,
                     'amount_recipe_required': round(amount_recipe_required, 4),
                     'amount_factory_required': round(amount_required, 4),
