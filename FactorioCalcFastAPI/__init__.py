@@ -2,11 +2,24 @@ from fastapi import FastAPI
 from FactorioCalcFastAPI.static_req_handle import *
 from FactorioCalcFastAPI.calc_instance import Calculator
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
+
 from typing import Optional
 import asyncio
 
 app = FastAPI()
 app.instance_dict = {}
+
+origins = [
+    "*"
+]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 async def check_instance(rand_id, conf):
