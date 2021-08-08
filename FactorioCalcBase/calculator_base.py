@@ -19,6 +19,7 @@ class FactorioCalculatorBase:
         self.block_obj_dict = {}
         self.make_initial_block_objs()
         self.is_modified = False
+        self.node_dict = {}
 
     def make_initial_total_recipe_dict(self):
         new_obj = DependencyDictMerged(self.recipe_name, self.amount, self.extra_product_rate_dict)
@@ -107,12 +108,8 @@ class FactorioCalculatorBase:
                 block_obj: ProductionBlock = self.production_block_recipe_finder(recipe_name=recp, block_or_recipe='b')
                 amount_required = self.get_block_needed_amount_in_ref_time(recp)
                 amount_recipe_required = self.production_block_recipe_finder(recipe_name=recp, block_or_recipe='r')
-                amount_item_required = self.total_item_dict['item'].get(recp)
-                if amount_item_required is not None:
-                    amount_item_required = round(amount_item_required, 4)
                 to_return_dict[cat][recp] = {
                     'name': recp,
-                    'amount_item_required': amount_item_required,
                     'amount_recipe_required': round(amount_recipe_required, 4),
                     'amount_factory_required': round(amount_required, 4),
                     'machine_name': block_obj.machine_obj.machine_name,
@@ -121,7 +118,8 @@ class FactorioCalculatorBase:
                     'base_speed_rate': block_obj.machine_obj.base_speed_rate,
                     'total_power_consumption': round(amount_required*block_obj.power_consumption, 4),
                 }
-        to_return_dict.update(self.total_item_dict)
+        to_return_dict['items'] = self.total_item_dict
+        self.total_out_dict = to_return_dict
         return to_return_dict
 
     def change_amount(self, amount: float):
@@ -129,3 +127,43 @@ class FactorioCalculatorBase:
 
     def json_out(self):
         return json.dumps(self.total_info_out_as_dict(), sort_keys=False, indent=4)
+
+    def diagram_data_out(self):
+        node_list = list(self.total_recipe_dict['recipe'].keys())
+        t_and_s_list = []
+
+        def update_t_and_s_list(source, itm_name):
+            if itm_name != self.recipe_name:
+                required_by_dict = self.total_item_dict[itm_name]['required_by']
+                for target, strength in required_by_dict.items():
+                    t_and_s_list.append((source, itm_name, target, strength))
+
+        for node in node_list:
+            key_list = list(RecipeClass(node).results.keys())
+            for key in key_list:
+                update_t_and_s_list(node, key)
+
+        link_dict = {
+            'source': [],
+            'target': [],
+            'value': [],
+            'label': [],
+            'node': node_list,
+            'node_value': [],
+            'node_custom_data': [],
+            'link_custom_data': []
+        }
+        for node in node_list:
+            link_dict['node_custom_data'].append('"'+self.total_out_dict['recipe'][node]['machine_name']+'" x'+str(self.total_out_dict['recipe'][node]['amount_factory_required']))
+
+        for source, itm_name, target, strength in t_and_s_list:
+            link_dict['source'].append(node_list.index(source))
+            link_dict['target'].append(node_list.index(target))
+            if itm_name in ['water', 'crude-oil', 'petroleum-gas', 'light-oil', 'heavy-oil']:
+                link_dict['value'].append(strength/10)
+            else:
+                link_dict['value'].append(strength)
+            link_dict['label'].append(itm_name)
+            link_dict['node_value'].append(self.total_recipe_dict['recipe'][source])
+            link_dict['link_custom_data'].append('total "'+str(strength)+'" of "'+itm_name+'" required by "'+target+'"')
+        return link_dict

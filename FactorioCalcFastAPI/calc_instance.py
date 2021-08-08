@@ -12,14 +12,15 @@ class Calculator:
         recipe_name = self.conf.recipe_name
         amount = self.conf.amount
         mining_research_modifier = self.conf.mining_research_modifier
-        self.base = FactorioCalculatorBase(recipe_name=recipe_name, amount=amount, mining_research_modifier=mining_research_modifier)
+        self.base = FactorioCalculatorBase(recipe_name=recipe_name, amount=amount,
+                                           mining_research_modifier=mining_research_modifier)
         self.update_result()
 
     def change_amount(self, amount):
         self.base.change_amount(amount)
 
     def change_machine(self, recipe_name: str, machine_name: str):
-        self.base.change_machine_to_specific_block(recipe_name=recipe_name,machine_name=machine_name)
+        self.base.change_machine_to_specific_block(recipe_name=recipe_name, machine_name=machine_name)
 
     def set_module(self, recipe_name: str, module_list: list):
         self.base.set_module_to_specific_block(recipe_name=recipe_name, module_code_or_list=module_list)
@@ -42,3 +43,6 @@ class Calculator:
         elif action.action_name == 'change_amount':
             amount = action.action_detail.get('amount')
             self.change_amount(amount=amount)
+
+    def diagram_data_out(self):
+        return self.base.diagram_data_out()

@@ -1,23 +1,15 @@
-from FactorioCalcBase.calculator_base import FactorioCalculatorBase
+def dict_add_number(dic: dict, key, val: float):
+    if dic.get(key) is None:
+        dic[key] = val
+    else:
+        dic[key] += val
 
 
-# import random
-# import time
-#
-# class SangTae:
-#     def __init__(self):
-#         self.asdf = [1,2,3,4,5]
-#
-#
-# asdd = SangTae()
-#
-# it = iter(asdd.asdf)
-#
-# print(next(it))
-# print(next(it))
-# print(next(it))
-# print(next(it))
-# time.sleep(10)
 
-ase = FactorioCalculatorBase('spidertron')
-ase.total_info_out_as_dict()
+asdf = {
+    'apple': 1
+}
+
+dict_add_number(asdf, 'apple', 1)
+
+print(asdf)

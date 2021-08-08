@@ -1,5 +1,7 @@
 from FactorioCalcBase.recipe_class import RecipeClass
 from FactorioCalcBase.data.binary import recipe_dict
+from FactorioCalcBase.common_function import add_to_item_dict, dict_add_number
+from collections import Counter
 
 # TODO advanced-oil-processing 이외 다른 방법 추가
 
@@ -40,8 +42,6 @@ class OilProcessor:
 
         self.advanced_oil_processing_plus_cracking()
         self.update_oil_recipe_needed()
-        # self.update_oil_item_needed()
-        # self.update_non_oil_recipe_needed()
 
     def advanced_oil_processing_plus_cracking(self):
         adv = [25, 45, 55]  # advanced_oil_processing 생산량, 중유, 경유, 가스 순서
@@ -96,20 +96,36 @@ class OilProcessor:
             'light-oil-cracking': self.light_to_gas_amount,
             # 'extra': self.extra
         }
-        self.oil_recipe_needed = new_dict
-        self.update_oil_item_needed()
-        for recipe in ['water', 'crude-oil']:
-            new_rcp_obj = RecipeClass(recipe)
-            if self.oil_recipe_needed.get(recipe) is None:
-                self.oil_recipe_needed[recipe] = 0
-            self.oil_recipe_needed[recipe] += self.oil_item_needed[recipe]/new_rcp_obj.get_results_count()
 
-    def update_oil_item_needed(self):
-        new_dict = {}
-        for key in self.oil_recipe_needed.keys():
-            for each_ingredient in recipe_dict[key]['ingredients'].keys():
-                if new_dict.get(each_ingredient) is None:
-                    new_dict[each_ingredient] = 0
-                new_dict[each_ingredient] += recipe_dict[key]['ingredients'][each_ingredient]*self.oil_recipe_needed[key]
-        self.oil_item_needed = new_dict
+        oil_recp_dict = {}
+        oil_item_dict = {}
 
+        for key, val in new_dict.items():
+            for key2, val2 in recipe_dict[key]['ingredients'].items():
+                if key2 not in ['heavy-oil', 'light-oil', 'petroleum-gas']:  # 경유 중유 가스는 이미 레시피 필요량 계산 완료됨.
+                    new_recp = RecipeClass(key2)
+                    how_many = val*val2/new_recp.get_results_count()  #  val2/new_recp.get_results_count() <= 생산물 1 단위당 레시피 필요량
+                    dict_add_number(oil_recp_dict, new_recp.name, how_many)
+
+                add_to_item_dict(oil_item_dict, key2, val*val2, key)
+
+        self.oil_recipe_needed = dict(Counter(new_dict)+Counter(oil_recp_dict))
+        self.oil_item_needed = oil_item_dict
+
+
+
+    #     self.oil_recipe_needed = new_dict
+    #     self.update_oil_item_needed()
+    #
+    #     for recipe in ['water', 'crude-oil']:
+    #         new_rcp_obj = RecipeClass(recipe)
+    #         if self.oil_recipe_needed.get(recipe) is None:
+    #             self.oil_recipe_needed[recipe] = 0
+    #         self.oil_recipe_needed[recipe] += self.oil_item_needed[recipe]/new_rcp_obj.get_results_count()
+    #
+    # def update_oil_item_needed(self):
+    #     new_dict = {}
+    #     for key, val in self.oil_recipe_needed.items():
+    #
+    #         self.oil_item_needed = new_dict
+    #

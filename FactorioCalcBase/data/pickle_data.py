@@ -5,6 +5,7 @@ from production_machine_dict import production_machine_dict
 from productivity_module_available_list import productivity_module_available_list
 from recipe_dict import recipe_dict
 from production_machine_category_list_dict import production_machine_category_list_dict
+from sorted_recipe_list import sorted_recipe_list
 
 
 def pickle_data():
@@ -13,7 +14,8 @@ def pickle_data():
         'module_modifier_dict': module_modifier_dict,
         'production_machine_category_list_dict': production_machine_category_list_dict,
         'recipe_dict': recipe_dict,
-        'productivity_module_available_list': productivity_module_available_list
+        'productivity_module_available_list': productivity_module_available_list,
+        'sorted_recipe_list': sorted_recipe_list
     }
 
     with open('data_dict.pickle', 'wb') as pk:

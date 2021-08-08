@@ -4,6 +4,7 @@ from FactorioCalcFastAPI.calc_instance import Calculator
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from FactorioCalcFastAPI.data.icon_ref_dict import icon_ref_dict
+from fastapi.responses import HTMLResponse
 
 from typing import Optional
 import asyncio
@@ -12,6 +13,7 @@ app = FastAPI()
 app.instance_dict = {}
 
 origins = [
+    # 개발 편의를 위함. 배포시 수정 필요
     "*"
 ]
 app.add_middleware(
@@ -36,9 +38,11 @@ async def create_new_instance(rand_id, conf):
 async def root():
     return {"message": "Hello World"}
 
+
 @app.get("/icon_url/{name}")
 async def icon_url(name: str):
-    return "https://cdn.privatelaw.net/"+icon_ref_dict.get(name)
+    return "https://cdn.privatelaw.net/" + icon_ref_dict.get(name)
+
 
 @app.get("/recipe_list")
 async def recipe_list():
@@ -74,15 +78,28 @@ class Instruction(BaseModel):
     conf: Conf
     action: Action
 
-async def get_result_base(rand_id:float):
+
+async def get_result_base(rand_id: float):
     target = app.instance_dict.get(rand_id)
     await target.async_update_result()
     return target.results
 
+
+@app.get("/visualize/{rand_id}", response_class=HTMLResponse)
+async def diagram_out(rand_id: float):
+    target: Calculator = app.instance_dict.get(rand_id)
+    diagram_data: dict = target.diagram_data_out()
+    from FactorioCalcBase.dependency_diagram import DependencyDiagram
+    dd = DependencyDiagram(conf=target.conf, diagram_data=diagram_data)
+    return dd.get_html()
+
+
 @app.get("/calc/get_results/{rand_id}")
 async def get_result(rand_id: float):
     if rand_id in app.instance_dict.keys():
-        return await get_result_base(rand_id=rand_id)
+        to_return = await get_result_base(rand_id=rand_id)
+        return to_return
+
 
 @app.post("/calc")
 async def calc_control(instruction: Instruction):

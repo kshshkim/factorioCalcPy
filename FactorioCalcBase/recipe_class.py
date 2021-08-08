@@ -2,8 +2,8 @@ from FactorioCalcBase.data.binary import recipe_dict
 
 
 class RecipeClass:
-    def __init__(self, recipe_name):
-        self.amount = None
+    def __init__(self, recipe_name, amount=1):
+        self.amount = amount
         self.name = recipe_name
         self.ingredients = recipe_dict[self.name]['ingredients']
         self.results = recipe_dict[self.name]['results']

@@ -6,3 +6,4 @@ production_machine_category_list_dict = dataaa['production_machine_category_list
 production_machine_dict = dataaa['production_machine_dict']
 module_modifier_dict = dataaa['module_modifier_dict']
 productivity_module_available_list = dataaa['productivity_module_available_list']
+sorted_recipe_list = dataaa['sorted_recipe_list']

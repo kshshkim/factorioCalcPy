@@ -7,7 +7,7 @@ def get_recipe_spec(recipe_name: str):
 
 
 def get_recipe_list():
-    target = list(recipe_dict.keys())
+    target = sorted_recipe_list
     return target
 
 
@@ -38,4 +38,3 @@ def what_machine_can_produce(recipe_name: str):
     if cat is None:
         cat = 'crafting'
     return cat
-
