@@ -5,12 +5,13 @@ from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from FactorioCalcFastAPI.data.icon_ref_dict import icon_ref_dict
 from fastapi.responses import HTMLResponse
+from FactorioCalcFastAPI.redis_handle import rdc
+import pickle
 
 from typing import Optional
 import asyncio
 
 app = FastAPI()
-app.instance_dict = {}
 
 origins = [
     # 개발 편의를 위함. 배포시 수정 필요
@@ -26,17 +27,27 @@ app.add_middleware(
 
 
 async def check_instance(rand_id, conf):
-    if app.instance_dict.get(rand_id) is None:
+    if rdc.get(rand_id) is None:
         await create_new_instance(rand_id, conf)
 
 
 async def create_new_instance(rand_id, conf):
-    app.instance_dict[rand_id] = Calculator(conf)
+    new_instance = Calculator(conf)
+    pickled_instance = pickle.dumps(new_instance)
+    rdc.set(rand_id, pickled_instance)
 
 
 async def get_target(rand_id):
-    target: Calculator = app.instance_dict.get(rand_id)
-    return target
+    if rdc.get(rand_id) is not None:
+        pickled_instance = rdc.get(rand_id)
+        unpickled_instance = pickle.loads(pickled_instance)
+        target: Calculator = unpickled_instance
+        return target
+
+
+async def redis_overwrite(rand_id, instance):
+    pickled_instance = pickle.dumps(instance)
+    rdc.set(rand_id, pickled_instance)
 
 
 @app.get("/")
@@ -84,12 +95,6 @@ class Instruction(BaseModel):
     action: Action
 
 
-async def get_result_base(rand_id: float):
-    target = app.instance_dict.get(rand_id)
-    await target.async_update_result()
-    return target.results
-
-
 @app.get("/visualize/{rand_id}", response_class=HTMLResponse)
 async def diagram_out(rand_id: float):
     target = await get_target(rand_id=rand_id)
@@ -98,20 +103,21 @@ async def diagram_out(rand_id: float):
 
 
 @app.get("/calc/get_results/{rand_id}")
-async def get_result(rand_id: float):
-    if rand_id in app.instance_dict.keys():
-        to_return = await get_result_base(rand_id=rand_id)
-        return to_return
+async def get_results(rand_id: float):
+    if rdc.get(rand_id) is not None:
+        target: Calculator = await get_target(rand_id)
+        return target.results
 
 
 @app.post("/calc")
 async def calc_control(instruction: Instruction):
     await check_instance(instruction.rand_id, instruction.conf)
-    target_instance: Calculator = app.instance_dict.get(instruction.rand_id)
+    target_instance: Calculator = await get_target(instruction.rand_id)
     if (target_instance.conf != instruction.conf) or (instruction.action.action_name == 'initialize'):
-        await create_new_instance(instruction.rand_id, instruction.conf)
-
+        target_instance = Calculator(instruction.conf)
     target_instance.parse_action(instruction.action)
-    to_return = await get_result_base(instruction.rand_id)
+    await target_instance.async_update_result()
+    await redis_overwrite(rand_id=instruction.rand_id, instance=target_instance)
+    to_return = target_instance.results
 
     return to_return

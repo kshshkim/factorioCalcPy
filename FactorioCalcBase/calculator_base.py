@@ -5,7 +5,7 @@ import json
 
 
 class FactorioCalculatorBase:
-    def __init__(self, recipe_name='advanced-circuit', amount=1, mining_research_modifier=0, extra_product_rate_dict=None):
+    def __init__(self, recipe_name='advanced-circuit', amount=1, mining_research_modifier=0, extra_product_rate_dict=None, extra_conf=None):
         self.recipe_name = recipe_name
         self.recipe_obj = RecipeClass(self.recipe_name)
         self.amount = amount
@@ -20,6 +20,7 @@ class FactorioCalculatorBase:
         self.make_initial_block_objs()
         self.is_modified = False
         self.node_dict = {}
+        self.extra_conf = extra_conf
 
     def make_initial_total_recipe_dict(self):
         new_obj = DependencyDictMerged(self.recipe_name, self.amount, self.extra_product_rate_dict)
