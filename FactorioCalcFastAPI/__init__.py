@@ -34,6 +34,11 @@ async def create_new_instance(rand_id, conf):
     app.instance_dict[rand_id] = Calculator(conf)
 
 
+async def get_target(rand_id):
+    target: Calculator = app.instance_dict.get(rand_id)
+    return target
+
+
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
@@ -87,7 +92,7 @@ async def get_result_base(rand_id: float):
 
 @app.get("/visualize/{rand_id}", response_class=HTMLResponse)
 async def diagram_out(rand_id: float):
-    target: Calculator = app.instance_dict.get(rand_id)
+    target = await get_target(rand_id=rand_id)
     diagram_html = await target.diagram_data_update()
     return diagram_html
 
