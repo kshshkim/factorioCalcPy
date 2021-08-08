@@ -92,6 +92,7 @@ def diagram_out(rand_id: float):
     from FactorioCalcBase.dependency_diagram import DependencyDiagram
     dd = DependencyDiagram(conf=target.conf, diagram_data=diagram_data)
     diagram_html = dd.get_html()
+    del dd
     return diagram_html
 
 
