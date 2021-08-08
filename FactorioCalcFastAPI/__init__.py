@@ -86,12 +86,13 @@ async def get_result_base(rand_id: float):
 
 
 @app.get("/visualize/{rand_id}", response_class=HTMLResponse)
-async def diagram_out(rand_id: float):
+def diagram_out(rand_id: float):
     target: Calculator = app.instance_dict.get(rand_id)
     diagram_data: dict = target.diagram_data_out()
     from FactorioCalcBase.dependency_diagram import DependencyDiagram
     dd = DependencyDiagram(conf=target.conf, diagram_data=diagram_data)
-    return dd.get_html()
+    diagram_html = dd.get_html()
+    return diagram_html
 
 
 @app.get("/calc/get_results/{rand_id}")
