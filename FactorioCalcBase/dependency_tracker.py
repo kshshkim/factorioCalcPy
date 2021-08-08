@@ -63,7 +63,7 @@ class DependencyTracker:
 
         if trc.is_name_results_match():
             recipe_name = item_name
-        elif item_name in ['petroleum-gas', 'light-oil', 'heavy-oil', 'solid-fuel', 'raw-fish']:
+        elif item_name in ['petroleum-gas', 'light-oil', 'heavy-oil', 'solid-fuel', 'raw-fish', 'uranium-235', 'uranium-238']:  # TODO 우라늄 제작법
             return -1
         elif item_name == 'solid-fuel':  # TODO solid-fuel, 우라늄 관련 레시피 반영 필요
             recipe_name = 'solid-fuel-from-light-oil'
