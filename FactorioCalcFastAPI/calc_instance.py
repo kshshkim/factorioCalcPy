@@ -7,6 +7,8 @@ class Calculator:
         self.base = None
         self.initialize_base_obj()
         self.results = {}
+        self.diagram_data = None
+        self.dd = None
 
     def initialize_base_obj(self):
         recipe_name = self.conf.recipe_name
@@ -44,5 +46,8 @@ class Calculator:
             amount = action.action_detail.get('amount')
             self.change_amount(amount=amount)
 
-    def diagram_data_out(self):
-        return self.base.diagram_data_out()
+    async def diagram_data_update(self):
+        self.diagram_data = self.base.diagram_data_out()
+        from FactorioCalcBase.dependency_diagram import DependencyDiagram
+        self.dd = DependencyDiagram(self.conf, self.base.diagram_data_out())
+        return self.dd.get_html()
