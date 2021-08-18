@@ -74,7 +74,13 @@ async def recipe_spec(recipe_name: str):
 
 @app.get("/machine/{machine_name}")
 async def machine_spec(machine_name: str):
-    results = await get_machine_spec(machine_name=machine_name)
+    results = get_machine_spec(machine_name=machine_name)
+    return results
+
+
+@app.get("/available_machine_list/{recipe_name}")
+async def available_machine_list(recipe_name: str):
+    results = what_machine_can_produce(recipe_name=recipe_name)
     return results
 
 

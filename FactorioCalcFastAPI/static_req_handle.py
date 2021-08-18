@@ -37,4 +37,6 @@ def what_machine_can_produce(recipe_name: str):
 
     if cat is None:
         cat = 'crafting'
-    return cat
+
+    to_return = production_machine_category_list_dict.get(cat)
+    return to_return

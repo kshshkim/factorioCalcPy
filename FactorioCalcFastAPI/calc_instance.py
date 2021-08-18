@@ -46,7 +46,6 @@ class Calculator:
             amount = action.action_detail.get('amount')
             self.change_amount(amount=amount)
 
-
     async def diagram_data_update(self):
         self.diagram_data = self.base.diagram_data_out()
         from FactorioCalcBase.dependency_diagram import DependencyDiagram

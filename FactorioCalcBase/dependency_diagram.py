@@ -2,7 +2,7 @@ import plotly.graph_objects as go
 
 
 class DependencyDiagram:
-    def __init__(self, conf: dict, diagram_data: dict):
+    def __init__(self, conf, diagram_data: dict):
         self.diagram_data = diagram_data
         self.fig = go.Figure(
             data=[go.Sankey(
@@ -12,7 +12,7 @@ class DependencyDiagram:
                         width=0
                     ),
                     pad=100,
-                    thickness=20,
+                    thickness=50,
                     label=self.diagram_data.get('node'),
                     customdata=self.diagram_data.get('node_custom_data'),
                     hovertemplate='%{customdata}'
