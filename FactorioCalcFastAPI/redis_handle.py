@@ -1,6 +1,6 @@
 from redis import Redis
 
-REDIS_HOST = '172.18.0.2'
+REDIS_HOST = '172.18.0.1'
 REDIS_PORT = 16379
 REDIS_DB = 0
 
