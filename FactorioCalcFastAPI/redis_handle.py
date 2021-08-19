@@ -1,6 +1,6 @@
 from redis import Redis
 
-REDIS_HOST = 'redistest'
+REDIS_HOST = 'testnet'
 REDIS_PORT = 16379
 REDIS_DB = 0
 
