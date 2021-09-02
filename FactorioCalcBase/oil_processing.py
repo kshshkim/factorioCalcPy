@@ -46,7 +46,7 @@ class OilProcessor:
     def advanced_oil_processing_plus_cracking(self):
         adv = [25, 45, 55]  # advanced_oil_processing 생산량, 중유, 경유, 가스 순서
         if 'advanced-oil-processing' in self.extra_product_rate_dict.keys():
-            for i in range(len(adv)):
+            for i in range(3):
                 adv[i] = adv[i]*self.extra_product_rate_dict['advanced-oil-processing']
 
         need = [self.heavy_oil_need, self.light_oil_need, self.petroleum_gas_need]

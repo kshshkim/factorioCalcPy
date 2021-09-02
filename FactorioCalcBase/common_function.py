@@ -22,7 +22,7 @@ def counter_add_dict(dict_list: list, prefix: str = ''):
 def add_to_item_dict(base_dict: dict, item_name: str, item_amount: float, required_by: str):
 
     # item_dict = {
-    #     item_name :{
+    #     'item_name' :{
     #         'amount': float,
     #         'required_by': {
     #             recipe_1: float,
