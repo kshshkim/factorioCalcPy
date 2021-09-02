@@ -4,14 +4,6 @@ import pprint
 import json
 from FactorioCalcBase.recipe_class import RecipeClass
 #
-ase = FactorioCalculatorBase('atomic-bomb')
-# tinfo = ase.total_info_out_as_dict()
-#
-#
-# # pprint.pp(ase.diagram_data_out())
-# dd = ['asdf','eefs','adsdf','dieda']
-#
-# lala = [elem+'\nhi' for elem in dd]
-#
-# print(lala)
-# print(lala[1])
+ase = FactorioCalculatorBase('advanced-circuit', amount=1)
+ase.set_module_to_specific_block('advanced-oil-processing', ['p1'])
+pprint.pp(ase.total_info_out_as_dict())

@@ -2382,7 +2382,8 @@ recipe_dict = {
         "name": "wood",
         "energy_required": "",
         "ingredients": "",
-        "results": ""
+        "results": {'wood': 1},
+        'category': 'wood'
     },
     "stone": {
         "name": "stone",

@@ -56,7 +56,7 @@ production_machine_dict = {
     "electric-mining-drill": {
         "name": "electric-mining-drill",
         "production_rate": 0.5,
-        "module_slots": 0,
+        "module_slots": 3,
         "category": "mining-drill",
         "power_consumption": 180,
     },
@@ -80,21 +80,21 @@ production_machine_dict = {
         "category":"oil-processing",
         "production_rate": 1,
         "power_consumption": 180,
-        "module_slots": 0,
+        "module_slots": 3,
     },
     "chemical-plant": {
         "name": "chemical-plant",
         "category": "chemistry",
         "production_rate": 1,
         "power_consumption": 180,
-        "module_slots": 0,
+        "module_slots": 3,
     },
     "centrifuge": {
         "name": "centrifuge",
         "category": "centrifuging",
         "production_rate": 1,
         "power_consumption": 180,
-        "module_slots": 0,
+        "module_slots": 2,
     },
     "raw-fish": {
         "name": "raw-fish",

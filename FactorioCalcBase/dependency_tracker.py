@@ -63,7 +63,7 @@ class DependencyTracker:
 
         if trc.is_name_results_match():
             recipe_name = item_name
-        elif item_name in ['petroleum-gas', 'light-oil', 'heavy-oil', 'solid-fuel', 'raw-fish', 'uranium-235', 'uranium-238']:  # TODO 우라늄 제작법
+        elif item_name in ['petroleum-gas', 'light-oil', 'heavy-oil', 'solid-fuel', 'raw-fish', 'wood', 'uranium-235', 'uranium-238']:  # TODO 우라늄 제작법
             return -1
         elif item_name == 'solid-fuel':  # TODO solid-fuel, 우라늄 관련 레시피 반영 필요
             recipe_name = 'solid-fuel-from-light-oil'
@@ -79,12 +79,11 @@ class DependencyTracker:
 
 class DependencyDictMerged:
     # TODO 하드코딩 정리
-    def __init__(self, recipe_name: str, amount=1, extra_product_rate_dict=None):
+    def __init__(self, recipe_name: str, amount: float, extra_product_rate_dict: dict):
         dp_tracker: DependencyTracker = DependencyTracker(recipe_name, amount, extra_product_rate_dict)
 
         self.total_recipe_req_dict = dp_tracker.initial_total_recipe_req_dict
         self.total_item_req_dict = dp_tracker.initial_total_item_req_dict
-
         self.oil_obj = OilProcessor(dp_tracker.cannot_process_item_dict, extra_product_rate_dict=extra_product_rate_dict)
 
         if dp_tracker.cannot_process_item_dict != {}:
