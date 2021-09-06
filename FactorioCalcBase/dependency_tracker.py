@@ -1,5 +1,6 @@
 from FactorioCalcBase.recipe_class import RecipeClass
 from FactorioCalcBase.oil_processing import OilProcessor
+from FactorioCalcBase.uranium_processing import UraniumProcessor
 from FactorioCalcBase.common_function import add_to_item_dict, dict_add_number, counter_add_dict, merge_item_dicts
 from collections import deque
 
@@ -63,7 +64,7 @@ class DependencyTracker:
 
         if trc.is_name_results_match():
             recipe_name = item_name
-        elif item_name in ['petroleum-gas', 'light-oil', 'heavy-oil', 'solid-fuel', 'raw-fish', 'wood', 'uranium-235', 'uranium-238']:  # TODO 우라늄 제작법
+        elif item_name in ['petroleum-gas', 'light-oil', 'heavy-oil', 'uranium-235', 'uranium-238']:  # TODO 우라늄 제작법
             return -1
         elif item_name == 'solid-fuel':  # TODO solid-fuel, 우라늄 관련 레시피 반영 필요
             recipe_name = 'solid-fuel-from-light-oil'
@@ -85,7 +86,7 @@ class DependencyDictMerged:
         self.total_recipe_req_dict = dp_tracker.initial_total_recipe_req_dict
         self.total_item_req_dict = dp_tracker.initial_total_item_req_dict
         self.oil_obj = OilProcessor(dp_tracker.cannot_process_item_dict, extra_product_rate_dict=extra_product_rate_dict)
-
+        self.uranium_obj = UraniumProcessor(dp_tracker.cannot_process_item_dict, extra_product_rate_dict=extra_product_rate_dict)
         if dp_tracker.cannot_process_item_dict != {}:
             item_dict_list = [self.total_item_req_dict, self.oil_obj.oil_item_needed]
             recipe_dict_list = [self.total_recipe_req_dict, self.oil_obj.oil_recipe_needed]

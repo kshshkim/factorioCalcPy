@@ -2445,5 +2445,17 @@ recipe_dict = {
         "ingredients": {"sulfuric-acid": 1},
         "results": {"uranium-ore": 1},
         "category": "mining-drill"
+    },
+    "uranium-processing": {
+        "name": "uranium-processing",
+        "energy_required": 12,
+        "category": "centrifuging",
+        "ingredients": {
+            "uranium-ore": 10
+        },
+        "results": {
+            "uranium-238": 0.993,
+            "uranium-235": 0.007
+        }
     }
 }

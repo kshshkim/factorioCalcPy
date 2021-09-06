@@ -7,7 +7,7 @@ from collections import Counter
 
 
 class OilProcessor:
-    def __init__(self, oil_need_dict, extra_product_rate_dict=None):
+    def __init__(self, cannot_process_dict, extra_product_rate_dict=None):
         self.how_many_adv = 0
         self.heavy_to_light_amount = 0
         self.light_to_gas_amount = 0
@@ -19,18 +19,19 @@ class OilProcessor:
         if extra_product_rate_dict is None:
             extra_product_rate_dict = {}
         self.extra_product_rate_dict = extra_product_rate_dict
-        if oil_need_dict.get('petroleum-gas') is None:
-            oil_need_dict['petroleum-gas'] = 0
-        self.petroleum_gas_need = oil_need_dict['petroleum-gas']
-        if oil_need_dict.get('light-oil') is None:
-            oil_need_dict['light-oil'] = 0
-        self.light_oil_need = oil_need_dict['light-oil']
-        if oil_need_dict.get('heavy_oil') is None:
-            oil_need_dict['heavy_oil'] = 0
-        self.heavy_oil_need = oil_need_dict['heavy_oil']
+        if cannot_process_dict.get('petroleum-gas') is None:
+            cannot_process_dict['petroleum-gas'] = 0
+        self.petroleum_gas_need = cannot_process_dict['petroleum-gas']
+        if cannot_process_dict.get('light-oil') is None:
+            cannot_process_dict['light-oil'] = 0
+        self.light_oil_need = cannot_process_dict['light-oil']
+        if cannot_process_dict.get('heavy_oil') is None:
+            cannot_process_dict['heavy_oil'] = 0
+        self.heavy_oil_need = cannot_process_dict['heavy_oil']
 
         self.hoc_extra_product_ratio = 1
         self.loc_extra_product_ratio = 1
+        self.adv_resource_consumption_ratio = 1
 
         for key in self.extra_product_rate_dict.keys():
             if key == 'heavy-oil-cracking':
@@ -45,9 +46,8 @@ class OilProcessor:
 
     def advanced_oil_processing_plus_cracking(self):
         adv = [25, 45, 55]  # advanced_oil_processing 생산량, 중유, 경유, 가스 순서
-        if 'advanced-oil-processing' in self.extra_product_rate_dict.keys():
-            for i in range(3):
-                adv[i] = adv[i]*self.extra_product_rate_dict['advanced-oil-processing']
+        for i in range(3):
+            adv[i] = adv[i]*self.adv_resource_consumption_ratio
 
         need = [self.heavy_oil_need, self.light_oil_need, self.petroleum_gas_need]
         extra = [0, 0, 0]
