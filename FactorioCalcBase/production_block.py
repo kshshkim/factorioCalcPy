@@ -1,10 +1,12 @@
-from FactorioCalcBase.data.binary import production_machine_category_list_dict, productivity_module_available_list, module_modifier_dict
+from FactorioCalcBase.data.binary import production_machine_category_list_dict, productivity_module_available_list, \
+    module_modifier_dict
 from FactorioCalcBase.production_machine import ProductionMachine
 from FactorioCalcBase.recipe_class import RecipeClass
 
 
 class ProductionBlock:
-    def __init__(self, recipe_name, machine_name=None, module_list=None, mining_research_modifier=None):
+    def __init__(self, recipe_name, machine_name=None, module_list=None, mining_research_modifier=None,
+                 preferred_machine_list=None):
         self.recipe_name = recipe_name
         self.recipe_obj = RecipeClass(self.recipe_name)
         if module_list is None:
@@ -21,6 +23,8 @@ class ProductionBlock:
         self.production_speed = 0
         self.extra_product_rate = 0
         self.production_time_per_recipe = 0
+        self.preferred_machine_list = preferred_machine_list
+
         self.update_machine()
 
     def get_available_machine_list(self):
@@ -28,15 +32,34 @@ class ProductionBlock:
         machine_list = production_machine_category_list_dict.get(recipe_category)
         return machine_list
 
-    def update_machine(self, machine_name=None):
-        if machine_name is not None:
-            self.machine_name = machine_name
-        if (self.machine_name is None) or (self.machine_name not in self.available_machine_list):
-            self.machine_obj = ProductionMachine(self.available_machine_list[-1])
-            self.machine_name = self.machine_obj.machine_name
+    def is_this_machine_available(self, machine_name):
+        if machine_name is None:
+            return False
+        elif machine_name in self.available_machine_list:
+            return True
         else:
-            self.machine_obj = ProductionMachine(self.machine_name)
-        self.set_module(self.module_list)
+            return False
+
+    def set_default_machine(self):
+        is_set = False
+        if (self.preferred_machine_list is not None) or (self.preferred_machine_list != []):
+            for each_preferred_machine in self.preferred_machine_list:
+                if each_preferred_machine in self.available_machine_list:
+                    self.machine_name = each_preferred_machine
+                    is_set = True
+        #
+        if is_set is False:
+            self.machine_name = self.available_machine_list[-1]
+
+    def update_machine(self, machine_name=None):
+
+        if self.is_this_machine_available(machine_name):
+            self.machine_name = machine_name
+        else:
+            self.set_default_machine()
+
+        self.machine_obj = ProductionMachine(self.machine_name)
+        self.set_module(self.module_list)  # 초기화 후 모듈 재설정
 
     def set_module(self, module_code_or_list=None):
         check_list = None
@@ -109,7 +132,7 @@ class ProductionBlock:
         self.production_speed = return_list[0]
         self.power_consumption = return_list[1]
         self.extra_product_rate = return_list[2]
-        self.production_time_per_recipe = self.recipe_obj.energy_required/self.production_speed
+        self.production_time_per_recipe = self.recipe_obj.energy_required / self.production_speed
 
     def update_and_calculate_at_once(self):
         self.update_total_modifier()

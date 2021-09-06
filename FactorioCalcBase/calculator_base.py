@@ -5,7 +5,7 @@ import json
 
 
 class FactorioCalculatorBase:
-    def __init__(self, recipe_name='advanced-circuit', amount=1, mining_research_modifier=0, extra_product_rate_dict=None, extra_conf=None):
+    def __init__(self, recipe_name='advanced-circuit', amount=1, mining_research_modifier=0, extra_product_rate_dict=None, extra_conf=None, preferred_machine_list=None):
         self.recipe_name = recipe_name
         self.recipe_obj = RecipeClass(self.recipe_name)
         self.amount = amount
@@ -18,9 +18,9 @@ class FactorioCalculatorBase:
             self.extra_product_rate_dict = {}
         self.block_obj_dict = {}
         self.make_initial_block_objs()
-        self.is_modified = False
         self.node_dict = {}
         self.extra_conf = extra_conf
+        self.preferred_machine_list = preferred_machine_list
 
     def make_initial_total_recipe_dict(self):
         new_obj = DependencyDictMerged(self.recipe_name, self.amount, self.extra_product_rate_dict)
@@ -33,7 +33,7 @@ class FactorioCalculatorBase:
         for each_category in ref_dict.keys():
             self.block_obj_dict[each_category] = {}
             for each_recipe in ref_dict[each_category].keys():
-                self.block_obj_dict[each_category][each_recipe] = ProductionBlock(recipe_name=each_recipe, mining_research_modifier=self.mining_research_modifier)
+                self.block_obj_dict[each_category][each_recipe] = ProductionBlock(recipe_name=each_recipe, mining_research_modifier=self.mining_research_modifier, preferred_machine_list=self.preferred_machine_list)
 
     def update_extra_product_dict(self, block_obj):
         self.extra_product_rate_dict[block_obj.recipe_name] = block_obj.extra_product_rate
@@ -46,12 +46,18 @@ class FactorioCalculatorBase:
                 block_obj.update_and_calculate_at_once()
                 self.update_extra_product_dict(block_obj=block_obj)
 
+    # set module
     def set_module_to_specific_block(self, recipe_name, module_code_or_list):
         specific_block = self.production_block_recipe_finder(recipe_name=recipe_name, block_or_recipe='b')
 
         if specific_block is not None:
             specific_block.set_module(module_code_or_list)
             self.update_extra_product_dict(specific_block)
+
+    def set_module_to_all_blocks(self, module_code_or_list):
+        for each_production_block in self.block_obj_dict.values():
+            each_production_block.set_module(module_code_or_list)
+            self.update_extra_product_dict(each_production_block)
 
     def change_machine_to_specific_block(self, recipe_name: str, machine_name: str):
         specific_block: ProductionBlock = self.production_block_recipe_finder(recipe_name=recipe_name, block_or_recipe='b')
@@ -104,13 +110,13 @@ class FactorioCalculatorBase:
         to_return_dict = {}
         for cat in main_dict.keys():
             to_return_dict[cat] = {}
-            for recp in main_dict[cat].keys():
-                # 카테고리를 분리해서 출력할 경우 필요한 코드, 현재는 필요하지 않지만 성능 영향이 크지 않아서 그냥 둠.
+            for recp in main_dict[cat].keys():  # 카테고리를 분리해서 출력할 경우 필요한 코드, 현재는 필요하지 않지만 성능 영향이 크지 않아서 그냥 둠.
                 block_obj: ProductionBlock = self.production_block_recipe_finder(recipe_name=recp, block_or_recipe='b')
                 amount_required = self.get_block_needed_amount_in_ref_time(recp)
                 amount_recipe_required = self.production_block_recipe_finder(recipe_name=recp, block_or_recipe='r')
                 to_return_dict[cat][recp] = {
                     'name': recp,
+                    'product_per_a_minute': '',
                     'amount_recipe_required': round(amount_recipe_required, 4),
                     'amount_factory_required': round(amount_required, 4),
                     'machine_name': block_obj.machine_obj.machine_name,
