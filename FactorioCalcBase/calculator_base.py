@@ -143,7 +143,10 @@ class FactorioCalculatorBase:
 
         def update_t_and_s_list(source, itm_name):
             if itm_name != self.recipe_name:
-                required_by_dict = self.total_item_dict[itm_name]['required_by']
+                try:
+                    required_by_dict = self.total_item_dict[itm_name]['required_by']
+                except KeyError:  # 잉여생산물이 필요한 노드가 없어서 오류 발생
+                    required_by_dict = {}
                 for target, strength in required_by_dict.items():
                     t_and_s_list.append((source, itm_name, target, strength))
 
