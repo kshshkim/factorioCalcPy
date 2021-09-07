@@ -21,6 +21,9 @@ production_machine_category_list_dict = {
         'burner-mining-drill',
         'electric-mining-drill'
     ],
+    'uranium-mining-drill': [
+        'electric-mining-drill'
+    ],
     'water': [
         'offshore-pump'
     ],

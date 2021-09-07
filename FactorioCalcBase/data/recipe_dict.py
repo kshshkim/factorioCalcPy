@@ -2260,6 +2260,17 @@ recipe_dict = {
         },
         "category": "centrifuging"
     },
+    "kovarex-override": {
+        "name": "kovarex-override",
+        "energy_required": 60.0,
+        "ingredients": {
+            "uranium-238": 3
+        },
+        "results": {
+            "uranium-235": 1
+        },
+        "category": "centrifuging"
+    },
     "nuclear-fuel": {
         "name": "nuclear-fuel",
         "energy_required": 90.0,
@@ -2444,7 +2455,7 @@ recipe_dict = {
         "energy_required": 4,
         "ingredients": {"sulfuric-acid": 1},
         "results": {"uranium-ore": 1},
-        "category": "mining-drill"
+        "category": "uranium-mining-drill"
     },
     "uranium-processing": {
         "name": "uranium-processing",

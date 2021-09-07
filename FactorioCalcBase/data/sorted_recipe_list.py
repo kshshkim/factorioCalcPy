@@ -207,6 +207,7 @@ sorted_recipe_list = [
     'uranium-cannon-shell',
     'uranium-fuel-cell',
     'uranium-ore',
+    'uranium-processing',
     'uranium-rounds-magazine',
     'used-up-uranium-fuel-cell',
     'utility-science-pack',

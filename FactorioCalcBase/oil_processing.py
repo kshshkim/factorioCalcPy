@@ -1,6 +1,6 @@
 from FactorioCalcBase.recipe_class import RecipeClass
 from FactorioCalcBase.data.binary import recipe_dict
-from FactorioCalcBase.common_function import add_to_item_dict, dict_add_number
+from FactorioCalcBase.dependency_dict_common_function import add_to_item_dict, dict_add_number
 from collections import Counter
 
 # TODO advanced-oil-processing 이외 다른 방법 추가
@@ -13,9 +13,8 @@ class OilProcessor:
         self.light_to_gas_amount = 0
         self.extra = 0
         self.item_needed = {}
-        self.oil_recipe_needed = {}
-        self.non_oil_recipe_needed = {}
-        self.oil_item_needed = {}
+        self.recipe_needed = {}
+        self.item_needed = {}
         if extra_product_rate_dict is None:
             extra_product_rate_dict = {}
         self.extra_product_rate_dict = extra_product_rate_dict
@@ -109,8 +108,8 @@ class OilProcessor:
 
                 add_to_item_dict(oil_item_dict, key2, val*val2, key)
 
-        self.oil_recipe_needed = dict(Counter(new_dict)+Counter(oil_recp_dict))
-        self.oil_item_needed = oil_item_dict
+        self.recipe_needed = dict(Counter(new_dict) + Counter(oil_recp_dict))
+        self.item_needed = oil_item_dict
 
 
 

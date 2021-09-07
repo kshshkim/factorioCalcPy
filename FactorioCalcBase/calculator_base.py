@@ -1,5 +1,5 @@
 from FactorioCalcBase.production_block import ProductionBlock
-from FactorioCalcBase.dependency_tracker import DependencyDictMerged
+from FactorioCalcBase.dependency_tracker import FullDependency
 from FactorioCalcBase.recipe_class import RecipeClass
 import json
 
@@ -17,13 +17,15 @@ class FactorioCalculatorBase:
         if self.extra_product_rate_dict is None:
             self.extra_product_rate_dict = {}
         self.block_obj_dict = {}
-        self.make_initial_block_objs()
         self.node_dict = {}
         self.extra_conf = extra_conf
         self.preferred_machine_list = preferred_machine_list
+        if self.preferred_machine_list is None:
+            self.preferred_machine_list = []
+        self.make_initial_block_objs()
 
     def make_initial_total_recipe_dict(self):
-        new_obj = DependencyDictMerged(self.recipe_name, self.amount, self.extra_product_rate_dict)
+        new_obj = FullDependency(self.recipe_name, self.amount, self.extra_product_rate_dict)
         self.total_recipe_dict = new_obj.merged_recipe_dict
         self.total_item_dict = new_obj.merged_item_dict
 
@@ -66,7 +68,7 @@ class FactorioCalculatorBase:
             specific_block.update_machine(machine_name)
 
     def update_total_recipe_dict(self):
-        new_obj = DependencyDictMerged(self.recipe_name, self.amount, self.extra_product_rate_dict)
+        new_obj = FullDependency(self.recipe_name, self.amount, self.extra_product_rate_dict)
         self.total_recipe_dict = new_obj.merged_recipe_dict
         self.total_item_dict = new_obj.merged_item_dict
 
