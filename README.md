@@ -1,5 +1,9 @@
 # factorioCalcPy
 
+<b>[HTTP API Demo](https://a.privatelaw.net/docs)</b>
+
+<b>[Vue.js 기반 프론트엔드 Demo](https://fc.privatelaw.net)</b>
+
 **Work In Progress**
 
 **현재 개발중**
@@ -27,7 +31,3 @@ recipe를 기반으로 의존성 트리를 생성하고, 총 자원 필요량과
 
 ## FactorioCalcFastAPI
 [FastAPI](https://fastapi.tiangolo.com/) 기반 http api입니다. 
-
-<b>[HTTP API Demo](https://a.privatelaw.net/docs)</b>
-
-<b>[Vue.js 기반 프론트엔드 Demo](https://fc.privatelaw.net)</b>
