@@ -1,4 +1,5 @@
 # factorioCalcPy
+게임 [Factorio](https://www.factorio.com/)의 생산비율 계산기입니다. 일부 게임 데이터는 **Wube Software**의 지적 재산입니다.
 
 **Work In Progress**
 
