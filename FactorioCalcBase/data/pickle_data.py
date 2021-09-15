@@ -24,7 +24,7 @@ def pickle_data():
 
 pickle_data()
 
-with open('data_dict.pickle', 'rb') as pk:
-    dataaa = pickle.load(pk)
-
-pprint.pp(dataaa)
+# with open('data_dict.pickle', 'rb') as pk:
+#     dataaa = pickle.load(pk)
+#
+# pprint.pp(dataaa)
