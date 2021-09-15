@@ -3,18 +3,20 @@ from collections import Counter, deque
 from FactorioCalcBase.recipe_class import RecipeClass
 from FactorioCalcBase.data.binary import recipe_dict
 
+
 def find_recipe(needed_list, extra_product_rate_dict):
     item_name = needed_list[0]
     item_amount = needed_list[1]
 
     recipe_name = ''
     # name_results_match 가 아니면 따로 처리
-    if recipe_dict.get(item_name) is not None and recipe_dict[item_name]['results'] != '':
+
+    if item_name in ['petroleum-gas', 'light-oil', 'heavy-oil', 'uranium-235', 'uranium-238']:  # TODO 우라늄 제작법
+        return -1
+    elif recipe_dict.get(item_name) is not None and recipe_dict[item_name]['results'] != '':
         trc = RecipeClass(item_name)
         if trc.is_name_results_match():
             recipe_name = item_name
-    elif item_name in ['petroleum-gas', 'light-oil', 'heavy-oil', 'uranium-235', 'uranium-238']:  # TODO 우라늄 제작법
-        return -1
     elif item_name == 'solid-fuel':  # TODO solid-fuel, 우라늄 관련 레시피 반영 필요
         recipe_name = 'solid-fuel-from-light-oil'
         trc = RecipeClass(recipe_name)
@@ -28,7 +30,7 @@ def find_recipe(needed_list, extra_product_rate_dict):
         return [recipe_name, recipe_amount]
 
 
-def construct_dependedncy_dict(recipe_name: str, recipe_amount: float, extra_product_rate_dict: dict):
+def construct_dependency_dict(recipe_name: str, recipe_amount: float, extra_product_rate_dict: dict):
     recipe_obj = RecipeClass(recipe_name, recipe_amount)
 
     obj_search_queue = deque([recipe_obj])

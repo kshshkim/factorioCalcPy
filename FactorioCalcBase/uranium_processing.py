@@ -1,4 +1,4 @@
-from FactorioCalcBase.dependency_dict_common_function import construct_dependedncy_dict
+from FactorioCalcBase.dependency_dict_common_function import construct_dependency_dict
 from FactorioCalcBase.recipe_class import RecipeClass
 
 
@@ -18,7 +18,6 @@ class UraniumProcessor:
         self.cannot_process_dict = {}
         if (self.u238_needed != 0) or (self.u235_needed != 0):
             self.initialize()
-
 
     def initialize(self):
         if self.use_kovarex is True:
@@ -45,7 +44,7 @@ class UraniumProcessor:
             extra = {'uranium-235': (u238_std - u235_std) * u235_result_count}
         self.extra = extra
 
-        dict_list = construct_dependedncy_dict('uranium-processing', up_recipe_needed, self.extra_product_rate_dict)
+        dict_list = construct_dependency_dict('uranium-processing', up_recipe_needed, self.extra_product_rate_dict)
 
         self.recipe_needed = dict_list[0]
         self.item_needed = dict_list[1]

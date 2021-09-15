@@ -49,7 +49,7 @@ sorted_recipe_list = [
     'effectivity-module',
     'effectivity-module-2',
     'effectivity-module-3',
-    'electric-energy-interface',
+    # 'electric-energy-interface',
     'electric-engine-unit',
     'electric-furnace',
     'electric-mining-drill',
@@ -151,7 +151,7 @@ sorted_recipe_list = [
     'rail',
     'rail-chain-signal',
     'rail-signal',
-    'raw-fish',
+    # 'raw-fish',
     'red-wire',
     'refined-concrete',
     'refined-hazard-concrete',
@@ -209,9 +209,9 @@ sorted_recipe_list = [
     'uranium-ore',
     'uranium-processing',
     'uranium-rounds-magazine',
-    'used-up-uranium-fuel-cell',
+    # 'used-up-uranium-fuel-cell',
     'utility-science-pack',
-    'water',
-    'wood',
-    'wooden-chest'
+    # 'water',
+    # 'wood',
+    # 'wooden-chest'
 ]

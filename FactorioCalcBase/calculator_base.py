@@ -5,11 +5,13 @@ import json
 
 
 class FactorioCalculatorBase:
-    def __init__(self, recipe_name='advanced-circuit', amount=1, mining_research_modifier=0, extra_product_rate_dict=None, extra_conf=None, preferred_machine_list=None):
+    def __init__(self, recipe_name='advanced-circuit', amount=1, mining_research_modifier=0, extra_product_rate_dict=None, extra_conf=None, preferred_machine_list=None, use_kovarex=False):
         self.recipe_name = recipe_name
         self.recipe_obj = RecipeClass(self.recipe_name)
         self.amount = amount
         self.mining_research_modifier = mining_research_modifier
+        self.use_kovarex = use_kovarex
+
         self.total_recipe_dict = {}
         self.total_item_dict = {}
 
@@ -166,8 +168,7 @@ class FactorioCalculatorBase:
             'link_custom_data': []
         }
         for node in node_list:
-            link_dict['node_custom_data'].append('"'+self.total_out_dict['recipe'][node]['machine_name']+'" x'+str(self.total_out_dict['recipe'][node]['amount_factory_required']))
-
+            link_dict['node_custom_data'].append(f'"{self.total_out_dict["recipe"][node]["machine_name"]}" x{str(self.total_out_dict["recipe"][node]["amount_factory_required"])}"')
         for source, itm_name, target, strength in t_and_s_list:
             link_dict['source'].append(node_list.index(source))
             link_dict['target'].append(node_list.index(target))
@@ -177,5 +178,5 @@ class FactorioCalculatorBase:
                 link_dict['value'].append(strength)
             link_dict['label'].append(itm_name)
             link_dict['node_value'].append(self.total_recipe_dict['recipe'][source])
-            link_dict['link_custom_data'].append('total "'+str(strength)+'" of "'+itm_name+'" required by "'+target+'"')
+            link_dict['link_custom_data'].append(f'total "{str(strength)}" of "{itm_name}" required by "{target}"')
         return link_dict
