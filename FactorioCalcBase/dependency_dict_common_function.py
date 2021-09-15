@@ -13,13 +13,13 @@ def find_recipe(needed_list, extra_product_rate_dict):
 
     if item_name in ['petroleum-gas', 'light-oil', 'heavy-oil', 'uranium-235', 'uranium-238']:  # TODO 우라늄 제작법
         return -1
+    elif item_name == 'solid-fuel':  # TODO solid-fuel, 우라늄 관련 레시피 반영 필요
+        recipe_name = 'solid-fuel-from-light-oil'
+        trc = RecipeClass(recipe_name)
     elif recipe_dict.get(item_name) is not None and recipe_dict[item_name]['results'] != '':
         trc = RecipeClass(item_name)
         if trc.is_name_results_match():
             recipe_name = item_name
-    elif item_name == 'solid-fuel':  # TODO solid-fuel, 우라늄 관련 레시피 반영 필요
-        recipe_name = 'solid-fuel-from-light-oil'
-        trc = RecipeClass(recipe_name)
 
     extra_product_rate = extra_product_rate_dict.get(recipe_name)
     if extra_product_rate is None:

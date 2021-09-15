@@ -6,8 +6,8 @@ import json
 from FactorioCalcBase.recipe_class import RecipeClass
 #
 pml = []
-ase = FactorioCalculatorBase('processing-unit', amount=1, preferred_machine_list=pml)
-ase.set_module_to_specific_block('advanced-oil-processing', ['p1'])
+ase = FactorioCalculatorBase('uranium-fuel-cell', amount=1, preferred_machine_list=pml, use_kovarex=True)
+# ase.set_module_to_specific_block('advanced-oil-processing', ['p1'])
 pprint.pp(ase.total_info_out_as_dict())
 # pprint.pp(ase.diagram_data_out())
 

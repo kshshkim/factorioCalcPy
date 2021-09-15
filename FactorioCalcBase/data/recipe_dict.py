@@ -2247,21 +2247,21 @@ recipe_dict = {
             "centrifuge": 1
         }
     },
+    # "kovarex-enrichment-process": {
+    #     "name": "kovarex-enrichment-process",
+    #     "energy_required": 60.0,
+    #     "ingredients": {
+    #         "uranium-235": 40,
+    #         "uranium-238": 5
+    #     },
+    #     "results": {
+    #         "uranium-235": 41,
+    #         "uranium-238": 2
+    #     },
+    #     "category": "centrifuging"
+    # },
     "kovarex-enrichment-process": {
         "name": "kovarex-enrichment-process",
-        "energy_required": 60.0,
-        "ingredients": {
-            "uranium-235": 40,
-            "uranium-238": 5
-        },
-        "results": {
-            "uranium-235": 41,
-            "uranium-238": 2
-        },
-        "category": "centrifuging"
-    },
-    "kovarex-override": {
-        "name": "kovarex-override",
         "energy_required": 60.0,
         "ingredients": {
             "uranium-238": 3
