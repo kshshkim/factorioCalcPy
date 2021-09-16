@@ -1,3 +1,5 @@
+import datetime
+
 from fastapi import FastAPI
 from FactorioCalcFastAPI.static_req_handle import *
 from FactorioCalcFastAPI.calc_instance import Calculator
@@ -34,7 +36,7 @@ async def check_instance(rand_id, conf):
 async def create_new_instance(rand_id, conf):
     new_instance = Calculator(conf)
     pickled_instance = pickle.dumps(new_instance)
-    rdc.set(rand_id, pickled_instance)
+    rdc.set(rand_id, pickled_instance, datetime.timedelta(hours=24))
 
 
 async def get_target(rand_id):
@@ -47,7 +49,7 @@ async def get_target(rand_id):
 
 async def redis_overwrite(rand_id, instance):
     pickled_instance = pickle.dumps(instance)
-    rdc.set(rand_id, pickled_instance)
+    rdc.set(rand_id, pickled_instance, datetime.timedelta(hours=24))
 
 
 @app.get("/")
