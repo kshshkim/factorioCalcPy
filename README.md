@@ -10,7 +10,7 @@
 
 ## 소개
 
-게임 [Factorio](https://www.factorio.com/)의 자원 의존성, 생산시설 비율 계산기입니다. FactorioCalcBase/data/ 에 위치하는 일부 게임 데이터는 **Wube Software**의 지적 재산입니다.
+게임 [Factorio](https://www.factorio.com/)의 자원 의존성, 생산시설 비율 계산기입니다. **FactorioCalcBase/data/** 에 위치하는 일부 게임 데이터는 **Wube Software**의 지적 재산입니다.
 
 C 깔짝, VB.net 깔짝, Java 깔짝 건드려보고 수년이 지난 초보가 맨땅에 헤딩하는 식으로 진행하는 프로젝트입니다.
 
