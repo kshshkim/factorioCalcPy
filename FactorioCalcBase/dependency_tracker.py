@@ -45,19 +45,13 @@ class ProcessExcepts:
 
 
 class FullDependency:
-    # TODO 하드코딩 정리
     def __init__(self, recipe_name: str, amount: float, extra_product_rate_dict: dict, use_kovarex=False):
         process_general: ProcessGeneral = ProcessGeneral(recipe_name, amount, extra_product_rate_dict)
         process_excepts: ProcessExcepts = ProcessExcepts(cannot_process_dict=process_general.cannot_process_item_dict,
                                                          extra_product_rate_dict=extra_product_rate_dict,
                                                          use_kovarex=use_kovarex)
 
-        if process_general.cannot_process_item_dict != {}:
-            item_dict_list = [process_general.item_req_dict, process_excepts.item_req_dict]
-            recipe_dict_list = [process_general.recipe_req_dict, process_excepts.recipe_req_dict]
-            self.merged_recipe_dict = counter_add_dict(recipe_dict_list, 'recipe')
-            self.merged_item_dict = merge_item_dicts(item_dict_list)
-
-        else:
-            self.merged_recipe_dict = {'recipe': process_general.recipe_req_dict}
-            self.merged_item_dict = process_general.recipe_req_dict
+        item_dict_list = [process_general.item_req_dict, process_excepts.item_req_dict]
+        recipe_dict_list = [process_general.recipe_req_dict, process_excepts.recipe_req_dict]
+        self.merged_recipe_dict = counter_add_dict(recipe_dict_list, 'recipe')
+        self.merged_item_dict = merge_item_dicts(item_dict_list)
