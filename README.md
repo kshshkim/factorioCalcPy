@@ -1,4 +1,6 @@
-<big>**FactorioCalcBase/data/** 에 위치하는 일부 게임 데이터는 **Wube Software**의 지적 재산입니다. 이를 제외한 나머지는 MIT License에 따라 배포됩니다.</big>
+<big>**FactorioCalcBase/data/** 에 위치하는 일부 게임 데이터는 **Wube Software**의 지적 재산입니다. 
+  
+이를 제외한 나머지는 MIT License에 따라 배포됩니다.</big>
 
 
 # factorioCalcPy
