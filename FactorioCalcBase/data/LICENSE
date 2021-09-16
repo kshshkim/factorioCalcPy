@@ -4,5 +4,6 @@
  * productivity_module_available_list.py
  * recipe_dict.py
  * sorted_recipe_list.py
+ * data_dict.pickle
 
-상기 파일들은 [Official Factorio Wiki](https://wiki.factorio.com/)에 공개된 데이터를 가공한 것으로, CC-BY-NC-SA 3.0 라이센스를 따릅니다.
+상기 파일들은 Official Factorio Wiki(https://wiki.factorio.com/)에 공개된 데이터를 가공한 것으로, CC-BY-NC-SA 3.0 라이센스를 따릅니다.
