@@ -90,6 +90,8 @@ class Conf(BaseModel):
     recipe_name: str
     amount: float
     mining_research_modifier: float
+    preferred_machine_list: list
+    use_kovarex: bool
 
 
 class Action(BaseModel):
