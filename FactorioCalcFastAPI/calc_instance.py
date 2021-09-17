@@ -5,17 +5,22 @@ class Calculator:
     def __init__(self, conf):
         self.conf = conf
         self.base = None
-        self.initialize_base_obj()
         self.results = {}
         self.diagram_data = None
         self.dd = None
+        self.initialize_base_obj()
 
     def initialize_base_obj(self):
         recipe_name = self.conf.recipe_name
         amount = self.conf.amount
         mining_research_modifier = self.conf.mining_research_modifier
+        preferred_machine_list = self.conf.preferred_machine_list
+        use_kovarex = self.conf.use_kovarex
         self.base = FactorioCalculatorBase(recipe_name=recipe_name, amount=amount,
-                                           mining_research_modifier=mining_research_modifier)
+                                           mining_research_modifier=mining_research_modifier,
+                                           preferred_machine_list=preferred_machine_list,
+                                           use_kovarex=use_kovarex
+                                           )
         self.update_result()
 
     def change_amount(self, amount):
