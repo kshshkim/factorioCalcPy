@@ -1,14 +1,14 @@
 from FactorioCalcBase.data.binary import production_machine_category_list_dict, productivity_module_available_list, \
     module_modifier_dict
 from FactorioCalcBase.production_machine import ProductionMachine
-from FactorioCalcBase.recipe_class import RecipeClass
+from FactorioCalcBase.recipe import Recipe
 
 
 class ProductionBlock:
     def __init__(self, recipe_name, machine_name=None, module_list=None, mining_research_modifier=None,
                  preferred_machine_list=None):
         self.recipe_name = recipe_name
-        self.recipe_obj = RecipeClass(self.recipe_name)
+        self.recipe_obj = Recipe(self.recipe_name)
         if module_list is None:
             module_list = []
         if mining_research_modifier is None:

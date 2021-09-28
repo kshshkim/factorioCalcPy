@@ -1,21 +1,21 @@
 from FactorioCalcBase.dependency_dict_common_function import construct_dependency_dict, add_to_item_dict
-from FactorioCalcBase.recipe_class import RecipeClass
+from FactorioCalcBase.recipe import Recipe
 
 
 class UraniumProcessor:
-    def __init__(self, cannot_process_dict: dict, extra_product_rate_dict: dict, use_kovarex: bool = False):
+    def __init__(self, process_excepts_dict: dict, extra_product_rate_dict: dict, use_kovarex: bool = False):
         self.extra_product_rate_dict = extra_product_rate_dict
-        self.u235_needed = cannot_process_dict.get('uranium-235')
+        self.u235_needed = process_excepts_dict.get('uranium-235')
         if self.u235_needed is None:
             self.u235_needed = 0
-        self.u238_needed = cannot_process_dict.get('uranium-238')
+        self.u238_needed = process_excepts_dict.get('uranium-238')
         if self.u238_needed is None:
             self.u238_needed = 0
         self.use_kovarex = use_kovarex
         self.item_needed = {}
         self.recipe_needed = {}
         self.extra = {}
-        self.cannot_process_dict = {}
+        self.process_excepts_dict = {}
 
         self.total_u238_needed_by_kov = 0
         self.total_kov_recipe_needed_amount = 0
@@ -45,14 +45,14 @@ class UraniumProcessor:
 
     def var_set(self):
 
-        up_recipe_obj = RecipeClass('uranium-processing')
+        up_recipe_obj = Recipe('uranium-processing')
 
         self.up_u235_result_count = up_recipe_obj.results['uranium-235']
         self.up_u238_result_count = up_recipe_obj.results['uranium-238']
         self.up_u235_std_needed = self.u235_needed / (self.up_u235_result_count * self.up_extra_product_rate)
         self.up_u238_std_needed = self.u238_needed / (self.up_u238_result_count * self.up_extra_product_rate)
 
-        kov_obj = RecipeClass("kovarex-enrichment-process")
+        kov_obj = Recipe("kovarex-enrichment-process")
         self.kov_result_count = kov_obj.results.get('uranium-235')
 
     def uranium_processing(self):
@@ -71,7 +71,7 @@ class UraniumProcessor:
 
         self.recipe_needed = dict_list[0]
         self.item_needed = dict_list[1]
-        self.cannot_process_dict = dict_list[2]
+        self.process_excepts_dict = dict_list[2]
 
     # kovarex 1개 --
     # 필요(u238 3개)
@@ -86,7 +86,7 @@ class UraniumProcessor:
     def kovarex_override(self):
 
         if self.up_u238_std_needed <= self.up_u235_std_needed:
-            kov_obj = RecipeClass("kovarex-enrichment-process")
+            kov_obj = Recipe("kovarex-enrichment-process")
             kov_rc = self.kov_result_count
             kov_epr = self.kov_extra_product_rate
 
@@ -114,7 +114,7 @@ class UraniumProcessor:
 
         self.recipe_needed = dict_list[0]
         self.item_needed = dict_list[1]
-        self.cannot_process_dict = dict_list[2]
+        self.process_excepts_dict = dict_list[2]
 
         if self.use_kovarex is True:
             self.recipe_needed['kovarex-enrichment-process'] = self.total_kov_recipe_needed_amount
