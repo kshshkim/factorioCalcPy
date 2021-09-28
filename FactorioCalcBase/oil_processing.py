@@ -1,4 +1,5 @@
-from FactorioCalcBase.recipe import Recipe
+from FactorioCalcBase.recipe_class import RecipeClass
+from FactorioCalcBase.data.binary import recipe_dict
 from FactorioCalcBase.dependency_dict_common_function import add_to_item_dict, dict_add_number
 from collections import Counter
 
@@ -6,7 +7,7 @@ from collections import Counter
 
 
 class OilProcessor:
-    def __init__(self, process_excepts_dict: dict, extra_product_rate_dict=None):
+    def __init__(self, cannot_process_dict, extra_product_rate_dict=None):
         self.how_many_adv = 0
         self.heavy_to_light_amount = 0
         self.light_to_gas_amount = 0
@@ -17,15 +18,15 @@ class OilProcessor:
         if extra_product_rate_dict is None:
             extra_product_rate_dict = {}
         self.extra_product_rate_dict = extra_product_rate_dict
-        if process_excepts_dict.get('petroleum-gas') is None:
-            process_excepts_dict['petroleum-gas'] = 0
-        self.petroleum_gas_need = process_excepts_dict['petroleum-gas']
-        if process_excepts_dict.get('light-oil') is None:
-            process_excepts_dict['light-oil'] = 0
-        self.light_oil_need = process_excepts_dict['light-oil']
-        if process_excepts_dict.get('heavy_oil') is None:
-            process_excepts_dict['heavy_oil'] = 0
-        self.heavy_oil_need = process_excepts_dict['heavy_oil']
+        if cannot_process_dict.get('petroleum-gas') is None:
+            cannot_process_dict['petroleum-gas'] = 0
+        self.petroleum_gas_need = cannot_process_dict['petroleum-gas']
+        if cannot_process_dict.get('light-oil') is None:
+            cannot_process_dict['light-oil'] = 0
+        self.light_oil_need = cannot_process_dict['light-oil']
+        if cannot_process_dict.get('heavy_oil') is None:
+            cannot_process_dict['heavy_oil'] = 0
+        self.heavy_oil_need = cannot_process_dict['heavy_oil']
 
         self.hoc_extra_product_ratio = 1
         self.loc_extra_product_ratio = 1
@@ -40,11 +41,10 @@ class OilProcessor:
                 self.adv_resource_consumption_ratio = self.extra_product_rate_dict[key]
 
         self.advanced_oil_processing_plus_cracking()
-        self.update_recipe_item_needed()
+        self.update_oil_recipe_needed()
 
     def advanced_oil_processing_plus_cracking(self):
-        aop_obj = Recipe('advanced-oil-processing')
-        adv = [aop_obj.results['heavy-oil'], aop_obj.results['heavy-oil'], aop_obj.results['petroleum-gas']]  # default [25, 45, 55] advanced_oil_processing 생산량, 중유, 경유, 가스 순서
+        adv = [25, 45, 55]  # advanced_oil_processing 생산량, 중유, 경유, 가스 순서
         for i in range(3):
             adv[i] = adv[i]*self.adv_resource_consumption_ratio
 
@@ -87,7 +87,7 @@ class OilProcessor:
         self.light_to_gas_amount = extra_light_amount / (30 * l2p)
         self.extra = extra
 
-    def update_recipe_item_needed(self):
+    def update_oil_recipe_needed(self):
         # 먼저 advanced_oil_processing_plus_cracking 이 실행되어야함.
         new_dict = {
             'advanced-oil-processing': self.how_many_adv,
@@ -100,9 +100,9 @@ class OilProcessor:
         oil_item_dict = {}
 
         for key, val in new_dict.items():
-            for key2, val2 in Recipe(key).ingredients.items():
+            for key2, val2 in recipe_dict[key]['ingredients'].items():
                 if key2 not in ['heavy-oil', 'light-oil', 'petroleum-gas']:  # 경유 중유 가스는 이미 레시피 필요량 계산 완료됨.
-                    new_recp = Recipe(key2)
+                    new_recp = RecipeClass(key2)
                     how_many = val*val2/new_recp.get_results_count()  #  val2/new_recp.get_results_count() <= 생산물 1 단위당 레시피 필요량
                     dict_add_number(oil_recp_dict, new_recp.name, how_many)
 
@@ -110,3 +110,21 @@ class OilProcessor:
 
         self.recipe_needed = dict(Counter(new_dict) + Counter(oil_recp_dict))
         self.item_needed = oil_item_dict
+
+
+
+    #     self.oil_recipe_needed = new_dict
+    #     self.update_oil_item_needed()
+    #
+    #     for recipe in ['water', 'crude-oil']:
+    #         new_rcp_obj = RecipeClass(recipe)
+    #         if self.oil_recipe_needed.get(recipe) is None:
+    #             self.oil_recipe_needed[recipe] = 0
+    #         self.oil_recipe_needed[recipe] += self.oil_item_needed[recipe]/new_rcp_obj.get_results_count()
+    #
+    # def update_oil_item_needed(self):
+    #     new_dict = {}
+    #     for key, val in self.oil_recipe_needed.items():
+    #
+    #         self.oil_item_needed = new_dict
+    #
