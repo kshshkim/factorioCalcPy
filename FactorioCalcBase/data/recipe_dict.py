@@ -147,8 +147,6 @@ recipe_dict = {
             "crude-oil": 100
         },
         "results": {
-            #'advanced-oil-processing': 1
-
             "heavy-oil": 25,
             "light-oil": 45,
             "petroleum-gas": 55

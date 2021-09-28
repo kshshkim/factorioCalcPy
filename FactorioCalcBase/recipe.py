@@ -1,7 +1,7 @@
 from FactorioCalcBase.data.binary import recipe_dict
 
 
-class RecipeClass:
+class Recipe:
     def __init__(self, recipe_name, amount=1):
         self.amount = amount
         self.name = recipe_name
