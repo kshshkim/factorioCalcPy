@@ -1,13 +1,13 @@
 from FactorioCalcBase.production_block import ProductionBlock
 from FactorioCalcBase.dependency_tracker import FullDependency
-from FactorioCalcBase.recipe_class import RecipeClass
+from FactorioCalcBase.recipe import Recipe
 import json
 
 
 class CalculatorBase:
     def __init__(self, recipe_name='advanced-circuit', amount=1, mining_research_modifier=0, extra_product_rate_dict=None, extra_conf=None, preferred_machine_list=None, use_kovarex=False):
         self.recipe_name = recipe_name
-        self.recipe_obj = RecipeClass(self.recipe_name)
+        self.recipe_obj = Recipe(self.recipe_name)
         self.amount = amount
         self.mining_research_modifier = mining_research_modifier
         self.use_kovarex = use_kovarex
@@ -145,7 +145,7 @@ class CalculatorBase:
                     t_and_s_list.append((source, itm_name, target, strength))
 
         for node in node_list:
-            key_list = list(RecipeClass(node).results.keys())
+            key_list = list(Recipe(node).results.keys())
             for key in key_list:
                 update_t_and_s_list(node, key)
 

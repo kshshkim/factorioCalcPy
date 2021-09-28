@@ -1,6 +1,6 @@
 import copy
 from collections import Counter, deque
-from FactorioCalcBase.recipe_class import RecipeClass
+from FactorioCalcBase.recipe import Recipe
 
 
 def find_recipe(needed_list, extra_product_rate_dict):
@@ -11,10 +11,10 @@ def find_recipe(needed_list, extra_product_rate_dict):
         return -1
     elif item_name == 'solid-fuel':  # TODO solid-fuel,
         recipe_name = 'solid-fuel-from-light-oil'
-        trc = RecipeClass(recipe_name)
+        trc = Recipe(recipe_name)
     else:
         recipe_name = item_name
-        trc = RecipeClass(recipe_name)
+        trc = Recipe(recipe_name)
 
     extra_product_rate = extra_product_rate_dict.get(recipe_name)
     if extra_product_rate is None:
@@ -26,7 +26,7 @@ def find_recipe(needed_list, extra_product_rate_dict):
 
 
 def construct_dependency_dict(recipe_name: str, recipe_amount: float, extra_product_rate_dict: dict):
-    recipe_obj = RecipeClass(recipe_name, recipe_amount)
+    recipe_obj = Recipe(recipe_name, recipe_amount)
 
     obj_search_queue = deque([recipe_obj])
     item_needed_queue = deque([])
@@ -54,7 +54,7 @@ def construct_dependency_dict(recipe_name: str, recipe_amount: float, extra_prod
             else:
                 returned = find_recipe(item_needed_queue[0], extra_product_rate_dict)
                 # returned, [0]: name, [1]: amount
-                new_rcp_obj = RecipeClass(returned[0], amount=returned[1])
+                new_rcp_obj = Recipe(returned[0], amount=returned[1])
                 dict_add_number(total_recipe_needed_dict, key=returned[0], val=returned[1])
                 obj_search_queue.append(new_rcp_obj)
             item_needed_queue.popleft()

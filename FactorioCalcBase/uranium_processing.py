@@ -1,5 +1,5 @@
 from FactorioCalcBase.dependency_dict_common_function import construct_dependency_dict, add_to_item_dict
-from FactorioCalcBase.recipe_class import RecipeClass
+from FactorioCalcBase.recipe import Recipe
 
 
 class UraniumProcessor:
@@ -45,14 +45,14 @@ class UraniumProcessor:
 
     def var_set(self):
 
-        up_recipe_obj = RecipeClass('uranium-processing')
+        up_recipe_obj = Recipe('uranium-processing')
 
         self.up_u235_result_count = up_recipe_obj.results['uranium-235']
         self.up_u238_result_count = up_recipe_obj.results['uranium-238']
         self.up_u235_std_needed = self.u235_needed / (self.up_u235_result_count * self.up_extra_product_rate)
         self.up_u238_std_needed = self.u238_needed / (self.up_u238_result_count * self.up_extra_product_rate)
 
-        kov_obj = RecipeClass("kovarex-enrichment-process")
+        kov_obj = Recipe("kovarex-enrichment-process")
         self.kov_result_count = kov_obj.results.get('uranium-235')
 
     def uranium_processing(self):
@@ -86,7 +86,7 @@ class UraniumProcessor:
     def kovarex_override(self):
 
         if self.up_u238_std_needed <= self.up_u235_std_needed:
-            kov_obj = RecipeClass("kovarex-enrichment-process")
+            kov_obj = Recipe("kovarex-enrichment-process")
             kov_rc = self.kov_result_count
             kov_epr = self.kov_extra_product_rate
 

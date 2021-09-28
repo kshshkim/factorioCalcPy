@@ -1,13 +1,13 @@
 from unittest import TestCase, TestSuite
 import pprint
 from FactorioCalcBase.data.binary import sorted_recipe_list, production_machine_category_list_dict, production_machine_dict
-from FactorioCalcBase.recipe_class import RecipeClass
+from FactorioCalcBase.recipe import Recipe
 from FactorioCalcBase.calculator_base import CalculatorBase
 from FactorioCalcBase.dependency_dict_common_function import dict_add_number
 import time
 
 def test_change_machine(test_obj: CalculatorBase, target_recipe, failed_dict):
-    recipe_obj = RecipeClass(recipe_name=target_recipe)
+    recipe_obj = Recipe(recipe_name=target_recipe)
     cat = recipe_obj.get_category()
     available_machine_list = production_machine_category_list_dict.get(cat)
     failed_dict['method_failed']['change_machine_failed'] = {}

@@ -1,4 +1,4 @@
-from FactorioCalcBase.recipe_class import RecipeClass
+from FactorioCalcBase.recipe import Recipe
 from FactorioCalcBase.dependency_dict_common_function import add_to_item_dict, dict_add_number
 from collections import Counter
 
@@ -43,7 +43,7 @@ class OilProcessor:
         self.update_recipe_item_needed()
 
     def advanced_oil_processing_plus_cracking(self):
-        aop_obj = RecipeClass('advanced-oil-processing')
+        aop_obj = Recipe('advanced-oil-processing')
         adv = [aop_obj.results['heavy-oil'], aop_obj.results['heavy-oil'], aop_obj.results['petroleum-gas']]  # default [25, 45, 55] advanced_oil_processing 생산량, 중유, 경유, 가스 순서
         for i in range(3):
             adv[i] = adv[i]*self.adv_resource_consumption_ratio
@@ -100,9 +100,9 @@ class OilProcessor:
         oil_item_dict = {}
 
         for key, val in new_dict.items():
-            for key2, val2 in RecipeClass(key).ingredients.items():
+            for key2, val2 in Recipe(key).ingredients.items():
                 if key2 not in ['heavy-oil', 'light-oil', 'petroleum-gas']:  # 경유 중유 가스는 이미 레시피 필요량 계산 완료됨.
-                    new_recp = RecipeClass(key2)
+                    new_recp = Recipe(key2)
                     how_many = val*val2/new_recp.get_results_count()  #  val2/new_recp.get_results_count() <= 생산물 1 단위당 레시피 필요량
                     dict_add_number(oil_recp_dict, new_recp.name, how_many)
 
