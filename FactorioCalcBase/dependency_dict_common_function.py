@@ -1,25 +1,20 @@
 import copy
 from collections import Counter, deque
 from FactorioCalcBase.recipe_class import RecipeClass
-from FactorioCalcBase.data.binary import recipe_dict
 
 
 def find_recipe(needed_list, extra_product_rate_dict):
     item_name = needed_list[0]
     item_amount = needed_list[1]
 
-    recipe_name = ''
-    # name_results_match 가 아니면 따로 처리
-
-    if item_name in ['petroleum-gas', 'light-oil', 'heavy-oil', 'uranium-235', 'uranium-238']:  # TODO 우라늄 제작법
+    if item_name in ['petroleum-gas', 'light-oil', 'heavy-oil', 'uranium-235', 'uranium-238']:
         return -1
-    elif item_name == 'solid-fuel':  # TODO solid-fuel, 우라늄 관련 레시피 반영 필요
+    elif item_name == 'solid-fuel':  # TODO solid-fuel,
         recipe_name = 'solid-fuel-from-light-oil'
         trc = RecipeClass(recipe_name)
-    elif recipe_dict.get(item_name) is not None and recipe_dict[item_name]['results'] != '':
-        trc = RecipeClass(item_name)
-        if trc.is_name_results_match():
-            recipe_name = item_name
+    else:
+        recipe_name = item_name
+        trc = RecipeClass(recipe_name)
 
     extra_product_rate = extra_product_rate_dict.get(recipe_name)
     if extra_product_rate is None:
@@ -86,17 +81,6 @@ def counter_add_dict(dict_list: list, prefix: str = ''):
 
 
 def add_to_item_dict(base_dict: dict, item_name: str, item_amount: float, required_by: str):
-
-    # item_dict = {
-    #     'item_name' :{
-    #         'amount': float,
-    #         'required_by': {
-    #             recipe_1: float,
-    #             recipe_2: float
-    #         }
-    #     }
-    # }
-
     if base_dict.get(item_name) is None:
         base_dict[item_name] = {
             'name': item_name,

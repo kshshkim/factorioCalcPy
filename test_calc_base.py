@@ -2,11 +2,11 @@ from unittest import TestCase, TestSuite
 import pprint
 from FactorioCalcBase.data.binary import sorted_recipe_list, production_machine_category_list_dict, production_machine_dict
 from FactorioCalcBase.recipe_class import RecipeClass
-from FactorioCalcBase.calculator_base import FactorioCalculatorBase
+from FactorioCalcBase.calculator_base import CalculatorBase
 from FactorioCalcBase.dependency_dict_common_function import dict_add_number
+import time
 
-
-def test_change_machine(test_obj: FactorioCalculatorBase, target_recipe, failed_dict):
+def test_change_machine(test_obj: CalculatorBase, target_recipe, failed_dict):
     recipe_obj = RecipeClass(recipe_name=target_recipe)
     cat = recipe_obj.get_category()
     available_machine_list = production_machine_category_list_dict.get(cat)
@@ -21,7 +21,7 @@ def test_change_machine(test_obj: FactorioCalculatorBase, target_recipe, failed_
 
 
 
-def test_calculator_base_methods(test_obj: FactorioCalculatorBase, failed_dict: dict):
+def test_calculator_base_methods(test_obj: CalculatorBase, failed_dict: dict):
     recipe_list = list(test_obj.block_obj_dict.keys())
     for recipe in recipe_list:
         test_change_machine(test_obj, recipe, failed_dict)
@@ -44,10 +44,10 @@ def test_calculator_base_innit(failed_dict):
                 for use_kovarex in uk:
                     for amount in am:
                         try:
-                            test_obj = FactorioCalculatorBase(recipe_name=recipe, amount=amount,
-                                                              preferred_machine_list=preferred_machines,
-                                                              use_kovarex=use_kovarex,
-                                                              mining_research_modifier=mining_research_modifier)
+                            test_obj = CalculatorBase(recipe_name=recipe, amount=amount,
+                                                      preferred_machine_list=preferred_machines,
+                                                      use_kovarex=use_kovarex,
+                                                      mining_research_modifier=mining_research_modifier)
 
                         except:
                             dict_add_number(failed_dict['init_failed'], key=recipe, val=1)
@@ -55,4 +55,6 @@ def test_calculator_base_innit(failed_dict):
     pprint.pp(failed_dict)
     return failed_dict
 
+start_time = time.time()
 test_calculator_base_innit({})
+print(f'{time.time()-start_time}')
