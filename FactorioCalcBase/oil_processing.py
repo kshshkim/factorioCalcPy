@@ -1,5 +1,4 @@
 from FactorioCalcBase.recipe_class import RecipeClass
-from FactorioCalcBase.data.binary import recipe_dict
 from FactorioCalcBase.dependency_dict_common_function import add_to_item_dict, dict_add_number
 from collections import Counter
 
@@ -100,7 +99,7 @@ class OilProcessor:
         oil_item_dict = {}
 
         for key, val in new_dict.items():
-            for key2, val2 in recipe_dict[key]['ingredients'].items():
+            for key2, val2 in RecipeClass(key).ingredients.items():
                 if key2 not in ['heavy-oil', 'light-oil', 'petroleum-gas']:  # 경유 중유 가스는 이미 레시피 필요량 계산 완료됨.
                     new_recp = RecipeClass(key2)
                     how_many = val*val2/new_recp.get_results_count()  #  val2/new_recp.get_results_count() <= 생산물 1 단위당 레시피 필요량
