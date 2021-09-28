@@ -2,16 +2,13 @@ import datetime
 
 from fastapi import FastAPI
 from FactorioCalcFastAPI.static_req_handle import *
-from FactorioCalcFastAPI.calc_instance import Calculator
+from FactorioCalcFastAPI.calc_base_wrapper import Calculator
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from FactorioCalcFastAPI.data.icon_ref_dict import icon_ref_dict
 from fastapi.responses import HTMLResponse
 from FactorioCalcFastAPI.redis_handle import rdc
 import pickle
-
-from typing import Optional
-import asyncio
 
 app = FastAPI()
 
@@ -30,10 +27,10 @@ app.add_middleware(
 
 async def check_instance(rand_id, conf):
     if rdc.get(rand_id) is None:
-        await create_new_instance(rand_id, conf)
+        create_new_instance(rand_id, conf)
 
 
-async def create_new_instance(rand_id, conf):
+def create_new_instance(rand_id, conf):
     new_instance = Calculator(conf)
     pickled_instance = pickle.dumps(new_instance)
     rdc.set(rand_id, pickled_instance, datetime.timedelta(hours=24))
@@ -55,11 +52,6 @@ async def redis_overwrite(rand_id, instance):
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
-
-
-@app.get("/icon_url/{name}")
-async def icon_url(name: str):
-    return "https://cdn.privatelaw.net/" + icon_ref_dict.get(name)
 
 
 @app.get("/recipe_list")

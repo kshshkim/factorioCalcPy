@@ -4,7 +4,7 @@ from FactorioCalcBase.recipe_class import RecipeClass
 import json
 
 
-class FactorioCalculatorBase:
+class CalculatorBase:
     def __init__(self, recipe_name='advanced-circuit', amount=1, mining_research_modifier=0, extra_product_rate_dict=None, extra_conf=None, preferred_machine_list=None, use_kovarex=False):
         self.recipe_name = recipe_name
         self.recipe_obj = RecipeClass(self.recipe_name)
@@ -14,6 +14,7 @@ class FactorioCalculatorBase:
 
         self.total_recipe_dict = {}
         self.total_item_dict = {}
+        self.total_out_dict = {}
 
         self.extra_product_rate_dict = extra_product_rate_dict
         if self.extra_product_rate_dict is None:
@@ -42,15 +43,6 @@ class FactorioCalculatorBase:
     def update_extra_product_dict(self, block_obj):
         self.extra_product_rate_dict[block_obj.recipe_name] = block_obj.extra_product_rate
 
-    # def change_mining_research_modifier(self, mrm):
-    #     self.mining_research_modifier = mrm
-    #     for block_obj in self.block_obj_dict['general_recipe'].values():
-    #         if block_obj.recipe_obj.category in ['mining-drill', 'crude-oil']:
-    #             block_obj.mining_research_modifier = mrm
-    #             block_obj.update_and_calculate_at_once()
-    #             self.update_extra_product_dict(block_obj=block_obj)
-
-    # set module
     def set_module_to_specific_block(self, recipe_name, module_code_or_list):
         specific_block = self.production_block_recipe_finder(recipe_name=recipe_name, block_or_recipe='b')
 
