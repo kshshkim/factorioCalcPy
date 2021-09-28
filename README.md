@@ -1,7 +1,5 @@
 > <big>**FactorioCalcBase/data/** 에 위치하는 일부 게임 데이터는 <b>[Official Factorio Wiki](https://wiki.factorio.com/)</b>의 정보를 가공한 것으로, <b>[CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)</b>으로 배포됩니다.
 
-> 나머지는 **MIT License**에 따릅니다.</big>
-
 
 # factorioCalcPy
 
