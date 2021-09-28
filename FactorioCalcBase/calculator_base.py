@@ -1,20 +1,19 @@
 from FactorioCalcBase.production_block import ProductionBlock
 from FactorioCalcBase.dependency_tracker import FullDependency
-from FactorioCalcBase.recipe import Recipe
+from FactorioCalcBase.recipe_class import RecipeClass
 import json
 
 
-class CalculatorBase:
+class FactorioCalculatorBase:
     def __init__(self, recipe_name='advanced-circuit', amount=1, mining_research_modifier=0, extra_product_rate_dict=None, extra_conf=None, preferred_machine_list=None, use_kovarex=False):
         self.recipe_name = recipe_name
-        self.recipe_obj = Recipe(self.recipe_name)
+        self.recipe_obj = RecipeClass(self.recipe_name)
         self.amount = amount
         self.mining_research_modifier = mining_research_modifier
         self.use_kovarex = use_kovarex
 
         self.total_recipe_dict = {}
         self.total_item_dict = {}
-        self.total_out_dict = {}
 
         self.extra_product_rate_dict = extra_product_rate_dict
         if self.extra_product_rate_dict is None:
@@ -43,6 +42,15 @@ class CalculatorBase:
     def update_extra_product_dict(self, block_obj):
         self.extra_product_rate_dict[block_obj.recipe_name] = block_obj.extra_product_rate
 
+    # def change_mining_research_modifier(self, mrm):
+    #     self.mining_research_modifier = mrm
+    #     for block_obj in self.block_obj_dict['general_recipe'].values():
+    #         if block_obj.recipe_obj.category in ['mining-drill', 'crude-oil']:
+    #             block_obj.mining_research_modifier = mrm
+    #             block_obj.update_and_calculate_at_once()
+    #             self.update_extra_product_dict(block_obj=block_obj)
+
+    # set module
     def set_module_to_specific_block(self, recipe_name, module_code_or_list):
         specific_block = self.production_block_recipe_finder(recipe_name=recipe_name, block_or_recipe='b')
 
@@ -145,7 +153,7 @@ class CalculatorBase:
                     t_and_s_list.append((source, itm_name, target, strength))
 
         for node in node_list:
-            key_list = list(Recipe(node).results.keys())
+            key_list = list(RecipeClass(node).results.keys())
             for key in key_list:
                 update_t_and_s_list(node, key)
 

@@ -1,4 +1,4 @@
-from FactorioCalcBase.calculator_base import CalculatorBase
+from FactorioCalcBase.calculator_base import FactorioCalculatorBase
 
 
 class Calculator:
@@ -16,11 +16,11 @@ class Calculator:
         mining_research_modifier = self.conf.mining_research_modifier
         preferred_machine_list = self.conf.preferred_machine_list
         use_kovarex = self.conf.use_kovarex
-        self.base = CalculatorBase(recipe_name=recipe_name, amount=amount,
-                                   mining_research_modifier=mining_research_modifier,
-                                   preferred_machine_list=preferred_machine_list,
-                                   use_kovarex=use_kovarex
-                                   )
+        self.base = FactorioCalculatorBase(recipe_name=recipe_name, amount=amount,
+                                           mining_research_modifier=mining_research_modifier,
+                                           preferred_machine_list=preferred_machine_list,
+                                           use_kovarex=use_kovarex
+                                           )
         self.update_result()
 
     def change_amount(self, amount):
