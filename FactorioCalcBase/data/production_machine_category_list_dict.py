@@ -40,6 +40,12 @@ production_machine_category_list_dict = {
         'centrifuge'
     ],
     'raw-fish': [
-        'raw-fish'
+        'manual'
+    ],
+    'wood': [
+        'manual'
+    ],
+    'rocket-building': [
+        'rocket-silo'
     ]
 }

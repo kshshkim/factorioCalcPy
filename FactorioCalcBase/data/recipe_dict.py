@@ -2389,7 +2389,7 @@ recipe_dict = {
     },
     "wood": {
         "name": "wood",
-        "energy_required": "",
+        "energy_required": 0,
         "ingredients": "",
         "results": {'wood': 1},
         'category': 'wood'
@@ -2431,7 +2431,7 @@ recipe_dict = {
         "name": "raw-fish",
         "energy_required": 1,
         "ingredients": "",
-        "results": {"raw-fish":1},
+        "results": {"raw-fish": 1},
         "category": "raw-fish"
     },
     "solid-fuel": {

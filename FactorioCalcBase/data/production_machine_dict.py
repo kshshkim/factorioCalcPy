@@ -96,11 +96,18 @@ production_machine_dict = {
         "power_consumption": 180,
         "module_slots": 2,
     },
-    "raw-fish": {
-        "name": "raw-fish",
-        "category": "raw-fish",
+    "manual": {
+        "name": "manual",
+        "category": "manual",
         "production_rate": 1,
         "power_consumption": 0,
         "module_slots": 0
+    },
+    "rocket-silo": {
+        "name": "rocket-silo",
+        "category": "rocket-building",
+        "production_rate": 1,
+        "power_consumption": 4000,
+        "module_slots": 4
     }
 }
