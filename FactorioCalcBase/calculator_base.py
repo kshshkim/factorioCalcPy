@@ -108,18 +108,18 @@ class CalculatorBase:
             to_return_dict[cat] = {}
             for recp in main_dict[cat].keys():  # 카테고리를 분리해서 출력할 경우 필요한 코드, 현재는 필요하지 않지만 성능 영향이 크지 않아서 그냥 둠.
                 block_obj: ProductionBlock = self.production_block_recipe_finder(recipe_name=recp, block_or_recipe='b')
-                amount_required = self.get_block_needed_amount_in_ref_time(recp)
+                amount_factory_required = self.get_block_needed_amount_in_ref_time(recp)
                 amount_recipe_required = self.production_block_recipe_finder(recipe_name=recp, block_or_recipe='r')
                 to_return_dict[cat][recp] = {
                     'name': recp,
                     'product_per_a_minute': '',
                     'amount_recipe_required': round(amount_recipe_required, 4),
-                    'amount_factory_required': round(amount_required, 4),
+                    'amount_factory_required': round(amount_factory_required, 4),
                     'machine_name': block_obj.machine_obj.machine_name,
                     'added_modules': block_obj.module_list,
                     'speed_rate': block_obj.production_speed,
                     'base_speed_rate': block_obj.machine_obj.base_speed_rate,
-                    'total_power_consumption': round(amount_required*block_obj.power_consumption, 4),
+                    'total_power_consumption': round(amount_factory_required*block_obj.power_consumption, 4),
                 }
         to_return_dict['items'] = self.total_item_dict
         self.total_out_dict = to_return_dict
