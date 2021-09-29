@@ -29,7 +29,6 @@ def test_calculator_base_methods(test_obj: CalculatorBase, failed_dict: dict):
             dict_add_number(failed_dict['method_failed']['change_machine_failed'], recipe, 1)
 
 
-
 def test_calculator_base(failed_dict):
     mrms = [0, 0.3]
     pm = [None, ["assembling-machine-2", "stone-furnace", "burner-mining-drill"]]
@@ -58,6 +57,8 @@ def test_calculator_base(failed_dict):
     pprint.pp(failed_dict)
     return failed_dict
 
-start_time = time.time()
-test_calculator_base({})
-print(f'finished in {time.time()-start_time}')
+
+def run_test():
+    start_time = time.time()
+    test_calculator_base({})
+    print(f'finished in {time.time()-start_time}')
