@@ -1,6 +1,6 @@
 # OSS Notice | factorioCalcPy #
 
-This application is Copyright © (owner name). All rights reserved.
+This application is Copyright © Seonghyeon Kim. All rights reserved.
 
 The following sets forth attribution notices for third party software that may be contained in this application.
 
