@@ -47,7 +47,8 @@ class ProductionBlock:
                 if each_preferred_machine in self.available_machine_list:
                     self.machine_name = each_preferred_machine
                     is_set = True
-        #
+                    break
+
         if is_set is False:
             self.machine_name = self.available_machine_list[-1]
 
