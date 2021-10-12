@@ -110,6 +110,9 @@ class CalculatorBase:
                 block_obj: ProductionBlock = self.production_block_recipe_finder(recipe_name=recp, block_or_recipe='b')
                 amount_factory_required = self.get_block_needed_amount_in_ref_time(recp)
                 amount_recipe_required = self.production_block_recipe_finder(recipe_name=recp, block_or_recipe='r')
+                item_output = block_obj.recipe_obj.results
+                for key in item_output.keys():
+                    item_output[key] *= amount_recipe_required
                 to_return_dict[cat][recp] = {
                     'name': recp,
                     'product_per_a_minute': '',
@@ -120,6 +123,7 @@ class CalculatorBase:
                     'speed_rate': block_obj.production_speed,
                     'base_speed_rate': block_obj.machine_obj.base_speed_rate,
                     'total_power_consumption': round(amount_factory_required*block_obj.power_consumption, 4),
+                    'item_output': item_output
                 }
         to_return_dict['items'] = self.total_item_dict
         self.total_out_dict = to_return_dict
