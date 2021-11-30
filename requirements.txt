@@ -3,4 +3,3 @@ uvicorn==0.14.0
 pydantic~=1.8.2
 plotly~=5.1.0
 redis==3.5.3
-rq==1.9.0
